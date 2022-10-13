@@ -16,5 +16,10 @@ namespace Music__Player.sources.View
         {
             InitializeComponent();
         }
+
+        private void Songs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

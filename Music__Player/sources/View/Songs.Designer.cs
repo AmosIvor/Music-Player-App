@@ -34,8 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "Songs";
             this.Size = new System.Drawing.Size(1359, 965);
+            this.Load += new System.EventHandler(this.Songs_Load);
             this.ResumeLayout(false);
 
         }
