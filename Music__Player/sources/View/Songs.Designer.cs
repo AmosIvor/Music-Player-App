@@ -121,18 +121,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Name = "Songs";
-            this.Size = new System.Drawing.Size(1359, 965);
-            this.Load += new System.EventHandler(this.Songs_Load);
-=======
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "Songs";
             this.Size = new System.Drawing.Size(1359, 965);
             this.guna2Panel2.ResumeLayout(false);
->>>>>>> Song
             this.ResumeLayout(false);
 
         }
