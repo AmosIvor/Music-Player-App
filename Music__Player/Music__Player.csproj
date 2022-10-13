@@ -82,6 +82,42 @@
     <Compile Include="sources\Custom\Artist__Panel.Designer.cs">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\View\Albums.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\Albums.Designer.cs">
+      <DependentUpon>Albums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\View\History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\View\Playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\Playlist.Designer.cs">
+      <DependentUpon>Playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\View\Recent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\Recent.Designer.cs">
+      <DependentUpon>Recent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\View\Songs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\Songs.Designer.cs">
+      <DependentUpon>Songs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\View\Favorite.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\Favorite.Designer.cs">
+      <DependentUpon>Favorite.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main__Screen.resx">
       <DependentUpon>Main__Screen.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +130,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Info__Song__Panel.resx">
       <DependentUpon>Info__Song__Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\Albums.resx">
+      <DependentUpon>Albums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\Favorite.resx">
+      <DependentUpon>Favorite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\Playlist.resx">
+      <DependentUpon>Playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\Recent.resx">
+      <DependentUpon>Recent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\Songs.resx">
+      <DependentUpon>Songs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
@@ -237,7 +291,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="sources\Constant\" />
-    <Folder Include="sources\View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
