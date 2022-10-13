@@ -1,4 +1,5 @@
 ﻿using Music__Player.sources.Custom;
+using Music__Player.sources.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,20 @@ namespace Music__Player
             //    location = fpanelArtists.HorizontalScroll.Maximum;
             //    fpanelArtists.AutoScrollPosition = new Point(location, 0);
             //}
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSongs_Click(object sender, EventArgs e)
+        {
+            if (this.panelMainScreen.Controls.Count > 0)
+                this.panelMainScreen.Controls.Clear();
+            Songs test = new Songs();
+            test.Dock = DockStyle.Fill;
+            this.panelMainScreen.Controls.Add(test);
         }
     }
 }
