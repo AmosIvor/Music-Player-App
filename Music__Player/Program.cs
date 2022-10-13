@@ -17,6 +17,7 @@ namespace Music__Player
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main__Screen());
+
         }
     }
 }

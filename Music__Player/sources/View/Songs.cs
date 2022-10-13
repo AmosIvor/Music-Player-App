@@ -16,5 +16,6 @@ namespace Music__Player.sources.View
         {
             InitializeComponent();
         }
+
     }
 }
