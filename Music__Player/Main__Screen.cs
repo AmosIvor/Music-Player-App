@@ -73,5 +73,14 @@ namespace Music__Player
             test.Dock = DockStyle.Fill;
             this.panelMainScreen.Controls.Add(test);
         }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            if (this.panelMainScreen.Controls.Count > 0)
+                this.panelMainScreen.Controls.Clear();
+            History history = new History();
+            history.Dock = DockStyle.Fill;
+            this.panelMainScreen.Controls.Add(history);
+        }
     }
 }
