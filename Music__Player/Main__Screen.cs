@@ -60,11 +60,6 @@ namespace Music__Player
             //}
         }
 
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSongs_Click(object sender, EventArgs e)
         {
             if (this.panelMainScreen.Controls.Count > 0)
