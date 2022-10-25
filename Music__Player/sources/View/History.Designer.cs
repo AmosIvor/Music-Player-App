@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelPlayMusic = new Guna.UI2.WinForms.Guna2Panel();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.datagridviewHistory = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -45,6 +44,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnImage = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewHistory)).BeginInit();
             this.SuspendLayout();
@@ -91,20 +91,6 @@
             this.guna2DateTimePicker2.Size = new System.Drawing.Size(200, 40);
             this.guna2DateTimePicker2.TabIndex = 2;
             this.guna2DateTimePicker2.Value = new System.DateTime(2022, 10, 20, 15, 43, 16, 639);
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::Music__Player.Properties.Resources.icon_search_blue;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(49, 107);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(40, 40);
-            this.guna2ImageButton1.TabIndex = 3;
             // 
             // panelPlayMusic
             // 
@@ -171,7 +157,6 @@
             this.datagridviewHistory.RowHeadersVisible = false;
             this.datagridviewHistory.RowHeadersWidth = 51;
             this.datagridviewHistory.RowTemplate.Height = 45;
-            this.datagridviewHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.datagridviewHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridviewHistory.Size = new System.Drawing.Size(1250, 520);
             this.datagridviewHistory.TabIndex = 2;
@@ -261,13 +246,27 @@
             this.btnImage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnImage.ForeColor = System.Drawing.Color.White;
             this.btnImage.HoverState.Parent = this.btnImage;
-            this.btnImage.Location = new System.Drawing.Point(802, 15);
+            this.btnImage.Location = new System.Drawing.Point(662, 76);
             this.btnImage.Name = "btnImage";
             this.btnImage.ShadowDecoration.Parent = this.btnImage;
             this.btnImage.Size = new System.Drawing.Size(180, 45);
             this.btnImage.TabIndex = 1;
             this.btnImage.Text = "data";
             this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Image = global::Music__Player.Properties.Resources.icon_search_blue;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(35, 35);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(49, 107);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
+            this.guna2ImageButton1.Size = new System.Drawing.Size(40, 40);
+            this.guna2ImageButton1.TabIndex = 3;
             // 
             // History
             // 
