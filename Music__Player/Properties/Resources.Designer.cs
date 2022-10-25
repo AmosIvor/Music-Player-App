@@ -73,6 +73,16 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_add {
+            get {
+                object obj = ResourceManager.GetObject("icon_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_album_blue {
             get {
                 object obj = ResourceManager.GetObject("icon_album_blue", resourceCulture);
@@ -96,6 +106,16 @@ namespace Music__Player.Properties {
         internal static System.Drawing.Bitmap icon_back_blue {
             get {
                 object obj = ResourceManager.GetObject("icon_back_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_createplaylist_blue {
+            get {
+                object obj = ResourceManager.GetObject("icon_createplaylist_blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +293,16 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_leftArrow {
+            get {
+                object obj = ResourceManager.GetObject("icon_leftArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_mute_blue {
             get {
                 object obj = ResourceManager.GetObject("icon_mute_blue", resourceCulture);
@@ -323,6 +353,16 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_play {
+            get {
+                object obj = ResourceManager.GetObject("icon_play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_play_blue {
             get {
                 object obj = ResourceManager.GetObject("icon_play_blue", resourceCulture);
@@ -366,6 +406,16 @@ namespace Music__Player.Properties {
         internal static System.Drawing.Bitmap icon_repeat_white {
             get {
                 object obj = ResourceManager.GetObject("icon_repeat_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_rightArrow {
+            get {
+                object obj = ResourceManager.GetObject("icon_rightArrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
