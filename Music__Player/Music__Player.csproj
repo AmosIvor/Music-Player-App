@@ -67,6 +67,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="sources\Custom\Info__Playlist__Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Info__Playlist__Panel.Designer.cs">
+      <DependentUpon>Info__Playlist__Panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\Info__Song__Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,17 +85,35 @@
     <Compile Include="sources\Custom\Artist__Panel.Designer.cs">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\Custom\Playlist__Add__Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Playlist__Add__Panel.Designer.cs">
+      <DependentUpon>Playlist__Add__Panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\View\Albums.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="sources\View\Albums.Designer.cs">
       <DependentUpon>Albums.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\View\Child__Playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\Child__Playlist.Designer.cs">
+      <DependentUpon>Child__Playlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\View\History.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="sources\View\History.Designer.cs">
       <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\View\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\View\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="sources\View\Playlist.cs">
       <SubType>UserControl</SubType>
@@ -125,17 +149,29 @@
     <EmbeddedResource Include="sources\Custom\Artist__Panel.resx">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Info__Playlist__Panel.resx">
+      <DependentUpon>Info__Playlist__Panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Info__Song__Panel.resx">
       <DependentUpon>Info__Song__Panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Playlist__Add__Panel.resx">
+      <DependentUpon>Playlist__Add__Panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sources\View\Albums.resx">
       <DependentUpon>Albums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\Child__Playlist.resx">
+      <DependentUpon>Child__Playlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\View\Favorite.resx">
       <DependentUpon>Favorite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\View\History.resx">
       <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\View\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\View\Playlist.resx">
       <DependentUpon>Playlist.cs</DependentUpon>
@@ -294,6 +330,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_leftArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_rightArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_createplaylist_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
