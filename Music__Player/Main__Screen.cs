@@ -134,5 +134,7 @@ namespace Music__Player
         }
 
         #endregion
+
+        // Tran Tuan Vu
     }
 }
