@@ -94,6 +94,13 @@
     <Compile Include="sources\Custom\Playlist__Add__Panel.Designer.cs">
       <DependentUpon>Playlist__Add__Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\DAO\CustomDAO\Artist__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Info__Song__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\DataProviderDAO.cs" />
+    <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
+    <Compile Include="sources\DTO\HomeDTO\Song__Playing.cs" />
+    <Compile Include="sources\Navigation\Navigate.cs" />
+    <Compile Include="sources\Play__Music\Media__Player.cs" />
     <Compile Include="sources\View\Albums.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -348,6 +355,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_love_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_love_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pause_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_play_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_play_blue_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
