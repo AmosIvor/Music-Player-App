@@ -130,14 +130,17 @@
   <data name="icon_mute_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_mute_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_album_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_album_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="music1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_start_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_start_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="leftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leftArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_pause_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_pause_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_back_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_back_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_song_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icon_song_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,20 +148,26 @@
   <data name="icon_end_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_end_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_home_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_home_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_email_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_email_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_createplaylist_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_createplaylist_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_email_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_email_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_history_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_history_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_history_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_history_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="radio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\radio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_file_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_file_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radio-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\radio-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="draft" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\draft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,17 +178,14 @@
   <data name="icon_volumn_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_volumn_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_album_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_album_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_home_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_home_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_shuffle_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_shuffle_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_volume_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_volume_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_recent_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_recent_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="right-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\right-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,17 +193,23 @@
   <data name="icon_file_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_file_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_nameplaylist_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_nameplaylist_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_song_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon_song_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_envelop_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_envelop_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_explorer_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\icon_explorer_whte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_repeat_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_repeat_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_end_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_end_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_start_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_start_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_email_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_email_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,20 +226,17 @@
   <data name="icon_shuffle_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_shuffle_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="leftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\leftArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_album_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_album_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_back_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_back_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_volume_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_volume_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_song_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\icon_song_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_recent_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_recent_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_mute_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_mute_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_history_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_history_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_repeat_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_repeat_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,11 +244,20 @@
   <data name="icon_favorite_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_favorite_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_repeat_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_repeat_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_start_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_start_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_start_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_start_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_album_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_album_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_explorer_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icon_explorer_whte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_nameplaylist_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_nameplaylist_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="music2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_home_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_home_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,13 +268,7 @@
   <data name="icon_recent_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_recent_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="radio-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\radio-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="radio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\radio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="music4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\music4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

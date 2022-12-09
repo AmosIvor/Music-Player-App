@@ -63,7 +63,7 @@ namespace Music__Player
         private void btnSongs_Click(object sender, EventArgs e)
         {
             if (this.panelMainScreen.Controls.Count > 0)
-                this.panelMainScreen.Controls.Clear();
+                this.panelMainScreen.Controls.Clear();           
             Songs test = new Songs();
             test.Dock = DockStyle.Fill;
             this.panelMainScreen.Controls.Add(test);

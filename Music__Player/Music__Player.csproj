@@ -79,6 +79,30 @@
     <Compile Include="sources\Custom\Artist__Panel.Designer.cs">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\Custom\slide1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\slide1.Designer.cs">
+      <DependentUpon>slide1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\Custom\slide2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\slide2.Designer.cs">
+      <DependentUpon>slide2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\Custom\slide3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\slide3.Designer.cs">
+      <DependentUpon>slide3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\Custom\slide4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\slide4.Designer.cs">
+      <DependentUpon>slide4.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\View\Albums.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,12 +145,25 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Artist__Panel.resx">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Info__Song__Panel.resx">
       <DependentUpon>Info__Song__Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\slide1.resx">
+      <DependentUpon>slide1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\slide2.resx">
+      <DependentUpon>slide2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\slide3.resx">
+      <DependentUpon>slide3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\slide4.resx">
+      <DependentUpon>slide4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\View\Albums.resx">
       <DependentUpon>Albums.cs</DependentUpon>
@@ -303,6 +340,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\radio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music4.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
