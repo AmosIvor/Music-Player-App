@@ -1,4 +1,5 @@
 ﻿using Music__Player.sources.Custom;
+using Music__Player.sources.Navigate;
 using Music__Player.sources.View;
 using System;
 using System.Collections.Generic;
@@ -14,68 +15,132 @@ namespace Music__Player
 {
     public partial class Main__Screen : Form
     {
-        private int location = 0;
+        //Songs songsScreen = new Songs();
+        //Albums albumsScreen = new Albums();
+
+        //Recent recentScreen = new Recent();
+        //Favorite favoriteScreen = new Favorite();
+        //History historyScreen = new History();
+
+        //Playlist playlistScreen = new Playlist();
+        //Child__Playlist childPlaylistScreen = new Child__Playlist();
+        
         public Main__Screen()
         {
             InitializeComponent();
-            fpanelArtists.AutoScrollPosition = new Point(0, 0);
-            fpanelArtists.HorizontalScroll.Maximum = fpanelArtists.Width;
+            initMainScreen();
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnLeft_Click(object sender, EventArgs e)
+        private void initMainScreen()
         {
-            //int change = fpanelArtists.HorizontalScroll.Value + fpanelArtists.HorizontalScroll.SmallChange * 30;
-            //fpanelArtists.AutoScrollPosition = new Point(change, 0);
-
-            if (location - fpanelArtists.HorizontalScroll.SmallChange * 30 > 0)
-            {
-                location -= 30;
-                fpanelArtists.HorizontalScroll.Value = location;
-            }
-            //else
-            //{
-            //    location = 0;
-            //    fpanelArtists.AutoScrollPosition = new Point(location, 0);
-            //}
+            btnHome.Checked = true;
+            panelMainScreen.Tag = homeScreen;
+        }
+        private void showPanel(Panel panel, UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            userControl.Visible = true;
+            panel.Controls.Add(userControl);
+            panel.Tag = userControl;
         }
 
-        private void btnRight_Click(object sender, EventArgs e)
+        private void changeVerticalLine(Control Vline, Control button)
         {
-            //int change = fpanelArtists.HorizontalScroll.Value - fpanelArtists.HorizontalScroll.SmallChange * 30;
-            //fpanelArtists.AutoScrollPosition = new Point(change, 0); 
-            if ((location + fpanelArtists.HorizontalScroll.SmallChange * 30) < fpanelArtists.HorizontalScroll.Maximum)
-            {
-                location += 30;
-                fpanelArtists.HorizontalScroll.Value = location;
-            }
-            //else
-            //{
-            //    location = fpanelArtists.HorizontalScroll.Maximum;
-            //    fpanelArtists.AutoScrollPosition = new Point(location, 0);
-            //}
+            int LocationX = Vline.Location.X;
+            int LocationY = button.Location.Y;
+            Vline.Location = new Point(LocationX, LocationY);
         }
 
+        #region HOME
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            changeVerticalLine(VerticalLine, btnHome);
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            showPanel(panelMainScreen, homeScreen);
+        }
         private void btnSongs_Click(object sender, EventArgs e)
         {
-            if (this.panelMainScreen.Controls.Count > 0)
-                this.panelMainScreen.Controls.Clear();           
-            Songs test = new Songs();
-            test.Dock = DockStyle.Fill;
-            this.panelMainScreen.Controls.Add(test);
+            changeVerticalLine(VerticalLine, btnSongs);
+            Console.WriteLine(panelMainScreen.Tag.ToString());
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            //showPanel(panelMainScreen, songsScreen);
+            showPanel(panelMainScreen, Navigation.Instance.songsScreen);
         }
+        private void btnAlbums_Click(object sender, EventArgs e)
+        {
+            changeVerticalLine(VerticalLine, btnAlbums);
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            //showPanel(panelMainScreen, recentScreen);
+            showPanel(panelMainScreen, Navigation.Instance.recentScreen);
+        }
+
+        #endregion
+
+        #region LIBRARY
 
         private void btnRecent_Click(object sender, EventArgs e)
         {
-            if (this.panelMainScreen.Controls.Count > 0)
-                this.panelMainScreen.Controls.Clear();
-            Recent test = new Recent();
-            test.Dock = DockStyle.Fill;
-            this.panelMainScreen.Controls.Add(test);
+            changeVerticalLine(VerticalLine, btnRecent);
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            //showPanel(panelMainScreen, recentScreen);
+            showPanel(panelMainScreen, Navigation.Instance.recentScreen);
         }
+        private void btnFavorite_Click(object sender, EventArgs e)
+        {
+            changeVerticalLine(VerticalLine, btnFavorite);
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            //showPanel(panelMainScreen, favoriteScreen);
+            showPanel(panelMainScreen, Navigation.Instance.favoriteScreen);
+        }
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            changeVerticalLine(VerticalLine, btnHistory);
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            //showPanel(panelMainScreen, historyScreen);
+            showPanel(panelMainScreen, Navigation.Instance.historyScreen);
+        }
+
+        #endregion
+
+        #region PLAYLIST
+
+        private void btnPlaylist_Click(object sender, EventArgs e)
+        {
+            changeVerticalLine(VerticalLine, btnPlaylist);
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            //showPanel(panelMainScreen, playlistScreen);
+            showPanel(panelMainScreen, Navigation.Instance.playlistScreen);
+        }
+
+        private void btnCreatePlaylist_Click(object sender, EventArgs e)
+        {
+            changeVerticalLine(VerticalLine, btnCreatePlaylist);
+            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            currentScreen.Visible = false;
+
+            //showPanel(panelMainScreen, childPlaylistScreen);
+            showPanel(panelMainScreen, Navigation.Instance.childPlaylistScreen);
+        }
+
+        #endregion
     }
 }
