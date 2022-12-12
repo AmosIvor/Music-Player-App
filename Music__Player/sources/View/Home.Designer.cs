@@ -45,8 +45,8 @@
             this.lblTitlePlaying = new System.Windows.Forms.Label();
             this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnRepeat = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnSkip = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.sliderTimeMusic = new Guna.UI2.WinForms.Guna2TrackBar();
             this.label12 = new System.Windows.Forms.Label();
@@ -172,8 +172,8 @@
             this.pnlSongPlaying.Controls.Add(this.lblTitlePlaying);
             this.pnlSongPlaying.Controls.Add(this.guna2ImageButton5);
             this.pnlSongPlaying.Controls.Add(this.guna2ImageButton1);
-            this.pnlSongPlaying.Controls.Add(this.guna2ImageButton4);
-            this.pnlSongPlaying.Controls.Add(this.guna2ImageButton3);
+            this.pnlSongPlaying.Controls.Add(this.btnRepeat);
+            this.pnlSongPlaying.Controls.Add(this.btnSkip);
             this.pnlSongPlaying.Controls.Add(this.btnPlay);
             this.pnlSongPlaying.Controls.Add(this.sliderTimeMusic);
             this.pnlSongPlaying.FillColor = System.Drawing.Color.White;
@@ -284,12 +284,13 @@
             this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
             this.guna2ImageButton5.CheckedState.Parent = this.guna2ImageButton5;
             this.guna2ImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(38, 38);
             this.guna2ImageButton5.HoverState.Parent = this.guna2ImageButton5;
             this.guna2ImageButton5.Image = global::Music__Player.Properties.Resources.icon_start_blue;
             this.guna2ImageButton5.ImageSize = new System.Drawing.Size(34, 34);
             this.guna2ImageButton5.Location = new System.Drawing.Point(142, 376);
             this.guna2ImageButton5.Name = "guna2ImageButton5";
+            this.guna2ImageButton5.PressedState.ImageSize = new System.Drawing.Size(34, 34);
             this.guna2ImageButton5.PressedState.Parent = this.guna2ImageButton5;
             this.guna2ImageButton5.Size = new System.Drawing.Size(45, 45);
             this.guna2ImageButton5.TabIndex = 3;
@@ -297,50 +298,55 @@
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(34, 34);
             this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Image = global::Music__Player.Properties.Resources.icon_shuffle_blue;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageButton1.Location = new System.Drawing.Point(394, 376);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Size = new System.Drawing.Size(45, 45);
             this.guna2ImageButton1.TabIndex = 3;
             // 
-            // guna2ImageButton4
+            // btnRepeat
             // 
-            this.guna2ImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton4.CheckedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Image = global::Music__Player.Properties.Resources.icon_repeat_blue;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(64, 376);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Size = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton4.TabIndex = 3;
+            this.btnRepeat.BackColor = System.Drawing.Color.Transparent;
+            this.btnRepeat.CheckedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRepeat.CheckedState.Parent = this.btnRepeat;
+            this.btnRepeat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRepeat.HoverState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnRepeat.HoverState.Parent = this.btnRepeat;
+            this.btnRepeat.Image = global::Music__Player.Properties.Resources.icon_repeat_blue;
+            this.btnRepeat.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRepeat.Location = new System.Drawing.Point(64, 376);
+            this.btnRepeat.Name = "btnRepeat";
+            this.btnRepeat.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnRepeat.PressedState.Parent = this.btnRepeat;
+            this.btnRepeat.Size = new System.Drawing.Size(45, 45);
+            this.btnRepeat.TabIndex = 3;
+            this.btnRepeat.Click += new System.EventHandler(this.btnRepeat_Click);
             // 
-            // guna2ImageButton3
+            // btnSkip
             // 
-            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton3.CheckedState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton3.HoverState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Image = global::Music__Player.Properties.Resources.icon_end_blue;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(313, 376);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Size = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton3.TabIndex = 3;
+            this.btnSkip.BackColor = System.Drawing.Color.Transparent;
+            this.btnSkip.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnSkip.CheckedState.Parent = this.btnSkip;
+            this.btnSkip.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSkip.HoverState.ImageSize = new System.Drawing.Size(38, 38);
+            this.btnSkip.HoverState.Parent = this.btnSkip;
+            this.btnSkip.Image = global::Music__Player.Properties.Resources.icon_end_blue;
+            this.btnSkip.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnSkip.Location = new System.Drawing.Point(313, 376);
+            this.btnSkip.Name = "btnSkip";
+            this.btnSkip.PressedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnSkip.PressedState.Parent = this.btnSkip;
+            this.btnSkip.Size = new System.Drawing.Size(45, 45);
+            this.btnSkip.TabIndex = 3;
+            this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
             // 
             // btnPlay
             // 
@@ -355,9 +361,11 @@
             this.btnPlay.ImageSize = new System.Drawing.Size(55, 55);
             this.btnPlay.Location = new System.Drawing.Point(219, 366);
             this.btnPlay.Name = "btnPlay";
+            this.btnPlay.PressedState.ImageSize = new System.Drawing.Size(55, 55);
             this.btnPlay.PressedState.Parent = this.btnPlay;
             this.btnPlay.Size = new System.Drawing.Size(65, 65);
             this.btnPlay.TabIndex = 3;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // sliderTimeMusic
             // 
@@ -630,8 +638,8 @@
         private System.Windows.Forms.Label lblTitlePlaying;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton btnRepeat;
+        private Guna.UI2.WinForms.Guna2ImageButton btnSkip;
         private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
         private Guna.UI2.WinForms.Guna2TrackBar sliderTimeMusic;
         private System.Windows.Forms.Label label12;

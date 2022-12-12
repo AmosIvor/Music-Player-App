@@ -100,7 +100,7 @@
     <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
     <Compile Include="sources\DTO\HomeDTO\Song__Playing.cs" />
     <Compile Include="sources\Navigation\Navigate.cs" />
-    <Compile Include="sources\Play__Music\Media__Player.cs" />
+    <Compile Include="sources\MediaPlayer\Media__Player.cs" />
     <Compile Include="sources\View\Albums.cs">
       <SubType>UserControl</SubType>
     </Compile>

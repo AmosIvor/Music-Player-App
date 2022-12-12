@@ -143,6 +143,8 @@ namespace Music__Player.sources.Custom
 
                 if (isSelected == true)
                 {
+                    lblNumber.Visible = false;
+
                     btnPlay.Checked = true;
 
                     pnlBackground.FillColor = SystemColors.Info;

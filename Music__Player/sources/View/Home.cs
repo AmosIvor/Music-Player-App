@@ -354,6 +354,52 @@ namespace Music__Player.sources.View
         {
             Media__Player.Instance.SliderTimeMusicScroll(sliderTimeMusic);
         }
-        #endregion 
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            Media__Player.Instance.btnPlay_Click(btnPlay);
+        }
+        private void btnRepeat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (fpanelSongs.Tag != null)
+                {
+                    Info__Song__Panel curr = (Info__Song__Panel)fpanelSongs.Tag;
+
+                    Media__Player.Instance.RunMP3(curr.URL, timerMusic);
+                }
+            }
+            catch { }
+        }
+
+
+        #endregion
+
+        private void btnSkip_Click(object sender, EventArgs e)
+        {
+            Info__Song__Panel selected = fpanelSongs.Controls.OfType<Info__Song__Panel>().FirstOrDefault(c => c.IsSelected);
+
+            selected.IsSelected = false;
+
+            selected.IsHovered = false;
+
+            int currIndex = fpanelSongs.Controls.GetChildIndex(selected) + 1;
+
+            Console.WriteLine(currIndex.ToString());
+
+            string nextIndex = Info__Song__Panel__DAO.Instance.ConvertID(++currIndex);
+
+            Console.WriteLine(nextIndex.ToString());
+
+            Info__Song__Panel next = fpanelSongs.Controls.OfType<Info__Song__Panel>().FirstOrDefault(c => c.ID == nextIndex);
+
+            next.IsSelected = true;
+
+            Media__Player.Instance.RunMP3(next.URL, timerMusic);
+
+            Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(next, pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
+
+            fpanelSongs.Tag = next;
+        }
     }
 }
