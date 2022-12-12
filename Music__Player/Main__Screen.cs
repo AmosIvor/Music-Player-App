@@ -68,5 +68,14 @@ namespace Music__Player
             test.Dock = DockStyle.Fill;
             this.panelMainScreen.Controls.Add(test);
         }
+
+        private void btnRecent_Click(object sender, EventArgs e)
+        {
+            if (this.panelMainScreen.Controls.Count > 0)
+                this.panelMainScreen.Controls.Clear();
+            Recent test = new Recent();
+            test.Dock = DockStyle.Fill;
+            this.panelMainScreen.Controls.Add(test);
+        }
     }
 }

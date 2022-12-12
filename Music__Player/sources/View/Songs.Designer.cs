@@ -60,6 +60,7 @@
             this.slide41 = new Music__Player.sources.Custom.slide4();
             this.slide21 = new Music__Player.sources.Custom.slide2();
             this.slide11 = new Music__Player.sources.Custom.slide1();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewListSongs)).BeginInit();
             this.slideBtnLayoutPanel.SuspendLayout();
@@ -94,27 +95,34 @@
             // 
             this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
             this.guna2ImageButton1.ImageSize = new System.Drawing.Size(26, 26);
             this.guna2ImageButton1.Location = new System.Drawing.Point(88, 26);
             this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(26, 26);
             this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Size = new System.Drawing.Size(44, 44);
             this.guna2ImageButton1.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.guna2ImageButton1, "Go forward");
             // 
             // guna2ImageButton2
             // 
+            this.guna2ImageButton2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.guna2ImageButton2.CheckedState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2ImageButton2.HoverState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
             this.guna2ImageButton2.ImageSize = new System.Drawing.Size(26, 26);
             this.guna2ImageButton2.Location = new System.Drawing.Point(38, 26);
             this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(26, 26);
             this.guna2ImageButton2.PressedState.Parent = this.guna2ImageButton2;
             this.guna2ImageButton2.Size = new System.Drawing.Size(44, 44);
             this.guna2ImageButton2.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.guna2ImageButton2, "Go Back");
             // 
             // guna2TextBox1
             // 
@@ -378,7 +386,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 10000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
@@ -474,5 +482,6 @@
         private Custom.slide1 slide11;
         private Custom.slide4 slide41;
         private Custom.slide3 slide31;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

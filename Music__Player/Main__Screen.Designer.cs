@@ -594,6 +594,7 @@
             this.btnRecent.Text = "Recent";
             this.btnRecent.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRecent.TextOffset = new System.Drawing.Point(47, 0);
+            this.btnRecent.Click += new System.EventHandler(this.btnRecent_Click);
             // 
             // btnSongs
             // 
