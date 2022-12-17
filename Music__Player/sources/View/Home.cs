@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using Guna.UI2.WinForms;
 using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
+using WMPLib;
+using System.Threading;
 
 namespace Music__Player.sources.View
 {
@@ -20,6 +22,8 @@ namespace Music__Player.sources.View
         private Panel fpSongHover = new Panel();
 
         private Panel fpArtistHover = new Panel();
+
+        private bool isClicked = false;
         
         public Home()
         {
@@ -41,6 +45,8 @@ namespace Music__Player.sources.View
             fpanelSongs.Controls.Clear();
 
             List<Info__Song__Panel> listSong = Info__Song__Panel__DAO.Instance.GetListInfoSongPanel();
+
+            Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(listSong[0], pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             int id = 1;
 
@@ -372,10 +378,7 @@ namespace Music__Player.sources.View
             catch { }
         }
 
-
-        #endregion
-
-        private void btnSkip_Click(object sender, EventArgs e)
+        void NextSong()
         {
             Info__Song__Panel selected = fpanelSongs.Controls.OfType<Info__Song__Panel>().FirstOrDefault(c => c.IsSelected);
 
@@ -385,11 +388,16 @@ namespace Music__Player.sources.View
 
             int currIndex = fpanelSongs.Controls.GetChildIndex(selected) + 1;
 
-            Console.WriteLine(currIndex.ToString());
-
             string nextIndex = Info__Song__Panel__DAO.Instance.ConvertID(++currIndex);
 
-            Console.WriteLine(nextIndex.ToString());
+            if (Convert.ToInt32(nextIndex) == fpanelSongs.Controls.Count + 1)
+            {
+                nextIndex = "01";
+
+                fpanelSongs.VerticalScroll.Value = 0;
+
+                fpanelSongs.VerticalScroll.Value = 0;
+            }
 
             Info__Song__Panel next = fpanelSongs.Controls.OfType<Info__Song__Panel>().FirstOrDefault(c => c.ID == nextIndex);
 
@@ -400,6 +408,66 @@ namespace Music__Player.sources.View
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(next, pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             fpanelSongs.Tag = next;
+
+            fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(nextIndex) - 1) * 100;
+
+            fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(nextIndex) - 1) * 100;
         }
+        private void btnSkip_Click(object sender, EventArgs e)
+        {
+            NextSong();
+        }
+
+        #endregion
+
+        #region HandleExit
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
+        private void btnAddPlaylist_Click(object sender, EventArgs e)
+        {
+            //if (isClicked == false)
+            //{
+            //    Dropdown__Playlist dropdownPlaylist = new Dropdown__Playlist();
+
+            //    pnlTest.Controls.Add(dropdownPlaylist);
+
+            //    //dropdownPlaylist.Dock = DockStyle.Fill;
+
+            //    pnlTest.Visible = true;
+
+            //    pnlTest.BringToFront();
+
+            //    dropdownPlaylist.Location = new Point(0, 0);
+
+            //    isClicked = true;
+
+            //    return;
+            //}
+
+            //pnlTest.Visible = false;
+
+            //isClicked = false;
+
+
+
+            if (isClicked == false)
+            {
+                Dropdown__Playlist__DAO.Instance.ShowDropDownPlaylist(panelHome, 513, 470);
+
+                isClicked = true;
+
+                return;
+            }
+
+            isClicked = false;
+
+            Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
+        }
+
     }
 }
