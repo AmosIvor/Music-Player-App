@@ -70,6 +70,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="sources\Constant\ICON.cs" />
+    <Compile Include="sources\Custom\Dropdown__Playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Dropdown__Playlist.Designer.cs">
+      <DependentUpon>Dropdown__Playlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\Info__Playlist__Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -88,16 +95,37 @@
     <Compile Include="sources\Custom\Artist__Panel.Designer.cs">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\Custom\Name__Playlist__Panel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Name__Playlist__Panel.Designer.cs">
+      <DependentUpon>Name__Playlist__Panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\Custom\Name__Playlist__Button.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Name__Playlist__Button.Designer.cs">
+      <DependentUpon>Name__Playlist__Button.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\Playlist__Add__Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="sources\Custom\Playlist__Add__Panel.Designer.cs">
       <DependentUpon>Playlist__Add__Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\Custom\Popup__Create__Playlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Popup__Create__Playlist.Designer.cs">
+      <DependentUpon>Popup__Create__Playlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\DAO\CustomDAO\Artist__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Dropdown__Playlist__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Info__Song__Panel__DAO.cs" />
-    <Compile Include="sources\DAO\DataProviderDAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\SQLConnection\DataProviderDAO.cs" />
     <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Button__DAO.cs" />
     <Compile Include="sources\DTO\HomeDTO\Song__Playing.cs" />
     <Compile Include="sources\Navigation\Navigate.cs" />
     <Compile Include="sources\MediaPlayer\Media__Player.cs" />
@@ -159,14 +187,26 @@
     <EmbeddedResource Include="sources\Custom\Artist__Panel.resx">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Dropdown__Playlist.resx">
+      <DependentUpon>Dropdown__Playlist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Info__Playlist__Panel.resx">
       <DependentUpon>Info__Playlist__Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Info__Song__Panel.resx">
       <DependentUpon>Info__Song__Panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Name__Playlist__Button.resx">
+      <DependentUpon>Name__Playlist__Button.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Name__Playlist__Panel.resx">
+      <DependentUpon>Name__Playlist__Panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Playlist__Add__Panel.resx">
       <DependentUpon>Playlist__Add__Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Popup__Create__Playlist.resx">
+      <DependentUpon>Popup__Create__Playlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\View\Albums.resx">
       <DependentUpon>Albums.cs</DependentUpon>
@@ -333,7 +373,7 @@
     <None Include="Resources\icon_createplaylist_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="sources\Constant\" />
+    <None Include="Resources\icon_add_playlist_black.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\leftArrow.png" />
@@ -381,6 +421,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_play_blue_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_playlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_playlist_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_power_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_playlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sources\DAO\MainScreenDAO\" />
+    <Folder Include="sources\DAO\PlaylistDAO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_name_playlist_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
