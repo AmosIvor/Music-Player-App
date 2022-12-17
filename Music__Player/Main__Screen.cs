@@ -1,4 +1,6 @@
-﻿using Music__Player.sources.Custom;
+﻿using Guna.UI2.WinForms;
+using Music__Player.sources.Custom;
+using Music__Player.sources.DAO.MainScreenDAO;
 using Music__Player.sources.Navigate;
 using Music__Player.sources.View;
 using System;
@@ -24,23 +26,120 @@ namespace Music__Player
 
         //Playlist playlistScreen = new Playlist();
         //Child__Playlist childPlaylistScreen = new Child__Playlist();
-        
+        FlowLayoutPanel fpnlHoverPlaylist = new FlowLayoutPanel();
         public Main__Screen()
         {
             InitializeComponent();
-            initMainScreen();
+
+            LoadMainScreen();
         }
+
+        #region Handle EXIT
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void initMainScreen()
+        #endregion
+
+
+        void LoadMainScreen()
         {
             btnHome.Checked = true;
+
             panelMainScreen.Tag = homeScreen;
+
+            LoadMenuBarPlaylists();
+
         }
-        private void showPanel(Panel panel, UserControl userControl)
+
+        void LoadMenuBarPlaylists()
+        {
+            fpnlPlaylists.Controls.Clear();
+
+            List<Name__Playlist__Button> listNamePlaylist = Name__Playlist__Button__DAO.Instance.GetListNamePlaylist();
+
+            foreach (Name__Playlist__Button namePlaylist in listNamePlaylist)
+            {
+                namePlaylist.MouseClickAdd += namePlaylist_MouseClickAdd;
+
+                namePlaylist.MouseEnterAdd += namePlaylist_MouseEnterAdd;
+
+                namePlaylist.MouseLeaveAdd += namePlaylist_MouseLeaveAdd;
+
+                fpnlPlaylists.Controls.Add(namePlaylist);
+            }
+        }
+
+        private void namePlaylist_MouseClickAdd(object sender, MouseEventArgs e)
+        {
+            if (fpnlPlaylists.Tag != null)
+            {
+                Name__Playlist__Button prev = (Name__Playlist__Button)fpnlPlaylists.Tag;
+
+                prev.IsSelected = false;
+            }
+
+            if (sender is Label || sender is Guna2ImageButton)
+            {
+                Name__Playlist__Button namePlaylistInside = Name__Playlist__Button__DAO.Instance.GetNamePlaylistButtonFromControl(sender);
+
+                namePlaylistInside.IsSelected = true;
+
+                fpnlPlaylists.Tag = namePlaylistInside;
+
+                return;
+            }
+            Name__Playlist__Button namePlaylistOutside = (Name__Playlist__Button)sender;
+
+            namePlaylistOutside.IsSelected = true;
+
+            fpnlPlaylists.Tag = namePlaylistOutside;
+        }
+
+        private void namePlaylist_MouseEnterAdd(object sender, EventArgs e)
+        {
+            if (fpnlHoverPlaylist.Tag != null)
+            {
+                Name__Playlist__Button prev = (Name__Playlist__Button)fpnlHoverPlaylist.Tag;
+
+                prev.IsHovered = false;
+            }
+
+            if (sender is Label || sender is Guna2ImageButton)
+            {
+                Name__Playlist__Button namePlaylistInside = Name__Playlist__Button__DAO.Instance.GetNamePlaylistButtonFromControl(sender);
+
+                namePlaylistInside.IsHovered = true;
+
+                fpnlHoverPlaylist.Tag = namePlaylistInside;
+
+                return;
+            }
+            Name__Playlist__Button namePlaylistOutside = (Name__Playlist__Button)sender;
+
+            namePlaylistOutside.IsHovered = true;
+
+            fpnlHoverPlaylist.Tag = namePlaylistOutside;
+        }
+
+        private void namePlaylist_MouseLeaveAdd(object sender, EventArgs e)
+        {
+            if (sender is Label || sender is Guna2ImageButton)
+            {
+                Name__Playlist__Button namePlaylistInside = Name__Playlist__Button__DAO.Instance.GetNamePlaylistButtonFromControl(sender);
+
+                namePlaylistInside.IsHovered = false;
+
+                return;
+            }
+            Name__Playlist__Button namePlaylistOutside = (Name__Playlist__Button)sender;
+
+            namePlaylistOutside.IsHovered = true;
+        }
+
+        void showPanel(Panel panel, UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             userControl.Visible = true;
@@ -142,5 +241,10 @@ namespace Music__Player
         }
 
         #endregion
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
