@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Music__Player.sources.Custom;
+using Music__Player.sources.DAO.SongDAO;
 
 namespace Music__Player.sources.View
 {
@@ -17,6 +19,7 @@ namespace Music__Player.sources.View
         {
             InitializeComponent();
             UserControl.CheckForIllegalCrossThreadCalls = false;
+            Load_Display_Song();
         }
         private void LoadNextSlide()
         {
@@ -53,5 +56,21 @@ namespace Music__Player.sources.View
             thread.Start();
         }
 
+        private void Songs_Load(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel1.WrapContents = false;
+            flowLayoutPanel1.AutoScroll = true;
+        }
+
+        private void Load_Display_Song()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            List<Songs_Display> listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay();
+            foreach(Songs_Display song in listSongDisplay)
+            {
+
+            }
+        }
     }
 }

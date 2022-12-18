@@ -30,10 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Songs));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblEnd = new System.Windows.Forms.Label();
+            this.lblStart = new System.Windows.Forms.Label();
+            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.sliderTimeMusic = new Guna.UI2.WinForms.Guna2TrackBar();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -46,13 +51,6 @@
             this.RadioBtn2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.RadioBtn3 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.RadioBtn1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.datagridviewListSongs = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slideBtnLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -61,22 +59,151 @@
             this.slide21 = new Music__Player.sources.Custom.slide2();
             this.slide11 = new Music__Player.sources.Custom.slide1();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.songs_Display1 = new Music__Player.sources.Custom.Songs_Display();
+            this.songs_Display2 = new Music__Player.sources.Custom.Songs_Display();
+            this.songs_Display3 = new Music__Player.sources.Custom.Songs_Display();
+            this.songs_Display4 = new Music__Player.sources.Custom.Songs_Display();
+            this.songs_Display5 = new Music__Player.sources.Custom.Songs_Display();
+            this.songs_Display6 = new Music__Player.sources.Custom.Songs_Display();
+            this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewListSongs)).BeginInit();
             this.slideBtnLayoutPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.lblEnd);
+            this.guna2Panel1.Controls.Add(this.lblStart);
+            this.guna2Panel1.Controls.Add(this.guna2ImageButton5);
+            this.guna2Panel1.Controls.Add(this.guna2ImageButton3);
+            this.guna2Panel1.Controls.Add(this.guna2ImageButton4);
+            this.guna2Panel1.Controls.Add(this.guna2ImageButton6);
+            this.guna2Panel1.Controls.Add(this.btnPlay);
+            this.guna2Panel1.Controls.Add(this.sliderTimeMusic);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 865);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 868);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1359, 100);
+            this.guna2Panel1.Size = new System.Drawing.Size(1359, 97);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // lblEnd
+            // 
+            this.lblEnd.AutoSize = true;
+            this.lblEnd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnd.Location = new System.Drawing.Point(1312, 6);
+            this.lblEnd.Name = "lblEnd";
+            this.lblEnd.Size = new System.Drawing.Size(44, 20);
+            this.lblEnd.TabIndex = 11;
+            this.lblEnd.Text = "05:20";
+            // 
+            // lblStart
+            // 
+            this.lblStart.AutoSize = true;
+            this.lblStart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStart.Location = new System.Drawing.Point(3, 6);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(44, 20);
+            this.lblStart.TabIndex = 12;
+            this.lblStart.Text = "00:00";
+            // 
+            // guna2ImageButton5
+            // 
+            this.guna2ImageButton5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton5.CheckedState.Parent = this.guna2ImageButton5;
+            this.guna2ImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton5.HoverState.Parent = this.guna2ImageButton5;
+            this.guna2ImageButton5.Image = global::Music__Player.Properties.Resources.icon_start_blue;
+            this.guna2ImageButton5.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton5.Location = new System.Drawing.Point(547, 37);
+            this.guna2ImageButton5.Name = "guna2ImageButton5";
+            this.guna2ImageButton5.PressedState.Parent = this.guna2ImageButton5;
+            this.guna2ImageButton5.Size = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton5.TabIndex = 6;
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton3.CheckedState.Parent = this.guna2ImageButton3;
+            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton3.HoverState.Parent = this.guna2ImageButton3;
+            this.guna2ImageButton3.Image = global::Music__Player.Properties.Resources.icon_shuffle_blue;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(885, 37);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
+            this.guna2ImageButton3.Size = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton3.TabIndex = 7;
+            // 
+            // guna2ImageButton4
+            // 
+            this.guna2ImageButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton4.CheckedState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.Image = global::Music__Player.Properties.Resources.icon_repeat_blue;
+            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton4.Location = new System.Drawing.Point(443, 37);
+            this.guna2ImageButton4.Name = "guna2ImageButton4";
+            this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
+            this.guna2ImageButton4.Size = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton4.TabIndex = 8;
+            // 
+            // guna2ImageButton6
+            // 
+            this.guna2ImageButton6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton6.CheckedState.Parent = this.guna2ImageButton6;
+            this.guna2ImageButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton6.HoverState.Parent = this.guna2ImageButton6;
+            this.guna2ImageButton6.Image = global::Music__Player.Properties.Resources.icon_end_blue;
+            this.guna2ImageButton6.ImageSize = new System.Drawing.Size(34, 34);
+            this.guna2ImageButton6.Location = new System.Drawing.Point(782, 37);
+            this.guna2ImageButton6.Name = "guna2ImageButton6";
+            this.guna2ImageButton6.PressedState.Parent = this.guna2ImageButton6;
+            this.guna2ImageButton6.Size = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton6.TabIndex = 9;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.CheckedState.Image = global::Music__Player.Properties.Resources.icon_play_blue;
+            this.btnPlay.CheckedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.btnPlay.CheckedState.Parent = this.btnPlay;
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay.HoverState.ImageSize = new System.Drawing.Size(65, 65);
+            this.btnPlay.HoverState.Parent = this.btnPlay;
+            this.btnPlay.Image = global::Music__Player.Properties.Resources.icon_pause_blue;
+            this.btnPlay.ImageSize = new System.Drawing.Size(55, 55);
+            this.btnPlay.Location = new System.Drawing.Point(651, 29);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.btnPlay.PressedState.Parent = this.btnPlay;
+            this.btnPlay.Size = new System.Drawing.Size(71, 60);
+            this.btnPlay.TabIndex = 10;
+            // 
+            // sliderTimeMusic
+            // 
+            this.sliderTimeMusic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sliderTimeMusic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.sliderTimeMusic.HoverState.Parent = this.sliderTimeMusic;
+            this.sliderTimeMusic.Location = new System.Drawing.Point(53, 3);
+            this.sliderTimeMusic.Name = "sliderTimeMusic";
+            this.sliderTimeMusic.Size = new System.Drawing.Size(1253, 23);
+            this.sliderTimeMusic.TabIndex = 5;
+            this.sliderTimeMusic.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             // 
             // guna2Panel2
             // 
@@ -254,124 +381,6 @@
             this.RadioBtn1.UncheckedState.Parent = this.RadioBtn1;
             this.RadioBtn1.Click += new System.EventHandler(this.RadioBtn1_CheckedChanged);
             // 
-            // datagridviewListSongs
-            // 
-            this.datagridviewListSongs.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datagridviewListSongs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.datagridviewListSongs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.datagridviewListSongs.BackgroundColor = System.Drawing.Color.White;
-            this.datagridviewListSongs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datagridviewListSongs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datagridviewListSongs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagridviewListSongs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.datagridviewListSongs.ColumnHeadersHeight = 50;
-            this.datagridviewListSongs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagridviewListSongs.DefaultCellStyle = dataGridViewCellStyle3;
-            this.datagridviewListSongs.EnableHeadersVisualStyles = false;
-            this.datagridviewListSongs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewListSongs.Location = new System.Drawing.Point(38, 422);
-            this.datagridviewListSongs.Name = "datagridviewListSongs";
-            this.datagridviewListSongs.RowHeadersVisible = false;
-            this.datagridviewListSongs.RowHeadersWidth = 51;
-            this.datagridviewListSongs.RowTemplate.Height = 50;
-            this.datagridviewListSongs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.datagridviewListSongs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridviewListSongs.Size = new System.Drawing.Size(1277, 437);
-            this.datagridviewListSongs.TabIndex = 6;
-            this.datagridviewListSongs.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.datagridviewListSongs.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewListSongs.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.datagridviewListSongs.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.datagridviewListSongs.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.datagridviewListSongs.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.datagridviewListSongs.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewListSongs.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewListSongs.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.datagridviewListSongs.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.datagridviewListSongs.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.datagridviewListSongs.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.datagridviewListSongs.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.datagridviewListSongs.ThemeStyle.HeaderStyle.Height = 50;
-            this.datagridviewListSongs.ThemeStyle.ReadOnly = false;
-            this.datagridviewListSongs.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.datagridviewListSongs.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.datagridviewListSongs.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.datagridviewListSongs.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.datagridviewListSongs.ThemeStyle.RowsStyle.Height = 50;
-            this.datagridviewListSongs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagridviewListSongs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.HeaderText = "#";
-            this.Column1.MinimumWidth = 50;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.HeaderText = "TITLE";
-            this.Column2.MinimumWidth = 320;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 320;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.HeaderText = "ARTIST";
-            this.Column3.MinimumWidth = 310;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 310;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.HeaderText = "ALBUM";
-            this.Column4.MinimumWidth = 320;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 320;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.HeaderText = "#";
-            this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Column5.MinimumWidth = 100;
-            this.Column5.Name = "Column5";
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "DURATION";
-            this.Column6.MinimumWidth = 150;
-            this.Column6.Name = "Column6";
-            // 
             // slideBtnLayoutPanel
             // 
             this.slideBtnLayoutPanel.Controls.Add(this.RadioBtn1);
@@ -433,22 +442,138 @@
             this.slide11.Size = new System.Drawing.Size(1126, 297);
             this.slide11.TabIndex = 0;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AllowDrop = true;
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.songs_Display1);
+            this.flowLayoutPanel1.Controls.Add(this.songs_Display2);
+            this.flowLayoutPanel1.Controls.Add(this.songs_Display3);
+            this.flowLayoutPanel1.Controls.Add(this.songs_Display4);
+            this.flowLayoutPanel1.Controls.Add(this.songs_Display5);
+            this.flowLayoutPanel1.Controls.Add(this.songs_Display6);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(88, 448);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1184, 414);
+            this.flowLayoutPanel1.TabIndex = 8;
+            // 
+            // songs_Display1
+            // 
+            this.songs_Display1.Album = null;
+            this.songs_Display1.Artist = null;
+            this.songs_Display1.BackColor = System.Drawing.Color.Transparent;
+            this.songs_Display1.Duration = null;
+            this.songs_Display1.Id = null;
+            this.songs_Display1.ImageSong = null;
+            this.songs_Display1.Location = new System.Drawing.Point(34, 3);
+            this.songs_Display1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.songs_Display1.Name = "songs_Display1";
+            this.songs_Display1.NameSong = null;
+            this.songs_Display1.Size = new System.Drawing.Size(1126, 84);
+            this.songs_Display1.TabIndex = 0;
+            this.songs_Display1.URL = null;
+            // 
+            // songs_Display2
+            // 
+            this.songs_Display2.Album = null;
+            this.songs_Display2.Artist = null;
+            this.songs_Display2.BackColor = System.Drawing.Color.Transparent;
+            this.songs_Display2.Duration = null;
+            this.songs_Display2.Id = null;
+            this.songs_Display2.ImageSong = null;
+            this.songs_Display2.Location = new System.Drawing.Point(34, 100);
+            this.songs_Display2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.songs_Display2.Name = "songs_Display2";
+            this.songs_Display2.NameSong = null;
+            this.songs_Display2.Size = new System.Drawing.Size(1126, 84);
+            this.songs_Display2.TabIndex = 1;
+            this.songs_Display2.URL = null;
+            // 
+            // songs_Display3
+            // 
+            this.songs_Display3.Album = null;
+            this.songs_Display3.Artist = null;
+            this.songs_Display3.BackColor = System.Drawing.Color.Transparent;
+            this.songs_Display3.Duration = null;
+            this.songs_Display3.Id = null;
+            this.songs_Display3.ImageSong = null;
+            this.songs_Display3.Location = new System.Drawing.Point(34, 197);
+            this.songs_Display3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.songs_Display3.Name = "songs_Display3";
+            this.songs_Display3.NameSong = null;
+            this.songs_Display3.Size = new System.Drawing.Size(1126, 84);
+            this.songs_Display3.TabIndex = 2;
+            this.songs_Display3.URL = null;
+            // 
+            // songs_Display4
+            // 
+            this.songs_Display4.Album = null;
+            this.songs_Display4.Artist = null;
+            this.songs_Display4.BackColor = System.Drawing.Color.Transparent;
+            this.songs_Display4.Duration = null;
+            this.songs_Display4.Id = null;
+            this.songs_Display4.ImageSong = null;
+            this.songs_Display4.Location = new System.Drawing.Point(34, 294);
+            this.songs_Display4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.songs_Display4.Name = "songs_Display4";
+            this.songs_Display4.NameSong = null;
+            this.songs_Display4.Size = new System.Drawing.Size(1126, 84);
+            this.songs_Display4.TabIndex = 3;
+            this.songs_Display4.URL = null;
+            // 
+            // songs_Display5
+            // 
+            this.songs_Display5.Album = null;
+            this.songs_Display5.Artist = null;
+            this.songs_Display5.BackColor = System.Drawing.Color.Transparent;
+            this.songs_Display5.Duration = null;
+            this.songs_Display5.Id = null;
+            this.songs_Display5.ImageSong = null;
+            this.songs_Display5.Location = new System.Drawing.Point(34, 391);
+            this.songs_Display5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.songs_Display5.Name = "songs_Display5";
+            this.songs_Display5.NameSong = null;
+            this.songs_Display5.Size = new System.Drawing.Size(1126, 84);
+            this.songs_Display5.TabIndex = 4;
+            this.songs_Display5.URL = null;
+            // 
+            // songs_Display6
+            // 
+            this.songs_Display6.Album = null;
+            this.songs_Display6.Artist = null;
+            this.songs_Display6.BackColor = System.Drawing.Color.Transparent;
+            this.songs_Display6.Duration = null;
+            this.songs_Display6.Id = null;
+            this.songs_Display6.ImageSong = null;
+            this.songs_Display6.Location = new System.Drawing.Point(34, 488);
+            this.songs_Display6.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
+            this.songs_Display6.Name = "songs_Display6";
+            this.songs_Display6.NameSong = null;
+            this.songs_Display6.Size = new System.Drawing.Size(1126, 84);
+            this.songs_Display6.TabIndex = 5;
+            this.songs_Display6.URL = null;
+            // 
             // Songs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.slideBtnLayoutPanel);
-            this.Controls.Add(this.datagridviewListSongs);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "Songs";
             this.Size = new System.Drawing.Size(1359, 965);
+            this.Load += new System.EventHandler(this.Songs_Load);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.datagridviewListSongs)).EndInit();
             this.slideBtnLayoutPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -467,13 +592,6 @@
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtn4;
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtn2;
         private Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtn3;
-        private Guna.UI2.WinForms.Guna2DataGridView datagridviewListSongs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewImageColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.FlowLayoutPanel slideBtnLayoutPanel;
         private Custom.slide1 userControl11;
         private System.Windows.Forms.Timer timer1;
@@ -483,5 +601,20 @@
         private Custom.slide4 slide41;
         private Custom.slide3 slide31;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private Custom.Songs_Display songs_Display1;
+        private Custom.Songs_Display songs_Display2;
+        private Custom.Songs_Display songs_Display3;
+        private Custom.Songs_Display songs_Display4;
+        private Custom.Songs_Display songs_Display5;
+        private Custom.Songs_Display songs_Display6;
+        private System.Windows.Forms.Label lblEnd;
+        private System.Windows.Forms.Label lblStart;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
+        private Guna.UI2.WinForms.Guna2TrackBar sliderTimeMusic;
     }
 }

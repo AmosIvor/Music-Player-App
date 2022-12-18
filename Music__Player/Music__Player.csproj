@@ -118,11 +118,19 @@
     <Compile Include="sources\Custom\Playlist__Add__Panel.Designer.cs">
       <DependentUpon>Playlist__Add__Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\Custom\Songs_Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Songs_Display.Designer.cs">
+      <DependentUpon>Songs_Display.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\DAO\CustomDAO\Artist__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Info__Song__Panel__DAO.cs" />
     <Compile Include="sources\DAO\DataProviderDAO.cs" />
     <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
+    <Compile Include="sources\DAO\SongDAO\SongDisplayDAO.cs" />
     <Compile Include="sources\DTO\HomeDTO\Song__Playing.cs" />
+    <Compile Include="sources\DTO\SongDTO\SongDisplayDTO.cs" />
     <Compile Include="sources\Navigation\Navigate.cs" />
     <Compile Include="sources\Play__Music\Media__Player.cs" />
     <Compile Include="sources\View\Albums.cs">
@@ -204,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Playlist__Add__Panel.resx">
       <DependentUpon>Playlist__Add__Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Songs_Display.resx">
+      <DependentUpon>Songs_Display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\View\Albums.resx">
       <DependentUpon>Albums.cs</DependentUpon>
