@@ -47,6 +47,8 @@ namespace Music__Player.sources.Custom
             pnlMain.MouseEnter += userControl_MouseEnter;
 
             pnlMain.MouseLeave += userControl_MouseLeave;
+
+            pnlMain.MouseClick += userControl_MouseClick;
         }
 
         private string name_Playlist;
@@ -94,6 +96,39 @@ namespace Music__Player.sources.Custom
                 else
                 {
                     pnlMain.FillColor = Color.FromArgb(20, 0, 0, 0);
+                }
+            }
+        }
+
+        private event MouseEventHandler _mouseClickAdd;
+
+        public event MouseEventHandler MouseClickAdd
+        {
+            add
+            {
+                this.Cursor = Cursors.Hand;
+
+                _mouseClickAdd += value;
+
+                foreach (Control control in pnlMain.Controls)
+                {
+                    control.MouseClick += value;
+
+                    control.Cursor = Cursors.Hand;
+                }
+            }
+
+            remove
+            {
+                this.Cursor = Cursors.Default;
+
+                _mouseClickAdd -= value;
+
+                foreach (Control control in pnlMain.Controls)
+                {
+                    control.MouseClick -= value;
+
+                    Cursor = Cursors.Default;
                 }
             }
         }
@@ -159,6 +194,10 @@ namespace Music__Player.sources.Custom
             _mouseLeaveAdd?.Invoke(sender, e);
         }
 
+        private void userControl_MouseClick(object sender, MouseEventArgs e)
+        {
+            _mouseClickAdd?.Invoke(sender, e);
+        }
         #endregion
 
     }

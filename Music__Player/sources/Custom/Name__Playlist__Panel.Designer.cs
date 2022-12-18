@@ -44,7 +44,7 @@
             this.pnlMain.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.ShadowDecoration.Parent = this.pnlMain;
-            this.pnlMain.Size = new System.Drawing.Size(287, 46);
+            this.pnlMain.Size = new System.Drawing.Size(265, 46);
             this.pnlMain.TabIndex = 0;
             // 
             // lblName
@@ -53,7 +53,7 @@
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(46, 6);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(223, 30);
+            this.lblName.Size = new System.Drawing.Size(215, 30);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Tran Tuan Vu";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -70,15 +70,15 @@
             this.btnImage.Size = new System.Drawing.Size(35, 35);
             this.btnImage.TabIndex = 0;
             // 
-            // Name__Playlist
+            // Name__Playlist__Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlMain);
             this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.Name = "Name__Playlist";
-            this.Size = new System.Drawing.Size(287, 46);
+            this.Name = "Name__Playlist__Panel";
+            this.Size = new System.Drawing.Size(265, 46);
             this.pnlMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
