@@ -69,7 +69,7 @@ namespace Music__Player.sources.View
             List<Songs_Display> listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay();
             foreach(Songs_Display song in listSongDisplay)
             {
-
+                flowLayoutPanel1.Controls.Add(song);
             }
         }
     }

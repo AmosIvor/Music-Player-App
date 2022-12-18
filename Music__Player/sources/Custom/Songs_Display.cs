@@ -32,7 +32,13 @@ namespace Music__Player.sources.Custom
             Duration = row["DURATION"].ToString() ;
             Album = row["NAME_ALBUM"].ToString();
             URL = row["LINK"].ToString();
+
+            if (row["ISFAVORITE"].ToString() == "False")           
+                IsSelectedFavorite = false;
+            else
+                IsSelectedFavorite = true;
         }
+
 
         private string id;
         public string Id
@@ -50,7 +56,10 @@ namespace Music__Player.sources.Custom
         {
             get { return imageSong; }
             set
-            { imageSong = value; }
+            {
+                imageSong = value;
+                pbImageSong.Image = imageSong;
+            }
         }
 
         private string nameSong;
@@ -103,6 +112,62 @@ namespace Music__Player.sources.Custom
         {
             get { return url; }
             set { url = value;}
+        }
+
+        private void Songs_Display_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            if (isSelectedFavorite == false) 
+                pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_green;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+            if (isSelectedFavorite == false)
+                pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_black;
+        }
+
+        private void HandleMouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+        private void HandleMouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private bool isSelectedFavorite;
+        private bool IsSelectedFavorite
+        {
+            get { return isSelectedFavorite; }
+            set
+            {
+                if (value == false)
+                {
+                    pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_black;
+                    isSelectedFavorite = false;
+                }
+                else
+                {
+                    pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_green;
+                    isSelectedFavorite = true;
+                }
+            }
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (IsSelectedFavorite == true)
+            {
+                IsSelectedFavorite = false;
+            }
+            else
+                isSelectedFavorite = true;
         }
     }
 }

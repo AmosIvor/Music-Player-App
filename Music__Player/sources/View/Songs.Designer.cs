@@ -197,13 +197,13 @@
             // sliderTimeMusic
             // 
             this.sliderTimeMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sliderTimeMusic.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
+            this.sliderTimeMusic.FillColor = System.Drawing.Color.Silver;
             this.sliderTimeMusic.HoverState.Parent = this.sliderTimeMusic;
             this.sliderTimeMusic.Location = new System.Drawing.Point(53, 3);
             this.sliderTimeMusic.Name = "sliderTimeMusic";
             this.sliderTimeMusic.Size = new System.Drawing.Size(1253, 23);
             this.sliderTimeMusic.TabIndex = 5;
-            this.sliderTimeMusic.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.sliderTimeMusic.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
             // guna2Panel2
             // 

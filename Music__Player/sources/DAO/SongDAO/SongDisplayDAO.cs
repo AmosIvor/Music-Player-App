@@ -28,8 +28,10 @@ namespace Music__Player.sources.DAO.SongDAO
         public List<Songs_Display> GetListSongDisplay()
         {
             List<Songs_Display> listSong = new List<Songs_Display>();
-            string query = "SELECT ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM\r\nFROM SONG, ALBUMS\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM\r\n";
+            string query = "SELECT SONG.ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM, ISFAVORITE\r\nFROM SONG, ALBUMS, FAVORITES\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM AND SONG.ID_ALBUM = FAVORITES.ID_SONG";
+            
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
+            
             foreach (DataRow row in data.Rows) 
             {
                 Songs_Display songDisplay = new Songs_Display(row);
