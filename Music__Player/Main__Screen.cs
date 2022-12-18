@@ -32,7 +32,10 @@ namespace Music__Player
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn có muốn thoát khỏi ứng dụng", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void initMainScreen()
