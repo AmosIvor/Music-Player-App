@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.ShadowPanelSong = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbAlbum = new System.Windows.Forms.Label();
             this.lbTimeSong = new System.Windows.Forms.Label();
@@ -36,30 +36,31 @@
             this.lbNameSong = new System.Windows.Forms.Label();
             this.pbImageSong = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbId = new System.Windows.Forms.Label();
-            this.guna2ShadowPanel1.SuspendLayout();
+            this.ShadowPanelSong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageSong)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2ShadowPanel1
+            // ShadowPanelSong
             // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.pictureBox1);
-            this.guna2ShadowPanel1.Controls.Add(this.lbAlbum);
-            this.guna2ShadowPanel1.Controls.Add(this.lbTimeSong);
-            this.guna2ShadowPanel1.Controls.Add(this.lbArtist);
-            this.guna2ShadowPanel1.Controls.Add(this.lbNameSong);
-            this.guna2ShadowPanel1.Controls.Add(this.pbImageSong);
-            this.guna2ShadowPanel1.Controls.Add(this.lbId);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1123, 81);
-            this.guna2ShadowPanel1.TabIndex = 8;
-            this.guna2ShadowPanel1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.guna2ShadowPanel1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.ShadowPanelSong.BackColor = System.Drawing.Color.Transparent;
+            this.ShadowPanelSong.Controls.Add(this.pictureBox1);
+            this.ShadowPanelSong.Controls.Add(this.lbAlbum);
+            this.ShadowPanelSong.Controls.Add(this.lbTimeSong);
+            this.ShadowPanelSong.Controls.Add(this.lbArtist);
+            this.ShadowPanelSong.Controls.Add(this.lbNameSong);
+            this.ShadowPanelSong.Controls.Add(this.pbImageSong);
+            this.ShadowPanelSong.Controls.Add(this.lbId);
+            this.ShadowPanelSong.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.ShadowPanelSong.Location = new System.Drawing.Point(8, 3);
+            this.ShadowPanelSong.Name = "ShadowPanelSong";
+            this.ShadowPanelSong.Radius = 5;
+            this.ShadowPanelSong.ShadowColor = System.Drawing.Color.Black;
+            this.ShadowPanelSong.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            this.ShadowPanelSong.Size = new System.Drawing.Size(1120, 81);
+            this.ShadowPanelSong.TabIndex = 8;
+            this.ShadowPanelSong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.ShadowPanelSong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // pictureBox1
             // 
@@ -82,8 +83,8 @@
             this.lbAlbum.Size = new System.Drawing.Size(199, 20);
             this.lbAlbum.TabIndex = 13;
             this.lbAlbum.Text = "Album";
-            this.lbAlbum.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.lbAlbum.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbAlbum.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.lbAlbum.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // lbTimeSong
             // 
@@ -94,8 +95,8 @@
             this.lbTimeSong.TabIndex = 12;
             this.lbTimeSong.Text = "3:40";
             this.lbTimeSong.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbTimeSong.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.lbTimeSong.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbTimeSong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.lbTimeSong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // lbArtist
             // 
@@ -105,8 +106,8 @@
             this.lbArtist.Size = new System.Drawing.Size(160, 23);
             this.lbArtist.TabIndex = 11;
             this.lbArtist.Text = "Nhạc sĩ";
-            this.lbArtist.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.lbArtist.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbArtist.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.lbArtist.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // lbNameSong
             // 
@@ -116,8 +117,8 @@
             this.lbNameSong.Size = new System.Drawing.Size(271, 23);
             this.lbNameSong.TabIndex = 10;
             this.lbNameSong.Text = "Đây là 1 bài hát ";
-            this.lbNameSong.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.lbNameSong.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbNameSong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.lbNameSong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // pbImageSong
             // 
@@ -130,8 +131,8 @@
             this.pbImageSong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImageSong.TabIndex = 9;
             this.pbImageSong.TabStop = false;
-            this.pbImageSong.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.pbImageSong.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pbImageSong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.pbImageSong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // lbId
             // 
@@ -145,19 +146,19 @@
             this.lbId.Tag = "";
             this.lbId.Text = "01";
             this.lbId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbId.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.lbId.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.lbId.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.lbId.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // Songs_Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.guna2ShadowPanel1);
+            this.Controls.Add(this.ShadowPanelSong);
             this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.Name = "Songs_Display";
             this.Size = new System.Drawing.Size(1126, 84);
-            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.ShadowPanelSong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageSong)).EndInit();
             this.ResumeLayout(false);
@@ -166,7 +167,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel ShadowPanelSong;
         private System.Windows.Forms.Label lbAlbum;
         private System.Windows.Forms.Label lbTimeSong;
         private System.Windows.Forms.Label lbArtist;

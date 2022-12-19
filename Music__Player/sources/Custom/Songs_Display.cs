@@ -137,10 +137,12 @@ namespace Music__Player.sources.Custom
         private void HandleMouseEnter(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Hand;
+            ShadowPanelSong.FillColor = Color.Gainsboro;
         }
         private void HandleMouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Default;
+            ShadowPanelSong.FillColor = Color.WhiteSmoke;
         }
 
         private bool isSelectedFavorite;
