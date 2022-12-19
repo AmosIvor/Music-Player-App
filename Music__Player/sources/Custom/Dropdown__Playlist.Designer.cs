@@ -47,10 +47,12 @@
             this.fpnlMain.Controls.Add(this.name__Playlist4);
             this.fpnlMain.Controls.Add(this.name__Playlist6);
             this.fpnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fpnlMain.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.fpnlMain.Location = new System.Drawing.Point(0, 0);
             this.fpnlMain.Name = "fpnlMain";
-            this.fpnlMain.Size = new System.Drawing.Size(287, 274);
+            this.fpnlMain.Size = new System.Drawing.Size(287, 247);
             this.fpnlMain.TabIndex = 0;
+            this.fpnlMain.WrapContents = false;
             // 
             // name__Playlist1
             // 
@@ -61,7 +63,7 @@
             this.name__Playlist1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.name__Playlist1.Name = "name__Playlist1";
             this.name__Playlist1.Name_Playlist = null;
-            this.name__Playlist1.Size = new System.Drawing.Size(281, 46);
+            this.name__Playlist1.Size = new System.Drawing.Size(264, 46);
             this.name__Playlist1.TabIndex = 0;
             // 
             // name__Playlist2
@@ -119,7 +121,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.fpnlMain);
             this.Name = "Dropdown__Playlist";
-            this.Size = new System.Drawing.Size(287, 274);
+            this.Size = new System.Drawing.Size(287, 247);
             this.fpnlMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
