@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Music__Player.sources.Custom;
+using Music__Player.sources.DAO.CustomDAO;
 using Music__Player.sources.DAO.MainScreenDAO;
 using Music__Player.sources.Navigate;
 using Music__Player.sources.View;
@@ -17,16 +18,22 @@ namespace Music__Player
 {
     public partial class Main__Screen : Form
     {
-        //Songs songsScreen = new Songs();
-        //Albums albumsScreen = new Albums();
-
-        //Recent recentScreen = new Recent();
-        //Favorite favoriteScreen = new Favorite();
-        //History historyScreen = new History();
-
-        //Playlist playlistScreen = new Playlist();
-        //Child__Playlist childPlaylistScreen = new Child__Playlist();
+        
         FlowLayoutPanel fpnlHoverPlaylist = new FlowLayoutPanel();
+
+        private static Main__Screen instance;
+
+        public static Main__Screen Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new Main__Screen();
+                return instance;
+            }
+
+            private set { instance = value; }
+        }
         public Main__Screen()
         {
             InitializeComponent();
@@ -139,7 +146,8 @@ namespace Music__Player
             namePlaylistOutside.IsHovered = true;
         }
 
-        void showPanel(Panel panel, UserControl userControl)
+
+        void ShowCurrentScreen(Panel panel, UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
             userControl.Visible = true;
@@ -162,7 +170,7 @@ namespace Music__Player
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 
-            showPanel(panelMainScreen, homeScreen);
+            ShowCurrentScreen(panelMainScreen, homeScreen);
         }
         private void btnSongs_Click(object sender, EventArgs e)
         {
@@ -171,8 +179,8 @@ namespace Music__Player
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 
-            //showPanel(panelMainScreen, songsScreen);
-            showPanel(panelMainScreen, Navigation.Instance.songsScreen);
+            //ShowCurrentScreen(panelMainScreen, songsScreen);
+            ShowCurrentScreen(panelMainScreen, Navigation.Instance.songsScreen);
         }
         private void btnAlbums_Click(object sender, EventArgs e)
         {
@@ -180,8 +188,8 @@ namespace Music__Player
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 
-            //showPanel(panelMainScreen, recentScreen);
-            showPanel(panelMainScreen, Navigation.Instance.recentScreen);
+            //ShowCurrentScreen(panelMainScreen, recentScreen);
+            ShowCurrentScreen(panelMainScreen, Navigation.Instance.recentScreen);
         }
 
         #endregion
@@ -194,8 +202,8 @@ namespace Music__Player
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 
-            //showPanel(panelMainScreen, recentScreen);
-            showPanel(panelMainScreen, Navigation.Instance.recentScreen);
+            //ShowCurrentScreen(panelMainScreen, recentScreen);
+            ShowCurrentScreen(panelMainScreen, Navigation.Instance.recentScreen);
         }
         private void btnFavorite_Click(object sender, EventArgs e)
         {
@@ -203,8 +211,8 @@ namespace Music__Player
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 
-            //showPanel(panelMainScreen, favoriteScreen);
-            showPanel(panelMainScreen, Navigation.Instance.favoriteScreen);
+            //ShowCurrentScreen(panelMainScreen, favoriteScreen);
+            ShowCurrentScreen(panelMainScreen, Navigation.Instance.favoriteScreen);
         }
         private void btnHistory_Click(object sender, EventArgs e)
         {
@@ -212,8 +220,8 @@ namespace Music__Player
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 
-            //showPanel(panelMainScreen, historyScreen);
-            showPanel(panelMainScreen, Navigation.Instance.historyScreen);
+            //ShowCurrentScreen(panelMainScreen, historyScreen);
+            ShowCurrentScreen(panelMainScreen, Navigation.Instance.historyScreen);
         }
 
         #endregion
@@ -226,25 +234,26 @@ namespace Music__Player
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 
-            //showPanel(panelMainScreen, playlistScreen);
-            showPanel(panelMainScreen, Navigation.Instance.playlistScreen);
+            //ShowCurrentScreen(panelMainScreen, playlistScreen);
+            ShowCurrentScreen(panelMainScreen, Navigation.Instance.playlistScreen);
         }
 
         private void btnCreatePlaylist_Click(object sender, EventArgs e)
         {
-            changeVerticalLine(VerticalLine, btnCreatePlaylist);
-            UserControl currentScreen = (UserControl)panelMainScreen.Tag;
-            currentScreen.Visible = false;
+            //changeVerticalLine(VerticalLine, btnCreatePlaylist);
+            //UserControl currentScreen = (UserControl)panelMainScreen.Tag;
+            //currentScreen.Visible = false;
 
-            //showPanel(panelMainScreen, childPlaylistScreen);
-            showPanel(panelMainScreen, Navigation.Instance.childPlaylistScreen);
+            ////ShowCurrentScreen(panelMainScreen, childPlaylistScreen);
+            //ShowCurrentScreen(panelMainScreen, Navigation.Instance.childPlaylistScreen);
+
+            Popup__Create__Playlist__DAO.Instance.ShowPopup();
+
+            btnCreatePlaylist.Checked = false;
         }
 
         #endregion
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

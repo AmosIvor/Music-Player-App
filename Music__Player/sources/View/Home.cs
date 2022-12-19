@@ -23,7 +23,9 @@ namespace Music__Player.sources.View
 
         private Panel fpArtistHover = new Panel();
 
-        private bool isClicked = false;
+        public static bool isClicked = false;
+
+        public static Info__Song__Panel musicPlaying;
         
         public Home()
         {
@@ -47,6 +49,8 @@ namespace Music__Player.sources.View
             List<Info__Song__Panel> listSong = Info__Song__Panel__DAO.Instance.GetListInfoSongPanel();
 
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(listSong[0], pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
+
+            musicPlaying = listSong[0];
 
             int id = 1;
 
@@ -97,6 +101,8 @@ namespace Music__Player.sources.View
             Media__Player.Instance.RunMP3(curr.URL, timerMusic);
 
             fpanelSongs.Tag = curr;
+
+            musicPlaying = curr;
         }
         private void infoSongPanel_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -128,6 +134,8 @@ namespace Music__Player.sources.View
 
                 Media__Player.Instance.RunMP3(infoSongPanelInside.URL, timerMusic);
 
+                musicPlaying = infoSongPanelInside;
+
                 fpanelSongs.Tag = infoSongPanelInside;
 
                 return;
@@ -142,6 +150,8 @@ namespace Music__Player.sources.View
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(infoSongPanelOutside, pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             Media__Player.Instance.RunMP3(infoSongPanelOutside.URL, timerMusic);
+
+            musicPlaying = infoSongPanelOutside;
         }
         private void infoSongPanel_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -243,6 +253,8 @@ namespace Music__Player.sources.View
             fpanelSongs.Tag = infoSongPanel;
 
             Media__Player.Instance.RunMP3(curr.URL, timerMusic);
+
+            musicPlaying = infoSongPanel;
         }
         private void artistPanel_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -283,6 +295,8 @@ namespace Music__Player.sources.View
 
                 infoSongPanelInside.IsHovered = true;
 
+                musicPlaying = infoSongPanelInside;
+
                 fpanelSongs.Tag = infoSongPanelInside;
 
                 return;
@@ -305,6 +319,8 @@ namespace Music__Player.sources.View
             Media__Player.Instance.RunMP3(artistPanelOutside.URL, timerMusic);
 
             fpanelSongs.Tag = infoSongPanelOutside;
+
+            musicPlaying = infoSongPanelOutside;
         }
         private void artistPanel_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -453,8 +469,6 @@ namespace Music__Player.sources.View
 
             //isClicked = false;
 
-
-
             if (isClicked == false)
             {
                 Dropdown__Playlist__DAO.Instance.ShowDropDownPlaylist(panelHome, 513, 470);
@@ -469,5 +483,6 @@ namespace Music__Player.sources.View
             Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
         }
 
+       
     }
 }
