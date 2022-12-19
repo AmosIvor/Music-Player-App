@@ -70,6 +70,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="sources\Constant\IMAGE.cs" />
+    <Compile Include="sources\Custom\Song__Playing__BottomBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Song__Playing__BottomBar.Designer.cs">
+      <DependentUpon>Song__Playing__BottomBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\DAO\CustomDAO\Form__Background__DAO.cs" />
     <Compile Include="sources\Constant\ICON.cs" />
     <Compile Include="sources\Custom\Dropdown__Playlist.cs">
       <SubType>UserControl</SubType>
@@ -121,8 +129,10 @@
     </Compile>
     <Compile Include="sources\DAO\CustomDAO\Artist__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Dropdown__Playlist__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Info__Playlist__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Info__Song__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Popup__Create__Playlist__DAO.cs" />
     <Compile Include="sources\DAO\SQLConnection\DataProviderDAO.cs" />
     <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Button__DAO.cs" />
@@ -207,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Popup__Create__Playlist.resx">
       <DependentUpon>Popup__Create__Playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Song__Playing__BottomBar.resx">
+      <DependentUpon>Song__Playing__BottomBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\View\Albums.resx">
       <DependentUpon>Albums.cs</DependentUpon>
@@ -440,6 +453,69 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_name_playlist_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_background_playlist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip_to_start_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_100px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end_100px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause_100px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat_100px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle_100px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip_to_start_100px.png1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audio_100px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_playlist_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_playlist_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_playlist_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_playlist_gray_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_add_playlist_red1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
