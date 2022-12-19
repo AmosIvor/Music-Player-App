@@ -31,7 +31,9 @@ namespace Music__Player.sources.PlayMusic
         public void RunMP3(string url, Timer timer)
         {
             player.URL = url;
+
             player.controls.play();
+
             timer.Enabled = true;
         }
 
@@ -48,8 +50,8 @@ namespace Music__Player.sources.PlayMusic
                 lblEnd.Text = player.controls.currentItem.durationString;
 
                 lblStart.Text = player.controls.currentPositionString;
-
             }
+
             else if (player.playState == WMPPlayState.wmppsStopped)
             {
                 timer1.Enabled = false;
@@ -69,5 +71,21 @@ namespace Music__Player.sources.PlayMusic
             player.controls.currentPosition = sliderTimeMusic.Value;
         }
 
+        public void btnPlay_Click(Guna2ImageButton btn)
+        {
+            if (player.playState == WMPPlayState.wmppsPlaying)
+            {
+                btn.Checked = false;
+
+                player.controls.pause();
+            }
+
+            else if (player.playState == WMPPlayState.wmppsPaused)
+            {
+                btn.Checked = true;
+
+                player.controls.play();
+            }
+        }
     }
 }
