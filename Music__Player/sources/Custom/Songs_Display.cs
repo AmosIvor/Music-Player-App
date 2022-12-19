@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Music__Player.sources.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -165,9 +166,25 @@ namespace Music__Player.sources.Custom
             if (IsSelectedFavorite == true)
             {
                 IsSelectedFavorite = false;
+                DataProviderDAO.Instance.ExecuteNonQuery($"UPDATE FAVORITES\r\nSET ISFAVORITE = 0\r\nWHERE ID_SONG = {Id}");
             }
             else
+            {
                 isSelectedFavorite = true;
+                DataProviderDAO.Instance.ExecuteNonQuery($"UPDATE FAVORITES\r\nSET ISFAVORITE = 1\r\nWHERE ID_SONG = {Id}");
+            }
+        }
+
+        private void HandleClickFavoriteEvent(object sender, EventArgs e)
+        {
+            if (IsSelectedFavorite == true)
+            {
+
+                IsSelectedFavorite = false;
+            } else
+            {
+                IsSelectedFavorite = true;
+            }
         }
     }
 }
