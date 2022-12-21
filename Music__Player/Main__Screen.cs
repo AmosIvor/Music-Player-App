@@ -175,7 +175,6 @@ namespace Music__Player
         private void btnSongs_Click(object sender, EventArgs e)
         {
             changeVerticalLine(VerticalLine, btnSongs);
-            Console.WriteLine(panelMainScreen.Tag.ToString());
             UserControl currentScreen = (UserControl)panelMainScreen.Tag;
             currentScreen.Visible = false;
 

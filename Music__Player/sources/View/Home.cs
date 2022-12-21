@@ -50,7 +50,9 @@ namespace Music__Player.sources.View
 
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(listSong[0], pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
-            musicPlaying = listSong[0];
+            //musicPlaying = listSong[0];
+
+            //musicPlaying.URL = "";
 
             int id = 1;
 
@@ -70,6 +72,8 @@ namespace Music__Player.sources.View
             }
 
             lblCountFpanelsSong.Text = fpanelSongs.Controls.Count + " songs on the list";
+
+            //musicPlaying = listSong[0];
         }
 
         private void infoSongPanel_MouseClickPlay(object sender, MouseEventArgs e)
@@ -103,6 +107,9 @@ namespace Music__Player.sources.View
             fpanelSongs.Tag = curr;
 
             musicPlaying = curr;
+
+            //Playlist.Instance.LoadSongPlayingBottomBar();
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
         }
         private void infoSongPanel_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -136,6 +143,8 @@ namespace Music__Player.sources.View
 
                 musicPlaying = infoSongPanelInside;
 
+                Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
+
                 fpanelSongs.Tag = infoSongPanelInside;
 
                 return;
@@ -152,6 +161,8 @@ namespace Music__Player.sources.View
             Media__Player.Instance.RunMP3(infoSongPanelOutside.URL, timerMusic);
 
             musicPlaying = infoSongPanelOutside;
+
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
         }
         private void infoSongPanel_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -255,6 +266,8 @@ namespace Music__Player.sources.View
             Media__Player.Instance.RunMP3(curr.URL, timerMusic);
 
             musicPlaying = infoSongPanel;
+
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
         }
         private void artistPanel_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -297,6 +310,8 @@ namespace Music__Player.sources.View
 
                 musicPlaying = infoSongPanelInside;
 
+                Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
+
                 fpanelSongs.Tag = infoSongPanelInside;
 
                 return;
@@ -321,6 +336,8 @@ namespace Music__Player.sources.View
             fpanelSongs.Tag = infoSongPanelOutside;
 
             musicPlaying = infoSongPanelOutside;
+
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
         }
         private void artistPanel_MouseEnterAdd(object sender, EventArgs e)
         {
