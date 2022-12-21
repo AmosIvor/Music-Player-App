@@ -18,7 +18,7 @@ namespace Music__Player.sources.View
         public Songs()
         {
             InitializeComponent();
-            UserControl.CheckForIllegalCrossThreadCalls = false;
+            CheckForIllegalCrossThreadCalls = false;
             Load_Display_Song();
         }
         private void LoadNextSlide()
@@ -71,6 +71,17 @@ namespace Music__Player.sources.View
             {
                 flowLayoutPanel1.Controls.Add(song);
             }
+        }
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+            string findByName = searchBar.Text;
+            flowLayoutPanel1.Controls.Clear();
+            List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName);
+            foreach (Songs_Display song in listSongSearch)
+            {
+                flowLayoutPanel1.Controls.Add(song);
+            }
+            searchBar.Focus();
         }
     }
 }

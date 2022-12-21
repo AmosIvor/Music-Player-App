@@ -40,5 +40,17 @@ namespace Music__Player.sources.DAO.SongDAO
             return listSong;
         }
 
+        public List<Songs_Display> GetListSongSearch(string nameSong)
+        {
+            List<Songs_Display> listSongs = new List<Songs_Display>();
+            string query = $"SELECT SONG.ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM, ISFAVORITE\r\nFROM SONG, ALBUMS, FAVORITES\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM AND SONG.ID_ALBUM = FAVORITES.ID_SONG\r\nAND SONG.NAME_SONG LIKE N'%{nameSong}%'";
+            DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
+            foreach (DataRow row in data.Rows)
+            {
+                Songs_Display songDisplay = new Songs_Display(row);
+                listSongs.Add(songDisplay);
+            }
+            return listSongs;
+        }
     }
 }
