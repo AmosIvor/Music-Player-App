@@ -1,5 +1,4 @@
 ﻿using Music__Player.sources.DAO.HomeDAO;
-using Music__Player.sources.DTO.HomeDTO;
 using Music__Player.sources.PlayMusic;
 using Music__Player.sources.View;
 using System;
@@ -17,14 +16,26 @@ namespace Music__Player.sources.Custom
 {
     public partial class Song__Playing__BottomBar : UserControl
     {
+        //private static Song__Playing__Bottom__Bar instance;
+        //public static Song__Playing__Bottom__Bar Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //            instance = new Song__Playing__Bottom__Bar();
+
+        //        return instance;
+        //    }
+
+        //    private set { instance = value; }
+        //}
+
         public Song__Playing__BottomBar()
         {
             InitializeComponent();
-
-            LoadSongPlaying();
         }
 
-        void LoadSongPlaying()
+        public void LoadSongPlaying()
         {
             Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
 
@@ -44,6 +55,18 @@ namespace Music__Player.sources.Custom
         private void btnPlay_Click(object sender, EventArgs e)
         {
             Media__Player.Instance.btnPlay_Click(btnPlay);
+        }
+
+        private void btnRepeat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Home.musicPlaying != null)
+                {
+                    Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
+                }
+            }
+            catch { }
         }
     }
 }

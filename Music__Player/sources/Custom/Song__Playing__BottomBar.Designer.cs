@@ -71,7 +71,7 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
             this.guna2Panel3.Size = new System.Drawing.Size(1359, 100);
-            this.guna2Panel3.TabIndex = 4;
+            this.guna2Panel3.TabIndex = 5;
             // 
             // sliderVolume
             // 
@@ -244,6 +244,7 @@
             this.btnRepeat.PressedState.Parent = this.btnRepeat;
             this.btnRepeat.Size = new System.Drawing.Size(40, 40);
             this.btnRepeat.TabIndex = 5;
+            this.btnRepeat.Click += new System.EventHandler(this.btnRepeat_Click);
             // 
             // lblArtist
             // 
@@ -286,13 +287,13 @@
             this.timerMusic.Interval = 1000;
             this.timerMusic.Tick += new System.EventHandler(this.timerMusic_Tick);
             // 
-            // Song__Playing__BottomBar
+            // Song__Playing__Bottom__Bar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel3);
-            this.Name = "Song__Playing__BottomBar";
+            this.Name = "Song__Playing__Bottom__Bar";
             this.Size = new System.Drawing.Size(1359, 100);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -311,13 +312,13 @@
         private System.Windows.Forms.Label lblEnd;
         private Guna.UI2.WinForms.Guna2ImageButton btnBack;
         private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2ImageButton btnVolume;
         private Guna.UI2.WinForms.Guna2ImageButton btnSkip;
         private Guna.UI2.WinForms.Guna2ImageButton btnRepeat;
         private System.Windows.Forms.Label lblArtist;
         private Guna.UI2.WinForms.Guna2PictureBox pbImage;
         private System.Windows.Forms.Label lblNameSong;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private System.Windows.Forms.Timer timerMusic;
     }
 }
