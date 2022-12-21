@@ -1,4 +1,5 @@
 ﻿using Music__Player.sources.Custom;
+using Music__Player.sources.DAO.CustomDAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,18 +14,51 @@ namespace Music__Player.sources.View
 {
     public partial class Playlist : UserControl
     {
+        Playlist__Add__Panel panelAddPlaylist = new Playlist__Add__Panel();
+
+        //private static Playlist instance;
+        //public static Playlist Instance
+        //{
+        //    get
+        //    {
+        //        if (instance == null)
+        //            instance = new Playlist();
+
+        //        return instance;
+        //    }
+
+        //    private set { instance = value; }
+        //}
         public Playlist()
         {
             InitializeComponent();
+
+            LoadPlaylists();
+
+            
         }
 
-        private void btnTest_Click(object sender, EventArgs e)
+        void LoadPlaylists()
         {
-            Info__Playlist__Panel info = new Info__Playlist__Panel();
-            Playlist__Add__Panel add = new Playlist__Add__Panel();
+            fpnlPlaylists.Controls.Clear();
 
-            flowLayoutPanel1.Controls.Add(info);
-            flowLayoutPanel1.Controls.Add(add);
+            List<Info__Playlist__Panel> listInfoPlaylist = Info__Playlist__Panel__DAO.Instance.GetListInfoPlaylistPanel();
+
+            foreach (Info__Playlist__Panel infoPlaylist in listInfoPlaylist)
+            {
+                fpnlPlaylists.Controls.Add(infoPlaylist);
+            }
+
+            fpnlPlaylists.Controls.Add(panelAddPlaylist);
+
+            lblTitle.Text = $"Amos Ivor - {fpnlPlaylists.Controls.Count - 1} playlists";
         }
+
+        public void LoadSongPlayingBottomBar()
+        {
+            songPlayingBottomBar.LoadSongPlaying();
+        }
+
+        
     }
 }

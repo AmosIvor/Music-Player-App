@@ -66,6 +66,22 @@ namespace Music__Player.sources.DAO.HomeDAO
             pbImage.Image = songPlaying.Image_Song;
         }
 
+        public void SetSongPlayingBottomBar(UserControl userControl, Guna2PictureBox pbImage, Label lblNameSong, Label lblArtist, Label lblDuration)
+        {
+            Info__Song__Panel infoSongPanel = (Info__Song__Panel)userControl;
+
+            Song__Playing songPlaying = new Song__Playing(infoSongPanel.Title, 
+                                        infoSongPanel.Artist, infoSongPanel.Duration, infoSongPanel.Image_Song);
+
+            lblNameSong.Text = songPlaying.Title;
+
+            lblArtist.Text = songPlaying.Artist;
+
+            pbImage.Image = songPlaying.Image_Song;
+
+            lblDuration.Text = songPlaying.Duration;
+        }
+
         private int CenterHorizontal(Guna2ShadowPanel mainPanel, Control control)
         {
             int temp = (mainPanel.Width - control.Width) / 2;
