@@ -517,5 +517,8 @@
   <ItemGroup>
     <None Include="Resources\icon_add_playlist_red1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_pause_blue_200.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
