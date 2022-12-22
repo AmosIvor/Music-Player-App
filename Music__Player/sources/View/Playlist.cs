@@ -1,5 +1,6 @@
 ﻿using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.CustomDAO;
+using Music__Player.sources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,26 +17,11 @@ namespace Music__Player.sources.View
     {
         Playlist__Add__Panel panelAddPlaylist = new Playlist__Add__Panel();
 
-        //private static Playlist instance;
-        //public static Playlist Instance
-        //{
-        //    get
-        //    {
-        //        if (instance == null)
-        //            instance = new Playlist();
-
-        //        return instance;
-        //    }
-
-        //    private set { instance = value; }
-        //}
         public Playlist()
         {
             InitializeComponent();
 
             LoadPlaylists();
-
-            
         }
 
         void LoadPlaylists()
@@ -59,6 +45,9 @@ namespace Music__Player.sources.View
             songPlayingBottomBar.LoadSongPlaying();
         }
 
-        
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Navigate.Navigation.Instance.mainScreen.LoadChildPlaylist();
+        }
     }
 }
