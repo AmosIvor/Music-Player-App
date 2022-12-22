@@ -50,10 +50,6 @@ namespace Music__Player.sources.View
 
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(listSong[0], pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
-            //musicPlaying = listSong[0];
-
-            //musicPlaying.URL = "";
-
             int id = 1;
 
             foreach (Info__Song__Panel infoSongPanel in listSong)
@@ -72,8 +68,6 @@ namespace Music__Player.sources.View
             }
 
             lblCountFpanelsSong.Text = fpanelSongs.Controls.Count + " songs on the list";
-
-            //musicPlaying = listSong[0];
         }
 
         private void infoSongPanel_MouseClickPlay(object sender, MouseEventArgs e)
@@ -108,7 +102,6 @@ namespace Music__Player.sources.View
 
             musicPlaying = curr;
 
-            //Playlist.Instance.LoadSongPlayingBottomBar();
             Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
         }
         private void infoSongPanel_MouseDoubleClickAdd(object sender, MouseEventArgs e)
@@ -388,7 +381,6 @@ namespace Music__Player.sources.View
         {
             Media__Player.Instance.EventTimer(timerMusic, btnPlay, sliderTimeMusic, lblStart, lblEnd);
         }
-
         private void sliderTimeMusic_Scroll(object sender, ScrollEventArgs e)
         {
             Media__Player.Instance.SliderTimeMusicScroll(sliderTimeMusic);
@@ -463,29 +455,6 @@ namespace Music__Player.sources.View
 
         private void btnAddPlaylist_Click(object sender, EventArgs e)
         {
-            //if (isClicked == false)
-            //{
-            //    Dropdown__Playlist dropdownPlaylist = new Dropdown__Playlist();
-
-            //    pnlTest.Controls.Add(dropdownPlaylist);
-
-            //    //dropdownPlaylist.Dock = DockStyle.Fill;
-
-            //    pnlTest.Visible = true;
-
-            //    pnlTest.BringToFront();
-
-            //    dropdownPlaylist.Location = new Point(0, 0);
-
-            //    isClicked = true;
-
-            //    return;
-            //}
-
-            //pnlTest.Visible = false;
-
-            //isClicked = false;
-
             if (isClicked == false)
             {
                 Dropdown__Playlist__DAO.Instance.ShowDropDownPlaylist(panelHome, 513, 470);
