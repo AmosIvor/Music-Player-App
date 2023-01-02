@@ -28,6 +28,8 @@ namespace Music__Player.sources.Navigate
 
         public Main__Screen mainScreen = new Main__Screen();
 
+        public static Home homeScreen = new Home();
+
         public Songs songsScreen = new Songs();
 
         public Albums albumsScreen = new Albums();
@@ -41,6 +43,8 @@ namespace Music__Player.sources.Navigate
         public Playlist playlistScreen = new Playlist();
 
         public Child__Playlist childPlaylistScreen = new Child__Playlist();
+
+        public Child__Playlist childPlaylistScreenPlayingSong = new Child__Playlist();
 
         public void ShowCurrentScreen(Panel panel, UserControl userControl)
         {
