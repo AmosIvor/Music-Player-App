@@ -18,6 +18,23 @@ namespace Music__Player.sources.Custom
             InitializeComponent();
         }
 
+        public Info__Song__Panel(List__Song__Playlist songByPlaylist)
+        {
+            InitializeComponent();
+
+            this.Title = songByPlaylist.Title;
+
+            this.Artist = songByPlaylist.Artist;
+
+            this.Duration = songByPlaylist.Duration;
+
+            this.Image_Song = songByPlaylist.Image_Song;
+
+            this.URL = songByPlaylist.URL;
+
+            LoadInitialEvent();
+        }
+
         #region Initial
 
         public Info__Song__Panel(DataRow row)
@@ -177,6 +194,7 @@ namespace Music__Player.sources.Custom
                     if (isHovered == false && isSelected == true && btnFavorite.Checked == false)
                     {
                         lblFavorite.Visible = true;
+
                     }
                 }
 
@@ -326,9 +344,9 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_MouseClick(object sender, MouseEventArgs e)
         {
-            btnPlay.Checked = !btnPlay.Checked;
+            //btnPlay.Checked = !btnPlay.Checked;
 
-            isPlay = btnPlay.Checked;
+            //isPlay = btnPlay.Checked;
         }
     }
 }
