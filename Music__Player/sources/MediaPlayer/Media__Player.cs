@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Music__Player.sources.DAO.HomeDAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,7 +72,7 @@ namespace Music__Player.sources.PlayMusic
             player.controls.currentPosition = sliderTimeMusic.Value;
         }
 
-        public void btnPlay_Click(Guna2ImageButton btn)
+        public void btnPlay_Click(Guna2ImageButton btn, Timer timer)
         {
             if (player.playState == WMPPlayState.wmppsPlaying)
             {
@@ -85,6 +86,11 @@ namespace Music__Player.sources.PlayMusic
                 btn.Checked = true;
 
                 player.controls.play();
+            }
+            else
+            {
+                Navigate.Navigation.homeScreen.SearchAndPlaySong(Song__Playing__DAO.Instance.currInfoSongPanel);
+
             }
         }
     }
