@@ -287,13 +287,13 @@
             this.timerMusic.Interval = 1000;
             this.timerMusic.Tick += new System.EventHandler(this.timerMusic_Tick);
             // 
-            // Song__Playing__Bottom__Bar
+            // Song__Playing__BottomBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel3);
-            this.Name = "Song__Playing__Bottom__Bar";
+            this.Name = "Song__Playing__BottomBar";
             this.Size = new System.Drawing.Size(1359, 100);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();

@@ -16,30 +16,16 @@ namespace Music__Player.sources.Custom
 {
     public partial class Song__Playing__BottomBar : UserControl
     {
-        //private static Song__Playing__Bottom__Bar instance;
-        //public static Song__Playing__Bottom__Bar Instance
-        //{
-        //    get
-        //    {
-        //        if (instance == null)
-        //            instance = new Song__Playing__Bottom__Bar();
-
-        //        return instance;
-        //    }
-
-        //    private set { instance = value; }
-        //}
-
         public Song__Playing__BottomBar()
         {
             InitializeComponent();
         }
 
-        public void LoadSongPlaying()
+        public void LoadSongPlayingByInfoSongPanel()
         {
-            Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
+            Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
 
-            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(Home.musicPlaying, pbImage, lblNameSong, lblArtist, lblEnd);
+            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(pbImage, lblNameSong, lblArtist, lblEnd);
         }
 
         private void timerMusic_Tick(object sender, EventArgs e)
@@ -54,16 +40,16 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay);
+            Media__Player.Instance.btnPlay_Click(btnPlay, timerMusic);
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)
         {
             try
             {
-                if (Home.musicPlaying != null)
+                if (Song__Playing__DAO.Instance.currInfoSongPanel != null)
                 {
-                    Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
+                    Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
                 }
             }
             catch { }
