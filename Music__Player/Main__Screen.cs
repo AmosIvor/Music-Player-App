@@ -18,6 +18,8 @@ namespace Music__Player
 {
     public partial class Main__Screen : Form
     {
+        #region Inital
+
         FlowLayoutPanel fpnlHoverPlaylist = new FlowLayoutPanel();
 
         private static Main__Screen instance;
@@ -35,6 +37,8 @@ namespace Music__Player
             private set { instance = value; }
         }
 
+        #endregion
+
         public Main__Screen()
         {
             InitializeComponent();
@@ -46,7 +50,9 @@ namespace Music__Player
         {
             btnHome.Checked = true;
 
-            panelMainScreen.Tag = homeScreen;
+            panelMainScreen.Controls.Add(Navigation.homeScreen);
+
+            panelMainScreen.Tag = Navigation.homeScreen;
 
             LoadMenuBarPlaylists();
         }
@@ -60,7 +66,7 @@ namespace Music__Player
         #endregion
 
         #region MenuBar
-        void LoadMenuBarPlaylists()
+        public void LoadMenuBarPlaylists()
         {
             fpnlPlaylists.Controls.Clear();
 
@@ -103,7 +109,6 @@ namespace Music__Player
 
             fpnlPlaylists.Tag = namePlaylistOutside;
         }
-
         private void namePlaylist_MouseEnterAdd(object sender, EventArgs e)
         {
             if (fpnlHoverPlaylist.Tag != null)
@@ -129,7 +134,6 @@ namespace Music__Player
 
             fpnlHoverPlaylist.Tag = namePlaylistOutside;
         }
-
         private void namePlaylist_MouseLeaveAdd(object sender, EventArgs e)
         {
             if (sender is Label || sender is Guna2ImageButton)
@@ -150,7 +154,7 @@ namespace Music__Player
         #region HOME
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Navigation.Instance.NavigateScreen(panelMainScreen, btnHome, homeScreen, VerticalLine);
+            Navigation.Instance.NavigateScreen(panelMainScreen, btnHome, Navigation.homeScreen, VerticalLine);
         }
         private void btnSongs_Click(object sender, EventArgs e)
         {
@@ -200,8 +204,19 @@ namespace Music__Player
             Navigation.Instance.NavigateScreen(panelMainScreen, btnPlaylist, Navigation.Instance.childPlaylistScreen, VerticalLine);
         }
 
-        #endregion
+        public void LoadChildPlaylistPlayingSong()
+        {
+            Navigation.Instance.NavigateScreen(panelMainScreen, btnPlaylist, Navigation.Instance.childPlaylistScreenPlayingSong, VerticalLine);
+        }
 
+        public void LoadPlaylists()
+        {
+            Navigation.Instance.NavigateScreen(panelMainScreen, btnPlaylist, Navigation.Instance.playlistScreen, VerticalLine);
+
+            btnPlaylist.Checked = true;
+        }
+
+        #endregion
        
     }
 }

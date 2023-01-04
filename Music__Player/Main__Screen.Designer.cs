@@ -34,6 +34,12 @@
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.fpnlPlaylists = new System.Windows.Forms.FlowLayoutPanel();
+            this.name__Playlist__Button6 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button5 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button4 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button1 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button2 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button3 = new Music__Player.sources.Custom.Name__Playlist__Button();
             this.VerticalLine = new Guna.UI2.WinForms.Guna2VSeparator();
             this.btnPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblPlaylist = new System.Windows.Forms.Label();
@@ -49,16 +55,8 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.borderForm = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelMainScreen = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.homeScreen = new Music__Player.sources.View.Home();
-            this.name__Playlist__Button6 = new Music__Player.sources.Custom.Name__Playlist__Button();
-            this.name__Playlist__Button5 = new Music__Player.sources.Custom.Name__Playlist__Button();
-            this.name__Playlist__Button4 = new Music__Player.sources.Custom.Name__Playlist__Button();
-            this.name__Playlist__Button1 = new Music__Player.sources.Custom.Name__Playlist__Button();
-            this.name__Playlist__Button2 = new Music__Player.sources.Custom.Name__Playlist__Button();
-            this.name__Playlist__Button3 = new Music__Player.sources.Custom.Name__Playlist__Button();
             this.panelSlideBar.SuspendLayout();
             this.fpnlPlaylists.SuspendLayout();
-            this.panelMainScreen.SuspendLayout();
             this.SuspendLayout();
             // 
             // dragForm
@@ -114,6 +112,72 @@
             this.fpnlPlaylists.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
             this.fpnlPlaylists.Size = new System.Drawing.Size(233, 264);
             this.fpnlPlaylists.TabIndex = 5;
+            // 
+            // name__Playlist__Button6
+            // 
+            this.name__Playlist__Button6.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button6.IsHovered = false;
+            this.name__Playlist__Button6.IsSelected = false;
+            this.name__Playlist__Button6.Location = new System.Drawing.Point(29, 3);
+            this.name__Playlist__Button6.Name = "name__Playlist__Button6";
+            this.name__Playlist__Button6.Name_Playlist = null;
+            this.name__Playlist__Button6.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button6.TabIndex = 5;
+            // 
+            // name__Playlist__Button5
+            // 
+            this.name__Playlist__Button5.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button5.IsHovered = false;
+            this.name__Playlist__Button5.IsSelected = false;
+            this.name__Playlist__Button5.Location = new System.Drawing.Point(29, 54);
+            this.name__Playlist__Button5.Name = "name__Playlist__Button5";
+            this.name__Playlist__Button5.Name_Playlist = null;
+            this.name__Playlist__Button5.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button5.TabIndex = 4;
+            // 
+            // name__Playlist__Button4
+            // 
+            this.name__Playlist__Button4.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button4.IsHovered = false;
+            this.name__Playlist__Button4.IsSelected = false;
+            this.name__Playlist__Button4.Location = new System.Drawing.Point(29, 105);
+            this.name__Playlist__Button4.Name = "name__Playlist__Button4";
+            this.name__Playlist__Button4.Name_Playlist = null;
+            this.name__Playlist__Button4.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button4.TabIndex = 3;
+            // 
+            // name__Playlist__Button1
+            // 
+            this.name__Playlist__Button1.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button1.IsHovered = false;
+            this.name__Playlist__Button1.IsSelected = false;
+            this.name__Playlist__Button1.Location = new System.Drawing.Point(29, 156);
+            this.name__Playlist__Button1.Name = "name__Playlist__Button1";
+            this.name__Playlist__Button1.Name_Playlist = null;
+            this.name__Playlist__Button1.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button1.TabIndex = 0;
+            // 
+            // name__Playlist__Button2
+            // 
+            this.name__Playlist__Button2.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button2.IsHovered = false;
+            this.name__Playlist__Button2.IsSelected = false;
+            this.name__Playlist__Button2.Location = new System.Drawing.Point(29, 207);
+            this.name__Playlist__Button2.Name = "name__Playlist__Button2";
+            this.name__Playlist__Button2.Name_Playlist = null;
+            this.name__Playlist__Button2.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button2.TabIndex = 1;
+            // 
+            // name__Playlist__Button3
+            // 
+            this.name__Playlist__Button3.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button3.IsHovered = false;
+            this.name__Playlist__Button3.IsSelected = false;
+            this.name__Playlist__Button3.Location = new System.Drawing.Point(29, 258);
+            this.name__Playlist__Button3.Name = "name__Playlist__Button3";
+            this.name__Playlist__Button3.Name_Playlist = null;
+            this.name__Playlist__Button3.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button3.TabIndex = 2;
             // 
             // VerticalLine
             // 
@@ -479,7 +543,6 @@
             // panelMainScreen
             // 
             this.panelMainScreen.AutoScroll = true;
-            this.panelMainScreen.Controls.Add(this.homeScreen);
             this.panelMainScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainScreen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(242)))), ((int)(((byte)(237)))));
             this.panelMainScreen.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(242)))), ((int)(((byte)(237)))));
@@ -489,81 +552,6 @@
             this.panelMainScreen.ShadowDecoration.Parent = this.panelMainScreen;
             this.panelMainScreen.Size = new System.Drawing.Size(1359, 965);
             this.panelMainScreen.TabIndex = 2;
-            // 
-            // homeScreen
-            // 
-            this.homeScreen.BackColor = System.Drawing.Color.Transparent;
-            this.homeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homeScreen.Location = new System.Drawing.Point(0, 0);
-            this.homeScreen.Name = "homeScreen";
-            this.homeScreen.Size = new System.Drawing.Size(1359, 965);
-            this.homeScreen.TabIndex = 0;
-            // 
-            // name__Playlist__Button6
-            // 
-            this.name__Playlist__Button6.BackColor = System.Drawing.Color.Transparent;
-            this.name__Playlist__Button6.IsHovered = false;
-            this.name__Playlist__Button6.IsSelected = false;
-            this.name__Playlist__Button6.Location = new System.Drawing.Point(29, 3);
-            this.name__Playlist__Button6.Name = "name__Playlist__Button6";
-            this.name__Playlist__Button6.Name_Playlist = null;
-            this.name__Playlist__Button6.Size = new System.Drawing.Size(175, 45);
-            this.name__Playlist__Button6.TabIndex = 5;
-            // 
-            // name__Playlist__Button5
-            // 
-            this.name__Playlist__Button5.BackColor = System.Drawing.Color.Transparent;
-            this.name__Playlist__Button5.IsHovered = false;
-            this.name__Playlist__Button5.IsSelected = false;
-            this.name__Playlist__Button5.Location = new System.Drawing.Point(29, 54);
-            this.name__Playlist__Button5.Name = "name__Playlist__Button5";
-            this.name__Playlist__Button5.Name_Playlist = null;
-            this.name__Playlist__Button5.Size = new System.Drawing.Size(175, 45);
-            this.name__Playlist__Button5.TabIndex = 4;
-            // 
-            // name__Playlist__Button4
-            // 
-            this.name__Playlist__Button4.BackColor = System.Drawing.Color.Transparent;
-            this.name__Playlist__Button4.IsHovered = false;
-            this.name__Playlist__Button4.IsSelected = false;
-            this.name__Playlist__Button4.Location = new System.Drawing.Point(29, 105);
-            this.name__Playlist__Button4.Name = "name__Playlist__Button4";
-            this.name__Playlist__Button4.Name_Playlist = null;
-            this.name__Playlist__Button4.Size = new System.Drawing.Size(175, 45);
-            this.name__Playlist__Button4.TabIndex = 3;
-            // 
-            // name__Playlist__Button1
-            // 
-            this.name__Playlist__Button1.BackColor = System.Drawing.Color.Transparent;
-            this.name__Playlist__Button1.IsHovered = false;
-            this.name__Playlist__Button1.IsSelected = false;
-            this.name__Playlist__Button1.Location = new System.Drawing.Point(29, 156);
-            this.name__Playlist__Button1.Name = "name__Playlist__Button1";
-            this.name__Playlist__Button1.Name_Playlist = null;
-            this.name__Playlist__Button1.Size = new System.Drawing.Size(175, 45);
-            this.name__Playlist__Button1.TabIndex = 0;
-            // 
-            // name__Playlist__Button2
-            // 
-            this.name__Playlist__Button2.BackColor = System.Drawing.Color.Transparent;
-            this.name__Playlist__Button2.IsHovered = false;
-            this.name__Playlist__Button2.IsSelected = false;
-            this.name__Playlist__Button2.Location = new System.Drawing.Point(29, 207);
-            this.name__Playlist__Button2.Name = "name__Playlist__Button2";
-            this.name__Playlist__Button2.Name_Playlist = null;
-            this.name__Playlist__Button2.Size = new System.Drawing.Size(175, 45);
-            this.name__Playlist__Button2.TabIndex = 1;
-            // 
-            // name__Playlist__Button3
-            // 
-            this.name__Playlist__Button3.BackColor = System.Drawing.Color.Transparent;
-            this.name__Playlist__Button3.IsHovered = false;
-            this.name__Playlist__Button3.IsSelected = false;
-            this.name__Playlist__Button3.Location = new System.Drawing.Point(29, 258);
-            this.name__Playlist__Button3.Name = "name__Playlist__Button3";
-            this.name__Playlist__Button3.Name_Playlist = null;
-            this.name__Playlist__Button3.Size = new System.Drawing.Size(175, 45);
-            this.name__Playlist__Button3.TabIndex = 2;
             // 
             // Main__Screen
             // 
@@ -579,7 +567,6 @@
             this.panelSlideBar.ResumeLayout(false);
             this.panelSlideBar.PerformLayout();
             this.fpnlPlaylists.ResumeLayout(false);
-            this.panelMainScreen.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -602,7 +589,6 @@
         private Guna.UI2.WinForms.Guna2VSeparator VerticalLine;
         private Guna.UI2.WinForms.Guna2Elipse borderForm;
         private Guna.UI2.WinForms.Guna2GradientPanel panelMainScreen;
-        private sources.View.Home homeScreen;
         private Guna.UI2.WinForms.Guna2Button btnCreatePlaylist;
         private System.Windows.Forms.FlowLayoutPanel fpnlPlaylists;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
