@@ -31,21 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main__Screen));
             this.dragForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.panelTitle = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.fpnlPlaylists = new System.Windows.Forms.FlowLayoutPanel();
+            this.name__Playlist__Button6 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button5 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button4 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button1 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button2 = new Music__Player.sources.Custom.Name__Playlist__Button();
+            this.name__Playlist__Button3 = new Music__Player.sources.Custom.Name__Playlist__Button();
             this.VerticalLine = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnName1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblPlaylist = new System.Windows.Forms.Label();
             this.lblLibrary = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
+            this.btnCreatePlaylist = new Guna.UI2.WinForms.Guna2Button();
             this.btnLocalFiles = new Guna.UI2.WinForms.Guna2Button();
-            this.btnExplorer = new Guna.UI2.WinForms.Guna2Button();
             this.btnHistory = new Guna.UI2.WinForms.Guna2Button();
             this.btnAlbums = new Guna.UI2.WinForms.Guna2Button();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
@@ -54,59 +55,26 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.borderForm = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelMainScreen = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnCreatePlaylist = new Guna.UI2.WinForms.Guna2Button();
-            this.homeScreen = new Music__Player.sources.View.Home();
-            this.panelTitle.SuspendLayout();
             this.panelSlideBar.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
-            this.panelMainScreen.SuspendLayout();
+            this.fpnlPlaylists.SuspendLayout();
             this.SuspendLayout();
             // 
             // dragForm
             // 
-            this.dragForm.TargetControl = this;
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panelTitle.Controls.Add(this.btnExit);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.ShadowDecoration.Parent = this.panelTitle;
-            this.panelTitle.Size = new System.Drawing.Size(1601, 36);
-            this.panelTitle.TabIndex = 0;
-            // 
-            // btnExit
-            // 
-            this.btnExit.CheckedState.Parent = this.btnExit;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.CustomImages.Parent = this.btnExit;
-            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExit.FillColor = System.Drawing.Color.LightSeaGreen;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Location = new System.Drawing.Point(1566, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(35, 36);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "x";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.dragForm.TargetControl = this.panelSlideBar;
             // 
             // panelSlideBar
             // 
             this.panelSlideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.panelSlideBar.Controls.Add(this.guna2Separator1);
+            this.panelSlideBar.Controls.Add(this.fpnlPlaylists);
             this.panelSlideBar.Controls.Add(this.VerticalLine);
-            this.panelSlideBar.Controls.Add(this.guna2Panel1);
             this.panelSlideBar.Controls.Add(this.btnPlaylist);
             this.panelSlideBar.Controls.Add(this.lblPlaylist);
             this.panelSlideBar.Controls.Add(this.lblLibrary);
             this.panelSlideBar.Controls.Add(this.lblMenu);
             this.panelSlideBar.Controls.Add(this.btnCreatePlaylist);
             this.panelSlideBar.Controls.Add(this.btnLocalFiles);
-            this.panelSlideBar.Controls.Add(this.btnExplorer);
             this.panelSlideBar.Controls.Add(this.btnHistory);
             this.panelSlideBar.Controls.Add(this.btnAlbums);
             this.panelSlideBar.Controls.Add(this.btnFavorite);
@@ -117,11 +85,99 @@
             this.panelSlideBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.panelSlideBar.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.panelSlideBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.panelSlideBar.Location = new System.Drawing.Point(0, 36);
+            this.panelSlideBar.Location = new System.Drawing.Point(0, 0);
             this.panelSlideBar.Name = "panelSlideBar";
             this.panelSlideBar.ShadowDecoration.Parent = this.panelSlideBar;
             this.panelSlideBar.Size = new System.Drawing.Size(242, 965);
             this.panelSlideBar.TabIndex = 1;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Location = new System.Drawing.Point(55, 586);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(151, 10);
+            this.guna2Separator1.TabIndex = 6;
+            // 
+            // fpnlPlaylists
+            // 
+            this.fpnlPlaylists.AutoScroll = true;
+            this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button6);
+            this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button5);
+            this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button4);
+            this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button1);
+            this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button2);
+            this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button3);
+            this.fpnlPlaylists.Location = new System.Drawing.Point(7, 616);
+            this.fpnlPlaylists.Name = "fpnlPlaylists";
+            this.fpnlPlaylists.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
+            this.fpnlPlaylists.Size = new System.Drawing.Size(233, 264);
+            this.fpnlPlaylists.TabIndex = 5;
+            // 
+            // name__Playlist__Button6
+            // 
+            this.name__Playlist__Button6.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button6.IsHovered = false;
+            this.name__Playlist__Button6.IsSelected = false;
+            this.name__Playlist__Button6.Location = new System.Drawing.Point(29, 3);
+            this.name__Playlist__Button6.Name = "name__Playlist__Button6";
+            this.name__Playlist__Button6.Name_Playlist = null;
+            this.name__Playlist__Button6.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button6.TabIndex = 5;
+            // 
+            // name__Playlist__Button5
+            // 
+            this.name__Playlist__Button5.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button5.IsHovered = false;
+            this.name__Playlist__Button5.IsSelected = false;
+            this.name__Playlist__Button5.Location = new System.Drawing.Point(29, 54);
+            this.name__Playlist__Button5.Name = "name__Playlist__Button5";
+            this.name__Playlist__Button5.Name_Playlist = null;
+            this.name__Playlist__Button5.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button5.TabIndex = 4;
+            // 
+            // name__Playlist__Button4
+            // 
+            this.name__Playlist__Button4.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button4.IsHovered = false;
+            this.name__Playlist__Button4.IsSelected = false;
+            this.name__Playlist__Button4.Location = new System.Drawing.Point(29, 105);
+            this.name__Playlist__Button4.Name = "name__Playlist__Button4";
+            this.name__Playlist__Button4.Name_Playlist = null;
+            this.name__Playlist__Button4.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button4.TabIndex = 3;
+            // 
+            // name__Playlist__Button1
+            // 
+            this.name__Playlist__Button1.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button1.IsHovered = false;
+            this.name__Playlist__Button1.IsSelected = false;
+            this.name__Playlist__Button1.Location = new System.Drawing.Point(29, 156);
+            this.name__Playlist__Button1.Name = "name__Playlist__Button1";
+            this.name__Playlist__Button1.Name_Playlist = null;
+            this.name__Playlist__Button1.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button1.TabIndex = 0;
+            // 
+            // name__Playlist__Button2
+            // 
+            this.name__Playlist__Button2.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button2.IsHovered = false;
+            this.name__Playlist__Button2.IsSelected = false;
+            this.name__Playlist__Button2.Location = new System.Drawing.Point(29, 207);
+            this.name__Playlist__Button2.Name = "name__Playlist__Button2";
+            this.name__Playlist__Button2.Name_Playlist = null;
+            this.name__Playlist__Button2.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button2.TabIndex = 1;
+            // 
+            // name__Playlist__Button3
+            // 
+            this.name__Playlist__Button3.BackColor = System.Drawing.Color.Transparent;
+            this.name__Playlist__Button3.IsHovered = false;
+            this.name__Playlist__Button3.IsSelected = false;
+            this.name__Playlist__Button3.Location = new System.Drawing.Point(29, 258);
+            this.name__Playlist__Button3.Name = "name__Playlist__Button3";
+            this.name__Playlist__Button3.Name_Playlist = null;
+            this.name__Playlist__Button3.Size = new System.Drawing.Size(175, 45);
+            this.name__Playlist__Button3.TabIndex = 2;
             // 
             // VerticalLine
             // 
@@ -131,166 +187,6 @@
             this.VerticalLine.Name = "VerticalLine";
             this.VerticalLine.Size = new System.Drawing.Size(10, 45);
             this.VerticalLine.TabIndex = 4;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.AutoScroll = true;
-            this.guna2Panel1.AutoScrollMinSize = new System.Drawing.Size(0, 150);
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.guna2Button9);
-            this.guna2Panel1.Controls.Add(this.guna2Button10);
-            this.guna2Panel1.Controls.Add(this.guna2Button11);
-            this.guna2Panel1.Controls.Add(this.btnName1);
-            this.guna2Panel1.Location = new System.Drawing.Point(7, 586);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(227, 203);
-            this.guna2Panel1.TabIndex = 3;
-            // 
-            // guna2Button9
-            // 
-            this.guna2Button9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.BorderRadius = 10;
-            this.guna2Button9.BorderThickness = 1;
-            this.guna2Button9.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button9.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button9.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button9.CheckedState.Parent = this.guna2Button9;
-            this.guna2Button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button9.CustomImages.CheckedImage = ((System.Drawing.Image)(resources.GetObject("guna2Button9.CustomImages.CheckedImage")));
-            this.guna2Button9.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button9.CustomImages.Image")));
-            this.guna2Button9.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
-            this.guna2Button9.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button9.CustomImages.Parent = this.guna2Button9;
-            this.guna2Button9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.ForeColor = System.Drawing.Color.White;
-            this.guna2Button9.HoverState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button9.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button9.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button9.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button9.HoverState.Parent = this.guna2Button9;
-            this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.Location = new System.Drawing.Point(29, 162);
-            this.guna2Button9.Name = "guna2Button9";
-            this.guna2Button9.ShadowDecoration.Parent = this.guna2Button9;
-            this.guna2Button9.Size = new System.Drawing.Size(170, 45);
-            this.guna2Button9.TabIndex = 1;
-            this.guna2Button9.Text = "Name4";
-            this.guna2Button9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.TextOffset = new System.Drawing.Point(47, 0);
-            // 
-            // guna2Button10
-            // 
-            this.guna2Button10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button10.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button10.BorderRadius = 10;
-            this.guna2Button10.BorderThickness = 1;
-            this.guna2Button10.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button10.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button10.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button10.CheckedState.Parent = this.guna2Button10;
-            this.guna2Button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button10.CustomImages.CheckedImage = ((System.Drawing.Image)(resources.GetObject("guna2Button10.CustomImages.CheckedImage")));
-            this.guna2Button10.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button10.CustomImages.Image")));
-            this.guna2Button10.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
-            this.guna2Button10.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button10.CustomImages.Parent = this.guna2Button10;
-            this.guna2Button10.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.HoverState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button10.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button10.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button10.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.HoverState.Parent = this.guna2Button10;
-            this.guna2Button10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.Location = new System.Drawing.Point(29, 111);
-            this.guna2Button10.Name = "guna2Button10";
-            this.guna2Button10.ShadowDecoration.Parent = this.guna2Button10;
-            this.guna2Button10.Size = new System.Drawing.Size(170, 45);
-            this.guna2Button10.TabIndex = 2;
-            this.guna2Button10.Text = "Name3";
-            this.guna2Button10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.TextOffset = new System.Drawing.Point(47, 0);
-            // 
-            // guna2Button11
-            // 
-            this.guna2Button11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button11.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button11.BorderRadius = 10;
-            this.guna2Button11.BorderThickness = 1;
-            this.guna2Button11.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button11.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button11.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button11.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2Button11.CheckedState.Parent = this.guna2Button11;
-            this.guna2Button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button11.CustomImages.CheckedImage = ((System.Drawing.Image)(resources.GetObject("guna2Button11.CustomImages.CheckedImage")));
-            this.guna2Button11.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button11.CustomImages.Image")));
-            this.guna2Button11.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button11.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
-            this.guna2Button11.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button11.CustomImages.Parent = this.guna2Button11;
-            this.guna2Button11.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button11.ForeColor = System.Drawing.Color.White;
-            this.guna2Button11.HoverState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button11.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button11.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button11.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button11.HoverState.Parent = this.guna2Button11;
-            this.guna2Button11.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button11.Location = new System.Drawing.Point(29, 60);
-            this.guna2Button11.Name = "guna2Button11";
-            this.guna2Button11.ShadowDecoration.Parent = this.guna2Button11;
-            this.guna2Button11.Size = new System.Drawing.Size(170, 45);
-            this.guna2Button11.TabIndex = 3;
-            this.guna2Button11.Text = "Name2";
-            this.guna2Button11.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button11.TextOffset = new System.Drawing.Point(47, 0);
-            // 
-            // btnName1
-            // 
-            this.btnName1.BackColor = System.Drawing.Color.Transparent;
-            this.btnName1.BorderColor = System.Drawing.Color.Transparent;
-            this.btnName1.BorderRadius = 10;
-            this.btnName1.BorderThickness = 1;
-            this.btnName1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnName1.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnName1.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnName1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnName1.CheckedState.Parent = this.btnName1;
-            this.btnName1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnName1.CustomImages.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnName1.CustomImages.CheckedImage")));
-            this.btnName1.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("btnName1.CustomImages.Image")));
-            this.btnName1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnName1.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
-            this.btnName1.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnName1.CustomImages.Parent = this.btnName1;
-            this.btnName1.FillColor = System.Drawing.Color.Transparent;
-            this.btnName1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnName1.ForeColor = System.Drawing.Color.White;
-            this.btnName1.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnName1.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnName1.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnName1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnName1.HoverState.Parent = this.btnName1;
-            this.btnName1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnName1.Location = new System.Drawing.Point(29, 9);
-            this.btnName1.Name = "btnName1";
-            this.btnName1.ShadowDecoration.Parent = this.btnName1;
-            this.btnName1.Size = new System.Drawing.Size(170, 45);
-            this.btnName1.TabIndex = 4;
-            this.btnName1.Text = "Name1";
-            this.btnName1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnName1.TextOffset = new System.Drawing.Point(47, 0);
             // 
             // btnPlaylist
             // 
@@ -302,7 +198,7 @@
             this.btnPlaylist.HoverState.Parent = this.btnPlaylist;
             this.btnPlaylist.Image = global::Music__Player.Properties.Resources.icon_skip_blue;
             this.btnPlaylist.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPlaylist.Location = new System.Drawing.Point(172, 546);
+            this.btnPlaylist.Location = new System.Drawing.Point(172, 436);
             this.btnPlaylist.Name = "btnPlaylist";
             this.btnPlaylist.PressedState.Parent = this.btnPlaylist;
             this.btnPlaylist.Size = new System.Drawing.Size(34, 34);
@@ -315,7 +211,7 @@
             this.lblPlaylist.BackColor = System.Drawing.Color.Transparent;
             this.lblPlaylist.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlaylist.ForeColor = System.Drawing.Color.White;
-            this.lblPlaylist.Location = new System.Drawing.Point(32, 552);
+            this.lblPlaylist.Location = new System.Drawing.Point(32, 442);
             this.lblPlaylist.Name = "lblPlaylist";
             this.lblPlaylist.Size = new System.Drawing.Size(79, 23);
             this.lblPlaylist.TabIndex = 1;
@@ -327,7 +223,7 @@
             this.lblLibrary.BackColor = System.Drawing.Color.Transparent;
             this.lblLibrary.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLibrary.ForeColor = System.Drawing.Color.White;
-            this.lblLibrary.Location = new System.Drawing.Point(32, 296);
+            this.lblLibrary.Location = new System.Drawing.Point(32, 241);
             this.lblLibrary.Name = "lblLibrary";
             this.lblLibrary.Size = new System.Drawing.Size(76, 23);
             this.lblLibrary.TabIndex = 1;
@@ -344,6 +240,43 @@
             this.lblMenu.Size = new System.Drawing.Size(60, 23);
             this.lblMenu.TabIndex = 1;
             this.lblMenu.Text = "MENU";
+            // 
+            // btnCreatePlaylist
+            // 
+            this.btnCreatePlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreatePlaylist.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCreatePlaylist.BorderRadius = 10;
+            this.btnCreatePlaylist.BorderThickness = 1;
+            this.btnCreatePlaylist.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCreatePlaylist.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnCreatePlaylist.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreatePlaylist.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCreatePlaylist.CheckedState.Parent = this.btnCreatePlaylist;
+            this.btnCreatePlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreatePlaylist.CustomImages.CheckedImage = global::Music__Player.Properties.Resources.icon_createplaylist_blue;
+            this.btnCreatePlaylist.CustomImages.Image = global::Music__Player.Properties.Resources.icon_createplaylist_white;
+            this.btnCreatePlaylist.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCreatePlaylist.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
+            this.btnCreatePlaylist.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnCreatePlaylist.CustomImages.Parent = this.btnCreatePlaylist;
+            this.btnCreatePlaylist.FillColor = System.Drawing.Color.Transparent;
+            this.btnCreatePlaylist.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreatePlaylist.ForeColor = System.Drawing.Color.White;
+            this.btnCreatePlaylist.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnCreatePlaylist.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnCreatePlaylist.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreatePlaylist.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCreatePlaylist.HoverState.Parent = this.btnCreatePlaylist;
+            this.btnCreatePlaylist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCreatePlaylist.Location = new System.Drawing.Point(36, 531);
+            this.btnCreatePlaylist.Name = "btnCreatePlaylist";
+            this.btnCreatePlaylist.ShadowDecoration.Parent = this.btnCreatePlaylist;
+            this.btnCreatePlaylist.Size = new System.Drawing.Size(204, 45);
+            this.btnCreatePlaylist.TabIndex = 0;
+            this.btnCreatePlaylist.Text = "Create Playlist";
+            this.btnCreatePlaylist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCreatePlaylist.TextOffset = new System.Drawing.Point(47, 0);
+            this.btnCreatePlaylist.Click += new System.EventHandler(this.btnCreatePlaylist_Click);
             // 
             // btnLocalFiles
             // 
@@ -372,7 +305,7 @@
             this.btnLocalFiles.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnLocalFiles.HoverState.Parent = this.btnLocalFiles;
             this.btnLocalFiles.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLocalFiles.Location = new System.Drawing.Point(36, 483);
+            this.btnLocalFiles.Location = new System.Drawing.Point(36, 377);
             this.btnLocalFiles.Name = "btnLocalFiles";
             this.btnLocalFiles.ShadowDecoration.Parent = this.btnLocalFiles;
             this.btnLocalFiles.Size = new System.Drawing.Size(170, 45);
@@ -380,42 +313,6 @@
             this.btnLocalFiles.Text = "Local Files";
             this.btnLocalFiles.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLocalFiles.TextOffset = new System.Drawing.Point(47, 0);
-            // 
-            // btnExplorer
-            // 
-            this.btnExplorer.BackColor = System.Drawing.Color.Transparent;
-            this.btnExplorer.BorderColor = System.Drawing.Color.Transparent;
-            this.btnExplorer.BorderRadius = 10;
-            this.btnExplorer.BorderThickness = 1;
-            this.btnExplorer.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnExplorer.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnExplorer.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExplorer.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnExplorer.CheckedState.Parent = this.btnExplorer;
-            this.btnExplorer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExplorer.CustomImages.CheckedImage = global::Music__Player.Properties.Resources.icon_explorer_blue;
-            this.btnExplorer.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("btnExplorer.CustomImages.Image")));
-            this.btnExplorer.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExplorer.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
-            this.btnExplorer.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnExplorer.CustomImages.Parent = this.btnExplorer;
-            this.btnExplorer.FillColor = System.Drawing.Color.Transparent;
-            this.btnExplorer.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExplorer.ForeColor = System.Drawing.Color.White;
-            this.btnExplorer.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnExplorer.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnExplorer.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExplorer.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnExplorer.HoverState.Parent = this.btnExplorer;
-            this.btnExplorer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExplorer.Location = new System.Drawing.Point(36, 228);
-            this.btnExplorer.Name = "btnExplorer";
-            this.btnExplorer.ShadowDecoration.Parent = this.btnExplorer;
-            this.btnExplorer.Size = new System.Drawing.Size(170, 45);
-            this.btnExplorer.TabIndex = 0;
-            this.btnExplorer.Text = "Explorer";
-            this.btnExplorer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnExplorer.TextOffset = new System.Drawing.Point(47, 0);
             // 
             // btnHistory
             // 
@@ -444,7 +341,7 @@
             this.btnHistory.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnHistory.HoverState.Parent = this.btnHistory;
             this.btnHistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHistory.Location = new System.Drawing.Point(36, 432);
+            this.btnHistory.Location = new System.Drawing.Point(36, 326);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.ShadowDecoration.Parent = this.btnHistory;
             this.btnHistory.Size = new System.Drawing.Size(170, 45);
@@ -518,7 +415,7 @@
             this.btnFavorite.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnFavorite.HoverState.Parent = this.btnFavorite;
             this.btnFavorite.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFavorite.Location = new System.Drawing.Point(36, 381);
+            this.btnFavorite.Location = new System.Drawing.Point(36, 480);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.Parent = this.btnFavorite;
             this.btnFavorite.Size = new System.Drawing.Size(170, 45);
@@ -555,7 +452,7 @@
             this.btnRecent.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnRecent.HoverState.Parent = this.btnRecent;
             this.btnRecent.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRecent.Location = new System.Drawing.Point(36, 330);
+            this.btnRecent.Location = new System.Drawing.Point(36, 275);
             this.btnRecent.Name = "btnRecent";
             this.btnRecent.ShadowDecoration.Parent = this.btnRecent;
             this.btnRecent.Size = new System.Drawing.Size(170, 45);
@@ -646,80 +543,30 @@
             // panelMainScreen
             // 
             this.panelMainScreen.AutoScroll = true;
-            this.panelMainScreen.Controls.Add(this.homeScreen);
             this.panelMainScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainScreen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(242)))), ((int)(((byte)(237)))));
             this.panelMainScreen.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(242)))), ((int)(((byte)(237)))));
             this.panelMainScreen.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.panelMainScreen.Location = new System.Drawing.Point(242, 36);
+            this.panelMainScreen.Location = new System.Drawing.Point(242, 0);
             this.panelMainScreen.Name = "panelMainScreen";
             this.panelMainScreen.ShadowDecoration.Parent = this.panelMainScreen;
             this.panelMainScreen.Size = new System.Drawing.Size(1359, 965);
             this.panelMainScreen.TabIndex = 2;
             // 
-            // btnCreatePlaylist
-            // 
-            this.btnCreatePlaylist.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreatePlaylist.BorderColor = System.Drawing.Color.Transparent;
-            this.btnCreatePlaylist.BorderRadius = 10;
-            this.btnCreatePlaylist.BorderThickness = 1;
-            this.btnCreatePlaylist.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCreatePlaylist.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnCreatePlaylist.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreatePlaylist.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnCreatePlaylist.CheckedState.Parent = this.btnCreatePlaylist;
-            this.btnCreatePlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCreatePlaylist.CustomImages.CheckedImage = global::Music__Player.Properties.Resources.icon_createplaylist_blue;
-            this.btnCreatePlaylist.CustomImages.Image = global::Music__Player.Properties.Resources.icon_createplaylist_white;
-            this.btnCreatePlaylist.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCreatePlaylist.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
-            this.btnCreatePlaylist.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnCreatePlaylist.CustomImages.Parent = this.btnCreatePlaylist;
-            this.btnCreatePlaylist.FillColor = System.Drawing.Color.Transparent;
-            this.btnCreatePlaylist.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreatePlaylist.ForeColor = System.Drawing.Color.White;
-            this.btnCreatePlaylist.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnCreatePlaylist.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnCreatePlaylist.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreatePlaylist.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCreatePlaylist.HoverState.Parent = this.btnCreatePlaylist;
-            this.btnCreatePlaylist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCreatePlaylist.Location = new System.Drawing.Point(36, 805);
-            this.btnCreatePlaylist.Name = "btnCreatePlaylist";
-            this.btnCreatePlaylist.ShadowDecoration.Parent = this.btnCreatePlaylist;
-            this.btnCreatePlaylist.Size = new System.Drawing.Size(204, 45);
-            this.btnCreatePlaylist.TabIndex = 0;
-            this.btnCreatePlaylist.Text = "Create Playlist";
-            this.btnCreatePlaylist.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCreatePlaylist.TextOffset = new System.Drawing.Point(47, 0);
-            this.btnCreatePlaylist.Click += new System.EventHandler(this.btnCreatePlaylist_Click);
-            // 
-            // homeScreen
-            // 
-            this.homeScreen.BackColor = System.Drawing.Color.Transparent;
-            this.homeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.homeScreen.Location = new System.Drawing.Point(0, 0);
-            this.homeScreen.Name = "homeScreen";
-            this.homeScreen.Size = new System.Drawing.Size(1359, 965);
-            this.homeScreen.TabIndex = 0;
-            // 
             // Main__Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1601, 1001);
+            this.ClientSize = new System.Drawing.Size(1601, 965);
             this.Controls.Add(this.panelMainScreen);
             this.Controls.Add(this.panelSlideBar);
-            this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main__Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.panelTitle.ResumeLayout(false);
             this.panelSlideBar.ResumeLayout(false);
             this.panelSlideBar.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.panelMainScreen.ResumeLayout(false);
+            this.fpnlPlaylists.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -727,11 +574,8 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DragControl dragForm;
-        private Guna.UI2.WinForms.Guna2Panel panelTitle;
-        private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2GradientPanel panelSlideBar;
         private Guna.UI2.WinForms.Guna2Button btnHome;
-        private Guna.UI2.WinForms.Guna2Button btnExplorer;
         private Guna.UI2.WinForms.Guna2Button btnAlbums;
         private Guna.UI2.WinForms.Guna2Button btnSongs;
         private System.Windows.Forms.Label lblMenu;
@@ -742,16 +586,18 @@
         private Guna.UI2.WinForms.Guna2Button btnHistory;
         private Guna.UI2.WinForms.Guna2Button btnFavorite;
         private Guna.UI2.WinForms.Guna2Button btnRecent;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button10;
-        private Guna.UI2.WinForms.Guna2Button guna2Button11;
-        private Guna.UI2.WinForms.Guna2Button btnName1;
         private Guna.UI2.WinForms.Guna2VSeparator VerticalLine;
         private Guna.UI2.WinForms.Guna2Elipse borderForm;
         private Guna.UI2.WinForms.Guna2GradientPanel panelMainScreen;
-        private sources.View.Home homeScreen;
         private Guna.UI2.WinForms.Guna2Button btnCreatePlaylist;
+        private System.Windows.Forms.FlowLayoutPanel fpnlPlaylists;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private sources.Custom.Name__Playlist__Button name__Playlist__Button5;
+        private sources.Custom.Name__Playlist__Button name__Playlist__Button4;
+        private sources.Custom.Name__Playlist__Button name__Playlist__Button1;
+        private sources.Custom.Name__Playlist__Button name__Playlist__Button2;
+        private sources.Custom.Name__Playlist__Button name__Playlist__Button3;
+        private sources.Custom.Name__Playlist__Button name__Playlist__Button6;
     }
 }
 

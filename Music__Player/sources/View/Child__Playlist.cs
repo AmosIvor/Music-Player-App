@@ -7,42 +7,250 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
 using Music__Player.Properties;
+using Music__Player.sources.Constant;
+using Music__Player.sources.Custom;
+using Music__Player.sources.DAO.CustomDAO;
+using Music__Player.sources.DAO.HomeDAO;
+using Music__Player.sources.DAO.PlaylistDAO;
+using Music__Player.sources.DTO.ChildPlaylistDTO;
 
 namespace Music__Player.sources.View
 {
     public partial class Child__Playlist : UserControl
     {
-        
+        Panel pnlHovered = new Panel();
         public Child__Playlist()
         {
             InitializeComponent();
-            datagridviewListSongs.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            datagridviewListSongs.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            datagridviewListSongs.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            datagridviewListSongs.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            //datagridviewListSongs.Columns[5].HeaderCell.Style.Padding = new Padding(0, 0, 50, 0);
-            //datagridviewListSongs.Columns[5].DefaultCellStyle.Padding = new Padding(0, 0, 50, 0);
 
+            FormatDataGridView();
+
+            
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        public void LoadChildPlaylist(int idPlaylist)
         {
-            Bitmap favorite = new Bitmap(Resources.icon_favorite_blue);
-            datagridviewListSongs.Rows.Add(
-                new object[]
-                {
-                    "01",
-                    "Tran Tuan Vu",
-                    "Tuan Vu Author",
-                    "Tuan Vu Tran Album",
-                    favorite,
-                    "03:15"
-                }
-                );
-            
+            LoadTitle(idPlaylist);
+
+            LoadListSongByIdPlaylist(idPlaylist);
+        }
+
+        void FormatDataGridView()
+        {
+            dtgvSongs.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dtgvSongs.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dtgvSongs.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dtgvSongs.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+        #region Load Song by Playlist
+        public void LoadListSongByIdPlaylist(int idPlaylist)
+        {
+            fpnlSongs.Controls.Clear();
+
+            List<List__Song__Playlist> listSong = List__Song__Playlist__DAO.Instance.GetListSongByIdPlaylist(idPlaylist);
+
+            int id = 1;
+
+            foreach (List__Song__Playlist songByPlaylist in listSong)
+            {
+                songByPlaylist.ID = List__Song__Playlist__DAO.Instance.ConvertID(id++);
+
+                songByPlaylist.MouseDoubleClickAdd += songByPlaylist_MouseDoubleClickAdd;
+
+                songByPlaylist.MouseEnterAdd += songByPlaylist_MouseEnterAdd;
+
+                songByPlaylist.MouseLeaveAdd += songByPlaylist_MouseLeaveAdd;
+
+                songByPlaylist.MouseClickPlay += songByPlaylist_MouseClickPlay;
+
+                fpnlSongs.Controls.Add(songByPlaylist);
+            }
+
+            //fpnlSongs.HorizontalScroll.Visible = false;
+        }
+
+        private void songByPlaylist_MouseClickPlay(object sender, MouseEventArgs e)
+        {
+            if (fpnlSongs.Tag != null)
+            {
+                List__Song__Playlist prev = (List__Song__Playlist)fpnlSongs.Tag;
+
+                prev.IsSelected = false;
+
+                prev.IsHovered = false;
+            }
+
+            List__Song__Playlist curr = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+            LoadSongPlayingAllScreen(curr);
+
+            Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying(curr);
+        }
+        private void songByPlaylist_MouseDoubleClickAdd(object sender, MouseEventArgs e)
+        {
             
 
+            if (fpnlSongs.Tag != null)
+            {
+                List__Song__Playlist prevSelected = (List__Song__Playlist)fpnlSongs.Tag;
+
+                prevSelected.IsSelected = false;
+
+                prevSelected.IsHovered = false;
+            }
+
+            if (sender is Label || sender is Guna2ImageButton || sender is Guna2PictureBox)
+            {
+                List__Song__Playlist songByPlaylistInside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+                LoadSongPlayingAllScreen(songByPlaylistInside);
+
+                Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
+
+                Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying(songByPlaylistInside);
+
+                return;
+            }
+
+            List__Song__Playlist songByPlaylistOutside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromPanel(sender);
+
+            LoadSongPlayingAllScreen(songByPlaylistOutside);
+
+            Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying(songByPlaylistOutside);
         }
+        private void songByPlaylist_MouseEnterAdd(object sender, EventArgs e)
+        {
+            if (pnlHovered.Tag != null)
+            {
+                List__Song__Playlist prevHover = (List__Song__Playlist)pnlHovered.Tag;
+
+                prevHover.IsHovered = false;
+            }
+
+            if (sender is Label || sender is Guna2ImageButton || sender is Guna2PictureBox)
+            {
+                List__Song__Playlist songByPlaylistInside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+                songByPlaylistInside.IsHovered = true;
+
+                pnlHovered.Tag = songByPlaylistInside;
+
+                return;
+            }
+
+            List__Song__Playlist songByPlaylistOutside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromPanel(sender);
+
+            songByPlaylistOutside.IsHovered = true;
+        }
+        private void songByPlaylist_MouseLeaveAdd(object sender, EventArgs e)
+        {
+            if (sender is Label || sender is Guna2ImageButton || sender is Guna2PictureBox)
+            {
+                List__Song__Playlist songByPlaylistInside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+                songByPlaylistInside.IsHovered = false;
+
+                return;
+            }
+
+            List__Song__Playlist songByPlaylistOutside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromPanel(sender);
+
+            songByPlaylistOutside.IsHovered = false;
+        }
+
+        #endregion
+
+        #region Load Title
+
+        public void LoadTitle(int idPlaylist)
+        {
+            PlaylistDTO titlePlaylist = PlaylistDAO.Instance.GetPlaylistByID(idPlaylist);
+
+            pbPlaylist.Image = titlePlaylist.Image_Playlist;
+
+            lblTitle.Text = titlePlaylist.Name_Playlist;
+
+            lblNumberSong.Text = "Amos Ivor - " + titlePlaylist.Quantity + " songs";
+        }
+
+        #endregion
+
+        #region Back Button
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Navigate.Navigation.Instance.mainScreen.LoadPlaylists();
+        }
+
+        #endregion
+
+        #region Song Playing Bottom Bar
+        public void LoadSongPlayingBottomBar()
+        {
+            songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+        #endregion
+
+        #region Play First Song 
+        public void PlayFirstSong()
+        {
+            if (fpnlSongs.Controls.Count == 0)
+            {
+                return;
+            }
+            List__Song__Playlist firstSong = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == "01");
+
+            LoadSongPlayingAllScreen(firstSong);
+        }
+
+        #endregion
+
+        #region Load Song Playing 
+
+        void LoadSongPlayingAllScreen(List__Song__Playlist song)
+        {
+            fpnlSongs.Tag = song;
+
+            song.IsSelected = true;
+
+            Info__Song__Panel infoSong = new Info__Song__Panel(song);
+
+            Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
+
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.homeScreen.LoadSongPlaying();
+        }
+
+        #endregion
+
+        #region Set Song Playing
+        public void SetSongPlaying(List__Song__Playlist song)
+        {
+            List__Song__Playlist songByPlaylist = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == song.ID);
+
+            songByPlaylist.IsSelected = true;
+
+            fpnlSongs.Tag = songByPlaylist;
+
+            //Console.WriteLine(fpnlSongs.Tag.GetType());
+            
+        }
+
+        #endregion
     }
 }
