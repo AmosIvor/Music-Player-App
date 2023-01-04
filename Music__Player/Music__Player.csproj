@@ -71,6 +71,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="sources\Constant\IMAGE.cs" />
+    <Compile Include="sources\Custom\List__Song__Playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\List__Song__Playlist.Designer.cs">
+      <DependentUpon>List__Song__Playlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\Song__Playing__BottomBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,11 +137,15 @@
     <Compile Include="sources\DAO\CustomDAO\Dropdown__Playlist__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Info__Playlist__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Info__Song__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\List__Song__Playlist__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Playlist__Add__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Popup__Create__Playlist__DAO.cs" />
+    <Compile Include="sources\DAO\PlaylistDAO\PlaylistDAO.cs" />
     <Compile Include="sources\DAO\SQLConnection\DataProviderDAO.cs" />
     <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Button__DAO.cs" />
+    <Compile Include="sources\DTO\ChildPlaylistDTO\PlaylistDTO.cs" />
     <Compile Include="sources\DTO\HomeDTO\Song__Playing.cs" />
     <Compile Include="sources\Navigation\Navigate.cs" />
     <Compile Include="sources\MediaPlayer\Media__Player.cs" />
@@ -205,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Info__Song__Panel.resx">
       <DependentUpon>Info__Song__Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\List__Song__Playlist.resx">
+      <DependentUpon>List__Song__Playlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Name__Playlist__Button.resx">
       <DependentUpon>Name__Playlist__Button.cs</DependentUpon>
@@ -449,7 +462,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="sources\DAO\MainScreenDAO\" />
-    <Folder Include="sources\DAO\PlaylistDAO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_name_playlist_white.png" />
