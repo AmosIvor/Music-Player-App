@@ -72,7 +72,7 @@ namespace Music__Player.sources.View
                 fpnlSongs.Controls.Add(songByPlaylist);
             }
 
-            fpnlSongs.HorizontalScroll.Visible = false;
+            //fpnlSongs.HorizontalScroll.Visible = false;
         }
 
         private void songByPlaylist_MouseClickPlay(object sender, MouseEventArgs e)

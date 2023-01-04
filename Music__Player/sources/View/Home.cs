@@ -108,6 +108,8 @@ namespace Music__Player.sources.View
              
             fpanelSongs.Tag = curr;
 
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
             Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
 
             Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
@@ -144,6 +146,8 @@ namespace Music__Player.sources.View
 
                 Media__Player.Instance.RunMP3(infoSongPanelInside.URL, timerMusic);
 
+                Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
                 Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
 
                 Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
@@ -164,6 +168,8 @@ namespace Music__Player.sources.View
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             Media__Player.Instance.RunMP3(infoSongPanelOutside.URL, timerMusic);
+
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
 
             Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
 
@@ -276,6 +282,8 @@ namespace Music__Player.sources.View
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanel.ID) - 1) * 100;
 
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
             Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
 
             Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
@@ -327,6 +335,8 @@ namespace Music__Player.sources.View
 
                 fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanelInside.ID) - 1) * 100;
 
+                Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
                 Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
 
                 Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
@@ -359,6 +369,8 @@ namespace Music__Player.sources.View
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanelOutside.ID) - 1) * 100;
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanelOutside.ID) - 1) * 100;
+
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
 
             Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
 
@@ -471,6 +483,12 @@ namespace Music__Player.sources.View
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(nextIndex) - 1) * 100;
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(nextIndex) - 1) * 100;
+
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
         }
         private void btnSkip_Click(object sender, EventArgs e)
         {
