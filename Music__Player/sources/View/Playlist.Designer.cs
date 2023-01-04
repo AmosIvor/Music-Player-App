@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.pnlBottom = new Guna.UI2.WinForms.Guna2Panel();
+            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.fpnlPlaylists = new System.Windows.Forms.FlowLayoutPanel();
+            this.info__Playlist__Panel1 = new Music__Player.sources.Custom.Info__Playlist__Panel();
+            this.info__Playlist__Panel2 = new Music__Player.sources.Custom.Info__Playlist__Panel();
+            this.info__Playlist__Panel5 = new Music__Player.sources.Custom.Info__Playlist__Panel();
+            this.info__Playlist__Panel3 = new Music__Player.sources.Custom.Info__Playlist__Panel();
+            this.info__Playlist__Panel4 = new Music__Player.sources.Custom.Info__Playlist__Panel();
             this.btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.info__Playlist__Panel1 = new Music__Player.sources.Custom.Info__Playlist__Panel();
-            this.info__Playlist__Panel2 = new Music__Player.sources.Custom.Info__Playlist__Panel();
-            this.info__Playlist__Panel5 = new Music__Player.sources.Custom.Info__Playlist__Panel();
-            this.info__Playlist__Panel3 = new Music__Player.sources.Custom.Info__Playlist__Panel();
-            this.info__Playlist__Panel4 = new Music__Player.sources.Custom.Info__Playlist__Panel();
-            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.pnlBottom.SuspendLayout();
             this.fpnlPlaylists.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -59,6 +59,15 @@
             this.pnlBottom.Size = new System.Drawing.Size(1359, 100);
             this.pnlBottom.TabIndex = 0;
             // 
+            // songPlayingBottomBar
+            // 
+            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
+            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
+            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
+            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
+            this.songPlayingBottomBar.TabIndex = 0;
+            // 
             // fpnlPlaylists
             // 
             this.fpnlPlaylists.AutoScroll = true;
@@ -73,6 +82,81 @@
             this.fpnlPlaylists.Name = "fpnlPlaylists";
             this.fpnlPlaylists.Size = new System.Drawing.Size(1359, 505);
             this.fpnlPlaylists.TabIndex = 2;
+            // 
+            // info__Playlist__Panel1
+            // 
+            this.info__Playlist__Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.info__Playlist__Panel1.ID_Playlist = 0;
+            this.info__Playlist__Panel1.Image_Playlist = null;
+            this.info__Playlist__Panel1.IsHovered = false;
+            this.info__Playlist__Panel1.IsSelected = false;
+            this.info__Playlist__Panel1.Location = new System.Drawing.Point(64, 32);
+            this.info__Playlist__Panel1.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
+            this.info__Playlist__Panel1.Name = "info__Playlist__Panel1";
+            this.info__Playlist__Panel1.Name_Playlist = null;
+            this.info__Playlist__Panel1.Number_Song = null;
+            this.info__Playlist__Panel1.Size = new System.Drawing.Size(587, 168);
+            this.info__Playlist__Panel1.TabIndex = 0;
+            // 
+            // info__Playlist__Panel2
+            // 
+            this.info__Playlist__Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.info__Playlist__Panel2.ID_Playlist = 0;
+            this.info__Playlist__Panel2.Image_Playlist = null;
+            this.info__Playlist__Panel2.IsHovered = false;
+            this.info__Playlist__Panel2.IsSelected = false;
+            this.info__Playlist__Panel2.Location = new System.Drawing.Point(718, 32);
+            this.info__Playlist__Panel2.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
+            this.info__Playlist__Panel2.Name = "info__Playlist__Panel2";
+            this.info__Playlist__Panel2.Name_Playlist = null;
+            this.info__Playlist__Panel2.Number_Song = null;
+            this.info__Playlist__Panel2.Size = new System.Drawing.Size(587, 168);
+            this.info__Playlist__Panel2.TabIndex = 1;
+            // 
+            // info__Playlist__Panel5
+            // 
+            this.info__Playlist__Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.info__Playlist__Panel5.ID_Playlist = 0;
+            this.info__Playlist__Panel5.Image_Playlist = null;
+            this.info__Playlist__Panel5.IsHovered = false;
+            this.info__Playlist__Panel5.IsSelected = false;
+            this.info__Playlist__Panel5.Location = new System.Drawing.Point(64, 264);
+            this.info__Playlist__Panel5.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
+            this.info__Playlist__Panel5.Name = "info__Playlist__Panel5";
+            this.info__Playlist__Panel5.Name_Playlist = null;
+            this.info__Playlist__Panel5.Number_Song = null;
+            this.info__Playlist__Panel5.Size = new System.Drawing.Size(587, 168);
+            this.info__Playlist__Panel5.TabIndex = 4;
+            // 
+            // info__Playlist__Panel3
+            // 
+            this.info__Playlist__Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.info__Playlist__Panel3.ID_Playlist = 0;
+            this.info__Playlist__Panel3.Image_Playlist = null;
+            this.info__Playlist__Panel3.IsHovered = false;
+            this.info__Playlist__Panel3.IsSelected = false;
+            this.info__Playlist__Panel3.Location = new System.Drawing.Point(718, 264);
+            this.info__Playlist__Panel3.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
+            this.info__Playlist__Panel3.Name = "info__Playlist__Panel3";
+            this.info__Playlist__Panel3.Name_Playlist = null;
+            this.info__Playlist__Panel3.Number_Song = null;
+            this.info__Playlist__Panel3.Size = new System.Drawing.Size(587, 168);
+            this.info__Playlist__Panel3.TabIndex = 2;
+            // 
+            // info__Playlist__Panel4
+            // 
+            this.info__Playlist__Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.info__Playlist__Panel4.ID_Playlist = 0;
+            this.info__Playlist__Panel4.Image_Playlist = null;
+            this.info__Playlist__Panel4.IsHovered = false;
+            this.info__Playlist__Panel4.IsSelected = false;
+            this.info__Playlist__Panel4.Location = new System.Drawing.Point(64, 496);
+            this.info__Playlist__Panel4.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
+            this.info__Playlist__Panel4.Name = "info__Playlist__Panel4";
+            this.info__Playlist__Panel4.Name_Playlist = null;
+            this.info__Playlist__Panel4.Number_Song = null;
+            this.info__Playlist__Panel4.Size = new System.Drawing.Size(587, 168);
+            this.info__Playlist__Panel4.TabIndex = 3;
             // 
             // btnNext
             // 
@@ -154,75 +238,6 @@
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(1359, 360);
             this.guna2Panel2.TabIndex = 1;
-            // 
-            // info__Playlist__Panel1
-            // 
-            this.info__Playlist__Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.info__Playlist__Panel1.Image_Playlist = null;
-            this.info__Playlist__Panel1.Location = new System.Drawing.Point(64, 32);
-            this.info__Playlist__Panel1.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
-            this.info__Playlist__Panel1.Name = "info__Playlist__Panel1";
-            this.info__Playlist__Panel1.Name_Playlist = null;
-            this.info__Playlist__Panel1.Number_Song = null;
-            this.info__Playlist__Panel1.Size = new System.Drawing.Size(587, 168);
-            this.info__Playlist__Panel1.TabIndex = 0;
-            // 
-            // info__Playlist__Panel2
-            // 
-            this.info__Playlist__Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.info__Playlist__Panel2.Image_Playlist = null;
-            this.info__Playlist__Panel2.Location = new System.Drawing.Point(718, 32);
-            this.info__Playlist__Panel2.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
-            this.info__Playlist__Panel2.Name = "info__Playlist__Panel2";
-            this.info__Playlist__Panel2.Name_Playlist = null;
-            this.info__Playlist__Panel2.Number_Song = null;
-            this.info__Playlist__Panel2.Size = new System.Drawing.Size(587, 168);
-            this.info__Playlist__Panel2.TabIndex = 1;
-            // 
-            // info__Playlist__Panel5
-            // 
-            this.info__Playlist__Panel5.BackColor = System.Drawing.Color.Transparent;
-            this.info__Playlist__Panel5.Image_Playlist = null;
-            this.info__Playlist__Panel5.Location = new System.Drawing.Point(64, 264);
-            this.info__Playlist__Panel5.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
-            this.info__Playlist__Panel5.Name = "info__Playlist__Panel5";
-            this.info__Playlist__Panel5.Name_Playlist = null;
-            this.info__Playlist__Panel5.Number_Song = null;
-            this.info__Playlist__Panel5.Size = new System.Drawing.Size(587, 168);
-            this.info__Playlist__Panel5.TabIndex = 4;
-            // 
-            // info__Playlist__Panel3
-            // 
-            this.info__Playlist__Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.info__Playlist__Panel3.Image_Playlist = null;
-            this.info__Playlist__Panel3.Location = new System.Drawing.Point(718, 264);
-            this.info__Playlist__Panel3.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
-            this.info__Playlist__Panel3.Name = "info__Playlist__Panel3";
-            this.info__Playlist__Panel3.Name_Playlist = null;
-            this.info__Playlist__Panel3.Number_Song = null;
-            this.info__Playlist__Panel3.Size = new System.Drawing.Size(587, 168);
-            this.info__Playlist__Panel3.TabIndex = 2;
-            // 
-            // info__Playlist__Panel4
-            // 
-            this.info__Playlist__Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.info__Playlist__Panel4.Image_Playlist = null;
-            this.info__Playlist__Panel4.Location = new System.Drawing.Point(64, 496);
-            this.info__Playlist__Panel4.Margin = new System.Windows.Forms.Padding(64, 32, 3, 32);
-            this.info__Playlist__Panel4.Name = "info__Playlist__Panel4";
-            this.info__Playlist__Panel4.Name_Playlist = null;
-            this.info__Playlist__Panel4.Number_Song = null;
-            this.info__Playlist__Panel4.Size = new System.Drawing.Size(587, 168);
-            this.info__Playlist__Panel4.TabIndex = 3;
-            // 
-            // songPlayingBottomBar
-            // 
-            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
-            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
-            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
-            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
-            this.songPlayingBottomBar.TabIndex = 0;
             // 
             // Playlist
             // 
