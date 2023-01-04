@@ -78,6 +78,7 @@
             // 
             // guna2DateTimePicker2
             // 
+            this.guna2DateTimePicker2.BackColor = System.Drawing.Color.Transparent;
             this.guna2DateTimePicker2.CheckedState.Parent = this.guna2DateTimePicker2;
             this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
             this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -118,6 +119,8 @@
             // datagridviewHistory
             // 
             this.datagridviewHistory.AllowUserToAddRows = false;
+            this.datagridviewHistory.AllowUserToResizeColumns = false;
+            this.datagridviewHistory.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.datagridviewHistory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.datagridviewHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -157,6 +160,7 @@
             this.datagridviewHistory.RowHeadersVisible = false;
             this.datagridviewHistory.RowHeadersWidth = 51;
             this.datagridviewHistory.RowTemplate.Height = 45;
+            this.datagridviewHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.datagridviewHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datagridviewHistory.Size = new System.Drawing.Size(1250, 520);
             this.datagridviewHistory.TabIndex = 2;
