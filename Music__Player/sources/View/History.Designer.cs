@@ -36,6 +36,7 @@
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelPlayMusic = new Guna.UI2.WinForms.Guna2Panel();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.datagridviewHistory = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnImage = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewHistory)).BeginInit();
@@ -106,8 +106,8 @@
             // panelContent
             // 
             this.panelContent.BackColor = System.Drawing.Color.Transparent;
+            this.panelContent.Controls.Add(this.flowLayoutPanel1);
             this.panelContent.Controls.Add(this.datagridviewHistory);
-            this.panelContent.Controls.Add(this.btnImage);
             this.panelContent.Controls.Add(this.guna2DateTimePicker1);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContent.Location = new System.Drawing.Point(0, 0);
@@ -115,6 +115,13 @@
             this.panelContent.ShadowDecoration.Parent = this.panelContent;
             this.panelContent.Size = new System.Drawing.Size(1359, 965);
             this.panelContent.TabIndex = 5;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(49, 230);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1250, 596);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // datagridviewHistory
             // 
@@ -162,7 +169,7 @@
             this.datagridviewHistory.RowTemplate.Height = 45;
             this.datagridviewHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.datagridviewHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagridviewHistory.Size = new System.Drawing.Size(1250, 520);
+            this.datagridviewHistory.Size = new System.Drawing.Size(1250, 51);
             this.datagridviewHistory.TabIndex = 2;
             this.datagridviewHistory.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.datagridviewHistory.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -241,23 +248,6 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
-            // btnImage
-            // 
-            this.btnImage.BorderRadius = 10;
-            this.btnImage.CheckedState.Parent = this.btnImage;
-            this.btnImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImage.CustomImages.Parent = this.btnImage;
-            this.btnImage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnImage.ForeColor = System.Drawing.Color.White;
-            this.btnImage.HoverState.Parent = this.btnImage;
-            this.btnImage.Location = new System.Drawing.Point(662, 76);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.ShadowDecoration.Parent = this.btnImage;
-            this.btnImage.Size = new System.Drawing.Size(180, 45);
-            this.btnImage.TabIndex = 1;
-            this.btnImage.Text = "data";
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
-            // 
             // guna2ImageButton1
             // 
             this.guna2ImageButton1.BackColor = System.Drawing.Color.Transparent;
@@ -298,7 +288,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Panel panelPlayMusic;
         private Guna.UI2.WinForms.Guna2Panel panelContent;
-        private Guna.UI2.WinForms.Guna2Button btnImage;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewHistory;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -306,5 +295,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
