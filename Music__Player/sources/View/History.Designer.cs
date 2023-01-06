@@ -37,6 +37,15 @@
             this.panelPlayMusic = new Guna.UI2.WinForms.Guna2Panel();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.fpnlSongs = new System.Windows.Forms.FlowLayoutPanel();
+            this.song__History9 = new Music__Player.sources.Custom.Song__History();
+            this.song__History1 = new Music__Player.sources.Custom.Song__History();
+            this.song__History2 = new Music__Player.sources.Custom.Song__History();
+            this.song__History3 = new Music__Player.sources.Custom.Song__History();
+            this.song__History4 = new Music__Player.sources.Custom.Song__History();
+            this.song__History5 = new Music__Player.sources.Custom.Song__History();
+            this.song__History6 = new Music__Player.sources.Custom.Song__History();
+            this.song__History7 = new Music__Player.sources.Custom.Song__History();
+            this.song__History8 = new Music__Player.sources.Custom.Song__History();
             this.datagridviewHistory = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,7 +54,10 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
+            this.panelPlayMusic.SuspendLayout();
             this.panelContent.SuspendLayout();
+            this.fpnlSongs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +108,7 @@
             // panelPlayMusic
             // 
             this.panelPlayMusic.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelPlayMusic.Controls.Add(this.songPlayingBottomBar);
             this.panelPlayMusic.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPlayMusic.Location = new System.Drawing.Point(0, 865);
             this.panelPlayMusic.Name = "panelPlayMusic";
@@ -118,10 +131,200 @@
             // 
             // fpnlSongs
             // 
-            this.fpnlSongs.Location = new System.Drawing.Point(49, 230);
+            this.fpnlSongs.AutoScroll = true;
+            this.fpnlSongs.Controls.Add(this.song__History9);
+            this.fpnlSongs.Controls.Add(this.song__History1);
+            this.fpnlSongs.Controls.Add(this.song__History2);
+            this.fpnlSongs.Controls.Add(this.song__History3);
+            this.fpnlSongs.Controls.Add(this.song__History4);
+            this.fpnlSongs.Controls.Add(this.song__History5);
+            this.fpnlSongs.Controls.Add(this.song__History6);
+            this.fpnlSongs.Controls.Add(this.song__History7);
+            this.fpnlSongs.Controls.Add(this.song__History8);
+            this.fpnlSongs.Location = new System.Drawing.Point(21, 230);
             this.fpnlSongs.Name = "fpnlSongs";
-            this.fpnlSongs.Size = new System.Drawing.Size(1250, 596);
+            this.fpnlSongs.Size = new System.Drawing.Size(1295, 596);
             this.fpnlSongs.TabIndex = 3;
+            // 
+            // song__History9
+            // 
+            this.song__History9.Artist = null;
+            this.song__History9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History9.Date_Song = null;
+            this.song__History9.Duration = null;
+            this.song__History9.ID = null;
+            this.song__History9.Image_Song = null;
+            this.song__History9.IsFavorite = false;
+            this.song__History9.IsHovered = false;
+            this.song__History9.IsSelected = false;
+            this.song__History9.Location = new System.Drawing.Point(3, 0);
+            this.song__History9.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History9.Name = "song__History9";
+            this.song__History9.Name_Album = null;
+            this.song__History9.Size = new System.Drawing.Size(1270, 70);
+            this.song__History9.TabIndex = 8;
+            this.song__History9.Title = null;
+            this.song__History9.URL = null;
+            // 
+            // song__History1
+            // 
+            this.song__History1.Artist = null;
+            this.song__History1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History1.Date_Song = null;
+            this.song__History1.Duration = null;
+            this.song__History1.ID = null;
+            this.song__History1.Image_Song = null;
+            this.song__History1.IsFavorite = false;
+            this.song__History1.IsHovered = false;
+            this.song__History1.IsSelected = false;
+            this.song__History1.Location = new System.Drawing.Point(3, 73);
+            this.song__History1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History1.Name = "song__History1";
+            this.song__History1.Name_Album = null;
+            this.song__History1.Size = new System.Drawing.Size(1270, 70);
+            this.song__History1.TabIndex = 0;
+            this.song__History1.Title = null;
+            this.song__History1.URL = null;
+            // 
+            // song__History2
+            // 
+            this.song__History2.Artist = null;
+            this.song__History2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History2.Date_Song = null;
+            this.song__History2.Duration = null;
+            this.song__History2.ID = null;
+            this.song__History2.Image_Song = null;
+            this.song__History2.IsFavorite = false;
+            this.song__History2.IsHovered = false;
+            this.song__History2.IsSelected = false;
+            this.song__History2.Location = new System.Drawing.Point(3, 146);
+            this.song__History2.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History2.Name = "song__History2";
+            this.song__History2.Name_Album = null;
+            this.song__History2.Size = new System.Drawing.Size(1270, 70);
+            this.song__History2.TabIndex = 1;
+            this.song__History2.Title = null;
+            this.song__History2.URL = null;
+            // 
+            // song__History3
+            // 
+            this.song__History3.Artist = null;
+            this.song__History3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History3.Date_Song = null;
+            this.song__History3.Duration = null;
+            this.song__History3.ID = null;
+            this.song__History3.Image_Song = null;
+            this.song__History3.IsFavorite = false;
+            this.song__History3.IsHovered = false;
+            this.song__History3.IsSelected = false;
+            this.song__History3.Location = new System.Drawing.Point(3, 219);
+            this.song__History3.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History3.Name = "song__History3";
+            this.song__History3.Name_Album = null;
+            this.song__History3.Size = new System.Drawing.Size(1270, 70);
+            this.song__History3.TabIndex = 2;
+            this.song__History3.Title = null;
+            this.song__History3.URL = null;
+            // 
+            // song__History4
+            // 
+            this.song__History4.Artist = null;
+            this.song__History4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History4.Date_Song = null;
+            this.song__History4.Duration = null;
+            this.song__History4.ID = null;
+            this.song__History4.Image_Song = null;
+            this.song__History4.IsFavorite = false;
+            this.song__History4.IsHovered = false;
+            this.song__History4.IsSelected = false;
+            this.song__History4.Location = new System.Drawing.Point(3, 292);
+            this.song__History4.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History4.Name = "song__History4";
+            this.song__History4.Name_Album = null;
+            this.song__History4.Size = new System.Drawing.Size(1270, 70);
+            this.song__History4.TabIndex = 3;
+            this.song__History4.Title = null;
+            this.song__History4.URL = null;
+            // 
+            // song__History5
+            // 
+            this.song__History5.Artist = null;
+            this.song__History5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History5.Date_Song = null;
+            this.song__History5.Duration = null;
+            this.song__History5.ID = null;
+            this.song__History5.Image_Song = null;
+            this.song__History5.IsFavorite = false;
+            this.song__History5.IsHovered = false;
+            this.song__History5.IsSelected = false;
+            this.song__History5.Location = new System.Drawing.Point(3, 365);
+            this.song__History5.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History5.Name = "song__History5";
+            this.song__History5.Name_Album = null;
+            this.song__History5.Size = new System.Drawing.Size(1270, 70);
+            this.song__History5.TabIndex = 4;
+            this.song__History5.Title = null;
+            this.song__History5.URL = null;
+            // 
+            // song__History6
+            // 
+            this.song__History6.Artist = null;
+            this.song__History6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History6.Date_Song = null;
+            this.song__History6.Duration = null;
+            this.song__History6.ID = null;
+            this.song__History6.Image_Song = null;
+            this.song__History6.IsFavorite = false;
+            this.song__History6.IsHovered = false;
+            this.song__History6.IsSelected = false;
+            this.song__History6.Location = new System.Drawing.Point(3, 438);
+            this.song__History6.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History6.Name = "song__History6";
+            this.song__History6.Name_Album = null;
+            this.song__History6.Size = new System.Drawing.Size(1270, 70);
+            this.song__History6.TabIndex = 5;
+            this.song__History6.Title = null;
+            this.song__History6.URL = null;
+            // 
+            // song__History7
+            // 
+            this.song__History7.Artist = null;
+            this.song__History7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History7.Date_Song = null;
+            this.song__History7.Duration = null;
+            this.song__History7.ID = null;
+            this.song__History7.Image_Song = null;
+            this.song__History7.IsFavorite = false;
+            this.song__History7.IsHovered = false;
+            this.song__History7.IsSelected = false;
+            this.song__History7.Location = new System.Drawing.Point(3, 511);
+            this.song__History7.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History7.Name = "song__History7";
+            this.song__History7.Name_Album = null;
+            this.song__History7.Size = new System.Drawing.Size(1270, 70);
+            this.song__History7.TabIndex = 6;
+            this.song__History7.Title = null;
+            this.song__History7.URL = null;
+            // 
+            // song__History8
+            // 
+            this.song__History8.Artist = null;
+            this.song__History8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.song__History8.Date_Song = null;
+            this.song__History8.Duration = null;
+            this.song__History8.ID = null;
+            this.song__History8.Image_Song = null;
+            this.song__History8.IsFavorite = false;
+            this.song__History8.IsHovered = false;
+            this.song__History8.IsSelected = false;
+            this.song__History8.Location = new System.Drawing.Point(3, 584);
+            this.song__History8.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
+            this.song__History8.Name = "song__History8";
+            this.song__History8.Name_Album = null;
+            this.song__History8.Size = new System.Drawing.Size(1270, 70);
+            this.song__History8.TabIndex = 7;
+            this.song__History8.Title = null;
+            this.song__History8.URL = null;
             // 
             // datagridviewHistory
             // 
@@ -262,6 +465,15 @@
             this.guna2ImageButton1.Size = new System.Drawing.Size(40, 40);
             this.guna2ImageButton1.TabIndex = 3;
             // 
+            // songPlayingBottomBar
+            // 
+            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
+            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
+            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
+            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
+            this.songPlayingBottomBar.TabIndex = 0;
+            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,7 +485,9 @@
             this.Controls.Add(this.panelContent);
             this.Name = "History";
             this.Size = new System.Drawing.Size(1359, 965);
+            this.panelPlayMusic.ResumeLayout(false);
             this.panelContent.ResumeLayout(false);
+            this.fpnlSongs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridviewHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -296,5 +510,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.FlowLayoutPanel fpnlSongs;
+        private Custom.Song__History song__History9;
+        private Custom.Song__History song__History1;
+        private Custom.Song__History song__History2;
+        private Custom.Song__History song__History3;
+        private Custom.Song__History song__History4;
+        private Custom.Song__History song__History5;
+        private Custom.Song__History song__History6;
+        private Custom.Song__History song__History7;
+        private Custom.Song__History song__History8;
+        private Custom.Song__Playing__BottomBar songPlayingBottomBar;
     }
 }

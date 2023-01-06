@@ -22,7 +22,19 @@ namespace Music__Player.sources.View
         public History()
         {
             InitializeComponent();
+
+            LoadHistory();
         }
+
+        public void InsertHistory()
+        {
+            Song__History__DAO.Instance.InsertSongHistory(Song__Playing__DAO.Instance.currInfoSongPanel.Title);
+
+            Navigate.Navigation.Instance.historyScreen.LoadHistory();
+        }
+
+        #region Load History
+
         public void LoadHistory()
         {
             fpnlSongs.Controls.Clear();
@@ -145,5 +157,15 @@ namespace Music__Player.sources.View
 
             songByPlaylistOutside.IsHovered = false;
         }
+
+        #endregion
+
+        #region Bottom Bar
+
+        public void LoadSongPlayingBottomBar()
+        {
+            songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+        #endregion
     }
 }
