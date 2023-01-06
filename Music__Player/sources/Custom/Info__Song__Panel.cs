@@ -18,6 +18,7 @@ namespace Music__Player.sources.Custom
             InitializeComponent();
         }
 
+        #region Initial
         public Info__Song__Panel(List__Song__Playlist songByPlaylist)
         {
             InitializeComponent();
@@ -35,7 +36,22 @@ namespace Music__Player.sources.Custom
             LoadInitialEvent();
         }
 
-        #region Initial
+        public Info__Song__Panel(Song__History songHistory)
+        {
+            InitializeComponent();
+
+            this.Title = songHistory.Title;
+
+            this.Artist = songHistory.Artist;
+
+            this.Duration = songHistory.Duration;
+
+            this.Image_Song = songHistory.Image_Song;
+
+            this.URL = songHistory.URL;
+
+            LoadInitialEvent();
+        }
 
         public Info__Song__Panel(DataRow row)
         {
