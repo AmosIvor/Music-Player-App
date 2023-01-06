@@ -36,7 +36,7 @@
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelPlayMusic = new Guna.UI2.WinForms.Guna2Panel();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fpnlSongs = new System.Windows.Forms.FlowLayoutPanel();
             this.datagridviewHistory = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,7 +106,7 @@
             // panelContent
             // 
             this.panelContent.BackColor = System.Drawing.Color.Transparent;
-            this.panelContent.Controls.Add(this.flowLayoutPanel1);
+            this.panelContent.Controls.Add(this.fpnlSongs);
             this.panelContent.Controls.Add(this.datagridviewHistory);
             this.panelContent.Controls.Add(this.guna2DateTimePicker1);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -116,12 +116,12 @@
             this.panelContent.Size = new System.Drawing.Size(1359, 965);
             this.panelContent.TabIndex = 5;
             // 
-            // flowLayoutPanel1
+            // fpnlSongs
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(49, 230);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1250, 596);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.fpnlSongs.Location = new System.Drawing.Point(49, 230);
+            this.fpnlSongs.Name = "fpnlSongs";
+            this.fpnlSongs.Size = new System.Drawing.Size(1250, 596);
+            this.fpnlSongs.TabIndex = 3;
             // 
             // datagridviewHistory
             // 
@@ -295,6 +295,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel fpnlSongs;
     }
 }
