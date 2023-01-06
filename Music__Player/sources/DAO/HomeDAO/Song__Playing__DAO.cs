@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Music__Player.sources.Custom;
+using Music__Player.sources.DAO.CustomDAO;
 using Music__Player.sources.DTO.HomeDTO;
 using System;
 using System.Collections.Generic;
@@ -72,6 +73,10 @@ namespace Music__Player.sources.DAO.HomeDAO
         {
             songPlayingByInfoSongPanel = new Song__Playing(currInfoSongPanel);
 
+            //Song__History__DAO.Instance.InsertSongHistory(currInfoSongPanel.Title);
+
+            //Navigate.Navigation.Instance.historyScreen.LoadHistory();
+
             lblNameSong.Text = songPlayingByInfoSongPanel.Title;
 
             lblArtist.Text = songPlayingByInfoSongPanel.Artist;
@@ -86,6 +91,17 @@ namespace Music__Player.sources.DAO.HomeDAO
             int temp = (mainPanel.Width - control.Width) / 2;
 
             return (mainPanel.Location.X + temp - 44);
+        }
+
+        public void LoadSongPlayingAllScreen()
+        {
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.homeScreen.LoadSongPlaying();
         }
     }
 }
