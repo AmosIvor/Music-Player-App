@@ -164,6 +164,8 @@ namespace Music__Player.sources.View
 
             fpnlPlaylists.Tag = curr;
 
+            pnlClicked.Tag = curr;
+
             playlistSongPlaying = curr;
 
             Navigate.Navigation.Instance.mainScreen.LoadChildPlaylistPlayingSong();

@@ -26,8 +26,6 @@ namespace Music__Player.sources.View
             InitializeComponent();
 
             FormatDataGridView();
-
-            
         }
 
         public void LoadChildPlaylist(int idPlaylist)
@@ -71,8 +69,6 @@ namespace Music__Player.sources.View
 
                 fpnlSongs.Controls.Add(songByPlaylist);
             }
-
-            //fpnlSongs.HorizontalScroll.Visible = false;
         }
 
         private void songByPlaylist_MouseClickPlay(object sender, MouseEventArgs e)
@@ -96,8 +92,6 @@ namespace Music__Player.sources.View
         }
         private void songByPlaylist_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
-            
-
             if (fpnlSongs.Tag != null)
             {
                 List__Song__Playlist prevSelected = (List__Song__Playlist)fpnlSongs.Tag;
@@ -241,14 +235,19 @@ namespace Music__Player.sources.View
         #region Set Song Playing
         public void SetSongPlaying(List__Song__Playlist song)
         {
+            if (fpnlSongs.Tag != null)
+            {
+                List__Song__Playlist prevSelected = (List__Song__Playlist)fpnlSongs.Tag;
+
+                prevSelected.IsSelected = false;
+
+                prevSelected.IsHovered = false;
+            }
             List__Song__Playlist songByPlaylist = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == song.ID);
 
             songByPlaylist.IsSelected = true;
 
             fpnlSongs.Tag = songByPlaylist;
-
-            //Console.WriteLine(fpnlSongs.Tag.GetType());
-            
         }
 
         #endregion
