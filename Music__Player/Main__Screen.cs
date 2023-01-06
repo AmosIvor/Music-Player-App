@@ -22,21 +22,6 @@ namespace Music__Player
 
         FlowLayoutPanel fpnlHoverPlaylist = new FlowLayoutPanel();
 
-        private static Main__Screen instance;
-        public static Main__Screen Instance
-        {
-            get
-            {
-                if (instance == null)
-
-                    instance = new Main__Screen();
-
-                return instance;
-            }
-
-            private set { instance = value; }
-        }
-
         #endregion
 
         public Main__Screen()
