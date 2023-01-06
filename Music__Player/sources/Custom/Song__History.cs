@@ -24,7 +24,7 @@ namespace Music__Player.sources.Custom
             this.Title = row["NAME_SONG"].ToString();
 
             this.Artist = row["ARTIST"].ToString();
-
+            
             this.URL = row["LINK"].ToString();
 
             this.Duration = row["DURATION"].ToString();
