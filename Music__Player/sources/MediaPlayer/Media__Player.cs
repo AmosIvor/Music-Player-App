@@ -31,6 +31,8 @@ namespace Music__Player.sources.PlayMusic
 
         public void RunMP3(string url, Timer timer)
         {
+            player.settings.volume = 30;
+
             player.URL = url;
 
             player.controls.play();
