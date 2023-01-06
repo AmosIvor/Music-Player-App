@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.pnlBackground = new Guna.UI2.WinForms.Guna2Panel();
+            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblDate = new System.Windows.Forms.Label();
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFavorite = new System.Windows.Forms.Label();
             this.lblPlay = new System.Windows.Forms.Label();
-            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.lblDate = new System.Windows.Forms.Label();
             this.pnlBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,26 @@
             this.pnlBackground.ShadowDecoration.Parent = this.pnlBackground;
             this.pnlBackground.Size = new System.Drawing.Size(1270, 70);
             this.pnlBackground.TabIndex = 1;
+            // 
+            // pbImage
+            // 
+            this.pbImage.BorderRadius = 10;
+            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
+            this.pbImage.Location = new System.Drawing.Point(50, 6);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.ShadowDecoration.Parent = this.pbImage;
+            this.pbImage.Size = new System.Drawing.Size(60, 59);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 3;
+            this.pbImage.TabStop = false;
+            // 
+            // lblDate
+            // 
+            this.lblDate.Location = new System.Drawing.Point(1067, 23);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(200, 25);
+            this.lblDate.TabIndex = 0;
+            this.lblDate.Text = "20 September 2022";
             // 
             // lblDuration
             // 
@@ -115,20 +135,7 @@
             this.lblPlay.Name = "lblPlay";
             this.lblPlay.Size = new System.Drawing.Size(32, 32);
             this.lblPlay.TabIndex = 0;
-            this.lblPlay.Text = "01";
             this.lblPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pbImage
-            // 
-            this.pbImage.BorderRadius = 10;
-            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
-            this.pbImage.Location = new System.Drawing.Point(50, 6);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.ShadowDecoration.Parent = this.pbImage;
-            this.pbImage.Size = new System.Drawing.Size(60, 59);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImage.TabIndex = 3;
-            this.pbImage.TabStop = false;
             // 
             // btnPlay
             // 
@@ -159,19 +166,11 @@
             this.btnFavorite.Size = new System.Drawing.Size(32, 32);
             this.btnFavorite.TabIndex = 1;
             // 
-            // lblDate
-            // 
-            this.lblDate.Location = new System.Drawing.Point(1067, 23);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(200, 25);
-            this.lblDate.TabIndex = 0;
-            this.lblDate.Text = "20 September 2022";
-            // 
             // Song__History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Controls.Add(this.pnlBackground);
             this.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
             this.Name = "Song__History";
