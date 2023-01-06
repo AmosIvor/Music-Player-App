@@ -26,8 +26,6 @@ namespace Music__Player.sources.View
             InitializeComponent();
 
             FormatDataGridView();
-
-            
         }
 
         public void LoadChildPlaylist(int idPlaylist)
@@ -71,8 +69,6 @@ namespace Music__Player.sources.View
 
                 fpnlSongs.Controls.Add(songByPlaylist);
             }
-
-            //fpnlSongs.HorizontalScroll.Visible = false;
         }
 
         private void songByPlaylist_MouseClickPlay(object sender, MouseEventArgs e)
@@ -95,6 +91,8 @@ namespace Music__Player.sources.View
             Info__Song__Panel infoSong = new Info__Song__Panel(curr);
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
+
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
 
             Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
@@ -125,6 +123,8 @@ namespace Music__Player.sources.View
 
                 Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
 
+                Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
                 Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
                 Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
@@ -143,6 +143,8 @@ namespace Music__Player.sources.View
             Info__Song__Panel infoSongOutside = new Info__Song__Panel(songByPlaylistOutside);
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSongOutside;
+
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
 
             Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
@@ -271,14 +273,20 @@ namespace Music__Player.sources.View
         #region Set Song Playing
         public void SetSongPlaying(List__Song__Playlist song)
         {
+            if (fpnlSongs.Tag != null)
+            {
+                List__Song__Playlist prevSelected = (List__Song__Playlist)fpnlSongs.Tag;
+
+                prevSelected.IsSelected = false;
+
+                prevSelected.IsHovered = false;
+            }
+
             List__Song__Playlist songByPlaylist = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == song.ID);
 
             songByPlaylist.IsSelected = true;
 
             fpnlSongs.Tag = songByPlaylist;
-
-            //Console.WriteLine(fpnlSongs.Tag.GetType());
-            
         }
 
         #endregion
