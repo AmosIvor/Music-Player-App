@@ -30,7 +30,36 @@ namespace Music__Player.sources.DAO.CustomDAO
 
         public Guna2ShadowPanel pnlBackground = new Guna2ShadowPanel();
 
-        public void ShowDropDownPlaylist(Guna2GradientPanel panelHome, int locationX, int locationY)
+        public bool isFirst = false;
+
+        public void ShowDropDownPlaylistPanel(Panel panelHome, int locationX, int locationY)
+        {
+            pnlBackground.Controls.Clear();
+
+            pnlBackground.Visible = true;
+
+            pnlBackground.ShadowStyle = Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            
+            Dropdown__Playlist dropdownPlaylist = new Dropdown__Playlist();
+
+            pnlBackground.Size = dropdownPlaylist.Size;
+
+            pnlBackground.Size = new Size(pnlBackground.Width + 6, pnlBackground.Height + 6);
+
+            Point p = new Point(locationX, locationY);
+
+            pnlBackground.Location = p;
+
+            pnlBackground.Controls.Add(dropdownPlaylist);
+
+            dropdownPlaylist.Location = new Point(0, 0);
+
+            panelHome.Controls.Add(pnlBackground);
+
+            pnlBackground.BringToFront();
+        }
+
+        public void ShowDropDownPlaylistUserControl(UserControl control, int locationX, int locationY)
         {
             pnlBackground.Controls.Clear();
 
@@ -52,12 +81,62 @@ namespace Music__Player.sources.DAO.CustomDAO
 
             dropdownPlaylist.Location = new Point(0, 0);
 
-            panelHome.Controls.Add(pnlBackground);
+            control.Controls.Add(pnlBackground);
 
             pnlBackground.BringToFront();
         }
 
-        
+        public void GetAllControls(Control container)
+        {
+            foreach (Control c in container.Controls)
+            {
+                GetAllControls(c);
+
+                c.MouseClick += Control_MouseClick;
+            }
+        }
+
+        private void Control_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (isFirst == false && e.Button == MouseButtons.Left)
+            {
+                pnlBackground.Visible = false;
+            }
+
+            isFirst = false;
+        }
+
+        public void AddPlaylistEventInPanel(UserControl screen, Panel panelHome)
+        {
+            if (isFirst == false)
+            {
+                Point clickedPoint = screen.PointToClient(Control.MousePosition);
+
+                ShowDropDownPlaylistPanel(panelHome, clickedPoint.X + 20, clickedPoint.Y);
+
+                isFirst = true;
+
+                return;
+            }
+
+            isFirst = false;
+        }
+
+        public void AddPlaylistEventInUserControl(UserControl screen)
+        {
+            if (isFirst == false)
+            {
+                Point clickedPoint = screen.PointToClient(Control.MousePosition);
+
+                ShowDropDownPlaylistUserControl(screen, clickedPoint.X + 20, clickedPoint.Y);
+
+                isFirst = true;
+
+                return;
+            }
+
+            isFirst = false;
+        }
 
     }
 }
