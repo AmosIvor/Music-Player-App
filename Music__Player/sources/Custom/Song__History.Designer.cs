@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlBackground = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblDuration = new System.Windows.Forms.Label();
@@ -46,6 +47,7 @@
             // pnlBackground
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBackground.Controls.Add(this.btnAddPlaylist);
             this.pnlBackground.Controls.Add(this.pbImage);
             this.pnlBackground.Controls.Add(this.lblDate);
             this.pnlBackground.Controls.Add(this.lblDuration);
@@ -64,6 +66,23 @@
             this.pnlBackground.Size = new System.Drawing.Size(1270, 70);
             this.pnlBackground.TabIndex = 1;
             // 
+            // btnAddPlaylist
+            // 
+            this.btnAddPlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPlaylist.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddPlaylist.CheckedState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPlaylist.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddPlaylist.HoverState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Image = global::Music__Player.Properties.Resources.icon_add_playlist;
+            this.btnAddPlaylist.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddPlaylist.Location = new System.Drawing.Point(1221, 14);
+            this.btnAddPlaylist.Name = "btnAddPlaylist";
+            this.btnAddPlaylist.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddPlaylist.PressedState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Size = new System.Drawing.Size(45, 45);
+            this.btnAddPlaylist.TabIndex = 7;
+            // 
             // pbImage
             // 
             this.pbImage.BorderRadius = 10;
@@ -78,17 +97,19 @@
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(1067, 23);
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(1043, 23);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(200, 25);
+            this.lblDate.Size = new System.Drawing.Size(169, 25);
             this.lblDate.TabIndex = 0;
             this.lblDate.Text = "20 September 2022";
             // 
             // lblDuration
             // 
-            this.lblDuration.Location = new System.Drawing.Point(972, 23);
+            this.lblDuration.AutoSize = true;
+            this.lblDuration.Location = new System.Drawing.Point(958, 23);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(59, 25);
+            this.lblDuration.Size = new System.Drawing.Size(56, 25);
             this.lblDuration.TabIndex = 0;
             this.lblDuration.Text = "03:14";
             // 
@@ -123,7 +144,7 @@
             // lblFavorite
             // 
             this.lblFavorite.BackColor = System.Drawing.Color.Transparent;
-            this.lblFavorite.Location = new System.Drawing.Point(904, 19);
+            this.lblFavorite.Location = new System.Drawing.Point(897, 19);
             this.lblFavorite.Name = "lblFavorite";
             this.lblFavorite.Size = new System.Drawing.Size(32, 32);
             this.lblFavorite.TabIndex = 0;
@@ -160,7 +181,7 @@
             this.btnFavorite.HoverState.ImageSize = new System.Drawing.Size(24, 24);
             this.btnFavorite.HoverState.Parent = this.btnFavorite;
             this.btnFavorite.Image = global::Music__Player.Properties.Resources.icon_love_black;
-            this.btnFavorite.Location = new System.Drawing.Point(904, 19);
+            this.btnFavorite.Location = new System.Drawing.Point(897, 19);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.PressedState.Parent = this.btnFavorite;
             this.btnFavorite.Size = new System.Drawing.Size(32, 32);
@@ -176,6 +197,7 @@
             this.Name = "Song__History";
             this.Size = new System.Drawing.Size(1270, 70);
             this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
 
@@ -194,5 +216,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
         private Guna.UI2.WinForms.Guna2ImageButton btnFavorite;
         private System.Windows.Forms.Label lblDate;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAddPlaylist;
     }
 }
