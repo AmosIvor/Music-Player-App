@@ -35,6 +35,7 @@
             this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelPlayMusic = new Guna.UI2.WinForms.Guna2Panel();
+            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.panelContent = new Guna.UI2.WinForms.Guna2Panel();
             this.fpnlSongs = new System.Windows.Forms.FlowLayoutPanel();
             this.song__History9 = new Music__Player.sources.Custom.Song__History();
@@ -54,7 +55,6 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.panelPlayMusic.SuspendLayout();
             this.panelContent.SuspendLayout();
             this.fpnlSongs.SuspendLayout();
@@ -115,6 +115,15 @@
             this.panelPlayMusic.ShadowDecoration.Parent = this.panelPlayMusic;
             this.panelPlayMusic.Size = new System.Drawing.Size(1359, 100);
             this.panelPlayMusic.TabIndex = 4;
+            // 
+            // songPlayingBottomBar
+            // 
+            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
+            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
+            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
+            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
+            this.songPlayingBottomBar.TabIndex = 0;
             // 
             // panelContent
             // 
@@ -464,15 +473,6 @@
             this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
             this.guna2ImageButton1.Size = new System.Drawing.Size(40, 40);
             this.guna2ImageButton1.TabIndex = 3;
-            // 
-            // songPlayingBottomBar
-            // 
-            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
-            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
-            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
-            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
-            this.songPlayingBottomBar.TabIndex = 0;
             // 
             // History
             // 
