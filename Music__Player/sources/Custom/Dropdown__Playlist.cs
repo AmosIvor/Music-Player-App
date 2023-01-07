@@ -19,8 +19,6 @@ namespace Music__Player.sources.Custom
 
         Name__Playlist__Panel namePlaylistFirst;
 
-        //Main__Screen mainScreen;
-        
         public Dropdown__Playlist()
         {
             InitializeComponent();
@@ -97,8 +95,6 @@ namespace Music__Player.sources.Custom
 
                 Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
 
-                Home.isClicked = false;
-
                 if (namePlaylistInside == namePlaylistFirst)
                 {
                     Popup__Create__Playlist__DAO.Instance.ShowPopup();
@@ -112,8 +108,6 @@ namespace Music__Player.sources.Custom
             Name__Playlist__Panel namePlaylistOutside = Name__Playlist__Panel__DAO.Instance.GetNamePlaylistFromPanel(sender);
 
             Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
-
-            Home.isClicked = false;
 
             if (namePlaylistOutside == namePlaylistFirst)
             {
