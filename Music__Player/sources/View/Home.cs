@@ -21,13 +21,11 @@ namespace Music__Player.sources.View
     {
         #region Inital
 
-        private Panel fpSongHover = new Panel();
+        Panel fpSongHover = new Panel();
 
-        private Panel fpArtistHover = new Panel();
+        Panel fpArtistHover = new Panel();
 
-        public static bool isClicked = false;
-
-        public static Info__Song__Panel musicPlaying;
+        public bool isFirst = false;
 
         #endregion
 
@@ -43,6 +41,8 @@ namespace Music__Player.sources.View
             LoadListArtistPanel();
 
             LoadListInfoSongPanel();
+
+            LoadEventClick();
         }
 
         #region Info Song Panel
@@ -527,24 +527,18 @@ namespace Music__Player.sources.View
         #region Handle Context Menu
         private void btnAddPlaylist_Click(object sender, EventArgs e)
         {
-            if (isClicked == false)
-            {
-                Dropdown__Playlist__DAO.Instance.ShowDropDownPlaylist(panelHome, 513, 470);
-
-                isClicked = true;
-
-                return;
-            }
-
-            isClicked = false;
-
-            Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInPanel(this, panelHome);
+        }
+        
+        private void LoadEventClick()
+        {
+            Dropdown__Playlist__DAO.Instance.GetAllControls(this);
         }
 
         #endregion
 
         #region Navigate Bottom Bar
-        
+
         void LoadAllBottomBar()
         {
             Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
