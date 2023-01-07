@@ -51,8 +51,12 @@ namespace Music__Player.sources.View
 
                 songHistory.MouseClickPlay += songHistory_MouseClickPlay;
 
+                songHistory.MouseClickAddPlaylist += songHistory_MouseClickAddPlaylist;
+
                 fpnlSongs.Controls.Add(songHistory);
             }
+
+            LoadEventClick();
         }
         private void songHistory_MouseClickPlay(object sender, MouseEventArgs e)
         {
@@ -156,6 +160,16 @@ namespace Music__Player.sources.View
             Song__History songByPlaylistOutside = Song__History__DAO.Instance.GetSongHistoryFromPanel(sender);
 
             songByPlaylistOutside.IsHovered = false;
+        }
+
+        private void songHistory_MouseClickAddPlaylist(object sender, MouseEventArgs e)
+        {
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(this);
+        }
+
+        private void LoadEventClick()
+        {
+            Dropdown__Playlist__DAO.Instance.GetAllControls(this);
         }
 
         #endregion

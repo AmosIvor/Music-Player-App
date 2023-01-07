@@ -53,6 +53,8 @@ namespace Music__Player.sources.Custom
             pnlBackground.MouseLeave += userControl_MouseLeave;
 
             btnPlay.MouseClick += btnPlay_MouseClickPlay;
+
+            btnAddPlaylist.MouseClick += btnAddPlaylist_MouseClick;
         }
 
         private string iD;
@@ -288,6 +290,20 @@ namespace Music__Player.sources.Custom
             }
         }
 
+        private event MouseEventHandler _mouseClickAddPlaylist;
+
+        public event MouseEventHandler MouseClickAddPlaylist
+        {
+            add
+            {
+                _mouseClickAddPlaylist += value;
+            }
+            remove
+            {
+                _mouseClickAddPlaylist -= value;
+            }
+        }
+
         #endregion
 
         #region Event
@@ -319,7 +335,10 @@ namespace Music__Player.sources.Custom
             isFavorite = btnFavorite.Checked;
         }
 
-
+        private void btnAddPlaylist_MouseClick(object sender, MouseEventArgs e)
+        {
+            _mouseClickAddPlaylist?.Invoke(sender, e);
+        }
         #endregion
     }
 }
