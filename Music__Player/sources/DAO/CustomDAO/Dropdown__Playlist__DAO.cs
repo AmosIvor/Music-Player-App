@@ -32,6 +32,10 @@ namespace Music__Player.sources.DAO.CustomDAO
 
         public bool isFirst = false;
 
+        int WIDTH_DROPDOWN = 293;
+
+        int HEIGHT_DROPDOWN = 253;
+
         public void ShowDropDownPlaylistPanel(Panel panelHome, int locationX, int locationY)
         {
             pnlBackground.Controls.Clear();
@@ -108,34 +112,43 @@ namespace Music__Player.sources.DAO.CustomDAO
 
         public void AddPlaylistEventInPanel(UserControl screen, Panel panelHome)
         {
-            if (isFirst == false)
-            {
-                Point clickedPoint = screen.PointToClient(Control.MousePosition);
+            Point clickedPoint = screen.PointToClient(Control.MousePosition);
 
-                ShowDropDownPlaylistPanel(panelHome, clickedPoint.X + 20, clickedPoint.Y);
+            ShowDropDownPlaylistPanel(panelHome, clickedPoint.X + 20, clickedPoint.Y);
 
-                isFirst = true;
-
-                return;
-            }
-
-            isFirst = false;
+            isFirst = true;
         }
 
         public void AddPlaylistEventInUserControl(UserControl screen)
         {
-            if (isFirst == false)
+            Point clickedPoint = screen.PointToClient(Control.MousePosition);
+
+            clickedPoint = CheckOutOfUserControl(screen, clickedPoint);
+
+            ShowDropDownPlaylistUserControl(screen, clickedPoint.X, clickedPoint.Y);
+
+            isFirst = true;
+        }
+
+        public Point CheckOutOfUserControl(UserControl screen, Point clickedPoint)
+        {
+            // check right
+            int positionTopRight = clickedPoint.X + WIDTH_DROPDOWN;
+            
+            if (positionTopRight >= screen.Width)
             {
-                Point clickedPoint = screen.PointToClient(Control.MousePosition);
-
-                ShowDropDownPlaylistUserControl(screen, clickedPoint.X + 20, clickedPoint.Y);
-
-                isFirst = true;
-
-                return;
+                clickedPoint = new Point(clickedPoint.X - WIDTH_DROPDOWN - 30, clickedPoint.Y);
             }
 
-            isFirst = false;
+            // check bottom
+            int positionBottom = clickedPoint.Y + HEIGHT_DROPDOWN;
+
+            if (positionBottom >= screen.Height)
+            {
+                clickedPoint = new Point(clickedPoint.X, clickedPoint.Y - HEIGHT_DROPDOWN);
+            }
+
+            return clickedPoint;
         }
 
     }
