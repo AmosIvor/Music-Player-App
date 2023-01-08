@@ -3,6 +3,7 @@ using Music__Player.sources.Constant;
 using Music__Player.sources.Custom;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,8 @@ namespace Music__Player.sources.DAO.CustomDAO
         int WIDTH_DROPDOWN = 293;
 
         int HEIGHT_DROPDOWN = 253;
+
+        public string songSelecting;
 
         public void ShowDropDownPlaylistPanel(Panel panelHome, int locationX, int locationY)
         {
@@ -114,6 +117,8 @@ namespace Music__Player.sources.DAO.CustomDAO
         {
             Point clickedPoint = screen.PointToClient(Control.MousePosition);
 
+            clickedPoint = CheckOutOfUserControl(screen, clickedPoint);
+
             ShowDropDownPlaylistPanel(panelHome, clickedPoint.X + 20, clickedPoint.Y);
 
             isFirst = true;
@@ -151,5 +156,25 @@ namespace Music__Player.sources.DAO.CustomDAO
             return clickedPoint;
         }
 
+        public void InsertSongPlaylist(int idPlaylist)
+        {
+            // check exist
+            string query = "EXEC PROC_Check_Exist_Song_In_Playlist @name_song , @id_playlist";
+
+            DataTable data = DataProviderDAO.Instance.ExecuteQuery(query, new object[] { songSelecting, idPlaylist }); 
+
+            if (data.Rows.Count > 0)
+            {
+                MessageBox.Show("Exist");
+
+                return;
+            }
+
+            string queryInsert = "EXEC PROC_Insert_Song_Playlist @name_song , @id_playlist";
+
+            DataProviderDAO.Instance.ExecuteNonQuery(queryInsert, new object[] { songSelecting, idPlaylist });
+
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+        }
     }
 }
