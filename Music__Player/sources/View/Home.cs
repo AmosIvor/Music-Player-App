@@ -528,6 +528,8 @@ namespace Music__Player.sources.View
         private void btnAddPlaylist_Click(object sender, EventArgs e)
         {
             Dropdown__Playlist__DAO.Instance.AddPlaylistEventInPanel(this, panelHome);
+
+            Dropdown__Playlist__DAO.Instance.songSelecting = lblTitlePlaying.Text;
         }
         
         private void LoadEventClick()

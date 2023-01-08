@@ -166,7 +166,16 @@ namespace Music__Player.sources.View
 
         private void songHistory_MouseClickAddPlaylist(object sender, MouseEventArgs e)
         {
-            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(this);
+            try
+            {
+                Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(this);
+
+                Song__History songByPlaylistInside = Song__History__DAO.Instance.GetSongHistoryFromControlIntoPanel(sender);
+
+                Dropdown__Playlist__DAO.Instance.songSelecting = songByPlaylistInside.Title;
+            }
+
+            catch { }
         }
 
         private void LoadEventClick()

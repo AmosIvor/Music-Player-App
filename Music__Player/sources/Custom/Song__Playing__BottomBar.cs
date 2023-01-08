@@ -63,6 +63,8 @@ namespace Music__Player.sources.Custom
         private void btnAddPlaylist_Click(object sender, EventArgs e)
         {
             Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(Navigate.Navigation.Instance.historyScreen);
+            
+            Dropdown__Playlist__DAO.Instance.songSelecting = lblNameSong.Text;
         }
     }
 }
