@@ -202,6 +202,6 @@ namespace Music__Player
         }
 
         #endregion
-       
+
     }
 }
