@@ -29,6 +29,8 @@ namespace Music__Player.sources.View
             InitializeComponent();
 
             LoadPlaylists();
+
+            LoadInitialSongBottomBar();
         }
 
         #region Load Playlists
@@ -263,6 +265,11 @@ namespace Music__Player.sources.View
         public void LoadSongPlayingBottomBar()
         {
             songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+
+        public void LoadInitialSongBottomBar()
+        {
+            songPlayingBottomBar.LoadInitialSong();
         }
         #endregion
 

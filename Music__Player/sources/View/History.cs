@@ -24,6 +24,8 @@ namespace Music__Player.sources.View
             InitializeComponent();
 
             LoadHistory();
+
+            LoadInitialSongBottomBar();
         }
 
         public void InsertHistory()
@@ -179,6 +181,11 @@ namespace Music__Player.sources.View
         public void LoadSongPlayingBottomBar()
         {
             songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+
+        private void LoadInitialSongBottomBar()
+        {
+            songPlayingBottomBar.LoadInitialSong();
         }
         #endregion
     }

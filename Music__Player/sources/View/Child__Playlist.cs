@@ -26,6 +26,8 @@ namespace Music__Player.sources.View
             InitializeComponent();
 
             FormatDataGridView();
+
+            LoadInitialSongBottomBar();
         }
 
         public void LoadChildPlaylist(int idPlaylist)
@@ -222,6 +224,11 @@ namespace Music__Player.sources.View
         public void LoadSongPlayingBottomBar()
         {
             songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+
+        public void LoadInitialSongBottomBar()
+        {
+            songPlayingBottomBar.LoadInitialSong();
         }
         #endregion
 
