@@ -24,6 +24,8 @@ namespace Music__Player.sources.Custom
         {
             InitializeComponent();
 
+            this.ID_Playlist = (int)row["ID_PLAYLIST"];
+
             this.Name_Playlist = row["NAME_PLAYLIST"].ToString();
 
             this.IsCreated = false;
@@ -37,6 +39,8 @@ namespace Music__Player.sources.Custom
 
             this.Name_Playlist = name_Playlist;
 
+            this.ID_Playlist = 0;
+
             this.IsCreated = false;
 
             LoadInitialEvent();
@@ -49,6 +53,12 @@ namespace Music__Player.sources.Custom
             pnlMain.MouseLeave += userControl_MouseLeave;
 
             pnlMain.MouseClick += userControl_MouseClick;
+        }
+        private int iD_Playlist;
+        public int ID_Playlist
+        {
+            get { return iD_Playlist; }
+            set { iD_Playlist = value; }
         }
 
         private string name_Playlist;
