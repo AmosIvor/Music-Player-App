@@ -1,4 +1,5 @@
-﻿using Music__Player.sources.DAO.HomeDAO;
+﻿using Music__Player.sources.DAO.CustomDAO;
+using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
 using Music__Player.sources.View;
 using System;
@@ -25,9 +26,13 @@ namespace Music__Player.sources.Custom
         {
             Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
 
-            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(pbImage, lblNameSong, lblArtist, lblEnd);
+            LoadInitialSong();
         }
 
+        public void LoadInitialSong()
+        {
+            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(pbImage, lblNameSong, lblArtist, lblEnd);
+        }
         private void timerMusic_Tick(object sender, EventArgs e)
         {
             Media__Player.Instance.EventTimer(timerMusic, btnPlay, sliderTimeMusic, lblStart, lblEnd);
@@ -53,6 +58,11 @@ namespace Music__Player.sources.Custom
                 }
             }
             catch { }
+        }
+
+        private void btnAddPlaylist_Click(object sender, EventArgs e)
+        {
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(Navigate.Navigation.Instance.historyScreen);
         }
     }
 }
