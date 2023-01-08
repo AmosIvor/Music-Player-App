@@ -102,6 +102,8 @@ namespace Music__Player.sources.Custom
                     return;
                 }
 
+                Dropdown__Playlist__DAO.Instance.InsertSongPlaylist(namePlaylistInside.ID_Playlist);
+
                 return;
             }
 
@@ -115,6 +117,8 @@ namespace Music__Player.sources.Custom
 
                 return;
             }
+
+            Dropdown__Playlist__DAO.Instance.InsertSongPlaylist(namePlaylistOutside.ID_Playlist);
         }
 
         
