@@ -55,6 +55,8 @@ namespace Music__Player.sources.Custom
             btnPlay.MouseClick += btnPlay_MouseClickPlay;
 
             btnAddPlaylist.MouseClick += btnAddPlaylist_MouseClick;
+
+            btnFavorite.MouseClick += btnFavorite_MouseClick;
         }
 
         private string iD;
