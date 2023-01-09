@@ -71,6 +71,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="sources\Constant\IMAGE.cs" />
+    <Compile Include="sources\Custom\Context__Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Context__Menu.Designer.cs">
+      <DependentUpon>Context__Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\Custom\Item__Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Item__Menu.Designer.cs">
+      <DependentUpon>Item__Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\List__Song__Playlist.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +155,7 @@
     <Compile Include="sources\DAO\CustomDAO\Dropdown__Playlist__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Info__Playlist__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Info__Song__Panel__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Item__Menu__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\List__Song__Playlist__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Playlist__Add__Panel__DAO.cs" />
@@ -214,6 +227,9 @@
     <EmbeddedResource Include="sources\Custom\Artist__Panel.resx">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Context__Menu.resx">
+      <DependentUpon>Context__Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Dropdown__Playlist.resx">
       <DependentUpon>Dropdown__Playlist.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Info__Song__Panel.resx">
       <DependentUpon>Info__Song__Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Item__Menu.resx">
+      <DependentUpon>Item__Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\List__Song__Playlist.resx">
       <DependentUpon>List__Song__Playlist.cs</DependentUpon>
@@ -541,6 +560,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_pause_blue_200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_dots_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bin_black1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_bin_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_triangle_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
