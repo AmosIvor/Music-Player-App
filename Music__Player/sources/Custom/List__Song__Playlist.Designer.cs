@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.pnlBackground = new Guna.UI2.WinForms.Guna2Panel();
-            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFavorite = new System.Windows.Forms.Label();
             this.lblPlay = new System.Windows.Forms.Label();
+            this.lblOption = new System.Windows.Forms.Label();
+            this.btnOption = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pnlBackground.SuspendLayout();
@@ -45,6 +47,8 @@
             // pnlBackground
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBackground.Controls.Add(this.lblOption);
+            this.pnlBackground.Controls.Add(this.btnOption);
             this.pnlBackground.Controls.Add(this.pbImage);
             this.pnlBackground.Controls.Add(this.lblDuration);
             this.pnlBackground.Controls.Add(this.lblAlbum);
@@ -62,23 +66,12 @@
             this.pnlBackground.Size = new System.Drawing.Size(1270, 70);
             this.pnlBackground.TabIndex = 0;
             // 
-            // pbImage
-            // 
-            this.pbImage.BorderRadius = 10;
-            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
-            this.pbImage.Location = new System.Drawing.Point(50, 6);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.ShadowDecoration.Parent = this.pbImage;
-            this.pbImage.Size = new System.Drawing.Size(60, 59);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImage.TabIndex = 3;
-            this.pbImage.TabStop = false;
-            // 
             // lblDuration
             // 
-            this.lblDuration.Location = new System.Drawing.Point(1143, 23);
+            this.lblDuration.AutoSize = true;
+            this.lblDuration.Location = new System.Drawing.Point(1141, 23);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(79, 25);
+            this.lblDuration.Size = new System.Drawing.Size(56, 25);
             this.lblDuration.TabIndex = 0;
             this.lblDuration.Text = "03:14";
             // 
@@ -125,6 +118,44 @@
             this.lblPlay.Text = "01";
             this.lblPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblOption
+            // 
+            this.lblOption.BackColor = System.Drawing.Color.Transparent;
+            this.lblOption.Location = new System.Drawing.Point(1216, 14);
+            this.lblOption.Name = "lblOption";
+            this.lblOption.Size = new System.Drawing.Size(45, 45);
+            this.lblOption.TabIndex = 9;
+            this.lblOption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnOption
+            // 
+            this.btnOption.BackColor = System.Drawing.Color.Transparent;
+            this.btnOption.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnOption.CheckedState.Parent = this.btnOption;
+            this.btnOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOption.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnOption.HoverState.Parent = this.btnOption;
+            this.btnOption.Image = global::Music__Player.Properties.Resources.icon_dots_black;
+            this.btnOption.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnOption.Location = new System.Drawing.Point(1216, 14);
+            this.btnOption.Name = "btnOption";
+            this.btnOption.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnOption.PressedState.Parent = this.btnOption;
+            this.btnOption.Size = new System.Drawing.Size(45, 45);
+            this.btnOption.TabIndex = 8;
+            // 
+            // pbImage
+            // 
+            this.pbImage.BorderRadius = 10;
+            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
+            this.pbImage.Location = new System.Drawing.Point(50, 6);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.ShadowDecoration.Parent = this.pbImage;
+            this.pbImage.Size = new System.Drawing.Size(60, 59);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 3;
+            this.pbImage.TabStop = false;
+            // 
             // btnPlay
             // 
             this.btnPlay.CheckedState.Image = global::Music__Player.Properties.Resources.icon_play_blue;
@@ -159,12 +190,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnlBackground);
             this.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
             this.Name = "List__Song__Playlist";
             this.Size = new System.Drawing.Size(1270, 70);
             this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
 
@@ -182,5 +214,7 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnFavorite;
         private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
         private Guna.UI2.WinForms.Guna2PictureBox pbImage;
+        private Guna.UI2.WinForms.Guna2ImageButton btnOption;
+        private System.Windows.Forms.Label lblOption;
     }
 }

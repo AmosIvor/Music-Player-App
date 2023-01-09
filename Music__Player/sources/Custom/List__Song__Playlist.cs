@@ -164,11 +164,19 @@ namespace Music__Player.sources.Custom
 
                     lblFavorite.Visible = false;
 
-                    if (isHovered == false && isSelected == true && btnFavorite.Checked == false)
-                    {
-                        lblFavorite.Visible = true;
+                    lblOption.Visible = false;
 
+                    if (isHovered == false && isSelected == true)
+                    {
+                        lblOption.Visible = true;
+
+                        if (btnFavorite.Checked == false)
+                        {
+                            lblFavorite.Visible = true;
+                        }
                     }
+
+                    
                 }
 
                 else
@@ -176,6 +184,8 @@ namespace Music__Player.sources.Custom
                     pnlBackground.FillColor = Color.Transparent;
 
                     lblPlay.Visible = true;
+
+                    lblOption.Visible = true;
 
                     if (btnFavorite.Checked != true)
                     {
