@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlBackground = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblAlbum = new System.Windows.Forms.Label();
@@ -38,6 +36,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFavorite = new System.Windows.Forms.Label();
             this.lblPlay = new System.Windows.Forms.Label();
+            this.btnAddPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnFavorite = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pnlBackground.SuspendLayout();
@@ -65,35 +65,6 @@
             this.pnlBackground.ShadowDecoration.Parent = this.pnlBackground;
             this.pnlBackground.Size = new System.Drawing.Size(1270, 70);
             this.pnlBackground.TabIndex = 1;
-            // 
-            // btnAddPlaylist
-            // 
-            this.btnAddPlaylist.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddPlaylist.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnAddPlaylist.CheckedState.Parent = this.btnAddPlaylist;
-            this.btnAddPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPlaylist.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddPlaylist.HoverState.Parent = this.btnAddPlaylist;
-            this.btnAddPlaylist.Image = global::Music__Player.Properties.Resources.icon_add_playlist;
-            this.btnAddPlaylist.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnAddPlaylist.Location = new System.Drawing.Point(1221, 14);
-            this.btnAddPlaylist.Name = "btnAddPlaylist";
-            this.btnAddPlaylist.PressedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnAddPlaylist.PressedState.Parent = this.btnAddPlaylist;
-            this.btnAddPlaylist.Size = new System.Drawing.Size(45, 45);
-            this.btnAddPlaylist.TabIndex = 7;
-            // 
-            // pbImage
-            // 
-            this.pbImage.BorderRadius = 10;
-            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
-            this.pbImage.Location = new System.Drawing.Point(50, 6);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.ShadowDecoration.Parent = this.pbImage;
-            this.pbImage.Size = new System.Drawing.Size(60, 59);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImage.TabIndex = 3;
-            this.pbImage.TabStop = false;
             // 
             // lblDate
             // 
@@ -158,6 +129,35 @@
             this.lblPlay.TabIndex = 0;
             this.lblPlay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnAddPlaylist
+            // 
+            this.btnAddPlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPlaylist.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddPlaylist.CheckedState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPlaylist.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddPlaylist.HoverState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Image = global::Music__Player.Properties.Resources.icon_add_playlist;
+            this.btnAddPlaylist.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddPlaylist.Location = new System.Drawing.Point(1221, 14);
+            this.btnAddPlaylist.Name = "btnAddPlaylist";
+            this.btnAddPlaylist.PressedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAddPlaylist.PressedState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Size = new System.Drawing.Size(45, 45);
+            this.btnAddPlaylist.TabIndex = 7;
+            // 
+            // pbImage
+            // 
+            this.pbImage.BorderRadius = 10;
+            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
+            this.pbImage.Location = new System.Drawing.Point(50, 6);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.ShadowDecoration.Parent = this.pbImage;
+            this.pbImage.Size = new System.Drawing.Size(60, 59);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 3;
+            this.pbImage.TabStop = false;
+            // 
             // btnPlay
             // 
             this.btnPlay.CheckedState.Image = global::Music__Player.Properties.Resources.icon_play_blue;
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBackground);
             this.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
             this.Name = "Song__History";
