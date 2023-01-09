@@ -21,13 +21,11 @@ namespace Music__Player.sources.View
     {
         #region Inital
 
-        private Panel fpSongHover = new Panel();
+        Panel fpSongHover = new Panel();
 
-        private Panel fpArtistHover = new Panel();
+        Panel fpArtistHover = new Panel();
 
-        public static bool isClicked = false;
-
-        public static Info__Song__Panel musicPlaying;
+        public bool isFirst = false;
 
         #endregion
 
@@ -43,6 +41,8 @@ namespace Music__Player.sources.View
             LoadListArtistPanel();
 
             LoadListInfoSongPanel();
+
+            LoadEventClick();
         }
 
         #region Info Song Panel
@@ -102,17 +102,15 @@ namespace Music__Player.sources.View
 
             Song__Playing__DAO.Instance.currInfoSongPanel = curr;
 
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             Media__Player.Instance.RunMP3(curr.URL, timerMusic);
              
             fpanelSongs.Tag = curr;
 
-            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
-
-            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
-
-            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+            LoadAllBottomBar();
         }
         private void infoSongPanel_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -142,15 +140,13 @@ namespace Music__Player.sources.View
 
                 Song__Playing__DAO.Instance.currInfoSongPanel = infoSongPanelInside;
 
+                Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
                 Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
                 Media__Player.Instance.RunMP3(infoSongPanelInside.URL, timerMusic);
 
-                Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
-
-                Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
-
-                Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+                LoadAllBottomBar();
 
                 fpanelSongs.Tag = infoSongPanelInside;
 
@@ -165,15 +161,13 @@ namespace Music__Player.sources.View
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSongPanelOutside;
 
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             Media__Player.Instance.RunMP3(infoSongPanelOutside.URL, timerMusic);
 
-            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
-
-            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
-
-            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+            LoadAllBottomBar();
         }
         private void infoSongPanel_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -276,17 +270,15 @@ namespace Music__Player.sources.View
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSongPanel;
 
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanel.ID) - 1) * 100;
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanel.ID) - 1) * 100;
 
-            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
-
-            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
-
-            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+            LoadAllBottomBar();
         }
         private void artistPanel_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -316,7 +308,7 @@ namespace Music__Player.sources.View
 
                 fpanelArtists.Tag = artistPanelInside;
 
-                Song__Playing__DAO.Instance.SetSongPlayingByArtistPanel(artistPanelInside, pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
+                //Song__Playing__DAO.Instance.SetSongPlayingByArtistPanel(artistPanelInside, pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
                 Media__Player.Instance.RunMP3(artistPanelInside.URL, timerMusic);
 
@@ -329,17 +321,15 @@ namespace Music__Player.sources.View
 
                 Song__Playing__DAO.Instance.currInfoSongPanel = infoSongPanelInside;
 
+                Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
                 Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
                 fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanelInside.ID) - 1) * 100;
 
                 fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanelInside.ID) - 1) * 100;
 
-                Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
-
-                Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
-
-                Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+                LoadAllBottomBar();
 
                 fpanelSongs.Tag = infoSongPanelInside;
 
@@ -364,17 +354,15 @@ namespace Music__Player.sources.View
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSongPanelOutside;
 
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanelOutside.ID) - 1) * 100;
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(infoSongPanelOutside.ID) - 1) * 100;
 
-            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
-
-            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
-
-            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+            LoadAllBottomBar();
         }
         private void artistPanel_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -484,11 +472,7 @@ namespace Music__Player.sources.View
 
             fpanelSongs.VerticalScroll.Value = (Convert.ToInt32(nextIndex) - 1) * 100;
 
-            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
-
-            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
-
-            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+            LoadAllBottomBar();
         }
         private void btnSkip_Click(object sender, EventArgs e)
         {
@@ -543,20 +527,30 @@ namespace Music__Player.sources.View
         #region Handle Context Menu
         private void btnAddPlaylist_Click(object sender, EventArgs e)
         {
-            if (isClicked == false)
-            {
-                Dropdown__Playlist__DAO.Instance.ShowDropDownPlaylist(panelHome, 513, 470);
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInPanel(this, panelHome);
 
-                isClicked = true;
-
-                return;
-            }
-
-            isClicked = false;
-
-            Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
+            Dropdown__Playlist__DAO.Instance.songSelecting = lblTitlePlaying.Text;
+        }
+        
+        private void LoadEventClick()
+        {
+            Dropdown__Playlist__DAO.Instance.GetAllControls(this);
         }
 
+        #endregion
+
+        #region Navigate Bottom Bar
+
+        void LoadAllBottomBar()
+        {
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.historyScreen.LoadSongPlayingBottomBar();
+        }
         #endregion
 
     }

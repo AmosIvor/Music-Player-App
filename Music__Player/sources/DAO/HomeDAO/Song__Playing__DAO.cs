@@ -1,5 +1,6 @@
 ﻿using Guna.UI2.WinForms;
 using Music__Player.sources.Custom;
+using Music__Player.sources.DAO.CustomDAO;
 using Music__Player.sources.DTO.HomeDTO;
 using System;
 using System.Collections.Generic;
@@ -49,25 +50,6 @@ namespace Music__Player.sources.DAO.HomeDAO
             pbImage.Image = songPlayingByInfoSongPanel.Image_Song;
         }
 
-        public void SetSongPlayingByArtistPanel(UserControl userControl, Guna2ShadowPanel pnlMain, Guna2PictureBox pbImage, Label lblTitle, Label lblArtist, Label lblDuration)
-        {
-            Artist__Panel artistPanel = (Artist__Panel)userControl;
-
-            Song__Playing songPlaying = new Song__Playing(artistPanel);
-
-            lblTitle.Text = songPlaying.Title;
-
-            lblTitle.Location = new System.Drawing.Point(CenterHorizontal(pnlMain, lblTitle), lblTitle.Location.Y);
-
-            lblArtist.Text = songPlaying.Artist;
-
-            lblArtist.Location = new System.Drawing.Point(CenterHorizontal(pnlMain, lblArtist), lblArtist.Location.Y);
-
-            lblDuration.Text = songPlaying.Duration;
-
-            pbImage.Image = songPlaying.Image_Song;
-        }
-
         public void SetSongPlayingBottomBar(Guna2PictureBox pbImage, Label lblNameSong, Label lblArtist, Label lblDuration)
         {
             songPlayingByInfoSongPanel = new Song__Playing(currInfoSongPanel);
@@ -87,5 +69,20 @@ namespace Music__Player.sources.DAO.HomeDAO
 
             return (mainPanel.Location.X + temp - 44);
         }
+
+        public void LoadSongPlayingAllScreen()
+        {
+            Navigate.Navigation.Instance.historyScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.playlistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.homeScreen.LoadSongPlaying();
+        }
+
+
     }
 }

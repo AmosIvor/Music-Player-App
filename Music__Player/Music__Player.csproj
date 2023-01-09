@@ -77,6 +77,12 @@
     <Compile Include="sources\Custom\List__Song__Playlist.Designer.cs">
       <DependentUpon>List__Song__Playlist.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\Custom\Song__History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Song__History.Designer.cs">
+      <DependentUpon>Song__History.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\Song__Playing__BottomBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,7 @@
     <Compile Include="sources\DAO\CustomDAO\Name__Playlist__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Playlist__Add__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Popup__Create__Playlist__DAO.cs" />
+    <Compile Include="sources\DAO\CustomDAO\Song__History__DAO.cs" />
     <Compile Include="sources\DAO\PlaylistDAO\PlaylistDAO.cs" />
     <Compile Include="sources\DAO\SQLConnection\DataProviderDAO.cs" />
     <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
@@ -230,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Popup__Create__Playlist.resx">
       <DependentUpon>Popup__Create__Playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Song__History.resx">
+      <DependentUpon>Song__History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Song__Playing__BottomBar.resx">
       <DependentUpon>Song__Playing__BottomBar.cs</DependentUpon>

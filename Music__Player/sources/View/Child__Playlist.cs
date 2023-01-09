@@ -26,6 +26,8 @@ namespace Music__Player.sources.View
             InitializeComponent();
 
             FormatDataGridView();
+
+            LoadInitialSongBottomBar();
         }
 
         public void LoadChildPlaylist(int idPlaylist)
@@ -84,7 +86,17 @@ namespace Music__Player.sources.View
 
             List__Song__Playlist curr = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
 
-            LoadSongPlayingAllScreen(curr);
+            fpnlSongs.Tag = curr;
+
+            curr.IsSelected = true;
+
+            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
+
+            Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
+
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
+            Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
             Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
 
@@ -105,7 +117,17 @@ namespace Music__Player.sources.View
             {
                 List__Song__Playlist songByPlaylistInside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
 
-                LoadSongPlayingAllScreen(songByPlaylistInside);
+                fpnlSongs.Tag = songByPlaylistInside;
+
+                songByPlaylistInside.IsSelected = true;
+
+                Info__Song__Panel infoSong = new Info__Song__Panel(songByPlaylistInside);
+
+                Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
+
+                Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
+                Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
                 Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
 
@@ -116,7 +138,17 @@ namespace Music__Player.sources.View
 
             List__Song__Playlist songByPlaylistOutside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromPanel(sender);
 
-            LoadSongPlayingAllScreen(songByPlaylistOutside);
+            fpnlSongs.Tag = songByPlaylistOutside;
+
+            songByPlaylistOutside.IsSelected = true;
+
+            Info__Song__Panel infoSongOutside = new Info__Song__Panel(songByPlaylistOutside);
+
+            Song__Playing__DAO.Instance.currInfoSongPanel = infoSongOutside;
+
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
+            Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
             Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
 
@@ -193,6 +225,11 @@ namespace Music__Player.sources.View
         {
             songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
         }
+
+        public void LoadInitialSongBottomBar()
+        {
+            songPlayingBottomBar.LoadInitialSong();
+        }
         #endregion
 
         #region Play First Song 
@@ -204,7 +241,15 @@ namespace Music__Player.sources.View
             }
             List__Song__Playlist firstSong = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == "01");
 
-            LoadSongPlayingAllScreen(firstSong);
+            fpnlSongs.Tag = firstSong;
+
+            firstSong.IsSelected = true;
+
+            Info__Song__Panel infoSongOutside = new Info__Song__Panel(firstSong);
+
+            Song__Playing__DAO.Instance.currInfoSongPanel = infoSongOutside;
+
+            Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
         }
 
         #endregion
@@ -243,6 +288,7 @@ namespace Music__Player.sources.View
 
                 prevSelected.IsHovered = false;
             }
+
             List__Song__Playlist songByPlaylist = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == song.ID);
 
             songByPlaylist.IsSelected = true;

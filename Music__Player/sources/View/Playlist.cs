@@ -29,6 +29,8 @@ namespace Music__Player.sources.View
             InitializeComponent();
 
             LoadPlaylists();
+
+            LoadInitialSongBottomBar();
         }
 
         #region Load Playlists
@@ -168,6 +170,8 @@ namespace Music__Player.sources.View
 
             playlistSongPlaying = curr;
 
+            pnlClicked.Tag = curr;
+
             Navigate.Navigation.Instance.mainScreen.LoadChildPlaylistPlayingSong();
 
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadChildPlaylist(curr.ID_Playlist);
@@ -218,7 +222,6 @@ namespace Music__Player.sources.View
         }
         private void InfoPlaylist_MouseEnterAdd(object sender, EventArgs e)
         {
-            
             if (pnlHovered.Tag != null)
             {
                 Info__Playlist__Panel prevHover = (Info__Playlist__Panel)pnlHovered.Tag;
@@ -264,6 +267,11 @@ namespace Music__Player.sources.View
         public void LoadSongPlayingBottomBar()
         {
             songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+
+        public void LoadInitialSongBottomBar()
+        {
+            songPlayingBottomBar.LoadInitialSong();
         }
         #endregion
 

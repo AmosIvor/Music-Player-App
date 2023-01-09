@@ -41,11 +41,11 @@ namespace Music__Player.sources.DAO.CustomDAO
 
             formBackground.TopMost = true;
 
-            formBackground.Location = Main__Screen.Instance.Location;
+            formBackground.Location = Navigate.Navigation.Instance.mainScreen.Location;
 
             formBackground.ShowInTaskbar = false;
 
-            formBackground.Size = Main__Screen.Instance.Size;
+            formBackground.Size = Navigate.Navigation.Instance.mainScreen.Size;
 
             formBackground.Show();
         }
