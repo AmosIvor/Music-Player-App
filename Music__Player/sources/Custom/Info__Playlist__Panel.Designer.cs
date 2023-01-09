@@ -32,10 +32,10 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
             this.pnlBackground = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblBin = new System.Windows.Forms.Label();
+            this.btnBin = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pbImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.btnBin = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.lblBin = new System.Windows.Forms.Label();
             this.pnlBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +79,30 @@
             this.pnlBackground.Size = new System.Drawing.Size(583, 164);
             this.pnlBackground.TabIndex = 1;
             // 
+            // lblBin
+            // 
+            this.lblBin.Location = new System.Drawing.Point(510, 52);
+            this.lblBin.Name = "lblBin";
+            this.lblBin.Size = new System.Drawing.Size(60, 60);
+            this.lblBin.TabIndex = 4;
+            // 
+            // btnBin
+            // 
+            this.btnBin.CheckedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.btnBin.CheckedState.Parent = this.btnBin;
+            this.btnBin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBin.HoverState.ImageSize = new System.Drawing.Size(59, 59);
+            this.btnBin.HoverState.Parent = this.btnBin;
+            this.btnBin.Image = global::Music__Player.Properties.Resources.icon_bin_black1;
+            this.btnBin.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnBin.Location = new System.Drawing.Point(510, 52);
+            this.btnBin.Name = "btnBin";
+            this.btnBin.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.btnBin.PressedState.Parent = this.btnBin;
+            this.btnBin.Size = new System.Drawing.Size(60, 60);
+            this.btnBin.TabIndex = 3;
+            this.btnBin.Click += new System.EventHandler(this.btnBin_Click);
+            // 
             // btnPlay
             // 
             this.btnPlay.CheckedState.Image = global::Music__Player.Properties.Resources.icon_play_blue;
@@ -108,30 +132,6 @@
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 0;
             this.pbImage.TabStop = false;
-            // 
-            // btnBin
-            // 
-            this.btnBin.CheckedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.btnBin.CheckedState.Parent = this.btnBin;
-            this.btnBin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBin.HoverState.ImageSize = new System.Drawing.Size(59, 59);
-            this.btnBin.HoverState.Parent = this.btnBin;
-            this.btnBin.Image = ((System.Drawing.Image)(resources.GetObject("btnBin.Image")));
-            this.btnBin.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnBin.Location = new System.Drawing.Point(510, 52);
-            this.btnBin.Name = "btnBin";
-            this.btnBin.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.btnBin.PressedState.Parent = this.btnBin;
-            this.btnBin.Size = new System.Drawing.Size(60, 60);
-            this.btnBin.TabIndex = 3;
-            this.btnBin.Click += new System.EventHandler(this.btnBin_Click);
-            // 
-            // lblBin
-            // 
-            this.lblBin.Location = new System.Drawing.Point(510, 52);
-            this.lblBin.Name = "lblBin";
-            this.lblBin.Size = new System.Drawing.Size(60, 60);
-            this.lblBin.TabIndex = 4;
             // 
             // Info__Playlist__Panel
             // 
