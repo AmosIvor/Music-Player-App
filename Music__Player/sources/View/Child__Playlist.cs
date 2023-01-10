@@ -35,6 +35,8 @@ namespace Music__Player.sources.View
             LoadTitle(idPlaylist);
 
             LoadListSongByIdPlaylist(idPlaylist);
+
+            LoadEventClick();
         }
 
         void FormatDataGridView()
@@ -68,6 +70,8 @@ namespace Music__Player.sources.View
                 songByPlaylist.MouseLeaveAdd += songByPlaylist_MouseLeaveAdd;
 
                 songByPlaylist.MouseClickPlay += songByPlaylist_MouseClickPlay;
+
+                songByPlaylist.MouseClickOption += songByPlaylist_MouseClickOption;
 
                 fpnlSongs.Controls.Add(songByPlaylist);
             }
@@ -192,6 +196,25 @@ namespace Music__Player.sources.View
             List__Song__Playlist songByPlaylistOutside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromPanel(sender);
 
             songByPlaylistOutside.IsHovered = false;
+        }
+
+        private void songByPlaylist_MouseClickOption(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Context__Menu__DAO.Instance.ShowContextMenuInUserControl(this);
+
+                //List__Song__Playlist songByPlaylistInside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+                //Context__Menu__DAO.Instance.songSelecting = songByPlaylistInside.Title;
+            }
+
+            catch { }
+        }
+
+        private void LoadEventClick()
+        {
+            Context__Menu__DAO.Instance.GetAllControls(this);
         }
 
         #endregion
