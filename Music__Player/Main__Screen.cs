@@ -191,7 +191,7 @@ namespace Music__Player
             currentScreen.Visible = false;
 
             //ShowCurrentScreen(panelMainScreen, recentScreen);
-            ShowCurrentScreen(panelMainScreen, Navigation.Instance.recentScreen);
+            ShowCurrentScreen(panelMainScreen, Navigation.Instance.albumsScreen);
         }
 
         #endregion

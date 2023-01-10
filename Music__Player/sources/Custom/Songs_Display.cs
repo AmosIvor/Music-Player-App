@@ -129,19 +129,31 @@ namespace Music__Player.sources.Custom
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            Cursor = Cursors.Default;
             if (isSelectedFavorite == false)
                 pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_black;
         }
 
         private void HandleMouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
+            foreach(Control control in ShadowPanelSong.Controls)
+            {
+                control.BackColor = Color.Gainsboro;
+            }
+            Cursor = Cursors.Hand;
+            lbId.Visible = false;
+            picturePlaySong.Visible = true;
             ShadowPanelSong.FillColor = Color.Gainsboro;
         }
         private void HandleMouseLeave(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Default;
+            foreach (Control control in ShadowPanelSong.Controls)
+            {
+                control.BackColor = Color.WhiteSmoke;
+            }
+            Cursor = Cursors.Default;
+            lbId.Visible = true;
+            picturePlaySong.Visible = false;
             ShadowPanelSong.FillColor = Color.WhiteSmoke;
         }
 
@@ -177,16 +189,27 @@ namespace Music__Player.sources.Custom
             }
         }
 
-        private void HandleClickFavoriteEvent(object sender, EventArgs e)
-        {
-            if (IsSelectedFavorite == true)
-            {
 
-                IsSelectedFavorite = false;
-            } else
+        private bool isSelectedSong = false;
+        public bool IsSelectedSong
+        {
+            get { return isSelectedSong; }
+            set
             {
-                IsSelectedFavorite = true;
+                if (value == true) 
+                {
+                    picturePlaySong.Image = global::Music__Player.Properties.Resources.icon_play_blue;
+                    isSelectedSong = true;
+                } else
+                {
+                    picturePlaySong.Image = global::Music__Player.Properties.Resources.icon_pause_blue;
+                    isSelectedSong = false;
+                }
             }
+        }
+        private void lbTimeSong_Click(object sender, EventArgs e)
+        {
+            picturePlaySong.Image = Properties.Resources.icon_play_blue;
         }
     }
 }
