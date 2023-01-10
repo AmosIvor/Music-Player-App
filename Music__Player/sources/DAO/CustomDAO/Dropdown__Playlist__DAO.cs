@@ -113,6 +113,15 @@ namespace Music__Player.sources.DAO.CustomDAO
             isFirst = false;
         }
 
+        public void HideMenu()
+        {
+            if (isFirst == false)
+            {
+                pnlBackground.Visible = false;
+            }
+
+            isFirst = false;
+        }
         public void AddPlaylistEventInPanel(UserControl screen, Panel panelHome)
         {
             Point clickedPoint = screen.PointToClient(Control.MousePosition);
