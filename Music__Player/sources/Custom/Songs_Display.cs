@@ -198,18 +198,24 @@ namespace Music__Player.sources.Custom
             {
                 if (value == true) 
                 {
-                    picturePlaySong.Image = global::Music__Player.Properties.Resources.icon_play_blue;
+                    picturePlaySong.Image = Properties.Resources.icon_play_blue;
                     isSelectedSong = true;
                 } else
                 {
-                    picturePlaySong.Image = global::Music__Player.Properties.Resources.icon_pause_blue;
+                    picturePlaySong.Image = Properties.Resources.icon_pause_blue;
                     isSelectedSong = false;
                 }
             }
         }
         private void lbTimeSong_Click(object sender, EventArgs e)
         {
-            picturePlaySong.Image = Properties.Resources.icon_play_blue;
+            if (IsSelectedSong == true)
+            {
+                IsSelectedSong = false;
+            } else
+            {
+                IsSelectedSong = true;
+            }
         }
     }
 }

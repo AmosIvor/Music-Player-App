@@ -70,7 +70,7 @@
             // 
             this.picturePlaySong.BackColor = System.Drawing.Color.WhiteSmoke;
             this.picturePlaySong.Image = global::Music__Player.Properties.Resources.icon_pause_blue;
-            this.picturePlaySong.Location = new System.Drawing.Point(30, 15);
+            this.picturePlaySong.Location = new System.Drawing.Point(30, 14);
             this.picturePlaySong.Name = "picturePlaySong";
             this.picturePlaySong.Size = new System.Drawing.Size(48, 50);
             this.picturePlaySong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,6 +78,7 @@
             this.picturePlaySong.TabStop = false;
             this.picturePlaySong.Visible = false;
             this.picturePlaySong.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.picturePlaySong.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             // 
             // pictureBox1
             // 
@@ -103,6 +104,7 @@
             this.lbAlbum.TabIndex = 13;
             this.lbAlbum.Text = "Album";
             this.lbAlbum.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.lbAlbum.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.lbAlbum.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.lbAlbum.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
@@ -117,6 +119,7 @@
             this.lbTimeSong.Text = "3:40";
             this.lbTimeSong.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lbTimeSong.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.lbTimeSong.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.lbTimeSong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.lbTimeSong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
@@ -130,6 +133,7 @@
             this.lbArtist.TabIndex = 11;
             this.lbArtist.Text = "Nhạc sĩ";
             this.lbArtist.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.lbArtist.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.lbArtist.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.lbArtist.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
@@ -143,6 +147,7 @@
             this.lbNameSong.TabIndex = 10;
             this.lbNameSong.Text = "Đây là 1 bài hát ";
             this.lbNameSong.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.lbNameSong.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.lbNameSong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.lbNameSong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
@@ -158,6 +163,7 @@
             this.pbImageSong.TabIndex = 9;
             this.pbImageSong.TabStop = false;
             this.pbImageSong.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.pbImageSong.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.pbImageSong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.pbImageSong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
@@ -173,6 +179,8 @@
             this.lbId.Tag = "";
             this.lbId.Text = "01";
             this.lbId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbId.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.lbId.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.lbId.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.lbId.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
