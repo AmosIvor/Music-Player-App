@@ -30,16 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Songs));
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblEnd = new System.Windows.Forms.Label();
-            this.lblStart = new System.Windows.Forms.Label();
-            this.guna2ImageButton5 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton4 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton6 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.sliderTimeMusic = new Guna.UI2.WinForms.Guna2TrackBar();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.searchBar = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -65,145 +57,15 @@
             this.songs_Display4 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display5 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display6 = new Music__Player.sources.Custom.Songs_Display();
-            this.searchBar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel1.SuspendLayout();
+            this.lblEnd = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.song__Playing__BottomBar1 = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.guna2Panel2.SuspendLayout();
             this.slideBtnLayoutPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.lblEnd);
-            this.guna2Panel1.Controls.Add(this.lblStart);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton5);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton3);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton4);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton6);
-            this.guna2Panel1.Controls.Add(this.btnPlay);
-            this.guna2Panel1.Controls.Add(this.sliderTimeMusic);
-            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 868);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1359, 97);
-            this.guna2Panel1.TabIndex = 0;
-            // 
-            // lblEnd
-            // 
-            this.lblEnd.AutoSize = true;
-            this.lblEnd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnd.Location = new System.Drawing.Point(1312, 6);
-            this.lblEnd.Name = "lblEnd";
-            this.lblEnd.Size = new System.Drawing.Size(44, 20);
-            this.lblEnd.TabIndex = 11;
-            this.lblEnd.Text = "05:20";
-            // 
-            // lblStart
-            // 
-            this.lblStart.AutoSize = true;
-            this.lblStart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStart.Location = new System.Drawing.Point(3, 6);
-            this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(44, 20);
-            this.lblStart.TabIndex = 12;
-            this.lblStart.Text = "00:00";
-            // 
-            // guna2ImageButton5
-            // 
-            this.guna2ImageButton5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton5.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton5.CheckedState.Parent = this.guna2ImageButton5;
-            this.guna2ImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton5.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton5.HoverState.Parent = this.guna2ImageButton5;
-            this.guna2ImageButton5.Image = global::Music__Player.Properties.Resources.icon_start_blue;
-            this.guna2ImageButton5.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton5.Location = new System.Drawing.Point(547, 37);
-            this.guna2ImageButton5.Name = "guna2ImageButton5";
-            this.guna2ImageButton5.PressedState.Parent = this.guna2ImageButton5;
-            this.guna2ImageButton5.Size = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton5.TabIndex = 6;
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton3.CheckedState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton3.HoverState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Image = global::Music__Player.Properties.Resources.icon_shuffle_blue;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(885, 37);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Size = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton3.TabIndex = 7;
-            // 
-            // guna2ImageButton4
-            // 
-            this.guna2ImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton4.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton4.CheckedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton4.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton4.HoverState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Image = global::Music__Player.Properties.Resources.icon_repeat_blue;
-            this.guna2ImageButton4.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton4.Location = new System.Drawing.Point(443, 37);
-            this.guna2ImageButton4.Name = "guna2ImageButton4";
-            this.guna2ImageButton4.PressedState.Parent = this.guna2ImageButton4;
-            this.guna2ImageButton4.Size = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton4.TabIndex = 8;
-            // 
-            // guna2ImageButton6
-            // 
-            this.guna2ImageButton6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton6.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton6.CheckedState.Parent = this.guna2ImageButton6;
-            this.guna2ImageButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton6.HoverState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton6.HoverState.Parent = this.guna2ImageButton6;
-            this.guna2ImageButton6.Image = global::Music__Player.Properties.Resources.icon_end_blue;
-            this.guna2ImageButton6.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton6.Location = new System.Drawing.Point(782, 37);
-            this.guna2ImageButton6.Name = "guna2ImageButton6";
-            this.guna2ImageButton6.PressedState.Parent = this.guna2ImageButton6;
-            this.guna2ImageButton6.Size = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton6.TabIndex = 9;
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlay.CheckedState.Image = global::Music__Player.Properties.Resources.icon_play_blue;
-            this.btnPlay.CheckedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.btnPlay.CheckedState.Parent = this.btnPlay;
-            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlay.HoverState.ImageSize = new System.Drawing.Size(65, 65);
-            this.btnPlay.HoverState.Parent = this.btnPlay;
-            this.btnPlay.Image = global::Music__Player.Properties.Resources.icon_pause_blue;
-            this.btnPlay.ImageSize = new System.Drawing.Size(55, 55);
-            this.btnPlay.Location = new System.Drawing.Point(651, 29);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.PressedState.ImageSize = new System.Drawing.Size(55, 55);
-            this.btnPlay.PressedState.Parent = this.btnPlay;
-            this.btnPlay.Size = new System.Drawing.Size(71, 60);
-            this.btnPlay.TabIndex = 10;
-            // 
-            // sliderTimeMusic
-            // 
-            this.sliderTimeMusic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sliderTimeMusic.FillColor = System.Drawing.Color.Silver;
-            this.sliderTimeMusic.HoverState.Parent = this.sliderTimeMusic;
-            this.sliderTimeMusic.Location = new System.Drawing.Point(53, 3);
-            this.sliderTimeMusic.Name = "sliderTimeMusic";
-            this.sliderTimeMusic.Size = new System.Drawing.Size(1253, 23);
-            this.sliderTimeMusic.TabIndex = 5;
-            this.sliderTimeMusic.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             // 
             // guna2Panel2
             // 
@@ -217,6 +79,37 @@
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(1359, 100);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // searchBar
+            // 
+            this.searchBar.BorderColor = System.Drawing.Color.Silver;
+            this.searchBar.BorderRadius = 18;
+            this.searchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchBar.DefaultText = "";
+            this.searchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchBar.DisabledState.Parent = this.searchBar;
+            this.searchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchBar.FocusedState.Parent = this.searchBar;
+            this.searchBar.ForeColor = System.Drawing.Color.Black;
+            this.searchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchBar.HoverState.Parent = this.searchBar;
+            this.searchBar.IconLeft = global::Music__Player.Properties.Resources.icon_search_blue;
+            this.searchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.searchBar.IconLeftSize = new System.Drawing.Size(28, 28);
+            this.searchBar.Location = new System.Drawing.Point(585, 26);
+            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchBar.Name = "searchBar";
+            this.searchBar.PasswordChar = '\0';
+            this.searchBar.PlaceholderText = "Search for favorite song ...";
+            this.searchBar.SelectedText = "";
+            this.searchBar.ShadowDecoration.Parent = this.searchBar;
+            this.searchBar.Size = new System.Drawing.Size(567, 44);
+            this.searchBar.TabIndex = 6;
+            this.searchBar.TextOffset = new System.Drawing.Point(15, 0);
+            this.searchBar.TextChanged += new System.EventHandler(this.searchBar_TextChanged);
             // 
             // guna2ImageButton1
             // 
@@ -441,6 +334,7 @@
             this.songs_Display1.Duration = null;
             this.songs_Display1.Id = null;
             this.songs_Display1.ImageSong = null;
+            this.songs_Display1.IsSelectedSong = false;
             this.songs_Display1.Location = new System.Drawing.Point(34, 3);
             this.songs_Display1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display1.Name = "songs_Display1";
@@ -457,6 +351,7 @@
             this.songs_Display2.Duration = null;
             this.songs_Display2.Id = null;
             this.songs_Display2.ImageSong = null;
+            this.songs_Display2.IsSelectedSong = false;
             this.songs_Display2.Location = new System.Drawing.Point(34, 100);
             this.songs_Display2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display2.Name = "songs_Display2";
@@ -473,6 +368,7 @@
             this.songs_Display3.Duration = null;
             this.songs_Display3.Id = null;
             this.songs_Display3.ImageSong = null;
+            this.songs_Display3.IsSelectedSong = false;
             this.songs_Display3.Location = new System.Drawing.Point(34, 197);
             this.songs_Display3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display3.Name = "songs_Display3";
@@ -489,6 +385,7 @@
             this.songs_Display4.Duration = null;
             this.songs_Display4.Id = null;
             this.songs_Display4.ImageSong = null;
+            this.songs_Display4.IsSelectedSong = false;
             this.songs_Display4.Location = new System.Drawing.Point(34, 294);
             this.songs_Display4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display4.Name = "songs_Display4";
@@ -505,6 +402,7 @@
             this.songs_Display5.Duration = null;
             this.songs_Display5.Id = null;
             this.songs_Display5.ImageSong = null;
+            this.songs_Display5.IsSelectedSong = false;
             this.songs_Display5.Location = new System.Drawing.Point(34, 391);
             this.songs_Display5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display5.Name = "songs_Display5";
@@ -521,6 +419,7 @@
             this.songs_Display6.Duration = null;
             this.songs_Display6.Id = null;
             this.songs_Display6.ImageSong = null;
+            this.songs_Display6.IsSelectedSong = false;
             this.songs_Display6.Location = new System.Drawing.Point(34, 488);
             this.songs_Display6.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display6.Name = "songs_Display6";
@@ -529,36 +428,37 @@
             this.songs_Display6.TabIndex = 5;
             this.songs_Display6.URL = null;
             // 
-            // searchBar
+            // lblEnd
             // 
-            this.searchBar.BorderColor = System.Drawing.Color.Silver;
-            this.searchBar.BorderRadius = 18;
-            this.searchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchBar.DefaultText = "";
-            this.searchBar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.searchBar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.searchBar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBar.DisabledState.Parent = this.searchBar;
-            this.searchBar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchBar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBar.FocusedState.Parent = this.searchBar;
-            this.searchBar.ForeColor = System.Drawing.Color.Black;
-            this.searchBar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchBar.HoverState.Parent = this.searchBar;
-            this.searchBar.IconLeft = global::Music__Player.Properties.Resources.icon_search_blue;
-            this.searchBar.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.searchBar.IconLeftSize = new System.Drawing.Size(28, 28);
-            this.searchBar.Location = new System.Drawing.Point(585, 26);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.PasswordChar = '\0';
-            this.searchBar.PlaceholderText = "Search for favorite song ...";
-            this.searchBar.SelectedText = "";
-            this.searchBar.ShadowDecoration.Parent = this.searchBar;
-            this.searchBar.Size = new System.Drawing.Size(567, 44);
-            this.searchBar.TabIndex = 6;
-            this.searchBar.TextOffset = new System.Drawing.Point(15, 0);
-            this.searchBar.TextChanged += new System.EventHandler(this.searchBar_TextChanged);
+            this.lblEnd.AutoSize = true;
+            this.lblEnd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnd.Location = new System.Drawing.Point(1312, 6);
+            this.lblEnd.Name = "lblEnd";
+            this.lblEnd.Size = new System.Drawing.Size(44, 20);
+            this.lblEnd.TabIndex = 11;
+            this.lblEnd.Text = "05:20";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.song__Playing__BottomBar1);
+            this.guna2Panel1.Controls.Add(this.lblEnd);
+            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 868);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(1359, 97);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // song__Playing__BottomBar1
+            // 
+            this.song__Playing__BottomBar1.BackColor = System.Drawing.Color.Transparent;
+            this.song__Playing__BottomBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.song__Playing__BottomBar1.Location = new System.Drawing.Point(0, -3);
+            this.song__Playing__BottomBar1.Name = "song__Playing__BottomBar1";
+            this.song__Playing__BottomBar1.Size = new System.Drawing.Size(1359, 100);
+            this.song__Playing__BottomBar1.TabIndex = 12;
             // 
             // Songs
             // 
@@ -573,19 +473,17 @@
             this.Name = "Songs";
             this.Size = new System.Drawing.Size(1359, 965);
             this.Load += new System.EventHandler(this.Songs_Load);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.slideBtnLayoutPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
@@ -612,14 +510,9 @@
         private Custom.Songs_Display songs_Display4;
         private Custom.Songs_Display songs_Display5;
         private Custom.Songs_Display songs_Display6;
-        private System.Windows.Forms.Label lblEnd;
-        private System.Windows.Forms.Label lblStart;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton6;
-        private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
-        private Guna.UI2.WinForms.Guna2TrackBar sliderTimeMusic;
         private Guna.UI2.WinForms.Guna2TextBox searchBar;
+        private System.Windows.Forms.Label lblEnd;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Custom.Song__Playing__BottomBar song__Playing__BottomBar1;
     }
 }

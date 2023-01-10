@@ -39,6 +39,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.album__Panel1);
             this.flowLayoutPanel1.Controls.Add(this.album__Panel2);
             this.flowLayoutPanel1.Controls.Add(this.album__Panel3);
@@ -55,40 +56,40 @@
             this.album__Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.album__Panel1.Location = new System.Drawing.Point(3, 3);
             this.album__Panel1.Name = "album__Panel1";
-            this.album__Panel1.Size = new System.Drawing.Size(1359, 90);
-            this.album__Panel1.TabIndex = 0;
+            this.album__Panel1.Size = new System.Drawing.Size(1359, 199);
+            this.album__Panel1.TabIndex = 5;
             // 
             // album__Panel2
             // 
             this.album__Panel2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.album__Panel2.Location = new System.Drawing.Point(3, 99);
+            this.album__Panel2.Location = new System.Drawing.Point(3, 208);
             this.album__Panel2.Name = "album__Panel2";
-            this.album__Panel2.Size = new System.Drawing.Size(1359, 90);
-            this.album__Panel2.TabIndex = 1;
+            this.album__Panel2.Size = new System.Drawing.Size(1359, 215);
+            this.album__Panel2.TabIndex = 6;
             // 
             // album__Panel3
             // 
             this.album__Panel3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.album__Panel3.Location = new System.Drawing.Point(3, 195);
+            this.album__Panel3.Location = new System.Drawing.Point(3, 429);
             this.album__Panel3.Name = "album__Panel3";
-            this.album__Panel3.Size = new System.Drawing.Size(1359, 90);
-            this.album__Panel3.TabIndex = 2;
+            this.album__Panel3.Size = new System.Drawing.Size(1359, 215);
+            this.album__Panel3.TabIndex = 7;
             // 
             // album__Panel4
             // 
             this.album__Panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.album__Panel4.Location = new System.Drawing.Point(3, 291);
+            this.album__Panel4.Location = new System.Drawing.Point(3, 650);
             this.album__Panel4.Name = "album__Panel4";
-            this.album__Panel4.Size = new System.Drawing.Size(1359, 90);
-            this.album__Panel4.TabIndex = 3;
+            this.album__Panel4.Size = new System.Drawing.Size(1359, 215);
+            this.album__Panel4.TabIndex = 8;
             // 
             // album__Panel5
             // 
             this.album__Panel5.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.album__Panel5.Location = new System.Drawing.Point(3, 387);
+            this.album__Panel5.Location = new System.Drawing.Point(3, 871);
             this.album__Panel5.Name = "album__Panel5";
-            this.album__Panel5.Size = new System.Drawing.Size(1359, 90);
-            this.album__Panel5.TabIndex = 4;
+            this.album__Panel5.Size = new System.Drawing.Size(1359, 215);
+            this.album__Panel5.TabIndex = 9;
             // 
             // Albums
             // 

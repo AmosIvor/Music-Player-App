@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Name = "Album__Panel";
-            this.Size = new System.Drawing.Size(1359, 90);
+            this.Size = new System.Drawing.Size(1359, 120);
             this.ResumeLayout(false);
 
         }
