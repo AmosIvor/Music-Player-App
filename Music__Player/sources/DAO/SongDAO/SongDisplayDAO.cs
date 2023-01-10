@@ -27,17 +27,17 @@ namespace Music__Player.sources.DAO.SongDAO
         private SongDisplayDAO() { }
         public List<Songs_Display> GetListSongDisplay()
         {
-            List<Songs_Display> listSong = new List<Songs_Display>();
+            List<Songs_Display> listSongs = new List<Songs_Display>();
             string query = "SELECT SONG.ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM, ISFAVORITE\r\nFROM SONG, ALBUMS, FAVORITES\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM AND SONG.ID_ALBUM = FAVORITES.ID_SONG";
             
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
             
             foreach (DataRow row in data.Rows) 
             {
-                Songs_Display songDisplay = new Songs_Display(row);
-                listSong.Add(songDisplay);
+                Songs_Display songDisplay = new Songs_Display(row, listSongs);
+                listSongs.Add(songDisplay);
             }
-            return listSong;
+            return listSongs;
         }
 
         public List<Songs_Display> GetListSongSearch(string nameSong)
@@ -47,7 +47,7 @@ namespace Music__Player.sources.DAO.SongDAO
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
             foreach (DataRow row in data.Rows)
             {
-                Songs_Display songDisplay = new Songs_Display(row);
+                Songs_Display songDisplay = new Songs_Display(row, listSongs);
                 listSongs.Add(songDisplay);
             }
             return listSongs;

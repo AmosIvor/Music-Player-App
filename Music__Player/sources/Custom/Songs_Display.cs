@@ -19,7 +19,7 @@ namespace Music__Player.sources.Custom
             InitializeComponent();
         }
 
-        public Songs_Display(DataRow row)
+        public Songs_Display(DataRow row, List<Songs_Display> listSongs)
         {
             InitializeComponent();
             Id = row["ID_SONG"].ToString();
@@ -34,12 +34,16 @@ namespace Music__Player.sources.Custom
             Album = row["NAME_ALBUM"].ToString();
             URL = row["LINK"].ToString();
 
+            this.listSongs = listSongs;
+
             if (row["ISFAVORITE"].ToString() == "False")           
                 IsSelectedFavorite = false;
             else
                 IsSelectedFavorite = true;
+
         }
 
+        private List<Songs_Display> listSongs;
 
         private string id;
         public string Id
@@ -214,6 +218,11 @@ namespace Music__Player.sources.Custom
                 IsSelectedSong = false;
             } else
             {
+                foreach (Songs_Display songs in listSongs)
+                {
+                    if (songs.IsSelectedSong == true)
+                        songs.IsSelectedSong = false;
+                }
                 IsSelectedSong = true;
             }
         }
