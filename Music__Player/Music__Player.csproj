@@ -101,6 +101,7 @@
     <Compile Include="sources\Custom\Song__Playing__BottomBar.Designer.cs">
       <DependentUpon>Song__Playing__BottomBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\DAO\CustomDAO\Context__Menu__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Form__Background__DAO.cs" />
     <Compile Include="sources\Constant\ICON.cs" />
     <Compile Include="sources\Custom\Dropdown__Playlist.cs">
