@@ -16,6 +16,8 @@ namespace Music__Player.sources.Custom
     {
         FlowLayoutPanel fpHovered = new FlowLayoutPanel();
 
+        Item__Menu itemMenuAddPlaylist;
+
         public Context__Menu()
         {
             InitializeComponent();
@@ -41,6 +43,8 @@ namespace Music__Player.sources.Custom
             }
 
             listItemMenu[1].IsAdd = true;
+
+            itemMenuAddPlaylist = listItemMenu[1]; 
         }
 
         private void itemMenu_MouseClickAdd(object sender, MouseEventArgs e)
@@ -62,6 +66,15 @@ namespace Music__Player.sources.Custom
                 Item__Menu itemMenuInside = Item__Menu__DAO.Instance.GetItemMenuFromControlIntoPanel(sender);
 
                 itemMenuInside.IsHovered = true;
+
+                if (itemMenuInside == itemMenuAddPlaylist)
+                {
+                    Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(Navigate.Navigation.Instance.childPlaylistScreen); ;
+                }
+                else
+                {
+                    Dropdown__Playlist__DAO.Instance.HideMenu();
+                }
 
                 fpHovered.Tag = itemMenuInside;
 
