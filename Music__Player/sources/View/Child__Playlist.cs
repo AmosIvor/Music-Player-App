@@ -21,6 +21,9 @@ namespace Music__Player.sources.View
     public partial class Child__Playlist : UserControl
     {
         Panel pnlHovered = new Panel();
+
+        Panel pnlOptioned = new Panel();
+
         public Child__Playlist()
         {
             InitializeComponent();
@@ -202,11 +205,22 @@ namespace Music__Player.sources.View
         {
             try
             {
+                if (pnlOptioned.Tag != null)
+                {
+                    List__Song__Playlist prevSong = (List__Song__Playlist)pnlOptioned.Tag;
+
+                    prevSong.IsOptioned = false;
+                }
+
+                List__Song__Playlist songByPlaylistInside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+                songByPlaylistInside.IsOptioned = true;
+
+                pnlOptioned.Tag = songByPlaylistInside;
+
                 Context__Menu__DAO.Instance.ShowContextMenuInUserControl(this);
 
-                //List__Song__Playlist songByPlaylistInside = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
-
-                //Context__Menu__DAO.Instance.songSelecting = songByPlaylistInside.Title;
+                Dropdown__Playlist__DAO.Instance.songSelecting = songByPlaylistInside.Title;
             }
 
             catch { }
@@ -215,6 +229,8 @@ namespace Music__Player.sources.View
         private void LoadEventClick()
         {
             Context__Menu__DAO.Instance.GetAllControls(this);
+
+            //Dropdown__Playlist__DAO.Instance.GetAllControls(this);
         }
 
         #endregion
@@ -317,6 +333,19 @@ namespace Music__Player.sources.View
             songByPlaylist.IsSelected = true;
 
             fpnlSongs.Tag = songByPlaylist;
+        }
+
+        #endregion
+
+        #region Delete Song
+
+        public void DeleteSong(string nameSong)
+        {
+            List__Song__Playlist songPlaylist = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.Title == nameSong);
+
+            fpnlSongs.Controls.Remove(songPlaylist);
+
+            songPlaylist.Dispose();
         }
 
         #endregion
