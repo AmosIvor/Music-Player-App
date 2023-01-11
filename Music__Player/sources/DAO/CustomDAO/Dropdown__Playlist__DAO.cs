@@ -115,7 +115,7 @@ namespace Music__Player.sources.DAO.CustomDAO
 
         public void HideMenu()
         {
-            if (isFirst == false)
+            if (isFirst == true)
             {
                 pnlBackground.Visible = false;
             }
@@ -140,6 +140,17 @@ namespace Music__Player.sources.DAO.CustomDAO
             clickedPoint = CheckOutOfUserControl(screen, clickedPoint);
 
             ShowDropDownPlaylistUserControl(screen, clickedPoint.X, clickedPoint.Y);
+
+            isFirst = true;
+        }
+
+        public void AddPlaylistEventWhenHoverContextMenu(UserControl screen)
+        {
+            int Ox = Context__Menu__DAO.Instance.pnlContextMenu.Location.X - WIDTH_DROPDOWN;
+
+            int Oy = Context__Menu__DAO.Instance.pnlContextMenu.Location.Y + Context__Menu__DAO.Instance.HEIGHT_MENU - HEIGHT_DROPDOWN;
+
+            ShowDropDownPlaylistUserControl(screen, Ox, Oy);
 
             isFirst = true;
         }
