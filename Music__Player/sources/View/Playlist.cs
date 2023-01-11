@@ -164,6 +164,8 @@ namespace Music__Player.sources.View
 
             curr.IsSelected = true;
 
+            Context__Menu__DAO.Instance.currChildPlaylist = curr.ID_Playlist;
+
             fpnlPlaylists.Tag = curr;
 
             pnlClicked.Tag = curr;
@@ -195,6 +197,8 @@ namespace Music__Player.sources.View
 
                 pnlClicked.Tag = infoPlaylistInside;
 
+                Context__Menu__DAO.Instance.currChildPlaylist = infoPlaylistInside.ID_Playlist;
+
                 Navigate.Navigation.Instance.mainScreen.LoadChildPlaylist();
 
                 Navigate.Navigation.Instance.childPlaylistScreen.LoadChildPlaylist(infoPlaylistInside.ID_Playlist);
@@ -214,6 +218,8 @@ namespace Music__Player.sources.View
             }
 
             pnlClicked.Tag = infoPlaylistOutside;
+
+            Context__Menu__DAO.Instance.currChildPlaylist = infoPlaylistOutside.ID_Playlist;
 
             Navigate.Navigation.Instance.mainScreen.LoadChildPlaylist();
 
@@ -316,6 +322,8 @@ namespace Music__Player.sources.View
                 if (prevClicked != playlistSongPlaying)
                 {
                     Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadChildPlaylist(prevClicked.ID_Playlist);
+
+                    Context__Menu__DAO.Instance.currChildPlaylist = prevClicked.ID_Playlist;
                 }
 
                 fpnlPlaylists.Tag = prevClicked;
