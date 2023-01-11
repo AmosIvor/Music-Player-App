@@ -28,9 +28,11 @@ namespace Music__Player.sources.DAO.CustomDAO
 
         public Guna2ShadowPanel pnlContextMenu = new Guna2ShadowPanel();
 
-        int WIDTH_MENU = 310;
+        public int currChildPlaylist;
 
-        int HEIGHT_MENU = 110;
+        public int WIDTH_MENU = 310;
+
+        public int HEIGHT_MENU = 110;
 
         public bool isFirst = false;
 
@@ -75,14 +77,22 @@ namespace Music__Player.sources.DAO.CustomDAO
         {
             if (isFirst == false && e.Button == MouseButtons.Left)
             {
+                Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
+
+                Dropdown__Playlist__DAO.Instance.isFirst = false;
+
                 pnlContextMenu.Visible = false;
             }
 
             isFirst = false;
         }
 
+        public UserControl currScreen;
+
         public void ShowContextMenuInUserControl(UserControl screen)
         {
+            currScreen = screen;
+
             Point clickedPoint = screen.PointToClient(Control.MousePosition);
 
             clickedPoint = CheckOutOfUserControl(screen, clickedPoint);
@@ -111,6 +121,31 @@ namespace Music__Player.sources.DAO.CustomDAO
             }
 
             return clickedPoint;
+        }
+
+        public void DeleteSongPlaylist()
+        {
+            string query = "EXEC PROC_Delete_Song_In_Playlist @name_song , @id_playlist";
+
+            DataProviderDAO.Instance.ExecuteNonQuery(query, new object[] { Dropdown__Playlist__DAO.Instance.songSelecting, currChildPlaylist });
+
+            if (IsChildPlaylistScreen())
+            {
+                Navigate.Navigation.Instance.childPlaylistScreen.DeleteSong(Dropdown__Playlist__DAO.Instance.songSelecting);
+
+                return;
+            }
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.DeleteSong(Dropdown__Playlist__DAO.Instance.songSelecting);
+        }
+
+        bool IsChildPlaylistScreen()
+        {
+            if (currScreen == Navigate.Navigation.Instance.childPlaylistScreen)
+
+                return true;
+
+            return false;
         }
     }
 }
