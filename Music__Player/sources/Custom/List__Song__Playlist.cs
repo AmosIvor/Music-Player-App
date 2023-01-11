@@ -176,6 +176,11 @@ namespace Music__Player.sources.Custom
                         {
                             lblFavorite.Visible = true;
                         }
+
+                        if (isOptioned == true)
+                        {
+                            lblOption.Visible = false;
+                        }
                     }
 
                     
@@ -193,6 +198,30 @@ namespace Music__Player.sources.Custom
                     {
                         lblFavorite.Visible = true;
                     }
+
+                    if (isOptioned == true)
+                    {
+                        lblOption.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private bool isOptioned;
+        public bool IsOptioned
+        {
+            get { return isOptioned; }
+            set
+            {
+                isOptioned = value;
+                
+                if (isOptioned == false)
+                {
+                    lblOption.Visible = true;
+                }
+                else
+                {
+                    lblOption.Visible = false;
                 }
             }
         }
