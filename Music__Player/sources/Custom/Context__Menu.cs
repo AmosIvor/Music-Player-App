@@ -49,7 +49,36 @@ namespace Music__Player.sources.Custom
 
         private void itemMenu_MouseClickAdd(object sender, MouseEventArgs e)
         {
-            
+            if (sender is Guna2ImageButton || sender is Label)
+            {
+                Item__Menu itemMenuInside = Item__Menu__DAO.Instance.GetItemMenuFromControlIntoPanel(sender);
+
+                if (itemMenuInside == itemMenuAddPlaylist)
+                {
+                    return;
+                }
+
+                Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
+
+                Context__Menu__DAO.Instance.pnlContextMenu.Visible = false;
+
+                Context__Menu__DAO.Instance.DeleteSongPlaylist();
+
+                return;
+            }
+
+            Item__Menu itemMenuOutside = Item__Menu__DAO.Instance.GetItemMenuFromPanel(sender);
+
+            if (itemMenuOutside == itemMenuAddPlaylist)
+            {
+                return;
+            }
+
+            Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
+
+            Context__Menu__DAO.Instance.pnlContextMenu.Visible = false;
+
+            Context__Menu__DAO.Instance.DeleteSongPlaylist();
         }
 
         private void itemMenu_MouseEnterAdd(object sender, EventArgs e)
@@ -69,7 +98,7 @@ namespace Music__Player.sources.Custom
 
                 if (itemMenuInside == itemMenuAddPlaylist)
                 {
-                    Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(Navigate.Navigation.Instance.childPlaylistScreen); ;
+                    Dropdown__Playlist__DAO.Instance.AddPlaylistEventWhenHoverContextMenu(Context__Menu__DAO.Instance.currScreen);
                 }
                 else
                 {
