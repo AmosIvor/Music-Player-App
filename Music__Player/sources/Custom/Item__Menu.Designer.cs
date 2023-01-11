@@ -60,12 +60,15 @@
             // 
             // btnImage
             // 
+            this.btnImage.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
             this.btnImage.CheckedState.Parent = this.btnImage;
+            this.btnImage.HoverState.ImageSize = new System.Drawing.Size(24, 24);
             this.btnImage.HoverState.Parent = this.btnImage;
             this.btnImage.Image = global::Music__Player.Properties.Resources.icon_add_playlist;
             this.btnImage.ImageSize = new System.Drawing.Size(24, 24);
             this.btnImage.Location = new System.Drawing.Point(7, 8);
             this.btnImage.Name = "btnImage";
+            this.btnImage.PressedState.ImageSize = new System.Drawing.Size(24, 24);
             this.btnImage.PressedState.Parent = this.btnImage;
             this.btnImage.Size = new System.Drawing.Size(35, 35);
             this.btnImage.TabIndex = 7;
