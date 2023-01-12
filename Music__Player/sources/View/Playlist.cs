@@ -269,6 +269,15 @@ namespace Music__Player.sources.View
         #endregion
 
         #region BottomBar
+        void LoadEventBottomBar()
+        {
+            songPlayingBottomBar.MouseClickAddPlaylist += SongPlayingBottomBar_MouseClickAddPlaylist;
+        }
+
+        private void SongPlayingBottomBar_MouseClickAddPlaylist(object sender, EventArgs e)
+        {
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(this);
+        }
 
         public void LoadSongPlayingBottomBar()
         {
@@ -278,6 +287,8 @@ namespace Music__Player.sources.View
         public void LoadInitialSongBottomBar()
         {
             songPlayingBottomBar.LoadInitialSong();
+
+            LoadEventBottomBar();
         }
         #endregion
 

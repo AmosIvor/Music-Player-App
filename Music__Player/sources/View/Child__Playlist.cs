@@ -228,9 +228,9 @@ namespace Music__Player.sources.View
 
         private void LoadEventClick()
         {
-            Context__Menu__DAO.Instance.GetAllControls(this);
+            //Context__Menu__DAO.Instance.GetAllControls(this);
 
-            //Dropdown__Playlist__DAO.Instance.GetAllControls(this);
+            Dropdown__Playlist__DAO.Instance.GetAllControls(this);
         }
 
         #endregion
@@ -260,6 +260,16 @@ namespace Music__Player.sources.View
         #endregion
 
         #region Song Playing Bottom Bar
+        void LoadEventBottomBar()
+        {
+            songPlayingBottomBar.MouseClickAddPlaylist += SongPlayingBottomBar_MouseClickAddPlaylist;
+        }
+
+        private void SongPlayingBottomBar_MouseClickAddPlaylist(object sender, EventArgs e)
+        {
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(this);
+        }
+
         public void LoadSongPlayingBottomBar()
         {
             songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
@@ -268,6 +278,8 @@ namespace Music__Player.sources.View
         public void LoadInitialSongBottomBar()
         {
             songPlayingBottomBar.LoadInitialSong();
+
+            LoadEventBottomBar();
         }
         #endregion
 

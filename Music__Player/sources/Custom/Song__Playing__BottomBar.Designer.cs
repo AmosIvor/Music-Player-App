@@ -191,7 +191,7 @@
             this.btnAddPlaylist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAddPlaylist.Size = new System.Drawing.Size(40, 40);
             this.btnAddPlaylist.TabIndex = 5;
-            this.btnAddPlaylist.Click += new System.EventHandler(this.btnAddPlaylist_Click);
+            this.btnAddPlaylist.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAddPlaylist_MouseClick);
             // 
             // btnVolume
             // 

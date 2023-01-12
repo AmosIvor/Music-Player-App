@@ -20,7 +20,38 @@ namespace Music__Player.sources.Custom
         public Song__Playing__BottomBar()
         {
             InitializeComponent();
+
+            LoadEvent();
         }
+
+        #region Initial Event
+
+        void LoadEvent()
+        {
+            btnAddPlaylist.Click += btnAddPlaylist_Click;
+        }
+
+        private event EventHandler _mouseClickAddPlaylist;
+
+        public event EventHandler MouseClickAddPlaylist
+        {
+            add
+            {
+                _mouseClickAddPlaylist += value;
+            }
+
+            remove
+            {
+                _mouseClickAddPlaylist -= value;
+            }
+        }
+
+        private void btnAddPlaylist_Click(object sender, EventArgs e)
+        {
+            _mouseClickAddPlaylist?.Invoke(sender, e);
+        }
+
+        #endregion
 
         public void LoadSongPlayingByInfoSongPanel()
         {
@@ -60,11 +91,10 @@ namespace Music__Player.sources.Custom
             catch { }
         }
 
-        private void btnAddPlaylist_Click(object sender, EventArgs e)
+        private void btnAddPlaylist_MouseClick(object sender, MouseEventArgs e)
         {
-            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(Navigate.Navigation.Instance.historyScreen);
-            
             Dropdown__Playlist__DAO.Instance.songSelecting = lblNameSong.Text;
         }
+
     }
 }
