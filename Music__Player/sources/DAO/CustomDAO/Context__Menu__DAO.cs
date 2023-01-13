@@ -77,10 +77,6 @@ namespace Music__Player.sources.DAO.CustomDAO
         {
             if (isFirst == false && e.Button == MouseButtons.Left)
             {
-                Dropdown__Playlist__DAO.Instance.pnlBackground.Visible = false;
-
-                Dropdown__Playlist__DAO.Instance.isFirst = false;
-
                 pnlContextMenu.Visible = false;
             }
 

@@ -228,7 +228,7 @@ namespace Music__Player.sources.View
 
         private void LoadEventClick()
         {
-            //Context__Menu__DAO.Instance.GetAllControls(this);
+            Context__Menu__DAO.Instance.GetAllControls(this);
 
             Dropdown__Playlist__DAO.Instance.GetAllControls(this);
         }

@@ -57,6 +57,8 @@ namespace Music__Player.sources.View
 
             LoadEventAddPlaylist();
 
+            LoadEventClick();
+
             lblTitle.Text = $"Amos Ivor - {fpnlPlaylists.Controls.Count - 1} playlists";
         }
 
@@ -269,6 +271,11 @@ namespace Music__Player.sources.View
         #endregion
 
         #region BottomBar
+        void LoadEventClick()
+        {
+            Dropdown__Playlist__DAO.Instance.GetAllControls(this);
+        }
+
         void LoadEventBottomBar()
         {
             songPlayingBottomBar.MouseClickAddPlaylist += SongPlayingBottomBar_MouseClickAddPlaylist;
