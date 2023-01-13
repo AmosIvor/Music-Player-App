@@ -58,7 +58,7 @@ namespace Music__Player.sources.View
 
         private void Songs_Load(object sender, EventArgs e)
         {
-            flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.AutoScroll = true;
         }
@@ -82,6 +82,11 @@ namespace Music__Player.sources.View
                 flowLayoutPanel1.Controls.Add(song);
             }
             searchBar.Focus();
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

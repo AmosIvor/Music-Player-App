@@ -71,6 +71,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="sources\Constant\IMAGE.cs" />
+    <Compile Include="sources\Custom\Album__Display.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\Album__Display.Designer.cs">
+      <DependentUpon>Album__Display.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\Album__Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +238,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sources\Custom\Album__Display.resx">
+      <DependentUpon>Album__Display.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Album__Panel.resx">
       <DependentUpon>Album__Panel.cs</DependentUpon>

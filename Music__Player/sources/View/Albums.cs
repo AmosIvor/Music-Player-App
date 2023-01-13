@@ -16,5 +16,12 @@ namespace Music__Player.sources.View
         {
             InitializeComponent();
         }
+
+        private void Albums_Load(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.WrapContents = false;
+            flowLayoutPanel1.AutoScroll = true;
+        }
     }
 }
