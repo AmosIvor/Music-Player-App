@@ -490,9 +490,7 @@
   <ItemGroup>
     <None Include="Resources\icon_playlist.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="sources\DAO\MainScreenDAO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icon_name_playlist_white.png" />
   </ItemGroup>

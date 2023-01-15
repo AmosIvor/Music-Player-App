@@ -355,6 +355,19 @@ namespace Music__Player.sources.View
         {
             List__Song__Playlist songPlaylist = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.Title == nameSong);
 
+            int startIndex = fpnlSongs.Controls.GetChildIndex(songPlaylist);
+
+            List__Song__Playlist temp = songPlaylist;
+
+            for (int i = startIndex + 1; i < fpnlSongs.Controls.Count; i++)
+            {
+                List__Song__Playlist newItem = (List__Song__Playlist)fpnlSongs.GetNextControl(temp, true);
+
+                newItem.ID = List__Song__Playlist__DAO.Instance.ConvertID(i);
+
+                temp = newItem;
+            }
+
             fpnlSongs.Controls.Remove(songPlaylist);
 
             songPlaylist.Dispose();
