@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.SongDAO;
+using Guna.UI2.WinForms;
 
 namespace Music__Player.sources.View
 {
@@ -23,12 +24,12 @@ namespace Music__Player.sources.View
         }
         private void LoadNextSlide()
         {
-            
             foreach(UserControl userControl in panel1.Controls)
             {
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
                 userControl.BringToFront();
             }
+
         }
 
         private void RadioBtn1_CheckedChanged(object sender, EventArgs e)

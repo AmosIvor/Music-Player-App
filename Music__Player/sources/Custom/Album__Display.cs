@@ -16,5 +16,15 @@ namespace Music__Player.sources.Custom
         {
             InitializeComponent();
         }
+
+        private void btnPlaySong_MouseEnter(object sender, EventArgs e)
+        {
+            btnPlaySong.Visible = true;
+        }
+
+        private void btnPlaySong_MouseLeave(object sender, EventArgs e)
+        {
+            btnPlaySong.Visible = false;
+        }
     }
 }

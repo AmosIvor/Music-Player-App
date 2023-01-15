@@ -31,18 +31,12 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.album__Display1 = new Music__Player.sources.Custom.Album__Display();
-            this.album__Display2 = new Music__Player.sources.Custom.Album__Display();
-            this.album__Display3 = new Music__Player.sources.Custom.Album__Display();
-            this.album__Display4 = new Music__Player.sources.Custom.Album__Display();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.album__Display1);
-            this.flowLayoutPanel1.Controls.Add(this.album__Display2);
-            this.flowLayoutPanel1.Controls.Add(this.album__Display3);
-            this.flowLayoutPanel1.Controls.Add(this.album__Display4);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 66);
@@ -70,30 +64,6 @@
             this.album__Display1.Size = new System.Drawing.Size(190, 230);
             this.album__Display1.TabIndex = 0;
             // 
-            // album__Display2
-            // 
-            this.album__Display2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.album__Display2.Location = new System.Drawing.Point(199, 3);
-            this.album__Display2.Name = "album__Display2";
-            this.album__Display2.Size = new System.Drawing.Size(190, 230);
-            this.album__Display2.TabIndex = 1;
-            // 
-            // album__Display3
-            // 
-            this.album__Display3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.album__Display3.Location = new System.Drawing.Point(395, 3);
-            this.album__Display3.Name = "album__Display3";
-            this.album__Display3.Size = new System.Drawing.Size(190, 230);
-            this.album__Display3.TabIndex = 2;
-            // 
-            // album__Display4
-            // 
-            this.album__Display4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.album__Display4.Location = new System.Drawing.Point(591, 3);
-            this.album__Display4.Name = "album__Display4";
-            this.album__Display4.Size = new System.Drawing.Size(190, 230);
-            this.album__Display4.TabIndex = 3;
-            // 
             // Album__Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -115,8 +85,5 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private Album__Display album__Display1;
-        private Album__Display album__Display2;
-        private Album__Display album__Display3;
-        private Album__Display album__Display4;
     }
 }

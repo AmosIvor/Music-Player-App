@@ -119,23 +119,47 @@ namespace Music__Player.sources.Custom
             set { url = value;}
         }
 
-        private void Songs_Display_MouseEnter(object sender, EventArgs e)
+        private bool isSelectedFavorite;
+        private bool IsSelectedFavorite
         {
-            this.Cursor = Cursors.Hand;
+            get { return isSelectedFavorite; }
+            set
+            {
+                if (value == false)
+                {
+                    pictureBox1.Image = Properties.Resources.icon_love_black;
+                    isSelectedFavorite = false;
+                    pictureBox1.Visible = false;
+                    pictureBox1.Image = Properties.Resources.icon_love_black;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.icon_love_green;
+                    isSelectedFavorite = true;
+                    pictureBox1.Visible = true;
+                    pictureBox1.Image = Properties.Resources.icon_love_green;
+                }
+            }
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.Hand;
-            if (isSelectedFavorite == false) 
-                pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_green;
+            Cursor = Cursors.Hand;
+            if (isSelectedFavorite == false)
+            {
+                pictureBox1.Visible = true;
+                pictureBox1.Size = new Size(32, 32);
+                pictureBox1.Image = Properties.Resources.icon_love_green;
+            }
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
-            if (isSelectedFavorite == false)
-                pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_black;
+            pictureBox1.Visible = false;
+            pictureBox1.Size = new Size(30, 30);
+            pictureBox1.Image = Properties.Resources.icon_love_black;
+
         }
 
         private void HandleMouseEnter(object sender, EventArgs e)
@@ -148,6 +172,10 @@ namespace Music__Player.sources.Custom
             lbId.Visible = false;
             picturePlaySong.Visible = true;
             ShadowPanelSong.FillColor = Color.Gainsboro;
+            if (isSelectedFavorite == false)
+            {
+                pictureBox1.Visible = true;
+            }
         }
         private void HandleMouseLeave(object sender, EventArgs e)
         {
@@ -159,26 +187,13 @@ namespace Music__Player.sources.Custom
             lbId.Visible = true;
             picturePlaySong.Visible = false;
             ShadowPanelSong.FillColor = Color.WhiteSmoke;
-        }
-
-        private bool isSelectedFavorite;
-        private bool IsSelectedFavorite
-        {
-            get { return isSelectedFavorite; }
-            set
+            if (isSelectedFavorite == false)
             {
-                if (value == false)
-                {
-                    pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_black;
-                    isSelectedFavorite = false;
-                }
-                else
-                {
-                    pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_green;
-                    isSelectedFavorite = true;
-                }
+                pictureBox1.Visible = false;
             }
         }
+
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (IsSelectedFavorite == true)
@@ -224,6 +239,20 @@ namespace Music__Player.sources.Custom
                         songs.IsSelectedSong = false;
                 }
                 IsSelectedSong = true;
+            }
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (IsSelectedFavorite == true)
+            {
+                IsSelectedFavorite = false;
+                DataProviderDAO.Instance.ExecuteNonQuery($"UPDATE FAVORITES\r\nSET ISFAVORITE = 0\r\nWHERE ID_SONG = {Id}");
+            }
+            else
+            {
+                isSelectedFavorite = true;
+                DataProviderDAO.Instance.ExecuteNonQuery($"UPDATE FAVORITES\r\nSET ISFAVORITE = 1\r\nWHERE ID_SONG = {Id}");
             }
         }
     }
