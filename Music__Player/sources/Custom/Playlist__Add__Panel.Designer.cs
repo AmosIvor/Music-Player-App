@@ -28,67 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ShadowPanel1.SuspendLayout();
+            this.pnlBackground = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnCreate = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.lblCreate = new System.Windows.Forms.Label();
+            this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2ShadowPanel1
+            // pnlBackground
             // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.guna2ImageButton1);
-            this.guna2ShadowPanel1.Controls.Add(this.label1);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(3, 3);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.Radius = 10;
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(583, 164);
-            this.guna2ShadowPanel1.TabIndex = 0;
+            this.pnlBackground.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBackground.Controls.Add(this.btnCreate);
+            this.pnlBackground.Controls.Add(this.lblCreate);
+            this.pnlBackground.FillColor = System.Drawing.Color.White;
+            this.pnlBackground.Location = new System.Drawing.Point(3, 3);
+            this.pnlBackground.Name = "pnlBackground";
+            this.pnlBackground.Radius = 10;
+            this.pnlBackground.ShadowColor = System.Drawing.Color.Black;
+            this.pnlBackground.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            this.pnlBackground.Size = new System.Drawing.Size(583, 164);
+            this.pnlBackground.TabIndex = 0;
             // 
-            // label1
+            // btnCreate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Create a new playlist";
+            this.btnCreate.CheckedState.ImageSize = new System.Drawing.Size(74, 74);
+            this.btnCreate.CheckedState.Parent = this.btnCreate;
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreate.HoverState.ImageSize = new System.Drawing.Size(78, 78);
+            this.btnCreate.HoverState.Parent = this.btnCreate;
+            this.btnCreate.Image = global::Music__Player.Properties.Resources.icon_createplaylist_blue;
+            this.btnCreate.ImageSize = new System.Drawing.Size(74, 74);
+            this.btnCreate.Location = new System.Drawing.Point(51, 45);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.PressedState.ImageSize = new System.Drawing.Size(74, 74);
+            this.btnCreate.PressedState.Parent = this.btnCreate;
+            this.btnCreate.Size = new System.Drawing.Size(74, 74);
+            this.btnCreate.TabIndex = 3;
             // 
-            // guna2ImageButton1
+            // lblCreate
             // 
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::Music__Player.Properties.Resources.icon_createplaylist_blue;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(74, 74);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(51, 45);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(74, 74);
-            this.guna2ImageButton1.TabIndex = 3;
+            this.lblCreate.AutoSize = true;
+            this.lblCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreate.Location = new System.Drawing.Point(180, 67);
+            this.lblCreate.Name = "lblCreate";
+            this.lblCreate.Size = new System.Drawing.Size(227, 31);
+            this.lblCreate.TabIndex = 2;
+            this.lblCreate.Text = "Create a new playlist";
             // 
             // Playlist__Add__Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.guna2ShadowPanel1);
-            this.Margin = new System.Windows.Forms.Padding(64, 64, 3, 3);
+            this.Controls.Add(this.pnlBackground);
+            this.Margin = new System.Windows.Forms.Padding(64, 50, 3, 0);
             this.Name = "Playlist__Add__Panel";
             this.Size = new System.Drawing.Size(587, 168);
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
+            this.pnlBackground.ResumeLayout(false);
+            this.pnlBackground.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlBackground;
+        private System.Windows.Forms.Label lblCreate;
+        private Guna.UI2.WinForms.Guna2ImageButton btnCreate;
     }
 }

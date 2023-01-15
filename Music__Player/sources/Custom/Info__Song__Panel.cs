@@ -19,6 +19,39 @@ namespace Music__Player.sources.Custom
         }
 
         #region Initial
+        public Info__Song__Panel(List__Song__Playlist songByPlaylist)
+        {
+            InitializeComponent();
+
+            this.Title = songByPlaylist.Title;
+
+            this.Artist = songByPlaylist.Artist;
+
+            this.Duration = songByPlaylist.Duration;
+
+            this.Image_Song = songByPlaylist.Image_Song;
+
+            this.URL = songByPlaylist.URL;
+
+            LoadInitialEvent();
+        }
+
+        public Info__Song__Panel(Song__History songHistory)
+        {
+            InitializeComponent();
+
+            this.Title = songHistory.Title;
+
+            this.Artist = songHistory.Artist;
+
+            this.Duration = songHistory.Duration;
+
+            this.Image_Song = songHistory.Image_Song;
+
+            this.URL = songHistory.URL;
+
+            LoadInitialEvent();
+        }
 
         public Info__Song__Panel(DataRow row)
         {
@@ -143,6 +176,8 @@ namespace Music__Player.sources.Custom
 
                 if (isSelected == true)
                 {
+                    lblNumber.Visible = false;
+
                     btnPlay.Checked = true;
 
                     pnlBackground.FillColor = SystemColors.Info;
@@ -175,6 +210,7 @@ namespace Music__Player.sources.Custom
                     if (isHovered == false && isSelected == true && btnFavorite.Checked == false)
                     {
                         lblFavorite.Visible = true;
+
                     }
                 }
 
@@ -324,9 +360,9 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_MouseClick(object sender, MouseEventArgs e)
         {
-            btnPlay.Checked = !btnPlay.Checked;
+            //btnPlay.Checked = !btnPlay.Checked;
 
-            isPlay = btnPlay.Checked;
+            //isPlay = btnPlay.Checked;
         }
     }
 }
