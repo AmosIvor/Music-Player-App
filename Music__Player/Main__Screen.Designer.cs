@@ -49,7 +49,6 @@
             this.btnLocalFiles = new Guna.UI2.WinForms.Guna2Button();
             this.btnHistory = new Guna.UI2.WinForms.Guna2Button();
             this.btnAlbums = new Guna.UI2.WinForms.Guna2Button();
-            this.btnFavorite = new Guna.UI2.WinForms.Guna2Button();
             this.btnRecent = new Guna.UI2.WinForms.Guna2Button();
             this.btnSongs = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
@@ -70,6 +69,7 @@
             this.panelSlideBar.Controls.Add(this.fpnlPlaylists);
             this.panelSlideBar.Controls.Add(this.VerticalLine);
             this.panelSlideBar.Controls.Add(this.btnPlaylist);
+            this.panelSlideBar.Controls.Add(this.btnFavorite);
             this.panelSlideBar.Controls.Add(this.lblPlaylist);
             this.panelSlideBar.Controls.Add(this.lblLibrary);
             this.panelSlideBar.Controls.Add(this.lblMenu);
@@ -77,7 +77,6 @@
             this.panelSlideBar.Controls.Add(this.btnLocalFiles);
             this.panelSlideBar.Controls.Add(this.btnHistory);
             this.panelSlideBar.Controls.Add(this.btnAlbums);
-            this.panelSlideBar.Controls.Add(this.btnFavorite);
             this.panelSlideBar.Controls.Add(this.btnRecent);
             this.panelSlideBar.Controls.Add(this.btnSongs);
             this.panelSlideBar.Controls.Add(this.btnHome);
@@ -187,6 +186,43 @@
             this.VerticalLine.Name = "VerticalLine";
             this.VerticalLine.Size = new System.Drawing.Size(10, 45);
             this.VerticalLine.TabIndex = 4;
+            // 
+            // btnFavorite
+            // 
+            this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
+            this.btnFavorite.BorderColor = System.Drawing.Color.Transparent;
+            this.btnFavorite.BorderRadius = 10;
+            this.btnFavorite.BorderThickness = 1;
+            this.btnFavorite.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnFavorite.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnFavorite.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFavorite.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnFavorite.CheckedState.Parent = this.btnFavorite;
+            this.btnFavorite.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFavorite.CustomImages.CheckedImage = global::Music__Player.Properties.Resources.icon_favorite_blue;
+            this.btnFavorite.CustomImages.Image = global::Music__Player.Properties.Resources.icon_favorite_white;
+            this.btnFavorite.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFavorite.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
+            this.btnFavorite.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnFavorite.CustomImages.Parent = this.btnFavorite;
+            this.btnFavorite.FillColor = System.Drawing.Color.Transparent;
+            this.btnFavorite.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFavorite.ForeColor = System.Drawing.Color.White;
+            this.btnFavorite.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnFavorite.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnFavorite.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFavorite.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnFavorite.HoverState.Parent = this.btnFavorite;
+            this.btnFavorite.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFavorite.Location = new System.Drawing.Point(36, 523);
+            this.btnFavorite.Name = "btnFavorite";
+            this.btnFavorite.ShadowDecoration.Parent = this.btnFavorite;
+            this.btnFavorite.Size = new System.Drawing.Size(170, 45);
+            this.btnFavorite.TabIndex = 0;
+            this.btnFavorite.Text = "Favorite";
+            this.btnFavorite.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFavorite.TextOffset = new System.Drawing.Point(47, 0);
+            this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
             // btnPlaylist
             // 

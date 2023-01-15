@@ -271,62 +271,6 @@
             this.dtgvSongs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvSongs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column1.HeaderText = "#";
-            this.Column1.MinimumWidth = 50;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column2.HeaderText = "TITLE";
-            this.Column2.MinimumWidth = 320;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 320;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column3.HeaderText = "ARTIST";
-            this.Column3.MinimumWidth = 310;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 310;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column4.HeaderText = "ALBUM";
-            this.Column4.MinimumWidth = 320;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 320;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Column5.HeaderText = "#";
-            this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Column5.MinimumWidth = 60;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column5.Width = 60;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "DURATION";
-            this.Column6.MinimumWidth = 150;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.BorderRadius = 18;
@@ -365,6 +309,64 @@
             this.label3.Size = new System.Drawing.Size(119, 31);
             this.label3.TabIndex = 3;
             this.label3.Text = "List Songs";
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column1.HeaderText = "#";
+            this.Column1.MinimumWidth = 50;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column2.HeaderText = "TITLE";
+            this.Column2.MinimumWidth = 320;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 320;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column3.HeaderText = "ARTIST";
+            this.Column3.MinimumWidth = 310;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 310;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.NullValue = "Windows.Forms.Bitmap";
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column4.HeaderText = "ALBUM";
+            this.Column4.MinimumWidth = 320;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 320;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column5.HeaderText = "";
+            this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column5.MinimumWidth = 60;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column5.Width = 60;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "DURATION";
+            this.Column6.MinimumWidth = 150;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Child__Playlist
             // 
