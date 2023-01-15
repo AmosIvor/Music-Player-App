@@ -11,57 +11,27 @@ using System.Windows.Forms;
 
 namespace Music__Player.sources.Custom
 {
-    public partial class Info__Song__Panel : UserControl
+    public partial class Song__History : UserControl
     {
-        public Info__Song__Panel()
+        public Song__History()
         {
             InitializeComponent();
         }
-
-        #region Initial
-        public Info__Song__Panel(List__Song__Playlist songByPlaylist)
-        {
-            InitializeComponent();
-
-            this.Title = songByPlaylist.Title;
-
-            this.Artist = songByPlaylist.Artist;
-
-            this.Duration = songByPlaylist.Duration;
-
-            this.Image_Song = songByPlaylist.Image_Song;
-
-            this.URL = songByPlaylist.URL;
-
-            LoadInitialEvent();
-        }
-
-        public Info__Song__Panel(Song__History songHistory)
-        {
-            InitializeComponent();
-
-            this.Title = songHistory.Title;
-
-            this.Artist = songHistory.Artist;
-
-            this.Duration = songHistory.Duration;
-
-            this.Image_Song = songHistory.Image_Song;
-
-            this.URL = songHistory.URL;
-
-            LoadInitialEvent();
-        }
-
-        public Info__Song__Panel(DataRow row)
+        public Song__History(DataRow row)
         {
             InitializeComponent();
 
             this.Title = row["NAME_SONG"].ToString();
 
             this.Artist = row["ARTIST"].ToString();
+            
+            this.URL = row["LINK"].ToString();
 
             this.Duration = row["DURATION"].ToString();
+
+            this.Name_Album = row["NAME_ALBUM"].ToString();
+
+            this.Date_Song = ((DateTime)row["DATE_CHECK"]).ToString("dd MMMM yyyy");
 
             MemoryStream stream = new MemoryStream((Byte[])row["IMAGE_SONG"]);
 
@@ -69,10 +39,10 @@ namespace Music__Player.sources.Custom
 
             this.Image_Song = temp;
 
-            this.URL = row["LINK"].ToString();
-
             LoadInitialEvent();
         }
+
+        #region Initial
 
         private void LoadInitialEvent()
         {
@@ -83,13 +53,17 @@ namespace Music__Player.sources.Custom
             pnlBackground.MouseLeave += userControl_MouseLeave;
 
             btnPlay.MouseClick += btnPlay_MouseClickPlay;
+
+            btnAddPlaylist.MouseClick += btnAddPlaylist_MouseClick;
+
+            btnFavorite.MouseClick += btnFavorite_MouseClick;
         }
 
         private string iD;
         public string ID
         {
             get { return iD; }
-            set { iD = value; lblNumber.Text = value; }
+            set { iD = value; lblPlay.Text = value; }
         }
 
         private Image image_Song;
@@ -124,8 +98,20 @@ namespace Music__Player.sources.Custom
         public string URL
         {
             get { return url; }
-
             set { url = value; }
+        }
+
+        private string name_album;
+        public string Name_Album
+        {
+            get { return name_album; }
+            set { name_album = value; lblAlbum.Text = value; }
+        }
+        private string date_Song;
+        public string Date_Song
+        {
+            get { return date_Song; }
+            set { date_Song = value; lblDate.Text = value; }
         }
 
         private bool isFavorite;
@@ -147,25 +133,6 @@ namespace Music__Player.sources.Custom
             }
         }
 
-        private bool isPlay;
-        public bool IsPlay
-        {
-            get { return isPlay; }
-            set
-            {
-                isPlay = value;
-
-                if (isPlay == true)
-                {
-                    btnPlay.Checked = true;
-                }
-                else
-                {
-                    btnPlay.Checked = false;
-                }
-            }
-        }
-
         private bool isSelected;
         public bool IsSelected
         {
@@ -176,17 +143,17 @@ namespace Music__Player.sources.Custom
 
                 if (isSelected == true)
                 {
-                    lblNumber.Visible = false;
+                    lblPlay.Visible = false;
 
                     btnPlay.Checked = true;
 
-                    pnlBackground.FillColor = SystemColors.Info;
+                    pnlBackground.FillColor = SystemColors.ControlLight;
                 }
                 else
                 {
                     btnPlay.Checked = false;
 
-                    pnlBackground.FillColor = Color.White;
+                    pnlBackground.FillColor = Color.Transparent;
                 }
             }
         }
@@ -201,9 +168,9 @@ namespace Music__Player.sources.Custom
 
                 if (isHovered == true || isSelected == true)
                 {
-                    pnlBackground.FillColor = SystemColors.Info;
+                    pnlBackground.FillColor = SystemColors.ControlLight;
 
-                    lblNumber.Visible = false;
+                    lblPlay.Visible = false;
 
                     lblFavorite.Visible = false;
 
@@ -216,14 +183,14 @@ namespace Music__Player.sources.Custom
 
                 else
                 {
-                    pnlBackground.FillColor = Color.White;
+                    pnlBackground.FillColor = Color.Transparent;
 
-                    lblNumber.Visible = true;
+                    lblPlay.Visible = true;
 
                     if (btnFavorite.Checked != true)
                     {
                         lblFavorite.Visible = true;
-                    } 
+                    }
                 }
             }
         }
@@ -325,6 +292,20 @@ namespace Music__Player.sources.Custom
             }
         }
 
+        private event MouseEventHandler _mouseClickAddPlaylist;
+
+        public event MouseEventHandler MouseClickAddPlaylist
+        {
+            add
+            {
+                _mouseClickAddPlaylist += value;
+            }
+            remove
+            {
+                _mouseClickAddPlaylist -= value;
+            }
+        }
+
         #endregion
 
         #region Event
@@ -349,8 +330,6 @@ namespace Music__Player.sources.Custom
             _mouseClickPlay?.Invoke(sender, e);
         }
 
-        #endregion
-
         private void btnFavorite_MouseClick(object sender, MouseEventArgs e)
         {
             btnFavorite.Checked = !btnFavorite.Checked;
@@ -358,11 +337,10 @@ namespace Music__Player.sources.Custom
             isFavorite = btnFavorite.Checked;
         }
 
-        private void btnPlay_MouseClick(object sender, MouseEventArgs e)
+        private void btnAddPlaylist_MouseClick(object sender, MouseEventArgs e)
         {
-            //btnPlay.Checked = !btnPlay.Checked;
-
-            //isPlay = btnPlay.Checked;
+            _mouseClickAddPlaylist?.Invoke(sender, e);
         }
+        #endregion
     }
 }

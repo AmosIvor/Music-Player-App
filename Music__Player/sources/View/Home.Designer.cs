@@ -30,11 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelHome = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pnlTest = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblCountFpanelsSong = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.fpanelArtists = new System.Windows.Forms.FlowLayoutPanel();
+            this.artist__Panel7 = new Music__Player.sources.Custom.Artist__Panel();
+            this.artist__Panel9 = new Music__Player.sources.Custom.Artist__Panel();
+            this.artist__Panel8 = new Music__Player.sources.Custom.Artist__Panel();
+            this.artist__Panel10 = new Music__Player.sources.Custom.Artist__Panel();
+            this.artist__Panel11 = new Music__Player.sources.Custom.Artist__Panel();
             this.pnlSongPlaying = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnAddPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pbPlaying = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -54,20 +58,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.fpanelSongs = new System.Windows.Forms.FlowLayoutPanel();
-            this.timerMusic = new System.Windows.Forms.Timer(this.components);
-            this.dropdown__Playlist1 = new Music__Player.sources.Custom.Dropdown__Playlist();
-            this.artist__Panel7 = new Music__Player.sources.Custom.Artist__Panel();
-            this.artist__Panel9 = new Music__Player.sources.Custom.Artist__Panel();
-            this.artist__Panel8 = new Music__Player.sources.Custom.Artist__Panel();
-            this.artist__Panel10 = new Music__Player.sources.Custom.Artist__Panel();
-            this.artist__Panel11 = new Music__Player.sources.Custom.Artist__Panel();
             this.info__Song__Panel10 = new Music__Player.sources.Custom.Info__Song__Panel();
             this.info__Song__Panel6 = new Music__Player.sources.Custom.Info__Song__Panel();
             this.info__Song__Panel7 = new Music__Player.sources.Custom.Info__Song__Panel();
             this.info__Song__Panel8 = new Music__Player.sources.Custom.Info__Song__Panel();
             this.info__Song__Panel9 = new Music__Player.sources.Custom.Info__Song__Panel();
+            this.timerMusic = new System.Windows.Forms.Timer(this.components);
             this.panelHome.SuspendLayout();
-            this.pnlTest.SuspendLayout();
             this.fpanelArtists.SuspendLayout();
             this.pnlSongPlaying.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlaying)).BeginInit();
@@ -77,7 +74,6 @@
             // panelHome
             // 
             this.panelHome.AutoScroll = true;
-            this.panelHome.Controls.Add(this.pnlTest);
             this.panelHome.Controls.Add(this.btnExit);
             this.panelHome.Controls.Add(this.lblCountFpanelsSong);
             this.panelHome.Controls.Add(this.guna2TextBox2);
@@ -96,19 +92,6 @@
             this.panelHome.ShadowDecoration.Parent = this.panelHome;
             this.panelHome.Size = new System.Drawing.Size(1359, 965);
             this.panelHome.TabIndex = 3;
-            // 
-            // pnlTest
-            // 
-            this.pnlTest.BackColor = System.Drawing.Color.Transparent;
-            this.pnlTest.Controls.Add(this.dropdown__Playlist1);
-            this.pnlTest.FillColor = System.Drawing.Color.White;
-            this.pnlTest.Location = new System.Drawing.Point(513, 470);
-            this.pnlTest.Name = "pnlTest";
-            this.pnlTest.ShadowColor = System.Drawing.Color.Black;
-            this.pnlTest.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.pnlTest.Size = new System.Drawing.Size(293, 280);
-            this.pnlTest.TabIndex = 7;
-            this.pnlTest.Visible = false;
             // 
             // btnExit
             // 
@@ -181,6 +164,91 @@
             this.fpanelArtists.Size = new System.Drawing.Size(1294, 303);
             this.fpanelArtists.TabIndex = 9;
             this.fpanelArtists.WrapContents = false;
+            // 
+            // artist__Panel7
+            // 
+            this.artist__Panel7.Artist = null;
+            this.artist__Panel7.BackColor = System.Drawing.Color.Transparent;
+            this.artist__Panel7.Duration = null;
+            this.artist__Panel7.Image_Song = null;
+            this.artist__Panel7.IsHovered = false;
+            this.artist__Panel7.IsPlay = false;
+            this.artist__Panel7.IsSelected = false;
+            this.artist__Panel7.Location = new System.Drawing.Point(3, 3);
+            this.artist__Panel7.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
+            this.artist__Panel7.Name = "artist__Panel7";
+            this.artist__Panel7.Size = new System.Drawing.Size(245, 296);
+            this.artist__Panel7.TabIndex = 0;
+            this.artist__Panel7.Title = null;
+            this.artist__Panel7.URL = null;
+            // 
+            // artist__Panel9
+            // 
+            this.artist__Panel9.Artist = null;
+            this.artist__Panel9.BackColor = System.Drawing.Color.Transparent;
+            this.artist__Panel9.Duration = null;
+            this.artist__Panel9.Image_Song = null;
+            this.artist__Panel9.IsHovered = false;
+            this.artist__Panel9.IsPlay = false;
+            this.artist__Panel9.IsSelected = false;
+            this.artist__Panel9.Location = new System.Drawing.Point(262, 3);
+            this.artist__Panel9.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
+            this.artist__Panel9.Name = "artist__Panel9";
+            this.artist__Panel9.Size = new System.Drawing.Size(245, 296);
+            this.artist__Panel9.TabIndex = 2;
+            this.artist__Panel9.Title = null;
+            this.artist__Panel9.URL = null;
+            // 
+            // artist__Panel8
+            // 
+            this.artist__Panel8.Artist = null;
+            this.artist__Panel8.BackColor = System.Drawing.Color.Transparent;
+            this.artist__Panel8.Duration = null;
+            this.artist__Panel8.Image_Song = null;
+            this.artist__Panel8.IsHovered = false;
+            this.artist__Panel8.IsPlay = false;
+            this.artist__Panel8.IsSelected = false;
+            this.artist__Panel8.Location = new System.Drawing.Point(521, 3);
+            this.artist__Panel8.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
+            this.artist__Panel8.Name = "artist__Panel8";
+            this.artist__Panel8.Size = new System.Drawing.Size(245, 296);
+            this.artist__Panel8.TabIndex = 1;
+            this.artist__Panel8.Title = null;
+            this.artist__Panel8.URL = null;
+            // 
+            // artist__Panel10
+            // 
+            this.artist__Panel10.Artist = null;
+            this.artist__Panel10.BackColor = System.Drawing.Color.Transparent;
+            this.artist__Panel10.Duration = null;
+            this.artist__Panel10.Image_Song = null;
+            this.artist__Panel10.IsHovered = false;
+            this.artist__Panel10.IsPlay = false;
+            this.artist__Panel10.IsSelected = false;
+            this.artist__Panel10.Location = new System.Drawing.Point(780, 3);
+            this.artist__Panel10.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
+            this.artist__Panel10.Name = "artist__Panel10";
+            this.artist__Panel10.Size = new System.Drawing.Size(245, 296);
+            this.artist__Panel10.TabIndex = 3;
+            this.artist__Panel10.Title = null;
+            this.artist__Panel10.URL = null;
+            // 
+            // artist__Panel11
+            // 
+            this.artist__Panel11.Artist = null;
+            this.artist__Panel11.BackColor = System.Drawing.Color.Transparent;
+            this.artist__Panel11.Duration = null;
+            this.artist__Panel11.Image_Song = null;
+            this.artist__Panel11.IsHovered = false;
+            this.artist__Panel11.IsPlay = false;
+            this.artist__Panel11.IsSelected = false;
+            this.artist__Panel11.Location = new System.Drawing.Point(1039, 3);
+            this.artist__Panel11.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
+            this.artist__Panel11.Name = "artist__Panel11";
+            this.artist__Panel11.Size = new System.Drawing.Size(245, 296);
+            this.artist__Panel11.TabIndex = 4;
+            this.artist__Panel11.Title = null;
+            this.artist__Panel11.URL = null;
             // 
             // pnlSongPlaying
             // 
@@ -453,103 +521,6 @@
             this.fpanelSongs.Size = new System.Drawing.Size(733, 459);
             this.fpanelSongs.TabIndex = 10;
             // 
-            // timerMusic
-            // 
-            this.timerMusic.Tick += new System.EventHandler(this.timerMusic_Tick);
-            // 
-            // dropdown__Playlist1
-            // 
-            this.dropdown__Playlist1.BackColor = System.Drawing.Color.Transparent;
-            this.dropdown__Playlist1.Location = new System.Drawing.Point(0, 0);
-            this.dropdown__Playlist1.Name = "dropdown__Playlist1";
-            this.dropdown__Playlist1.Size = new System.Drawing.Size(287, 274);
-            this.dropdown__Playlist1.TabIndex = 0;
-            // 
-            // artist__Panel7
-            // 
-            this.artist__Panel7.Artist = null;
-            this.artist__Panel7.BackColor = System.Drawing.Color.Transparent;
-            this.artist__Panel7.Duration = null;
-            this.artist__Panel7.Image_Song = null;
-            this.artist__Panel7.IsHovered = false;
-            this.artist__Panel7.IsPlay = false;
-            this.artist__Panel7.IsSelected = false;
-            this.artist__Panel7.Location = new System.Drawing.Point(3, 3);
-            this.artist__Panel7.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
-            this.artist__Panel7.Name = "artist__Panel7";
-            this.artist__Panel7.Size = new System.Drawing.Size(245, 296);
-            this.artist__Panel7.TabIndex = 0;
-            this.artist__Panel7.Title = null;
-            this.artist__Panel7.URL = null;
-            // 
-            // artist__Panel9
-            // 
-            this.artist__Panel9.Artist = null;
-            this.artist__Panel9.BackColor = System.Drawing.Color.Transparent;
-            this.artist__Panel9.Duration = null;
-            this.artist__Panel9.Image_Song = null;
-            this.artist__Panel9.IsHovered = false;
-            this.artist__Panel9.IsPlay = false;
-            this.artist__Panel9.IsSelected = false;
-            this.artist__Panel9.Location = new System.Drawing.Point(262, 3);
-            this.artist__Panel9.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
-            this.artist__Panel9.Name = "artist__Panel9";
-            this.artist__Panel9.Size = new System.Drawing.Size(245, 296);
-            this.artist__Panel9.TabIndex = 2;
-            this.artist__Panel9.Title = null;
-            this.artist__Panel9.URL = null;
-            // 
-            // artist__Panel8
-            // 
-            this.artist__Panel8.Artist = null;
-            this.artist__Panel8.BackColor = System.Drawing.Color.Transparent;
-            this.artist__Panel8.Duration = null;
-            this.artist__Panel8.Image_Song = null;
-            this.artist__Panel8.IsHovered = false;
-            this.artist__Panel8.IsPlay = false;
-            this.artist__Panel8.IsSelected = false;
-            this.artist__Panel8.Location = new System.Drawing.Point(521, 3);
-            this.artist__Panel8.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
-            this.artist__Panel8.Name = "artist__Panel8";
-            this.artist__Panel8.Size = new System.Drawing.Size(245, 296);
-            this.artist__Panel8.TabIndex = 1;
-            this.artist__Panel8.Title = null;
-            this.artist__Panel8.URL = null;
-            // 
-            // artist__Panel10
-            // 
-            this.artist__Panel10.Artist = null;
-            this.artist__Panel10.BackColor = System.Drawing.Color.Transparent;
-            this.artist__Panel10.Duration = null;
-            this.artist__Panel10.Image_Song = null;
-            this.artist__Panel10.IsHovered = false;
-            this.artist__Panel10.IsPlay = false;
-            this.artist__Panel10.IsSelected = false;
-            this.artist__Panel10.Location = new System.Drawing.Point(780, 3);
-            this.artist__Panel10.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
-            this.artist__Panel10.Name = "artist__Panel10";
-            this.artist__Panel10.Size = new System.Drawing.Size(245, 296);
-            this.artist__Panel10.TabIndex = 3;
-            this.artist__Panel10.Title = null;
-            this.artist__Panel10.URL = null;
-            // 
-            // artist__Panel11
-            // 
-            this.artist__Panel11.Artist = null;
-            this.artist__Panel11.BackColor = System.Drawing.Color.Transparent;
-            this.artist__Panel11.Duration = null;
-            this.artist__Panel11.Image_Song = null;
-            this.artist__Panel11.IsHovered = false;
-            this.artist__Panel11.IsPlay = false;
-            this.artist__Panel11.IsSelected = false;
-            this.artist__Panel11.Location = new System.Drawing.Point(1039, 3);
-            this.artist__Panel11.Margin = new System.Windows.Forms.Padding(3, 3, 11, 3);
-            this.artist__Panel11.Name = "artist__Panel11";
-            this.artist__Panel11.Size = new System.Drawing.Size(245, 296);
-            this.artist__Panel11.TabIndex = 4;
-            this.artist__Panel11.Title = null;
-            this.artist__Panel11.URL = null;
-            // 
             // info__Song__Panel10
             // 
             this.info__Song__Panel10.Artist = null;
@@ -640,6 +611,10 @@
             this.info__Song__Panel9.Title = null;
             this.info__Song__Panel9.URL = null;
             // 
+            // timerMusic
+            // 
+            this.timerMusic.Tick += new System.EventHandler(this.timerMusic_Tick);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -650,7 +625,6 @@
             this.Size = new System.Drawing.Size(1359, 965);
             this.panelHome.ResumeLayout(false);
             this.panelHome.PerformLayout();
-            this.pnlTest.ResumeLayout(false);
             this.fpanelArtists.ResumeLayout(false);
             this.pnlSongPlaying.ResumeLayout(false);
             this.pnlSongPlaying.PerformLayout();
@@ -708,7 +682,5 @@
         private System.Windows.Forms.Timer timerMusic;
         private Guna.UI2.WinForms.Guna2ImageButton btnAddPlaylist;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlTest;
-        private Custom.Dropdown__Playlist dropdown__Playlist1;
     }
 }

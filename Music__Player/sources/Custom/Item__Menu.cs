@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,40 +11,24 @@ using System.Windows.Forms;
 
 namespace Music__Player.sources.Custom
 {
-    public partial class Name__Playlist__Panel : UserControl
+    public partial class Item__Menu : UserControl
     {
         Color background = Color.FromArgb(192, 192, 255);
-        public Name__Playlist__Panel()
+        public Item__Menu()
         {
             InitializeComponent();
         }
 
-        public Name__Playlist__Panel(DataRow row)
+        public Item__Menu(string itemName, Image icon)
         {
             InitializeComponent();
 
-            this.ID_Playlist = (int)row["ID_PLAYLIST"];
+            this.Item_Name = itemName;
 
-            this.Name_Playlist = row["NAME_PLAYLIST"].ToString();
-
-            this.IsCreated = false;
+            this.Icon = icon;
 
             LoadInitialEvent();
         }
-
-        public Name__Playlist__Panel(string name_Playlist)
-        {
-            InitializeComponent();
-
-            this.Name_Playlist = name_Playlist;
-
-            this.ID_Playlist = 0;
-
-            this.IsCreated = false;
-
-            LoadInitialEvent();
-        }
-
         void LoadInitialEvent()
         {
             pnlMain.MouseEnter += userControl_MouseEnter;
@@ -54,37 +37,34 @@ namespace Music__Player.sources.Custom
 
             pnlMain.MouseClick += userControl_MouseClick;
         }
-        private int iD_Playlist;
-        public int ID_Playlist
+
+        private string item_Name;
+        public string Item_Name
         {
-            get { return iD_Playlist; }
-            set { iD_Playlist = value; }
+            get { return item_Name; }
+            set { item_Name = value; lblName.Text = value; }
         }
 
-        private string name_Playlist;
-        public string Name_Playlist
+        private Image icon;
+        public Image Icon
         {
-            get { return name_Playlist;}
-
-            set { name_Playlist = value; lblName.Text = name_Playlist; }
+            get { return icon; }
+            set { icon = value; btnImage.Image = value; }
         }
 
-        private bool isCreated;
-        public bool IsCreated
+        private bool isAdd;
+        public bool IsAdd
         {
-            get { return isCreated;}
+            get { return isAdd;}
+            set 
+            { 
+                isAdd = value;
 
-            set
-            {
-                isCreated = value;
+                if (isAdd == true)
+                {
+                    lblName.Image = ICON.Next;
 
-                if (isCreated == true)
-                {
-                    btnImage.Image = ICON.Playlist_Create;
-                }
-                else
-                {
-                    btnImage.Image = ICON.Playlist;
+                    lblName.ImageAlign = ContentAlignment.MiddleRight;
                 }
             }
         }
@@ -92,7 +72,7 @@ namespace Music__Player.sources.Custom
         private bool isHovered;
         public bool IsHovered
         {
-            get { return isHovered;}
+            get { return isHovered; }
 
             set
             {
@@ -209,6 +189,5 @@ namespace Music__Player.sources.Custom
             _mouseClickAdd?.Invoke(sender, e);
         }
         #endregion
-
     }
 }

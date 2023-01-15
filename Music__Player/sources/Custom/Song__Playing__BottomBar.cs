@@ -1,4 +1,5 @@
-﻿using Music__Player.sources.DAO.HomeDAO;
+﻿using Music__Player.sources.DAO.CustomDAO;
+using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
 using Music__Player.sources.View;
 using System;
@@ -16,32 +17,53 @@ namespace Music__Player.sources.Custom
 {
     public partial class Song__Playing__BottomBar : UserControl
     {
-        //private static Song__Playing__Bottom__Bar instance;
-        //public static Song__Playing__Bottom__Bar Instance
-        //{
-        //    get
-        //    {
-        //        if (instance == null)
-        //            instance = new Song__Playing__Bottom__Bar();
-
-        //        return instance;
-        //    }
-
-        //    private set { instance = value; }
-        //}
-
         public Song__Playing__BottomBar()
         {
             InitializeComponent();
+
+            LoadEvent();
         }
 
-        public void LoadSongPlaying()
+        #region Initial Event
+
+        void LoadEvent()
         {
-            Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
-
-            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(Home.musicPlaying, pbImage, lblNameSong, lblArtist, lblEnd);
+            btnAddPlaylist.Click += btnAddPlaylist_Click;
         }
 
+        private event EventHandler _mouseClickAddPlaylist;
+
+        public event EventHandler MouseClickAddPlaylist
+        {
+            add
+            {
+                _mouseClickAddPlaylist += value;
+            }
+
+            remove
+            {
+                _mouseClickAddPlaylist -= value;
+            }
+        }
+
+        private void btnAddPlaylist_Click(object sender, EventArgs e)
+        {
+            _mouseClickAddPlaylist?.Invoke(sender, e);
+        }
+
+        #endregion
+
+        public void LoadSongPlayingByInfoSongPanel()
+        {
+            Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
+
+            LoadInitialSong();
+        }
+
+        public void LoadInitialSong()
+        {
+            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(pbImage, lblNameSong, lblArtist, lblEnd);
+        }
         private void timerMusic_Tick(object sender, EventArgs e)
         {
             Media__Player.Instance.EventTimer(timerMusic, btnPlay, sliderTimeMusic, lblStart, lblEnd);
@@ -54,19 +76,25 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay);
+            Media__Player.Instance.btnPlay_Click(btnPlay, timerMusic);
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)
         {
             try
             {
-                if (Home.musicPlaying != null)
+                if (Song__Playing__DAO.Instance.currInfoSongPanel != null)
                 {
-                    Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
+                    Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
                 }
             }
             catch { }
         }
+
+        private void btnAddPlaylist_MouseClick(object sender, MouseEventArgs e)
+        {
+            Dropdown__Playlist__DAO.Instance.songSelecting = lblNameSong.Text;
+        }
+
     }
 }
