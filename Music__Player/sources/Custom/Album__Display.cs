@@ -17,6 +17,12 @@ namespace Music__Player.sources.Custom
             InitializeComponent();
         }
 
+        public Album__Display(DataRow row)
+        {
+            InitializeComponent();
+
+        }
+
         private void btnPlaySong_MouseEnter(object sender, EventArgs e)
         {
             btnPlaySong.Visible = true;
@@ -25,6 +31,11 @@ namespace Music__Player.sources.Custom
         private void btnPlaySong_MouseLeave(object sender, EventArgs e)
         {
             btnPlaySong.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
