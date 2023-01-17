@@ -40,7 +40,6 @@ namespace Music__Player.sources.Custom
                 IsSelectedFavorite = false;
             else
                 IsSelectedFavorite = true;
-
         }
 
         private List<Songs_Display> listSongs;
@@ -77,7 +76,6 @@ namespace Music__Player.sources.Custom
                 lbNameSong.Text = nameSong;
             }
         }
-
 
         private string artist;
         public string Artist
@@ -122,22 +120,21 @@ namespace Music__Player.sources.Custom
         private bool isSelectedFavorite;
         private bool IsSelectedFavorite
         {
-            get { return isSelectedFavorite; }
+            get 
+            { 
+                return isSelectedFavorite; 
+            }
             set
             {
                 if (value == false)
                 {
-                    pictureBox1.Image = Properties.Resources.icon_love_black;
+                    favoriteBox.Image = null;
                     isSelectedFavorite = false;
-                    pictureBox1.Visible = false;
-                    pictureBox1.Image = Properties.Resources.icon_love_black;
                 }
                 else
                 {
-                    pictureBox1.Image = Properties.Resources.icon_love_green;
                     isSelectedFavorite = true;
-                    pictureBox1.Visible = true;
-                    pictureBox1.Image = Properties.Resources.icon_love_green;
+                    favoriteBox.Image = Properties.Resources.icon_love_green;
                 }
             }
         }
@@ -145,21 +142,25 @@ namespace Music__Player.sources.Custom
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
-            if (isSelectedFavorite == false)
+            if (!isSelectedFavorite)
             {
-                pictureBox1.Visible = true;
-                pictureBox1.Size = new Size(32, 32);
-                pictureBox1.Image = Properties.Resources.icon_love_green;
+                favoriteBox.Size = new Size(30, 30);
+                favoriteBox.Image = Properties.Resources.icon_love_green;
             }
+        }
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
-            pictureBox1.Visible = false;
-            pictureBox1.Size = new Size(30, 30);
-            pictureBox1.Image = Properties.Resources.icon_love_black;
-
+            if (!isSelectedFavorite)
+            {
+                favoriteBox.Image = null;
+                favoriteBox.Size = new Size(28, 28);
+            }
         }
 
         private void HandleMouseEnter(object sender, EventArgs e)
@@ -172,11 +173,12 @@ namespace Music__Player.sources.Custom
             lbId.Visible = false;
             picturePlaySong.Visible = true;
             ShadowPanelSong.FillColor = Color.Gainsboro;
-            if (isSelectedFavorite == false)
+            if (!isSelectedFavorite)
             {
-                pictureBox1.Visible = true;
+                favoriteBox.Image = Properties.Resources.icon_love_black;
             }
         }
+
         private void HandleMouseLeave(object sender, EventArgs e)
         {
             foreach (Control control in ShadowPanelSong.Controls)
@@ -185,14 +187,13 @@ namespace Music__Player.sources.Custom
             }
             Cursor = Cursors.Default;
             lbId.Visible = true;
-            picturePlaySong.Visible = false;
+            picturePlaySong.Visible = false;    
             ShadowPanelSong.FillColor = Color.WhiteSmoke;
-            if (isSelectedFavorite == false)
+            if (!isSelectedFavorite)
             {
-                pictureBox1.Visible = false;
+                favoriteBox.Image = null;
             }
         }
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -203,11 +204,10 @@ namespace Music__Player.sources.Custom
             }
             else
             {
-                isSelectedFavorite = true;
+                IsSelectedFavorite = true;
                 DataProviderDAO.Instance.ExecuteNonQuery($"UPDATE FAVORITES\r\nSET ISFAVORITE = 1\r\nWHERE ID_SONG = {Id}");
             }
         }
-
 
         private bool isSelectedSong = false;
         public bool IsSelectedSong
@@ -239,20 +239,6 @@ namespace Music__Player.sources.Custom
                         songs.IsSelectedSong = false;
                 }
                 IsSelectedSong = true;
-            }
-        }
-
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (IsSelectedFavorite == true)
-            {
-                IsSelectedFavorite = false;
-                DataProviderDAO.Instance.ExecuteNonQuery($"UPDATE FAVORITES\r\nSET ISFAVORITE = 0\r\nWHERE ID_SONG = {Id}");
-            }
-            else
-            {
-                isSelectedFavorite = true;
-                DataProviderDAO.Instance.ExecuteNonQuery($"UPDATE FAVORITES\r\nSET ISFAVORITE = 1\r\nWHERE ID_SONG = {Id}");
             }
         }
     }

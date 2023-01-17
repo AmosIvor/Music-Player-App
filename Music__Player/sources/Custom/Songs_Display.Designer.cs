@@ -30,7 +30,7 @@
         {
             this.ShadowPanelSong = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.picturePlaySong = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.favoriteBox = new System.Windows.Forms.PictureBox();
             this.lbAlbum = new System.Windows.Forms.Label();
             this.lbTimeSong = new System.Windows.Forms.Label();
             this.lbArtist = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.lbId = new System.Windows.Forms.Label();
             this.ShadowPanelSong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePlaySong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favoriteBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageSong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             // 
             this.ShadowPanelSong.BackColor = System.Drawing.Color.Transparent;
             this.ShadowPanelSong.Controls.Add(this.picturePlaySong);
-            this.ShadowPanelSong.Controls.Add(this.pictureBox1);
+            this.ShadowPanelSong.Controls.Add(this.favoriteBox);
             this.ShadowPanelSong.Controls.Add(this.lbAlbum);
             this.ShadowPanelSong.Controls.Add(this.lbTimeSong);
             this.ShadowPanelSong.Controls.Add(this.lbArtist);
@@ -80,21 +80,19 @@
             this.picturePlaySong.Click += new System.EventHandler(this.lbTimeSong_Click);
             this.picturePlaySong.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             // 
-            // pictureBox1
+            // favoriteBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox1.Image = global::Music__Player.Properties.Resources.icon_love_black;
-            this.pictureBox1.Location = new System.Drawing.Point(930, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.favoriteBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.favoriteBox.Location = new System.Drawing.Point(926, 21);
+            this.favoriteBox.Name = "favoriteBox";
+            this.favoriteBox.Size = new System.Drawing.Size(28, 28);
+            this.favoriteBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.favoriteBox.TabIndex = 14;
+            this.favoriteBox.TabStop = false;
+            this.favoriteBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.favoriteBox.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.favoriteBox.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.favoriteBox.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // lbAlbum
             // 
@@ -197,7 +195,7 @@
             this.Size = new System.Drawing.Size(1126, 84);
             this.ShadowPanelSong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picturePlaySong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.favoriteBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageSong)).EndInit();
             this.ResumeLayout(false);
 
@@ -212,7 +210,7 @@
         private System.Windows.Forms.Label lbNameSong;
         private Guna.UI2.WinForms.Guna2PictureBox pbImageSong;
         private System.Windows.Forms.Label lbId;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox favoriteBox;
         private System.Windows.Forms.PictureBox picturePlaySong;
     }
 }
