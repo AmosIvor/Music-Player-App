@@ -490,7 +490,9 @@
   <ItemGroup>
     <None Include="Resources\icon_playlist.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icon_heart_blue.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_name_playlist_white.png" />
   </ItemGroup>
@@ -571,6 +573,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_triangle_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_heart_green.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
