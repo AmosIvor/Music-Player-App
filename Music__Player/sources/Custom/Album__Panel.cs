@@ -16,5 +16,22 @@ namespace Music__Player.sources.Custom
         {
             InitializeComponent();
         }
+
+        public Album__Panel(DataRow row)
+        {
+            InitializeComponent();
+            TypeAlbum = row["TYPE_ALBUM"].ToString();
+        }
+        private string typeAlbum;
+        public string TypeAlbum
+        {
+            get { return typeAlbum; }
+            set
+            {
+                typeAlbum = value;
+                lbTypeAlbum.Text = value;
+            }
+        }
+
     }
 }

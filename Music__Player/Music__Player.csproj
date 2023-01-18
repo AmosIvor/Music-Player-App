@@ -71,6 +71,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="sources\Constant\IMAGE.cs" />
+    <Compile Include="sources\Custom\AlbumOpenSongs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sources\Custom\AlbumOpenSongs.Designer.cs">
+      <DependentUpon>AlbumOpenSongs.cs</DependentUpon>
+    </Compile>
     <Compile Include="sources\Custom\Album__Display.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -27,15 +27,15 @@ namespace Music__Player.sources.DAO.AlbumDAO
         }
         private AlbumDisplayDAO() { }
 
-        public List<Album__Display> GetAlbumDisPlay()
+        public List<Album__Panel> GetAlbumDisplay()
         {
-            List<Album__Display> listAlbums = new List<Album__Display>();
-            string query = "";
+            List<Album__Panel> listAlbums = new List<Album__Panel>();
+            string query = "SELECT TYPE_ALBUM \r\nFROM ALBUMS\r\nGROUP BY TYPE_ALBUM\r\nORDER BY LEN(TYPE_ALBUM)";
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
             foreach (DataRow row in data.Rows)
             {
-                Album__Display album__Display= new Album__Display();
-                listAlbums.Add(album__Display);
+                Album__Panel albumPanel= new Album__Panel(row);
+                listAlbums.Add(albumPanel);
             }
             return listAlbums;
         }
