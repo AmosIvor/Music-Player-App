@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Music__Player.sources.DAO;
+using Music__Player.sources.DAO.AlbumDAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +23,7 @@ namespace Music__Player.sources.Custom
         {
             InitializeComponent();
             TypeAlbum = row["TYPE_ALBUM"].ToString();
+            LoadAlbum();
         }
         private string typeAlbum;
         public string TypeAlbum
@@ -32,6 +35,14 @@ namespace Music__Player.sources.Custom
                 lbTypeAlbum.Text = value;
             }
         }
-
+        private void LoadAlbum()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            List<Album__Display> listAlbumDisplays = AlbumDisplayDAO.Instance.GetAlbumsDisplay(TypeAlbum);
+            foreach (Album__Display albumDisplay in listAlbumDisplays)
+            {
+                flowLayoutPanel1.Controls.Add(albumDisplay);
+            }
+        }
     }
 }

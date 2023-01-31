@@ -44,7 +44,10 @@ namespace Music__Player.sources.Custom
         public Image ImageAlbum
         {
             get { return imageAlbum;}
-            set { imageAlbum = value;}
+            set { 
+                imageAlbum = value;
+                pbImageAlbum.Image = imageAlbum;
+            }
         }
         private void btnPlaySong_MouseEnter(object sender, EventArgs e)
         {
@@ -54,7 +57,6 @@ namespace Music__Player.sources.Custom
                 control.BackColor = Color.Gainsboro;
             }
             ShadowPanel.FillColor = Color.Gainsboro;
-
 
         }
 

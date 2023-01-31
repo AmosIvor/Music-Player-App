@@ -30,7 +30,7 @@ namespace Music__Player.sources.View
         private void Load_Album()
         {
             flowLayoutPanel1.Controls.Clear();
-            List<Album__Panel> listAlbums = AlbumDisplayDAO.Instance.GetAlbumDisplay();
+            List<Album__Panel> listAlbums = AlbumDisplayDAO.Instance.GetAlbumsPanel();
             foreach (Album__Panel album in listAlbums)
             {
                 flowLayoutPanel1.Controls.Add(album);
