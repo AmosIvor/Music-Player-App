@@ -162,6 +162,7 @@
     <Compile Include="sources\DAO\CustomDAO\Playlist__Add__Panel__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Popup__Create__Playlist__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Song__History__DAO.cs" />
+    <Compile Include="sources\DAO\FavoriteDAO\FavoriteDAO.cs" />
     <Compile Include="sources\DAO\PlaylistDAO\PlaylistDAO.cs" />
     <Compile Include="sources\DAO\SQLConnection\DataProviderDAO.cs" />
     <Compile Include="sources\DAO\HomeDAO\Song__Playing__DAO.cs" />
