@@ -38,11 +38,6 @@
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.userControl11 = new Music__Player.sources.Custom.slide1();
-            this.RadioBtn4 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.RadioBtn2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.RadioBtn3 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.RadioBtn1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.slideBtnLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.slide31 = new Music__Player.sources.Custom.slide3();
@@ -61,7 +56,6 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.song__Playing__BottomBar1 = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.guna2Panel2.SuspendLayout();
-            this.slideBtnLayoutPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -159,106 +153,6 @@
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(1359, 297);
             this.userControl11.TabIndex = 0;
-            // 
-            // RadioBtn4
-            // 
-            this.RadioBtn4.AllowDrop = true;
-            this.RadioBtn4.CheckedState.BorderColor = System.Drawing.Color.Gray;
-            this.RadioBtn4.CheckedState.BorderThickness = 2;
-            this.RadioBtn4.CheckedState.FillColor = System.Drawing.Color.White;
-            this.RadioBtn4.CheckedState.InnerColor = System.Drawing.Color.Gray;
-            this.RadioBtn4.CheckedState.InnerOffset = 10;
-            this.RadioBtn4.CheckedState.Parent = this.RadioBtn4;
-            this.RadioBtn4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioBtn4.Location = new System.Drawing.Point(66, 3);
-            this.RadioBtn4.Name = "RadioBtn4";
-            this.RadioBtn4.ShadowDecoration.Parent = this.RadioBtn4;
-            this.RadioBtn4.Size = new System.Drawing.Size(15, 15);
-            this.RadioBtn4.TabIndex = 10;
-            this.RadioBtn4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.RadioBtn4.UncheckedState.BorderThickness = 2;
-            this.RadioBtn4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.RadioBtn4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.RadioBtn4.UncheckedState.Parent = this.RadioBtn4;
-            this.RadioBtn4.CheckedChanged += new System.EventHandler(this.RadioBtn4_CheckedChanged);
-            // 
-            // RadioBtn2
-            // 
-            this.RadioBtn2.AllowDrop = true;
-            this.RadioBtn2.CheckedState.BorderColor = System.Drawing.Color.Gray;
-            this.RadioBtn2.CheckedState.BorderThickness = 2;
-            this.RadioBtn2.CheckedState.FillColor = System.Drawing.Color.White;
-            this.RadioBtn2.CheckedState.InnerColor = System.Drawing.Color.Gray;
-            this.RadioBtn2.CheckedState.InnerOffset = 10;
-            this.RadioBtn2.CheckedState.Parent = this.RadioBtn2;
-            this.RadioBtn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioBtn2.Location = new System.Drawing.Point(24, 3);
-            this.RadioBtn2.Name = "RadioBtn2";
-            this.RadioBtn2.ShadowDecoration.Parent = this.RadioBtn2;
-            this.RadioBtn2.Size = new System.Drawing.Size(15, 15);
-            this.RadioBtn2.TabIndex = 9;
-            this.RadioBtn2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.RadioBtn2.UncheckedState.BorderThickness = 2;
-            this.RadioBtn2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.RadioBtn2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.RadioBtn2.UncheckedState.Parent = this.RadioBtn2;
-            this.RadioBtn2.CheckedChanged += new System.EventHandler(this.RadioBtn2_CheckedChanged);
-            // 
-            // RadioBtn3
-            // 
-            this.RadioBtn3.AllowDrop = true;
-            this.RadioBtn3.CheckedState.BorderColor = System.Drawing.Color.Gray;
-            this.RadioBtn3.CheckedState.BorderThickness = 2;
-            this.RadioBtn3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.RadioBtn3.CheckedState.InnerColor = System.Drawing.Color.Gray;
-            this.RadioBtn3.CheckedState.InnerOffset = 10;
-            this.RadioBtn3.CheckedState.Parent = this.RadioBtn3;
-            this.RadioBtn3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioBtn3.Location = new System.Drawing.Point(45, 3);
-            this.RadioBtn3.Name = "RadioBtn3";
-            this.RadioBtn3.ShadowDecoration.Parent = this.RadioBtn3;
-            this.RadioBtn3.Size = new System.Drawing.Size(15, 15);
-            this.RadioBtn3.TabIndex = 7;
-            this.RadioBtn3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.RadioBtn3.UncheckedState.BorderThickness = 2;
-            this.RadioBtn3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.RadioBtn3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.RadioBtn3.UncheckedState.Parent = this.RadioBtn3;
-            this.RadioBtn3.CheckedChanged += new System.EventHandler(this.RadioBtn3_CheckedChanged);
-            // 
-            // RadioBtn1
-            // 
-            this.RadioBtn1.AllowDrop = true;
-            this.RadioBtn1.Checked = true;
-            this.RadioBtn1.CheckedState.BorderColor = System.Drawing.Color.Gray;
-            this.RadioBtn1.CheckedState.BorderThickness = 2;
-            this.RadioBtn1.CheckedState.FillColor = System.Drawing.Color.White;
-            this.RadioBtn1.CheckedState.InnerColor = System.Drawing.Color.Gray;
-            this.RadioBtn1.CheckedState.InnerOffset = 10;
-            this.RadioBtn1.CheckedState.Parent = this.RadioBtn1;
-            this.RadioBtn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RadioBtn1.Location = new System.Drawing.Point(3, 3);
-            this.RadioBtn1.Name = "RadioBtn1";
-            this.RadioBtn1.ShadowDecoration.Parent = this.RadioBtn1;
-            this.RadioBtn1.Size = new System.Drawing.Size(15, 15);
-            this.RadioBtn1.TabIndex = 1;
-            this.RadioBtn1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.RadioBtn1.UncheckedState.BorderThickness = 2;
-            this.RadioBtn1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.RadioBtn1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.RadioBtn1.UncheckedState.Parent = this.RadioBtn1;
-            this.RadioBtn1.Click += new System.EventHandler(this.RadioBtn1_CheckedChanged);
-            // 
-            // slideBtnLayoutPanel
-            // 
-            this.slideBtnLayoutPanel.Controls.Add(this.RadioBtn1);
-            this.slideBtnLayoutPanel.Controls.Add(this.RadioBtn2);
-            this.slideBtnLayoutPanel.Controls.Add(this.RadioBtn3);
-            this.slideBtnLayoutPanel.Controls.Add(this.RadioBtn4);
-            this.slideBtnLayoutPanel.Location = new System.Drawing.Point(585, 398);
-            this.slideBtnLayoutPanel.Name = "slideBtnLayoutPanel";
-            this.slideBtnLayoutPanel.Size = new System.Drawing.Size(85, 23);
-            this.slideBtnLayoutPanel.TabIndex = 1;
             // 
             // timer1
             // 
@@ -468,14 +362,12 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.slideBtnLayoutPanel);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Name = "Songs";
             this.Size = new System.Drawing.Size(1359, 965);
             this.Load += new System.EventHandler(this.Songs_Load);
             this.guna2Panel2.ResumeLayout(false);
-            this.slideBtnLayoutPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
@@ -491,11 +383,6 @@
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtn1;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtn4;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtn2;
-        private Guna.UI2.WinForms.Guna2CustomRadioButton RadioBtn3;
-        private System.Windows.Forms.FlowLayoutPanel slideBtnLayoutPanel;
         private Custom.slide1 userControl11;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;

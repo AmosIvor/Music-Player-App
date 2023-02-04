@@ -19,10 +19,10 @@ namespace Music__Player.sources.Custom
             InitializeComponent();
         }
 
-        public Songs_Display(DataRow row, List<Songs_Display> listSongs)
+        public Songs_Display(DataRow row, List<Songs_Display> listSongs, string Id)
         {
             InitializeComponent();
-            Id = row["ID_SONG"].ToString();
+            this.Id = Id;
 
             MemoryStream stream = new MemoryStream((Byte[])row["IMAGE_SONG"]);
             Image temp = Image.FromStream(stream);

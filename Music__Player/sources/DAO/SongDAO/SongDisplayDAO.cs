@@ -31,10 +31,11 @@ namespace Music__Player.sources.DAO.SongDAO
             string query = "SELECT SONG.ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM, ISFAVORITE\r\nFROM SONG, ALBUMS, FAVORITES\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM AND SONG.ID_ALBUM = FAVORITES.ID_SONG";
             
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
-            
+            int id = 1;
             foreach (DataRow row in data.Rows) 
             {
-                Songs_Display songDisplay = new Songs_Display(row, listSongs);
+                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString());
+                ++id;
                 listSongs.Add(songDisplay);
             }
             return listSongs;
@@ -45,9 +46,11 @@ namespace Music__Player.sources.DAO.SongDAO
             List<Songs_Display> listSongs = new List<Songs_Display>();
             string query = $"SELECT SONG.ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM, ISFAVORITE\r\nFROM SONG, ALBUMS, FAVORITES\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM AND SONG.ID_ALBUM = FAVORITES.ID_SONG\r\nAND SONG.NAME_SONG LIKE N'%{nameSong}%'";
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
+            int id = 1;
             foreach (DataRow row in data.Rows)
             {
-                Songs_Display songDisplay = new Songs_Display(row, listSongs);
+                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString());
+                ++id;
                 listSongs.Add(songDisplay);
             }
             return listSongs;
