@@ -11,6 +11,7 @@ using System.Threading;
 using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.SongDAO;
 using Guna.UI2.WinForms;
+using System.Runtime.InteropServices;
 
 namespace Music__Player.sources.View
 {
@@ -73,15 +74,30 @@ namespace Music__Player.sources.View
                 flowLayoutPanel1.Controls.Add(song);
             }
         }
-        private void searchBar_TextChanged(object sender, EventArgs e)
+        void searchNameSong(string findByName)
         {
-            string findByName = searchBar.Text;
             flowLayoutPanel1.Controls.Clear();
             List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName);
             foreach (Songs_Display song in listSongSearch)
             {
+                song.BackColor = Color.Gray;
                 flowLayoutPanel1.Controls.Add(song);
             }
+        }
+        private void searchBar_TextChanged(object sender, EventArgs e)
+        {
+            string findByName = searchBar.Text;
+            if (findByName != "")
+            {
+                flowLayoutPanel1.Controls.Clear();
+                List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName);
+                foreach (Songs_Display song in listSongSearch)
+                {
+                    flowLayoutPanel1.Controls.Add(song);
+                }
+            } else
+                Load_Display_Song();    
+
             searchBar.Focus();
         }
 
