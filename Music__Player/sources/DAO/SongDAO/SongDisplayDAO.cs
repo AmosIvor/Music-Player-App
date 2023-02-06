@@ -27,7 +27,7 @@ namespace Music__Player.sources.DAO.SongDAO
             }
         }
         private SongDisplayDAO() { }
-        public List<Songs_Display> GetListSongDisplay()
+        public List<Songs_Display> GetListSongDisplay(Song__Playing__BottomBar songPlayingBar)
         {
             List<Songs_Display> listSongs = new List<Songs_Display>();
             string query = "SELECT SONG.ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM, ISFAVORITE\r\nFROM SONG, ALBUMS, FAVORITES\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM AND SONG.ID_ALBUM = FAVORITES.ID_SONG";
@@ -36,14 +36,14 @@ namespace Music__Player.sources.DAO.SongDAO
             int id = 1;
             foreach (DataRow row in data.Rows) 
             {
-                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString());
+                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString(), songPlayingBar);
                 ++id;
                 listSongs.Add(songDisplay);
             }
             return listSongs;
         }
 
-        public List<Songs_Display> GetListSongSearch(string nameSong)
+        public List<Songs_Display> GetListSongSearch(string nameSong, Song__Playing__BottomBar songPlayingBar)
         {
             List<Songs_Display> listSongs = new List<Songs_Display>();
             string query = $"SELECT SONG.ID_SONG, NAME_SONG, ARTIST,LINK, IMAGE_SONG, DURATION, NAME_ALBUM, ISFAVORITE\r\nFROM SONG, ALBUMS, FAVORITES\r\nWHERE SONG.ID_ALBUM = ALBUMS.ID_ALBUM AND SONG.ID_ALBUM = FAVORITES.ID_SONG\r\nAND SONG.NAME_SONG LIKE N'%{nameSong}%'";
@@ -51,7 +51,7 @@ namespace Music__Player.sources.DAO.SongDAO
             int id = 1;
             foreach (DataRow row in data.Rows)
             {
-                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString());
+                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString(), songPlayingBar);
                 songDisplay.BackColor = Color.Gray;
                 ++id;
                 listSongs.Add(songDisplay);
@@ -62,7 +62,7 @@ namespace Music__Player.sources.DAO.SongDAO
             data = DataProviderDAO.Instance.ExecuteQuery(query);
             foreach (DataRow row in data.Rows)
             {
-                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString());
+                Songs_Display songDisplay = new Songs_Display(row, listSongs, id.ToString(), songPlayingBar);
                 ++id;
                 listSongs.Add(songDisplay);
             }

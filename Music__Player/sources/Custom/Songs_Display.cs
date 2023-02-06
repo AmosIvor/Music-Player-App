@@ -1,4 +1,5 @@
 ﻿using Music__Player.sources.DAO;
+using Music__Player.sources.PlayMusic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace Music__Player.sources.Custom
             InitializeComponent();
         }
 
-        public Songs_Display(DataRow row, List<Songs_Display> listSongs, string Id)
+        public Songs_Display(DataRow row, List<Songs_Display> listSongs, string Id, Song__Playing__BottomBar playingBar)
         {
             InitializeComponent();
             this.Id = Id;
@@ -40,6 +41,15 @@ namespace Music__Player.sources.Custom
                 IsSelectedFavorite = false;
             else
                 IsSelectedFavorite = true;
+
+            playingBottomBar = playingBar;
+        }
+
+        private Song__Playing__BottomBar playingBottomBar;
+        public Song__Playing__BottomBar PlayingBottomBar
+        {
+            get { return playingBottomBar; }
+            set { playingBottomBar = value; }
         }
 
         private List<Songs_Display> listSongs;
@@ -218,6 +228,7 @@ namespace Music__Player.sources.Custom
                 if (value == true) 
                 {
                     picturePlaySong.Image = Properties.Resources.icon_play_blue;
+                    playingBottomBar.setPlayingBottomBar(this);
                     isSelectedSong = true;
                 } else
                 {

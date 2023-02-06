@@ -1,4 +1,5 @@
-﻿using Music__Player.sources.DAO.HomeDAO;
+﻿using Music__Player.Properties;
+using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
 using Music__Player.sources.View;
 using System;
@@ -35,6 +36,24 @@ namespace Music__Player.sources.Custom
             InitializeComponent();
         }
 
+        private bool isPlay;
+        public bool IsPlay
+        {
+            get { return isPlay; }
+            set
+            {
+                isPlay = value;
+                if (isPlay == true)
+                {
+                    btnPlay.Image = Resources.pause_100px_png1;
+                }
+                else
+                {
+                    btnPlay.Image = Resources.play_100px_png1;
+                }
+            }
+        }
+
         public void LoadSongPlaying()
         {
             Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
@@ -54,7 +73,12 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay);
+            Media__Player.Instance.btnPlay_Click(btnPlay, this);
+            if (IsPlay == true)
+            {
+                IsPlay = false;
+            } else 
+                IsPlay = true;
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)
@@ -65,8 +89,24 @@ namespace Music__Player.sources.Custom
                 {
                     Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
                 }
+                
             }
-            catch { }
+            catch 
+            {
+
+            }
+        }
+
+        public void setPlayingBottomBar(Songs_Display song)
+        {
+            pbImage.Image = song.ImageSong;
+            lblNameSong.Text = song.NameSong;
+            lblStart.Text = "00:00";
+            lblEnd.Text = song.Duration;
+            lblArtist.Text = song.Artist;
+
+            Media__Player.Instance.RunMP3(song.URL, timerMusic);
+            IsPlay = true;
         }
     }
-}
+} 

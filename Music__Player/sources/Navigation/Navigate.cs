@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,9 +24,8 @@ namespace Music__Player.sources.Navigate
 
         private Navigation() { }
 
-        public Songs songsScreen = new Songs();
         public Albums albumsScreen = new Albums();
-
+        public Songs songsScreen = new Songs();
         public Recent recentScreen = new Recent();
         public Favorite favoriteScreen = new Favorite();
         public History historyScreen = new History();

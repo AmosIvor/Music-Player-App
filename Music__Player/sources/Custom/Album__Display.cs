@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms.Suite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -73,6 +74,11 @@ namespace Music__Player.sources.Custom
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void ShadowPanel_Click(object sender, EventArgs e)
+        {
+            AlbumOpenSongs instance = new AlbumOpenSongs();
+            
         }
     }
 }

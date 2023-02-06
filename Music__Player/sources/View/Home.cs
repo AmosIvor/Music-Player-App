@@ -395,7 +395,7 @@ namespace Music__Player.sources.View
         }
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay);
+            Media__Player.Instance.btnPlay_Click(btnPlay, null);
         }
         private void btnRepeat_Click(object sender, EventArgs e)
         {

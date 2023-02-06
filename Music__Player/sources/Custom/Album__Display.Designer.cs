@@ -33,8 +33,8 @@
             this.lbNameAlbum = new System.Windows.Forms.Label();
             this.ShadowPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnPlaySong = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbImageAlbum)).BeginInit();
             this.ShadowPanel.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.ShadowPanel.ShadowColor = System.Drawing.Color.DimGray;
             this.ShadowPanel.Size = new System.Drawing.Size(201, 271);
             this.ShadowPanel.TabIndex = 0;
+            this.ShadowPanel.Click += new System.EventHandler(this.ShadowPanel_Click);
             this.ShadowPanel.MouseEnter += new System.EventHandler(this.btnPlaySong_MouseEnter);
             this.ShadowPanel.MouseLeave += new System.EventHandler(this.btnPlaySong_MouseLeave);
             this.ShadowPanel.MouseHover += new System.EventHandler(this.btnPlaySong_MouseEnter);
@@ -103,17 +104,17 @@
             this.btnPlaySong.MouseLeave += new System.EventHandler(this.btnPlaySong_MouseLeave);
             this.btnPlaySong.MouseHover += new System.EventHandler(this.btnPlaySong_MouseEnter);
             // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
             // imageList2
             // 
             this.imageList2.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList2.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Album__Display
             // 
@@ -135,8 +136,8 @@
         private System.Windows.Forms.PictureBox pbImageAlbum;
         private System.Windows.Forms.Label lbNameAlbum;
         private Guna.UI2.WinForms.Guna2ShadowPanel ShadowPanel;
-        private System.Windows.Forms.ImageList imageList1;
         private Guna.UI2.WinForms.Guna2ImageButton btnPlaySong;
         private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

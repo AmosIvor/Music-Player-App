@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Music__Player.sources.Custom;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,9 +32,7 @@ namespace Music__Player.sources.PlayMusic
         public void RunMP3(string url, Timer timer)
         {
             player.URL = url;
-
             player.controls.play();
-
             timer.Enabled = true;
         }
 
@@ -71,19 +70,18 @@ namespace Music__Player.sources.PlayMusic
             player.controls.currentPosition = sliderTimeMusic.Value;
         }
 
-        public void btnPlay_Click(Guna2ImageButton btn)
+        public void btnPlay_Click(Guna2ImageButton btn, Song__Playing__BottomBar btnBar = null)
         {
             if (player.playState == WMPPlayState.wmppsPlaying)
             {
                 btn.Checked = false;
-
+                btnBar.IsPlay = true;
                 player.controls.pause();
             }
-
             else if (player.playState == WMPPlayState.wmppsPaused)
             {
                 btn.Checked = true;
-
+                btnBar.IsPlay = false;
                 player.controls.play();
             }
         }

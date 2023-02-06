@@ -68,7 +68,7 @@ namespace Music__Player.sources.View
         private void Load_Display_Song()
         {
             flowLayoutPanel1.Controls.Clear();
-            List<Songs_Display> listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay();
+            List<Songs_Display> listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay(songPlayingBar);
             foreach(Songs_Display song in listSongDisplay)
             {
                 flowLayoutPanel1.Controls.Add(song);
@@ -77,7 +77,7 @@ namespace Music__Player.sources.View
         void searchNameSong(string findByName)
         {
             flowLayoutPanel1.Controls.Clear();
-            List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName);
+            List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName, songPlayingBar);
             foreach (Songs_Display song in listSongSearch)
             {
                 song.BackColor = Color.Gray;
@@ -90,7 +90,7 @@ namespace Music__Player.sources.View
             if (findByName != "")
             {
                 flowLayoutPanel1.Controls.Clear();
-                List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName);
+                List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName, songPlayingBar);
                 foreach (Songs_Display song in listSongSearch)
                 {
                     flowLayoutPanel1.Controls.Add(song);
