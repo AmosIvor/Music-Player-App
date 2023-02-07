@@ -109,7 +109,7 @@ namespace Music__Player.sources.DAO.CustomDAO
             {
                 pnlBackground.Visible = false;
             }
-
+            
             isFirst = false;
         }
 

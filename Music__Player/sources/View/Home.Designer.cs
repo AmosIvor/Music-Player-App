@@ -32,7 +32,6 @@
             this.panelHome = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblCountFpanelsSong = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.fpanelArtists = new System.Windows.Forms.FlowLayoutPanel();
             this.artist__Panel7 = new Music__Player.sources.Custom.Artist__Panel();
             this.artist__Panel9 = new Music__Player.sources.Custom.Artist__Panel();
@@ -76,7 +75,6 @@
             this.panelHome.AutoScroll = true;
             this.panelHome.Controls.Add(this.btnExit);
             this.panelHome.Controls.Add(this.lblCountFpanelsSong);
-            this.panelHome.Controls.Add(this.guna2TextBox2);
             this.panelHome.Controls.Add(this.fpanelArtists);
             this.panelHome.Controls.Add(this.pnlSongPlaying);
             this.panelHome.Controls.Add(this.label12);
@@ -121,36 +119,6 @@
             this.lblCountFpanelsSong.Size = new System.Drawing.Size(131, 20);
             this.lblCountFpanelsSong.TabIndex = 6;
             this.lblCountFpanelsSong.Text = "5 songs on the list";
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox2.BorderRadius = 18;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.IconLeft = global::Music__Player.Properties.Resources.icon_search_blue;
-            this.guna2TextBox2.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(28, 28);
-            this.guna2TextBox2.Location = new System.Drawing.Point(171, 15);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Search ...";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(509, 44);
-            this.guna2TextBox2.TabIndex = 5;
-            this.guna2TextBox2.TextOffset = new System.Drawing.Point(15, 0);
             // 
             // fpanelArtists
             // 
@@ -638,7 +606,6 @@
 
         private Guna.UI2.WinForms.Guna2GradientPanel panelHome;
         private System.Windows.Forms.Label lblCountFpanelsSong;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private System.Windows.Forms.FlowLayoutPanel fpanelArtists;
         private Custom.Artist__Panel artist__Panel1;
         private Custom.Artist__Panel artist__Panel2;

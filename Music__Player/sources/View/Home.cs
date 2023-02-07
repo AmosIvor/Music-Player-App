@@ -14,6 +14,7 @@ using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
 using WMPLib;
 using System.Threading;
+using Music__Player.sources.DAO.FavoriteDAO;
 
 namespace Music__Player.sources.View
 {
@@ -69,6 +70,8 @@ namespace Music__Player.sources.View
                 infoSongPanel.MouseLeaveAdd += infoSongPanel_MouseLeaveAdd;
 
                 infoSongPanel.MouseClickPlay += infoSongPanel_MouseClickPlay;
+
+                infoSongPanel.MouseClickFavorite += infoSongPanel_MouseClickFavorite;
 
                 fpanelSongs.Controls.Add(infoSongPanel);
             }
@@ -207,6 +210,20 @@ namespace Music__Player.sources.View
             Info__Song__Panel infoSongPanelOutside = Info__Song__Panel__DAO.Instance.GetInfoSongPanelFromPanel(sender);
 
             infoSongPanelOutside.IsHovered = false;
+        }
+
+        private void infoSongPanel_MouseClickFavorite(object sender, EventArgs e)
+        {
+            try
+            {
+                Info__Song__Panel curr = Info__Song__Panel__DAO.Instance.GetInfoSongPanelFromControlIntoPanel(sender);
+
+                curr.IsFavorite = (curr.IsFavorite == false) ? true : false;
+
+                SongFavoriteAllScreen(curr);
+            }
+
+            catch { }
         }
 
         #endregion
@@ -555,5 +572,26 @@ namespace Music__Player.sources.View
         }
         #endregion
 
+        #region Handle Favorite
+
+        public void SongFavoriteInHome(bool isFavorite)
+        {
+            Info__Song__Panel curr = fpanelSongs.Controls.OfType<Info__Song__Panel>().FirstOrDefault(c => c.Title == FavoriteDAO.Instance.nameSong);
+
+            curr.IsFavorite = isFavorite;
+        }
+
+        void SongFavoriteAllScreen(Info__Song__Panel curr)
+        {
+            FavoriteDAO.Instance.nameSong = curr.Title;
+
+            Navigate.Navigation.Instance.historyScreen.SongFavoriteInHistory(curr.IsFavorite);
+
+            Navigate.Navigation.Instance.childPlaylistScreen.SongFavoriteInChildPlaylist(curr.IsFavorite);
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SongFavoriteInChildPlaylist(curr.IsFavorite);
+        }
+
+        #endregion
     }
 }

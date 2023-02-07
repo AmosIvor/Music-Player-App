@@ -12,6 +12,7 @@ using Music__Player.Properties;
 using Music__Player.sources.Constant;
 using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.CustomDAO;
+using Music__Player.sources.DAO.FavoriteDAO;
 using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.DAO.PlaylistDAO;
 using Music__Player.sources.DTO.ChildPlaylistDTO;
@@ -75,6 +76,8 @@ namespace Music__Player.sources.View
                 songByPlaylist.MouseClickPlay += songByPlaylist_MouseClickPlay;
 
                 songByPlaylist.MouseClickOption += songByPlaylist_MouseClickOption;
+
+                songByPlaylist.MouseClickFavorite += songByPlaylist_MouseClickFavorite;
 
                 fpnlSongs.Controls.Add(songByPlaylist);
             }
@@ -218,9 +221,24 @@ namespace Music__Player.sources.View
 
                 pnlOptioned.Tag = songByPlaylistInside;
 
-                Context__Menu__DAO.Instance.ShowContextMenuInUserControl(this);
-
+                Context__Menu__DAO.Instance.ShowContextMenuInUserControl(this, "playlist");
+                
                 Dropdown__Playlist__DAO.Instance.songSelecting = songByPlaylistInside.Title;
+            }
+
+            catch { }
+        }
+
+        private void songByPlaylist_MouseClickFavorite(object sender, MouseEventArgs e)
+        {
+            // doing
+            try
+            {
+                List__Song__Playlist songByPlaylist = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+                songByPlaylist.IsFavorite = (songByPlaylist.IsFavorite == false) ? true : false;
+
+                SongFavoriteAllScreen(songByPlaylist);                
             }
 
             catch { }
@@ -259,7 +277,7 @@ namespace Music__Player.sources.View
 
         #endregion
 
-        #region Song Playing Bottom Bar
+        #region Bottom Bar
         void LoadEventBottomBar()
         {
             songPlayingBottomBar.MouseClickAddPlaylist += SongPlayingBottomBar_MouseClickAddPlaylist;
@@ -286,21 +304,7 @@ namespace Music__Player.sources.View
         #region Play First Song 
         public void PlayFirstSong()
         {
-            if (fpnlSongs.Controls.Count == 0)
-            {
-                return;
-            }
-            List__Song__Playlist firstSong = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == "01");
-
-            fpnlSongs.Tag = firstSong;
-
-            firstSong.IsSelected = true;
-
-            Info__Song__Panel infoSongOutside = new Info__Song__Panel(firstSong);
-
-            Song__Playing__DAO.Instance.currInfoSongPanel = infoSongOutside;
-
-            Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
+            Song__Playing__DAO.Instance.PlayFirstSong(fpnlSongs);
         }
 
         #endregion
@@ -353,24 +357,44 @@ namespace Music__Player.sources.View
 
         public void DeleteSong(string nameSong)
         {
-            List__Song__Playlist songPlaylist = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.Title == nameSong);
+            Context__Menu__DAO.Instance.DeleteSong(fpnlSongs, nameSong);
+        }
 
-            int startIndex = fpnlSongs.Controls.GetChildIndex(songPlaylist);
+        #endregion
 
-            List__Song__Playlist temp = songPlaylist;
+        #region Handle Favorite
 
-            for (int i = startIndex + 1; i < fpnlSongs.Controls.Count; i++)
-            {
-                List__Song__Playlist newItem = (List__Song__Playlist)fpnlSongs.GetNextControl(temp, true);
+        public void SongFavoriteInChildPlaylist(bool isFavorite)
+        {
+            List__Song__Playlist curr = fpnlSongs.Controls.OfType<List__Song__Playlist>().First(c => c.Title == FavoriteDAO.Instance.nameSong);
 
-                newItem.ID = List__Song__Playlist__DAO.Instance.ConvertID(i);
+            curr.IsFavorite = isFavorite;
+        }
 
-                temp = newItem;
-            }
+        void SongFavoriteAllScreen(List__Song__Playlist curr)
+        {
+            FavoriteDAO.Instance.nameSong = curr.Title;
 
-            fpnlSongs.Controls.Remove(songPlaylist);
+            Navigate.Navigation.homeScreen.SongFavoriteInHome(curr.IsFavorite);
 
-            songPlaylist.Dispose();
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SongFavoriteInChildPlaylist(curr.IsFavorite);
+
+            Navigate.Navigation.Instance.historyScreen.SongFavoriteInHistory(curr.IsFavorite);
+        }
+
+        #endregion
+
+        #region Play First Song
+
+        private void btnPlayTop_Click(object sender, EventArgs e)
+        {
+            btnPlayTop.Checked = !btnPlayTop.Checked;
+
+            PlayFirstSong();
+
+            Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying((List__Song__Playlist)fpnlSongs.Tag);
         }
 
         #endregion
