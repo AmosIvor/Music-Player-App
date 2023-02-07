@@ -75,5 +75,23 @@ namespace Music__Player.sources.DAO.CustomDAO
 
             return song;
         }
+
+        public List<Song__History> GetListSongByDate(DateTime fromDate, DateTime toDate)
+        {
+            List<Song__History> listSong = new List<Song__History>();
+
+            string query = "EXEC PROC_Get_List_Song_By_Date @fromDate , @toDate";
+
+            DataTable data = DataProviderDAO.Instance.ExecuteQuery(query, new object[] { fromDate, toDate });
+
+            foreach (DataRow row in data.Rows)
+            {
+                Song__History song = new Song__History(row);
+
+                listSong.Add(song);
+            }
+
+            return listSong;
+        }
     }
 }

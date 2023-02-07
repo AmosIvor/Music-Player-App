@@ -11,6 +11,7 @@ using Guna.UI2.WinForms;
 using Music__Player.Properties;
 using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.CustomDAO;
+using Music__Player.sources.DAO.FavoriteDAO;
 using Music__Player.sources.DAO.HomeDAO;
 
 namespace Music__Player.sources.View
@@ -26,6 +27,8 @@ namespace Music__Player.sources.View
             LoadHistory();
 
             LoadInitialSongBottomBar();
+
+            LoadEventClick();
         }
 
         public void InsertHistory()
@@ -55,10 +58,12 @@ namespace Music__Player.sources.View
 
                 songHistory.MouseClickAddPlaylist += songHistory_MouseClickAddPlaylist;
 
+                songHistory.MouseClickFavorite += songHistory_MouseClickFavorite;
+
                 fpnlSongs.Controls.Add(songHistory);
             }
 
-            LoadEventClick();
+            LoadDateTime();
         }
         private void songHistory_MouseClickPlay(object sender, MouseEventArgs e)
         {
@@ -178,6 +183,20 @@ namespace Music__Player.sources.View
             catch { }
         }
 
+        private void songHistory_MouseClickFavorite(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Song__History curr = Song__History__DAO.Instance.GetSongHistoryFromControlIntoPanel(sender);
+
+                curr.IsFavorite = curr.IsFavorite == false ? true : false;
+
+                SongFavoriteAllScreen(curr);
+            }
+
+            catch { }
+        }
+
         void LoadEventClick()
         {
             Dropdown__Playlist__DAO.Instance.GetAllControls(this);
@@ -208,6 +227,70 @@ namespace Music__Player.sources.View
 
             LoadEventBottomBar();
         }
+        #endregion
+
+        #region Handle Favorite
+
+        public void SongFavoriteInHistory(bool isFavorite)
+        {
+            Song__History curr = fpnlSongs.Controls.OfType<Song__History>().FirstOrDefault(c => c.Title == FavoriteDAO.Instance.nameSong);
+
+            curr.IsFavorite = isFavorite;
+        }
+
+        void SongFavoriteAllScreen(Song__History curr)
+        {
+            FavoriteDAO.Instance.nameSong = curr.Title;
+
+            Navigate.Navigation.homeScreen.SongFavoriteInHome(curr.IsFavorite);
+
+            Navigate.Navigation.Instance.childPlaylistScreen.SongFavoriteInChildPlaylist(curr.IsFavorite);
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SongFavoriteInChildPlaylist(curr.IsFavorite);
+        }
+
+        #endregion
+
+        #region Date Time
+        
+        void LoadDateTime()
+        {
+            DateTime today = DateTime.Now;
+
+            dtpkFromDate.Value = new DateTime(today.Year, today.Month, 1);
+
+            dtpkToDate.Value = dtpkFromDate.Value.AddMonths(1).AddDays(-1);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadListByDate(dtpkFromDate.Value, dtpkToDate.Value);
+        }
+
+        void LoadListByDate(DateTime fromDate, DateTime toDate)
+        {
+            fpnlSongs.Controls.Clear();
+
+            List<Song__History> listSong = Song__History__DAO.Instance.GetListSongByDate(fromDate, toDate);
+
+            foreach (Song__History songHistory in listSong)
+            {
+                songHistory.MouseDoubleClickAdd += songHistory_MouseDoubleClickAdd;
+
+                songHistory.MouseEnterAdd += songHistory_MouseEnterAdd;
+
+                songHistory.MouseLeaveAdd += songHistory_MouseLeaveAdd;
+
+                songHistory.MouseClickPlay += songHistory_MouseClickPlay;
+
+                songHistory.MouseClickAddPlaylist += songHistory_MouseClickAddPlaylist;
+
+                songHistory.MouseClickFavorite += songHistory_MouseClickFavorite;
+
+                fpnlSongs.Controls.Add(songHistory);
+            }
+        }
+
         #endregion
     }
 }
