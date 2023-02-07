@@ -12,6 +12,7 @@ using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.SongDAO;
 using Guna.UI2.WinForms;
 using System.Runtime.InteropServices;
+using Music__Player.sources.DAO.CustomDAO;
 
 namespace Music__Player.sources.View
 {
@@ -20,8 +21,14 @@ namespace Music__Player.sources.View
         public Songs()
         {
             InitializeComponent();
+
             CheckForIllegalCrossThreadCalls = false;
+
             Load_Display_Song();
+
+            LoadInitialSongBottomBar();
+
+            LoadEventClick();
         }
         private void LoadNextSlide()
         {
@@ -68,7 +75,7 @@ namespace Music__Player.sources.View
         private void Load_Display_Song()
         {
             flowLayoutPanel1.Controls.Clear();
-            List<Songs_Display> listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay(songPlayingBar);
+            List<Songs_Display> listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay(songPlayingBottomBar);
             foreach(Songs_Display song in listSongDisplay)
             {
                 flowLayoutPanel1.Controls.Add(song);
@@ -77,7 +84,7 @@ namespace Music__Player.sources.View
         void searchNameSong(string findByName)
         {
             flowLayoutPanel1.Controls.Clear();
-            List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName, songPlayingBar);
+            List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName, songPlayingBottomBar);
             foreach (Songs_Display song in listSongSearch)
             {
                 song.BackColor = Color.Gray;
@@ -90,7 +97,7 @@ namespace Music__Player.sources.View
             if (findByName != "")
             {
                 flowLayoutPanel1.Controls.Clear();
-                List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName, songPlayingBar);
+                List<Songs_Display> listSongSearch = SongDisplayDAO.Instance.GetListSongSearch(findByName, songPlayingBottomBar);
                 foreach (Songs_Display song in listSongSearch)
                 {
                     flowLayoutPanel1.Controls.Add(song);
@@ -105,5 +112,36 @@ namespace Music__Player.sources.View
         {
 
         }
+
+        void LoadEventClick()
+        {
+            Dropdown__Playlist__DAO.Instance.GetAllControls(this);
+        }
+
+        #region Bottom Bar
+
+        void LoadEventBottomBar()
+        {
+            songPlayingBottomBar.MouseClickAddPlaylist += SongPlayingBottomBar_MouseClickAddPlaylist;
+        }
+
+        private void SongPlayingBottomBar_MouseClickAddPlaylist(object sender, EventArgs e)
+        {
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(this);
+        }
+
+        public void LoadSongPlayingBottomBar()
+        {
+            songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+
+        private void LoadInitialSongBottomBar()
+        {
+            songPlayingBottomBar.LoadInitialSong();
+
+            LoadEventBottomBar();
+        }
+
+        #endregion
     }
 }
