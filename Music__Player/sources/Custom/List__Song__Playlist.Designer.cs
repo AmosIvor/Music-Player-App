@@ -184,7 +184,6 @@
             this.btnFavorite.PressedState.Parent = this.btnFavorite;
             this.btnFavorite.Size = new System.Drawing.Size(32, 32);
             this.btnFavorite.TabIndex = 1;
-            this.btnFavorite.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnFavorite_MouseClick);
             // 
             // List__Song__Playlist
             // 

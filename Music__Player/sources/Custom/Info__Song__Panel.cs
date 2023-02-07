@@ -83,6 +83,8 @@ namespace Music__Player.sources.Custom
             pnlBackground.MouseLeave += userControl_MouseLeave;
 
             btnPlay.MouseClick += btnPlay_MouseClickPlay;
+
+            btnFavorite.MouseClick += btnFavorite_MouseClickFavorite;
         }
 
         private string iD;
@@ -138,10 +140,14 @@ namespace Music__Player.sources.Custom
 
                 if (isFavorite == true)
                 {
+                    lblFavorite.Visible = false;
+
                     btnFavorite.Checked = true;
                 }
                 else
                 {
+                    lblFavorite.Visible = true;
+
                     btnFavorite.Checked = false;
                 }
             }
@@ -325,6 +331,20 @@ namespace Music__Player.sources.Custom
             }
         }
 
+        private event MouseEventHandler _mouseClickFavorite;
+
+        public event MouseEventHandler MouseClickFavorite
+        {
+            add
+            {
+                _mouseClickFavorite += value;
+            }
+            remove
+            {
+                _mouseClickFavorite -= value;
+            }
+        }
+
         #endregion
 
         #region Event
@@ -351,18 +371,14 @@ namespace Music__Player.sources.Custom
 
         #endregion
 
-        private void btnFavorite_MouseClick(object sender, MouseEventArgs e)
+        private void btnFavorite_MouseClickFavorite(object sender, MouseEventArgs e)
         {
-            btnFavorite.Checked = !btnFavorite.Checked;
-
-            isFavorite = btnFavorite.Checked;
+            _mouseClickFavorite?.Invoke(sender, e);
         }
 
         private void btnPlay_MouseClick(object sender, MouseEventArgs e)
         {
-            //btnPlay.Checked = !btnPlay.Checked;
-
-            //isPlay = btnPlay.Checked;
+            
         }
     }
 }

@@ -30,12 +30,12 @@
         {
             this.pnlBackground = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblFavorite = new System.Windows.Forms.Label();
+            this.btnFavorite = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblDuration = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblArtist = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.btnFavorite = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.pbImage = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pnlBackground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
@@ -72,6 +72,36 @@
             this.lblFavorite.TabIndex = 6;
             this.lblFavorite.Tag = "";
             this.lblFavorite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnFavorite
+            // 
+            this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
+            this.btnFavorite.CheckedState.Image = global::Music__Player.Properties.Resources.icon_love_green;
+            this.btnFavorite.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnFavorite.CheckedState.Parent = this.btnFavorite;
+            this.btnFavorite.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFavorite.HoverState.Image = global::Music__Player.Properties.Resources.icon_love_green;
+            this.btnFavorite.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnFavorite.HoverState.Parent = this.btnFavorite;
+            this.btnFavorite.Image = global::Music__Player.Properties.Resources.icon_love_black;
+            this.btnFavorite.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnFavorite.Location = new System.Drawing.Point(561, 34);
+            this.btnFavorite.Name = "btnFavorite";
+            this.btnFavorite.PressedState.Parent = this.btnFavorite;
+            this.btnFavorite.Size = new System.Drawing.Size(40, 40);
+            this.btnFavorite.TabIndex = 5;
+            // 
+            // pbImage
+            // 
+            this.pbImage.BorderRadius = 15;
+            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
+            this.pbImage.Location = new System.Drawing.Point(64, 18);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.ShadowDecoration.Parent = this.pbImage;
+            this.pbImage.Size = new System.Drawing.Size(78, 77);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImage.TabIndex = 2;
+            this.pbImage.TabStop = false;
             // 
             // lblDuration
             // 
@@ -120,37 +150,6 @@
             this.lblNumber.Tag = "";
             this.lblNumber.Text = "01";
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnFavorite
-            // 
-            this.btnFavorite.BackColor = System.Drawing.Color.Transparent;
-            this.btnFavorite.CheckedState.Image = global::Music__Player.Properties.Resources.icon_love_green;
-            this.btnFavorite.CheckedState.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnFavorite.CheckedState.Parent = this.btnFavorite;
-            this.btnFavorite.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFavorite.HoverState.Image = global::Music__Player.Properties.Resources.icon_love_green;
-            this.btnFavorite.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnFavorite.HoverState.Parent = this.btnFavorite;
-            this.btnFavorite.Image = global::Music__Player.Properties.Resources.icon_love_black;
-            this.btnFavorite.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnFavorite.Location = new System.Drawing.Point(561, 34);
-            this.btnFavorite.Name = "btnFavorite";
-            this.btnFavorite.PressedState.Parent = this.btnFavorite;
-            this.btnFavorite.Size = new System.Drawing.Size(40, 40);
-            this.btnFavorite.TabIndex = 5;
-            this.btnFavorite.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnFavorite_MouseClick);
-            // 
-            // pbImage
-            // 
-            this.pbImage.BorderRadius = 15;
-            this.pbImage.Image = global::Music__Player.Properties.Resources.draft;
-            this.pbImage.Location = new System.Drawing.Point(64, 18);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.ShadowDecoration.Parent = this.pbImage;
-            this.pbImage.Size = new System.Drawing.Size(78, 77);
-            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImage.TabIndex = 2;
-            this.pbImage.TabStop = false;
             // 
             // btnPlay
             // 

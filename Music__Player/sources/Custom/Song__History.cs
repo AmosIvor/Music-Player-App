@@ -124,10 +124,14 @@ namespace Music__Player.sources.Custom
 
                 if (isFavorite == true)
                 {
+                    lblFavorite.Visible = false;
+
                     btnFavorite.Checked = true;
                 }
                 else
                 {
+                    lblFavorite.Visible = true;
+
                     btnFavorite.Checked = false;
                 }
             }
@@ -306,6 +310,20 @@ namespace Music__Player.sources.Custom
             }
         }
 
+        private event MouseEventHandler _mouseClickFavorite;
+
+        public event MouseEventHandler MouseClickFavorite
+        {
+            add
+            {
+                _mouseClickFavorite += value;
+            }
+            remove
+            {
+                _mouseClickFavorite -= value;
+            }
+        }
+
         #endregion
 
         #region Event
@@ -332,9 +350,7 @@ namespace Music__Player.sources.Custom
 
         private void btnFavorite_MouseClick(object sender, MouseEventArgs e)
         {
-            btnFavorite.Checked = !btnFavorite.Checked;
-
-            isFavorite = btnFavorite.Checked;
+            _mouseClickFavorite?.Invoke(sender, e);
         }
 
         private void btnAddPlaylist_MouseClick(object sender, MouseEventArgs e)
