@@ -77,8 +77,7 @@ namespace Music__Player.sources.Custom
         }
         private void ShadowPanel_Click(object sender, EventArgs e)
         {
-            AlbumOpenSongs instance = new AlbumOpenSongs();
-            
+            Navigate.Navigation.Instance.mainScreen.LoadChildAlbum();
         }
     }
 }
