@@ -1,4 +1,5 @@
-﻿using Music__Player.sources.DAO.CustomDAO;
+﻿using Music__Player.Properties;
+using Music__Player.sources.DAO.CustomDAO;
 using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
 using Music__Player.sources.View;

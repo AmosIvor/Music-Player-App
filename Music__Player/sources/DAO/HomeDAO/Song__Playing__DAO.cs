@@ -103,6 +103,8 @@ namespace Music__Player.sources.DAO.HomeDAO
 
             Navigate.Navigation.Instance.favoriteScreen.LoadSongPlayingBottomBar();
 
+            Navigate.Navigation.Instance.songsScreen.LoadSongPlayingBottomBar();
+
             Navigate.Navigation.homeScreen.LoadSongPlaying();
         }
 

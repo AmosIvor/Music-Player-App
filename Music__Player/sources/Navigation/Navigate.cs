@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Music__Player.sources.Custom;
 using Music__Player.sources.View;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,8 @@ namespace Music__Player.sources.Navigate
         public Child__Playlist childPlaylistScreen = new Child__Playlist();
 
         public Child__Playlist childPlaylistScreenPlayingSong = new Child__Playlist();
+
+        public Child__Album childAlbumScreen = new Child__Album();
 
         public void ShowCurrentScreen(Panel panel, UserControl userControl)
         {
