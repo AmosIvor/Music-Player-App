@@ -26,11 +26,11 @@ namespace Music__Player.sources.DAO.CustomDAO
 
         private Item__Menu__DAO() { }
 
-        public List<Item__Menu> GetListItemMenu()
+        public List<Item__Menu> GetListItemMenu(string nameMenu)
         {
             List<Item__Menu> listItem = new List<Item__Menu>();
 
-            Item__Menu itemRemove = new Item__Menu("Remove from this playlist", ICON.Bin);
+            Item__Menu itemRemove = new Item__Menu("Remove from this " + nameMenu, ICON.Bin);
 
             listItem.Add(itemRemove);
 

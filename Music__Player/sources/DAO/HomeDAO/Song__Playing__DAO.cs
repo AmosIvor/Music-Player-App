@@ -70,6 +70,27 @@ namespace Music__Player.sources.DAO.HomeDAO
             return (mainPanel.Location.X + temp - 44);
         }
 
+        public void PlayFirstSong(FlowLayoutPanel fpnlSongs)
+        {
+            if (fpnlSongs.Controls.Count == 0)
+            {
+                return;
+            }
+            List__Song__Playlist firstSong = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.ID == "01");
+
+            fpnlSongs.Tag = firstSong;
+
+            firstSong.IsSelected = true;
+
+            Info__Song__Panel infoSongOutside = new Info__Song__Panel(firstSong);
+
+            currInfoSongPanel = infoSongOutside;
+
+            Navigate.Navigation.Instance.historyScreen.InsertHistory();
+
+            LoadSongPlayingAllScreen();
+        }
+
         public void LoadSongPlayingAllScreen()
         {
             Navigate.Navigation.Instance.historyScreen.LoadSongPlayingBottomBar();
@@ -79,6 +100,8 @@ namespace Music__Player.sources.DAO.HomeDAO
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadSongPlayingBottomBar();
 
             Navigate.Navigation.Instance.childPlaylistScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.favoriteScreen.LoadSongPlayingBottomBar();
 
             Navigate.Navigation.homeScreen.LoadSongPlaying();
         }
