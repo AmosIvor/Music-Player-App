@@ -71,11 +71,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="sources\Constant\IMAGE.cs" />
-    <Compile Include="sources\Custom\AlbumOpenSongs.cs">
+    <Compile Include="sources\View\Child__Album.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="sources\Custom\AlbumOpenSongs.Designer.cs">
-      <DependentUpon>AlbumOpenSongs.cs</DependentUpon>
+    <Compile Include="sources\View\Child__Album.Designer.cs">
+      <DependentUpon>Child__Album.cs</DependentUpon>
     </Compile>
     <Compile Include="sources\Custom\Album__Display.cs">
       <SubType>UserControl</SubType>
@@ -278,8 +278,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="sources\Custom\AlbumOpenSongs.resx">
-      <DependentUpon>AlbumOpenSongs.cs</DependentUpon>
+    <EmbeddedResource Include="sources\View\Child__Album.resx">
+      <DependentUpon>Child__Album.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Album__Display.resx">
       <DependentUpon>Album__Display.cs</DependentUpon>

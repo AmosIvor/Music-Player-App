@@ -201,6 +201,11 @@ namespace Music__Player
             btnPlaylist.Checked = true;
         }
 
+        public void LoadChildAlbum()
+        {
+            Navigation.Instance.NavigateScreen(panelMainScreen, btnPlaylist, Navigation.Instance.childAlbumScreen, VerticalLine);
+        }
+
         #endregion
 
     }
