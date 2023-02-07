@@ -191,17 +191,20 @@ namespace Music__Player.sources.Custom
 
         private void HandleMouseLeave(object sender, EventArgs e)
         {
-            foreach (Control control in ShadowPanelSong.Controls)
+            if (!isSelectedSong)
             {
-                control.BackColor = Color.WhiteSmoke;
-            }
-            Cursor = Cursors.Default;
-            lbId.Visible = true;
-            picturePlaySong.Visible = false;    
-            ShadowPanelSong.FillColor = Color.WhiteSmoke;
-            if (!isSelectedFavorite)
-            {
-                favoriteBox.Image = null;
+                foreach (Control control in ShadowPanelSong.Controls)
+                {
+                    control.BackColor = Color.WhiteSmoke;
+                }
+                ShadowPanelSong.FillColor = Color.WhiteSmoke;
+                Cursor = Cursors.Default;
+                lbId.Visible = true;
+                picturePlaySong.Visible = false;    
+                if (!isSelectedFavorite)
+                {
+                    favoriteBox.Image = null;
+                }
             }
         }
 
@@ -227,13 +230,37 @@ namespace Music__Player.sources.Custom
             {
                 if (value == true) 
                 {
+                    isSelectedSong = true;
                     picturePlaySong.Image = Properties.Resources.icon_play_blue;
                     playingBottomBar.setPlayingBottomBar(this);
-                    isSelectedSong = true;
+
+                    foreach (Control control in ShadowPanelSong.Controls)
+                    {
+                        control.BackColor = Color.Gainsboro;
+                    }
+                    lbId.Visible = false;
+                    picturePlaySong.Visible = true;
+                    ShadowPanelSong.FillColor = Color.Gainsboro;
                 } else
                 {
-                    picturePlaySong.Image = Properties.Resources.icon_pause_blue;
                     isSelectedSong = false;
+                    picturePlaySong.Image = Properties.Resources.icon_pause_blue;
+
+                    foreach (Control control in ShadowPanelSong.Controls)
+                    {
+                        control.BackColor = Color.WhiteSmoke;
+                    }
+                    ShadowPanelSong.FillColor = Color.WhiteSmoke;
+                    if (!isSelectedSong)
+                    {
+                        lbId.Visible = true;
+                        picturePlaySong.Visible = false;
+                    }
+                    if (!isSelectedFavorite)
+                    {
+                        favoriteBox.Image = null;
+                    }
+
                 }
             }
         }

@@ -89,7 +89,10 @@ namespace Music__Player.sources.Custom
                 {
                     Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
                 }
-                
+                if (songPlaying != null)
+                {
+                    Media__Player.Instance.RunMP3(songPlaying.URL, timerMusic);
+                }
             }
             catch 
             {
@@ -97,16 +100,25 @@ namespace Music__Player.sources.Custom
             }
         }
 
+        private Songs_Display songPlaying;
+        public Songs_Display SongPlaying
+        {
+            get { return songPlaying; }
+            set
+            {
+                songPlaying = value;
+            }
+        }
         public void setPlayingBottomBar(Songs_Display song)
         {
+            songPlaying = song;
             pbImage.Image = song.ImageSong;
             lblNameSong.Text = song.NameSong;
             lblStart.Text = "00:00";
             lblEnd.Text = song.Duration;
             lblArtist.Text = song.Artist;
-
-            Media__Player.Instance.RunMP3(song.URL, timerMusic);
             IsPlay = true;
+            Media__Player.Instance.RunMP3(songPlaying.URL, timerMusic);
         }
     }
 } 

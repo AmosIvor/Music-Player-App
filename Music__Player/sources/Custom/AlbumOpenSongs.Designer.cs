@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbNameAlbum = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.songs_Display1 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display2 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display3 = new Music__Player.sources.Custom.Songs_Display();
@@ -56,6 +55,25 @@
             this.panel1.Size = new System.Drawing.Size(1353, 188);
             this.panel1.TabIndex = 1;
             // 
+            // lbNameAlbum
+            // 
+            this.lbNameAlbum.AutoSize = true;
+            this.lbNameAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameAlbum.Location = new System.Drawing.Point(231, 73);
+            this.lbNameAlbum.Name = "lbNameAlbum";
+            this.lbNameAlbum.Size = new System.Drawing.Size(232, 42);
+            this.lbNameAlbum.TabIndex = 2;
+            this.lbNameAlbum.Text = "Name Album";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(235, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Compilation";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -67,25 +85,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Compilation";
-            // 
-            // lbNameAlbum
-            // 
-            this.lbNameAlbum.AutoSize = true;
-            this.lbNameAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNameAlbum.Location = new System.Drawing.Point(231, 73);
-            this.lbNameAlbum.Name = "lbNameAlbum";
-            this.lbNameAlbum.Size = new System.Drawing.Size(232, 42);
-            this.lbNameAlbum.TabIndex = 2;
-            this.lbNameAlbum.Text = "Name Album";
             // 
             // flowLayoutPanel1
             // 
@@ -104,13 +103,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1184, 560);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(80, 227);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1160, 46);
-            this.panel2.TabIndex = 10;
-            // 
             // songs_Display1
             // 
             this.songs_Display1.Album = null;
@@ -124,6 +116,7 @@
             this.songs_Display1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display1.Name = "songs_Display1";
             this.songs_Display1.NameSong = null;
+            this.songs_Display1.PlayingBottomBar = null;
             this.songs_Display1.Size = new System.Drawing.Size(1126, 84);
             this.songs_Display1.TabIndex = 0;
             this.songs_Display1.URL = null;
@@ -141,6 +134,7 @@
             this.songs_Display2.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display2.Name = "songs_Display2";
             this.songs_Display2.NameSong = null;
+            this.songs_Display2.PlayingBottomBar = null;
             this.songs_Display2.Size = new System.Drawing.Size(1126, 84);
             this.songs_Display2.TabIndex = 1;
             this.songs_Display2.URL = null;
@@ -158,6 +152,7 @@
             this.songs_Display3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display3.Name = "songs_Display3";
             this.songs_Display3.NameSong = null;
+            this.songs_Display3.PlayingBottomBar = null;
             this.songs_Display3.Size = new System.Drawing.Size(1126, 84);
             this.songs_Display3.TabIndex = 2;
             this.songs_Display3.URL = null;
@@ -175,6 +170,7 @@
             this.songs_Display4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display4.Name = "songs_Display4";
             this.songs_Display4.NameSong = null;
+            this.songs_Display4.PlayingBottomBar = null;
             this.songs_Display4.Size = new System.Drawing.Size(1126, 84);
             this.songs_Display4.TabIndex = 3;
             this.songs_Display4.URL = null;
@@ -192,6 +188,7 @@
             this.songs_Display5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display5.Name = "songs_Display5";
             this.songs_Display5.NameSong = null;
+            this.songs_Display5.PlayingBottomBar = null;
             this.songs_Display5.Size = new System.Drawing.Size(1126, 84);
             this.songs_Display5.TabIndex = 4;
             this.songs_Display5.URL = null;
@@ -209,6 +206,7 @@
             this.songs_Display6.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.songs_Display6.Name = "songs_Display6";
             this.songs_Display6.NameSong = null;
+            this.songs_Display6.PlayingBottomBar = null;
             this.songs_Display6.Size = new System.Drawing.Size(1126, 84);
             this.songs_Display6.TabIndex = 5;
             this.songs_Display6.URL = null;
@@ -217,16 +215,17 @@
             // 
             this.song__Playing__BottomBar1.BackColor = System.Drawing.Color.Transparent;
             this.song__Playing__BottomBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.song__Playing__BottomBar1.IsPlay = false;
             this.song__Playing__BottomBar1.Location = new System.Drawing.Point(0, 865);
             this.song__Playing__BottomBar1.Name = "song__Playing__BottomBar1";
             this.song__Playing__BottomBar1.Size = new System.Drawing.Size(1359, 100);
+            this.song__Playing__BottomBar1.SongPlaying = null;
             this.song__Playing__BottomBar1.TabIndex = 0;
             // 
             // AlbumOpenSongs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.song__Playing__BottomBar1);
@@ -254,6 +253,5 @@
         private Songs_Display songs_Display4;
         private Songs_Display songs_Display5;
         private Songs_Display songs_Display6;
-        private System.Windows.Forms.Panel panel2;
     }
 }
