@@ -61,6 +61,11 @@ namespace Music__Player.sources.Custom
             }
 
             this.Close();
+
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
+            Navigate.Navigation.Instance.mainScreen.LoadMenuBarPlaylists();
+
         }
     }
 }

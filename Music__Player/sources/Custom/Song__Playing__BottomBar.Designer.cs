@@ -37,7 +37,7 @@
             this.lblEnd = new System.Windows.Forms.Label();
             this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnPlay = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnAddPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnVolume = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnSkip = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnRepeat = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -59,7 +59,7 @@
             this.guna2Panel3.Controls.Add(this.lblEnd);
             this.guna2Panel3.Controls.Add(this.btnBack);
             this.guna2Panel3.Controls.Add(this.btnPlay);
-            this.guna2Panel3.Controls.Add(this.guna2ImageButton1);
+            this.guna2Panel3.Controls.Add(this.btnAddPlaylist);
             this.guna2Panel3.Controls.Add(this.btnVolume);
             this.guna2Panel3.Controls.Add(this.btnSkip);
             this.guna2Panel3.Controls.Add(this.btnRepeat);
@@ -175,22 +175,23 @@
             this.btnPlay.TabIndex = 5;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // guna2ImageButton1
+            // btnAddPlaylist
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(38, 38);
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::Music__Player.Properties.Resources.icon_add_playlist;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(1263, 30);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(40, 40);
-            this.guna2ImageButton1.TabIndex = 5;
+            this.btnAddPlaylist.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnAddPlaylist.CheckedState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPlaylist.HoverState.ImageSize = new System.Drawing.Size(38, 38);
+            this.btnAddPlaylist.HoverState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.Image = global::Music__Player.Properties.Resources.icon_add_playlist;
+            this.btnAddPlaylist.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnAddPlaylist.Location = new System.Drawing.Point(1263, 30);
+            this.btnAddPlaylist.Name = "btnAddPlaylist";
+            this.btnAddPlaylist.PressedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnAddPlaylist.PressedState.Parent = this.btnAddPlaylist;
+            this.btnAddPlaylist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAddPlaylist.Size = new System.Drawing.Size(40, 40);
+            this.btnAddPlaylist.TabIndex = 5;
+            this.btnAddPlaylist.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAddPlaylist_MouseClick);
             // 
             // btnVolume
             // 
@@ -312,7 +313,7 @@
         private System.Windows.Forms.Label lblEnd;
         private Guna.UI2.WinForms.Guna2ImageButton btnBack;
         private Guna.UI2.WinForms.Guna2ImageButton btnPlay;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAddPlaylist;
         private Guna.UI2.WinForms.Guna2ImageButton btnVolume;
         private Guna.UI2.WinForms.Guna2ImageButton btnSkip;
         private Guna.UI2.WinForms.Guna2ImageButton btnRepeat;

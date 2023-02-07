@@ -90,7 +90,6 @@
             this.btnFavorite.PressedState.Parent = this.btnFavorite;
             this.btnFavorite.Size = new System.Drawing.Size(40, 40);
             this.btnFavorite.TabIndex = 5;
-            this.btnFavorite.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnFavorite_MouseClick);
             // 
             // pbImage
             // 

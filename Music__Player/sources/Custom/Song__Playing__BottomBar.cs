@@ -1,4 +1,4 @@
-﻿using Music__Player.Properties;
+﻿using Music__Player.sources.DAO.CustomDAO;
 using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
 using Music__Player.sources.View;
@@ -17,23 +17,38 @@ namespace Music__Player.sources.Custom
 {
     public partial class Song__Playing__BottomBar : UserControl
     {
-        //private static Song__Playing__Bottom__Bar instance;
-        //public static Song__Playing__Bottom__Bar Instance
-        //{
-        //    get
-        //    {
-        //        if (instance == null)
-        //            instance = new Song__Playing__Bottom__Bar();
-
-        //        return instance;
-        //    }
-
-        //    private set { instance = value; }
-        //}
-
         public Song__Playing__BottomBar()
         {
             InitializeComponent();
+
+            LoadEvent();
+        }
+
+        #region Initial Event
+
+        void LoadEvent()
+        {
+            btnAddPlaylist.Click += btnAddPlaylist_Click;
+        }
+
+        private event EventHandler _mouseClickAddPlaylist;
+
+        public event EventHandler MouseClickAddPlaylist
+        {
+            add
+            {
+                _mouseClickAddPlaylist += value;
+            }
+
+            remove
+            {
+                _mouseClickAddPlaylist -= value;
+            }
+        }
+
+        private void btnAddPlaylist_Click(object sender, EventArgs e)
+        {
+            _mouseClickAddPlaylist?.Invoke(sender, e);
         }
 
         private bool isPlay;
@@ -54,13 +69,19 @@ namespace Music__Player.sources.Custom
             }
         }
 
-        public void LoadSongPlaying()
-        {
-            Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
+        #endregion
 
-            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(Home.musicPlaying, pbImage, lblNameSong, lblArtist, lblEnd);
+        public void LoadSongPlayingByInfoSongPanel()
+        {
+            Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
+
+            LoadInitialSong();
         }
 
+        public void LoadInitialSong()
+        {
+            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(pbImage, lblNameSong, lblArtist, lblEnd);
+        }
         private void timerMusic_Tick(object sender, EventArgs e)
         {
             Media__Player.Instance.EventTimer(timerMusic, btnPlay, sliderTimeMusic, lblStart, lblEnd);
@@ -73,52 +94,25 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay, this);
-            if (IsPlay == true)
-            {
-                IsPlay = false;
-            } else 
-                IsPlay = true;
+            Media__Player.Instance.btnPlay_Click(btnPlay, timerMusic);
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)
         {
             try
             {
-                if (Home.musicPlaying != null)
+                if (Song__Playing__DAO.Instance.currInfoSongPanel != null)
                 {
-                    Media__Player.Instance.RunMP3(Home.musicPlaying.URL, timerMusic);
-                }
-                if (songPlaying != null)
-                {
-                    Media__Player.Instance.RunMP3(songPlaying.URL, timerMusic);
+                    Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
                 }
             }
-            catch 
-            {
-
-            }
+            catch { }
         }
 
-        private Songs_Display songPlaying;
-        public Songs_Display SongPlaying
+        private void btnAddPlaylist_MouseClick(object sender, MouseEventArgs e)
         {
-            get { return songPlaying; }
-            set
-            {
-                songPlaying = value;
-            }
+            Dropdown__Playlist__DAO.Instance.songSelecting = lblNameSong.Text;
         }
-        public void setPlayingBottomBar(Songs_Display song)
-        {
-            songPlaying = song;
-            pbImage.Image = song.ImageSong;
-            lblNameSong.Text = song.NameSong;
-            lblStart.Text = "00:00";
-            lblEnd.Text = song.Duration;
-            lblArtist.Text = song.Artist;
-            IsPlay = true;
-            Media__Player.Instance.RunMP3(songPlaying.URL, timerMusic);
-        }
+
     }
-} 
+}

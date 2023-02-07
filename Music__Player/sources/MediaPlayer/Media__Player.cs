@@ -1,4 +1,5 @@
 ﻿using Guna.UI2.WinForms;
+using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.Custom;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,8 @@ namespace Music__Player.sources.PlayMusic
 
         public void RunMP3(string url, Timer timer)
         {
+            player.settings.volume = 30;
+
             player.URL = url;
             player.controls.play();
             timer.Enabled = true;
@@ -70,7 +73,7 @@ namespace Music__Player.sources.PlayMusic
             player.controls.currentPosition = sliderTimeMusic.Value;
         }
 
-        public void btnPlay_Click(Guna2ImageButton btn, Song__Playing__BottomBar btnBar = null)
+        public void btnPlay_Click(Guna2ImageButton btn, Timer timer, Song__Playing__BottomBar btnBar = null)
         {
             if (player.playState == WMPPlayState.wmppsPlaying)
             {
@@ -83,6 +86,11 @@ namespace Music__Player.sources.PlayMusic
                 btn.Checked = true;
                 btnBar.IsPlay = false;
                 player.controls.play();
+            }
+            else
+            {
+                Navigate.Navigation.homeScreen.SearchAndPlaySong(Song__Playing__DAO.Instance.currInfoSongPanel);
+
             }
         }
     }

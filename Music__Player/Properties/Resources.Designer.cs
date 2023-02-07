@@ -233,6 +233,26 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_bin_32 {
+            get {
+                object obj = ResourceManager.GetObject("icon_bin_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_bin_black1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_bin_black1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_createplaylist_blue {
             get {
                 object obj = ResourceManager.GetObject("icon_createplaylist_blue", resourceCulture);
@@ -246,6 +266,16 @@ namespace Music__Player.Properties {
         internal static System.Drawing.Bitmap icon_createplaylist_white {
             get {
                 object obj = ResourceManager.GetObject("icon_createplaylist_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_dots_black {
+            get {
+                object obj = ResourceManager.GetObject("icon_dots_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +396,26 @@ namespace Music__Player.Properties {
         internal static System.Drawing.Bitmap icon_file_white {
             get {
                 object obj = ResourceManager.GetObject("icon_file_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_heart_blue {
+            get {
+                object obj = ResourceManager.GetObject("icon_heart_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_heart_green {
+            get {
+                object obj = ResourceManager.GetObject("icon_heart_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -496,6 +546,16 @@ namespace Music__Player.Properties {
         internal static System.Drawing.Bitmap icon_pause_blue {
             get {
                 object obj = ResourceManager.GetObject("icon_pause_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_pause_blue_200 {
+            get {
+                object obj = ResourceManager.GetObject("icon_pause_blue_200", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -706,6 +766,16 @@ namespace Music__Player.Properties {
         internal static System.Drawing.Bitmap icon_start_white {
             get {
                 object obj = ResourceManager.GetObject("icon_start_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_triangle_black {
+            get {
+                object obj = ResourceManager.GetObject("icon_triangle_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

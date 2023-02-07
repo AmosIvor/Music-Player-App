@@ -1,10 +1,12 @@
-﻿using Music__Player.sources.Custom;
+﻿using Guna.UI2.WinForms;
+using Music__Player.sources.Custom;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Music__Player.sources.DAO.CustomDAO
 {
@@ -29,7 +31,7 @@ namespace Music__Player.sources.DAO.CustomDAO
         {
             List<Info__Playlist__Panel> listInfoPlaylist = new List<Info__Playlist__Panel>();
 
-            string query = "Select IMAGE_PLAYLIST, NAME_PLAYLIST, QUANTITY from PLAYLISTS";
+            string query = "Select * from PLAYLISTS";
 
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
 
@@ -41,6 +43,25 @@ namespace Music__Player.sources.DAO.CustomDAO
             }
 
             return listInfoPlaylist;
+        }
+
+        public Info__Playlist__Panel GetInfoPlaylistPanelFromControlIntoPanel(object sender)
+        {
+            Control control = sender as Control;
+
+            Guna2ShadowPanel panel = (Guna2ShadowPanel)control.Parent;
+
+            Info__Playlist__Panel parent = (Info__Playlist__Panel)panel.Parent;
+
+            return parent;
+        }
+        public Info__Playlist__Panel GetInfoPlaylistPanelFromPanel(object sender)
+        {
+            Guna2ShadowPanel panel = (Guna2ShadowPanel)sender;
+
+            Info__Playlist__Panel parent = (Info__Playlist__Panel)panel.Parent;
+
+            return parent;
         }
 
     }

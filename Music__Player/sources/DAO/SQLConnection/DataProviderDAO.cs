@@ -27,6 +27,7 @@ namespace Music__Player.sources.DAO
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
             DataTable data = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();

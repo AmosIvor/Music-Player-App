@@ -40,7 +40,7 @@ namespace Music__Player.sources.DAO.CustomDAO
 
             listName.Add(firstRow);
 
-            string query = "Select NAME_PLAYLIST From PLAYLISTS";
+            string query = "Select * From PLAYLISTS";
             
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
 
