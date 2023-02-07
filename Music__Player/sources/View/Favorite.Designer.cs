@@ -35,7 +35,7 @@
             this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnPlayTop = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblNumberSong = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -63,7 +63,7 @@
             this.guna2Panel2.Controls.Add(this.btnBack);
             this.guna2Panel2.Controls.Add(this.btnNext);
             this.guna2Panel2.Controls.Add(this.guna2ImageButton1);
-            this.guna2Panel2.Controls.Add(this.guna2ImageButton3);
+            this.guna2Panel2.Controls.Add(this.btnPlayTop);
             this.guna2Panel2.Controls.Add(this.lblNumberSong);
             this.guna2Panel2.Controls.Add(this.lblTitle);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -123,23 +123,24 @@
             this.guna2ImageButton1.Size = new System.Drawing.Size(200, 200);
             this.guna2ImageButton1.TabIndex = 4;
             // 
-            // guna2ImageButton3
+            // btnPlayTop
             // 
-            this.guna2ImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ImageButton3.CheckedState.Image = global::Music__Player.Properties.Resources.icon_pause_blue_200;
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(190, 190);
-            this.guna2ImageButton3.CheckedState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(190, 190);
-            this.guna2ImageButton3.HoverState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Image = global::Music__Player.Properties.Resources.icon_play_blue_1;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(190, 190);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(852, 123);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(190, 190);
-            this.guna2ImageButton3.PressedState.Parent = this.guna2ImageButton3;
-            this.guna2ImageButton3.Size = new System.Drawing.Size(200, 200);
-            this.guna2ImageButton3.TabIndex = 4;
+            this.btnPlayTop.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlayTop.CheckedState.Image = global::Music__Player.Properties.Resources.icon_pause_blue_200;
+            this.btnPlayTop.CheckedState.ImageSize = new System.Drawing.Size(190, 190);
+            this.btnPlayTop.CheckedState.Parent = this.btnPlayTop;
+            this.btnPlayTop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlayTop.HoverState.ImageSize = new System.Drawing.Size(190, 190);
+            this.btnPlayTop.HoverState.Parent = this.btnPlayTop;
+            this.btnPlayTop.Image = global::Music__Player.Properties.Resources.icon_play_blue_1;
+            this.btnPlayTop.ImageSize = new System.Drawing.Size(190, 190);
+            this.btnPlayTop.Location = new System.Drawing.Point(852, 123);
+            this.btnPlayTop.Name = "btnPlayTop";
+            this.btnPlayTop.PressedState.ImageSize = new System.Drawing.Size(190, 190);
+            this.btnPlayTop.PressedState.Parent = this.btnPlayTop;
+            this.btnPlayTop.Size = new System.Drawing.Size(200, 200);
+            this.btnPlayTop.TabIndex = 4;
+            this.btnPlayTop.Click += new System.EventHandler(this.btnPlayTop_Click);
             // 
             // lblNumberSong
             // 
@@ -394,7 +395,7 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ImageButton btnBack;
         private Guna.UI2.WinForms.Guna2ImageButton btnNext;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
+        private Guna.UI2.WinForms.Guna2ImageButton btnPlayTop;
         private System.Windows.Forms.Label lblNumberSong;
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
