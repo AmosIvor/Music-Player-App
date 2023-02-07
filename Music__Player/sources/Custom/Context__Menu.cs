@@ -18,18 +18,22 @@ namespace Music__Player.sources.Custom
 
         Item__Menu itemMenuAddPlaylist;
 
-        public Context__Menu()
+        string currNameMenu = "";
+
+        public Context__Menu(string nameMenu)
         {
             InitializeComponent();
-
-            LoadContextMenu();
+            
+            LoadContextMenu(nameMenu);
         }
 
-        void LoadContextMenu()
+        void LoadContextMenu(string nameMenu)
         {
+            currNameMenu = nameMenu;
+
             fpnlMain.Controls.Clear();
 
-            List<Item__Menu> listItemMenu = Item__Menu__DAO.Instance.GetListItemMenu();
+            List<Item__Menu> listItemMenu = Item__Menu__DAO.Instance.GetListItemMenu(nameMenu);
 
             foreach (Item__Menu itemMenu in listItemMenu)
             {
@@ -62,7 +66,16 @@ namespace Music__Player.sources.Custom
 
                 Context__Menu__DAO.Instance.pnlContextMenu.Visible = false;
 
-                Context__Menu__DAO.Instance.DeleteSongPlaylist();
+                if (currNameMenu == "playlist")
+                {
+                    Context__Menu__DAO.Instance.DeleteSongPlaylist();
+
+                    return;
+                }
+                else
+                {
+                    Context__Menu__DAO.Instance.DeleteSongFavorite();
+                }
 
                 return;
             }
@@ -78,7 +91,18 @@ namespace Music__Player.sources.Custom
 
             Context__Menu__DAO.Instance.pnlContextMenu.Visible = false;
 
-            Context__Menu__DAO.Instance.DeleteSongPlaylist();
+            if (currNameMenu == "playlist")
+            {
+                Context__Menu__DAO.Instance.DeleteSongPlaylist();
+
+                return;
+            }
+            else
+            {
+                Context__Menu__DAO.Instance.DeleteSongFavorite();
+
+                return;
+            }
         }
 
         private void itemMenu_MouseEnterAdd(object sender, EventArgs e)
@@ -99,9 +123,13 @@ namespace Music__Player.sources.Custom
                 if (itemMenuInside == itemMenuAddPlaylist)
                 {
                     Dropdown__Playlist__DAO.Instance.AddPlaylistEventWhenHoverContextMenu(Context__Menu__DAO.Instance.currScreen);
+
+                    Dropdown__Playlist__DAO.Instance.isFirst = false;
                 }
                 else
                 {
+                    Dropdown__Playlist__DAO.Instance.isFirst = true;
+
                     Dropdown__Playlist__DAO.Instance.HideMenu();
                 }
 
@@ -130,7 +158,5 @@ namespace Music__Player.sources.Custom
 
             itemMenuOutside.IsHovered = false;
         }
-
-        
     }
 }

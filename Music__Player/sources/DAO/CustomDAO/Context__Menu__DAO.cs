@@ -36,15 +36,15 @@ namespace Music__Player.sources.DAO.CustomDAO
 
         public bool isFirst = false;
 
-        public void ShowDropDownPlaylistUserControl(UserControl control, int locationX, int locationY)
+        public void ShowDropDownPlaylistUserControl(UserControl control, string nameMenu, int locationX, int locationY)
         {
             pnlContextMenu.Controls.Clear();
-
+                
             pnlContextMenu.Visible = true;
 
             pnlContextMenu.ShadowStyle = Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
 
-            Context__Menu contextMenu = new Context__Menu();
+            Context__Menu contextMenu = new Context__Menu(nameMenu);
 
             pnlContextMenu.Size = contextMenu.Size;
 
@@ -79,13 +79,13 @@ namespace Music__Player.sources.DAO.CustomDAO
             {
                 pnlContextMenu.Visible = false;
             }
-
+            
             isFirst = false;
         }
 
         public UserControl currScreen;
 
-        public void ShowContextMenuInUserControl(UserControl screen)
+        public void ShowContextMenuInUserControl(UserControl screen, string nameMenu)
         {
             currScreen = screen;
 
@@ -93,7 +93,7 @@ namespace Music__Player.sources.DAO.CustomDAO
 
             clickedPoint = CheckOutOfUserControl(screen, clickedPoint);
 
-            ShowDropDownPlaylistUserControl(screen, clickedPoint.X, clickedPoint.Y);
+            ShowDropDownPlaylistUserControl(screen, nameMenu, clickedPoint.X, clickedPoint.Y);
 
             isFirst = true;
         }
@@ -135,6 +135,15 @@ namespace Music__Player.sources.DAO.CustomDAO
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.DeleteSong(Dropdown__Playlist__DAO.Instance.songSelecting);
         }
 
+        public void DeleteSongFavorite()
+        {
+            string query = "EXEC PROC_Delete_Song_Favorite @name_song";
+
+            DataProviderDAO.Instance.ExecuteNonQuery(query, new object[] { Dropdown__Playlist__DAO.Instance.songSelecting });
+
+            Navigate.Navigation.Instance.favoriteScreen.DeleteSong(Dropdown__Playlist__DAO.Instance.songSelecting);
+        }
+
         bool IsChildPlaylistScreen()
         {
             if (currScreen == Navigate.Navigation.Instance.childPlaylistScreen)
@@ -142,6 +151,28 @@ namespace Music__Player.sources.DAO.CustomDAO
                 return true;
 
             return false;
+        }
+
+        public void DeleteSong(FlowLayoutPanel fpnlSongs, string nameSong)
+        {
+            List__Song__Playlist song = fpnlSongs.Controls.OfType<List__Song__Playlist>().FirstOrDefault(c => c.Title == nameSong);
+
+            int startIndex = fpnlSongs.Controls.GetChildIndex(song);
+
+            List__Song__Playlist temp = song;
+
+            for (int i = startIndex + 1; i < fpnlSongs.Controls.Count; i++)
+            {
+                List__Song__Playlist newItem = (List__Song__Playlist)fpnlSongs.GetNextControl(temp, true);
+
+                newItem.ID = List__Song__Playlist__DAO.Instance.ConvertID(i);
+
+                temp = newItem;
+            }
+
+            fpnlSongs.Controls.Remove(song);
+
+            song.Dispose();
         }
     }
 }
