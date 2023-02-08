@@ -105,6 +105,10 @@ namespace Music__Player.sources.DAO.HomeDAO
 
             Navigate.Navigation.Instance.songsScreen.LoadSongPlayingBottomBar();
 
+            Navigate.Navigation.Instance.childAlbumScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.albumsScreen.LoadSongPlayingBottomBar();
+
             Navigate.Navigation.homeScreen.LoadSongPlaying();
         }
 
