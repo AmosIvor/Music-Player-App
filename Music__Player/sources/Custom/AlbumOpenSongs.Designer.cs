@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbNameAlbum = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.songs_Display1 = new Music__Player.sources.Custom.Songs_Display();
@@ -48,7 +47,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.lbNameAlbum);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2PictureBox1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -59,25 +57,15 @@
             // 
             this.lbNameAlbum.AutoSize = true;
             this.lbNameAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNameAlbum.Location = new System.Drawing.Point(231, 73);
+            this.lbNameAlbum.Location = new System.Drawing.Point(234, 50);
             this.lbNameAlbum.Name = "lbNameAlbum";
-            this.lbNameAlbum.Size = new System.Drawing.Size(232, 42);
+            this.lbNameAlbum.Size = new System.Drawing.Size(254, 42);
             this.lbNameAlbum.TabIndex = 2;
-            this.lbNameAlbum.Text = "Name Album";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(235, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Compilation";
+            this.lbNameAlbum.Text = "Nhật ký lớp tôi";
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2PictureBox1.Image = global::Music__Player.Properties.Resources.draft;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
@@ -219,7 +207,6 @@
             this.song__Playing__BottomBar1.Location = new System.Drawing.Point(0, 865);
             this.song__Playing__BottomBar1.Name = "song__Playing__BottomBar1";
             this.song__Playing__BottomBar1.Size = new System.Drawing.Size(1359, 100);
-            this.song__Playing__BottomBar1.SongPlaying = null;
             this.song__Playing__BottomBar1.TabIndex = 0;
             // 
             // AlbumOpenSongs
@@ -244,7 +231,6 @@
         private Song__Playing__BottomBar song__Playing__BottomBar1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbNameAlbum;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Songs_Display songs_Display1;

@@ -30,25 +30,6 @@ namespace Music__Player.sources.View
                 Thread.Sleep(1000);
                 userControl.BringToFront();
             }
-
-        }
-
-        private void RadioBtn1_CheckedChanged(object sender, EventArgs e)
-        {
-            slide11.BringToFront();
-        }
-
-        private void RadioBtn2_CheckedChanged(object sender, EventArgs e)
-        {
-            slide21.BringToFront();
-        }
-        private void RadioBtn3_CheckedChanged(object sender, EventArgs e)
-        {
-            slide31.BringToFront();
-        }
-        private void RadioBtn4_CheckedChanged(object sender, EventArgs e)
-        {
-            slide41.BringToFront();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -101,9 +82,5 @@ namespace Music__Player.sources.View
             searchBar.Focus();
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

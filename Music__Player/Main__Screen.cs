@@ -203,5 +203,12 @@ namespace Music__Player
 
         #endregion
 
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn đăng xuất không", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Close();
+            }    
+        }
     }
 }

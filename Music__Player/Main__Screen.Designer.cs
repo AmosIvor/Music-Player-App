@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main__Screen));
             this.dragForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.fpnlPlaylists = new System.Windows.Forms.FlowLayoutPanel();
             this.name__Playlist__Button6 = new Music__Player.sources.Custom.Name__Playlist__Button();
@@ -66,6 +67,7 @@
             // panelSlideBar
             // 
             this.panelSlideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.panelSlideBar.Controls.Add(this.btnDangXuat);
             this.panelSlideBar.Controls.Add(this.guna2Separator1);
             this.panelSlideBar.Controls.Add(this.fpnlPlaylists);
             this.panelSlideBar.Controls.Add(this.VerticalLine);
@@ -90,6 +92,42 @@
             this.panelSlideBar.ShadowDecoration.Parent = this.panelSlideBar;
             this.panelSlideBar.Size = new System.Drawing.Size(242, 965);
             this.panelSlideBar.TabIndex = 1;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.BorderRadius = 10;
+            this.btnDangXuat.BorderThickness = 1;
+            this.btnDangXuat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDangXuat.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnDangXuat.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnDangXuat.CheckedState.Parent = this.btnDangXuat;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangXuat.CustomImages.Image = global::Music__Player.Properties.Resources.icon_power_black;
+            this.btnDangXuat.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangXuat.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
+            this.btnDangXuat.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnDangXuat.CustomImages.Parent = this.btnDangXuat;
+            this.btnDangXuat.FillColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.HoverState.Parent = this.btnDangXuat;
+            this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangXuat.Location = new System.Drawing.Point(36, 908);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ShadowDecoration.Parent = this.btnDangXuat;
+            this.btnDangXuat.Size = new System.Drawing.Size(170, 45);
+            this.btnDangXuat.TabIndex = 7;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDangXuat.TextOffset = new System.Drawing.Point(47, 0);
+            this.btnDangXuat.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Separator1
             // 
@@ -598,6 +636,7 @@
         private sources.Custom.Name__Playlist__Button name__Playlist__Button2;
         private sources.Custom.Name__Playlist__Button name__Playlist__Button3;
         private sources.Custom.Name__Playlist__Button name__Playlist__Button6;
+        private Guna.UI2.WinForms.Guna2Button btnDangXuat;
     }
 }
 

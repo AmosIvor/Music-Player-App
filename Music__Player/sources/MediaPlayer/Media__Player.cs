@@ -90,7 +90,6 @@ namespace Music__Player.sources.PlayMusic
             else
             {
                 Navigate.Navigation.homeScreen.SearchAndPlaySong(Song__Playing__DAO.Instance.currInfoSongPanel);
-
             }
         }
     }

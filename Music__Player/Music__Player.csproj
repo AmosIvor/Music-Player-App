@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main__Screen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,7 @@
     <Compile Include="sources\Custom\Song__Playing__BottomBar.Designer.cs">
       <DependentUpon>Song__Playing__BottomBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="sources\DAO\AccountDAO.cs" />
     <Compile Include="sources\DAO\AlbumDAO\AlbumDisplayDAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Context__Menu__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Form__Background__DAO.cs" />
@@ -270,13 +277,16 @@
     <Compile Include="sources\View\Favorite.Designer.cs">
       <DependentUpon>Favorite.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main__Screen.resx">
       <DependentUpon>Main__Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\AlbumOpenSongs.resx">
       <DependentUpon>AlbumOpenSongs.cs</DependentUpon>
@@ -682,6 +692,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_heart_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
