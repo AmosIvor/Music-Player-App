@@ -32,6 +32,11 @@ namespace Music__Player.sources.View
             LoadEventClick();
         }
 
+        public void LoadTitle()
+        {
+            lblNumberSong.Text = $"Amos Ivor - {fpnlSongs.Controls.Count} songs";
+        }
+
         void LoadFavorite()
         {
             List<List__Song__Playlist> listSong = FavoriteDAO.Instance.GetListSongFavorite();
@@ -56,6 +61,8 @@ namespace Music__Player.sources.View
 
                 fpnlSongs.Controls.Add(songFavorite);
             }
+
+            LoadTitle();
         }
 
         private void songFavorite_MouseClickPlay(object sender, MouseEventArgs e)
