@@ -180,6 +180,8 @@ namespace Music__Player.sources.View
 
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadChildPlaylist(curr.ID_Playlist);
 
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadTitle(curr.Image_Playlist, curr.Name_Playlist);
+
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.PlayFirstSong();
         }
         private void InfoPlaylist_MouseDoubleClickAdd(object sender, MouseEventArgs e)
@@ -205,6 +207,8 @@ namespace Music__Player.sources.View
 
                 Navigate.Navigation.Instance.childPlaylistScreen.LoadChildPlaylist(infoPlaylistInside.ID_Playlist);
 
+                Navigate.Navigation.Instance.childPlaylistScreen.LoadTitle(infoPlaylistInside.Image_Playlist, infoPlaylistInside.Name_Playlist);
+
                 return;
             }
 
@@ -227,6 +231,7 @@ namespace Music__Player.sources.View
 
             Navigate.Navigation.Instance.childPlaylistScreen.LoadChildPlaylist(infoPlaylistOutside.ID_Playlist);
 
+            Navigate.Navigation.Instance.childPlaylistScreen.LoadTitle(infoPlaylistOutside.Image_Playlist, infoPlaylistOutside.Name_Playlist);
         }
         private void InfoPlaylist_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -303,6 +308,7 @@ namespace Music__Player.sources.View
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (pnlClicked.Tag == null)
+
                 return;
 
             Info__Playlist__Panel prevClicked = (Info__Playlist__Panel)pnlClicked.Tag;
@@ -341,6 +347,8 @@ namespace Music__Player.sources.View
                 {
                     Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadChildPlaylist(prevClicked.ID_Playlist);
 
+                    Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadTitle(prevClicked.Image_Playlist, prevClicked.Name_Playlist);
+
                     Context__Menu__DAO.Instance.currChildPlaylist = prevClicked.ID_Playlist;
                 }
 
@@ -353,5 +361,19 @@ namespace Music__Player.sources.View
 
         #endregion
 
+        #region Number Playlist
+        
+        public void LoadNumberSongInPlaylist()
+        {
+            if (pnlClicked.Tag == null)
+
+                return;
+
+            Info__Playlist__Panel prevClicked = (Info__Playlist__Panel)pnlClicked.Tag;
+
+            Navigate.Navigation.Instance.childPlaylistScreen.LoadNumberSongInPlayist(prevClicked);
+        }
+
+        #endregion
     }
 }

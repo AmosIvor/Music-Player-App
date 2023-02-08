@@ -39,21 +39,21 @@
             this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.slide31 = new Music__Player.sources.Custom.slide3();
+            this.slide41 = new Music__Player.sources.Custom.slide4();
+            this.slide21 = new Music__Player.sources.Custom.slide2();
+            this.slide11 = new Music__Player.sources.Custom.slide1();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblEnd = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.songs_Display1 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display2 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display3 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display4 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display5 = new Music__Player.sources.Custom.Songs_Display();
             this.songs_Display6 = new Music__Player.sources.Custom.Songs_Display();
-            this.slide31 = new Music__Player.sources.Custom.slide3();
-            this.slide41 = new Music__Player.sources.Custom.slide4();
-            this.slide21 = new Music__Player.sources.Custom.slide2();
-            this.slide11 = new Music__Player.sources.Custom.slide1();
-            this.songPlayingBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
+            this.lblEnd = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.userControl11 = new Music__Player.sources.Custom.slide1();
             this.guna2Panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -162,6 +162,38 @@
             this.panel1.Size = new System.Drawing.Size(1359, 295);
             this.panel1.TabIndex = 7;
             // 
+            // slide31
+            // 
+            this.slide31.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide31.BackgroundImage")));
+            this.slide31.Location = new System.Drawing.Point(114, -2);
+            this.slide31.Name = "slide31";
+            this.slide31.Size = new System.Drawing.Size(1126, 297);
+            this.slide31.TabIndex = 4;
+            // 
+            // slide41
+            // 
+            this.slide41.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide41.BackgroundImage")));
+            this.slide41.Location = new System.Drawing.Point(114, -2);
+            this.slide41.Name = "slide41";
+            this.slide41.Size = new System.Drawing.Size(1126, 297);
+            this.slide41.TabIndex = 3;
+            // 
+            // slide21
+            // 
+            this.slide21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide21.BackgroundImage")));
+            this.slide21.Location = new System.Drawing.Point(114, 0);
+            this.slide21.Name = "slide21";
+            this.slide21.Size = new System.Drawing.Size(1126, 297);
+            this.slide21.TabIndex = 1;
+            // 
+            // slide11
+            // 
+            this.slide11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide11.BackgroundImage")));
+            this.slide11.Location = new System.Drawing.Point(114, -2);
+            this.slide11.Name = "slide11";
+            this.slide11.Size = new System.Drawing.Size(1126, 297);
+            this.slide11.TabIndex = 0;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AllowDrop = true;
@@ -178,29 +210,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1184, 414);
             this.flowLayoutPanel1.TabIndex = 8;
-            // 
-            // lblEnd
-            // 
-            this.lblEnd.AutoSize = true;
-            this.lblEnd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnd.Location = new System.Drawing.Point(1312, 6);
-            this.lblEnd.Name = "lblEnd";
-            this.lblEnd.Size = new System.Drawing.Size(44, 20);
-            this.lblEnd.TabIndex = 11;
-            this.lblEnd.Text = "05:20";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.songPlayingBar);
-            this.guna2Panel1.Controls.Add(this.lblEnd);
-            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
-            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 868);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(1359, 97);
-            this.guna2Panel1.TabIndex = 0;
             // 
             // songs_Display1
             // 
@@ -310,47 +319,38 @@
             this.songs_Display6.TabIndex = 5;
             this.songs_Display6.URL = null;
             // 
-            // slide31
+            // lblEnd
             // 
-            this.slide31.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide31.BackgroundImage")));
-            this.slide31.Location = new System.Drawing.Point(114, -2);
-            this.slide31.Name = "slide31";
-            this.slide31.Size = new System.Drawing.Size(1126, 297);
-            this.slide31.TabIndex = 4;
+            this.lblEnd.AutoSize = true;
+            this.lblEnd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnd.Location = new System.Drawing.Point(1312, 6);
+            this.lblEnd.Name = "lblEnd";
+            this.lblEnd.Size = new System.Drawing.Size(44, 20);
+            this.lblEnd.TabIndex = 11;
+            this.lblEnd.Text = "05:20";
             // 
-            // slide41
+            // guna2Panel1
             // 
-            this.slide41.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide41.BackgroundImage")));
-            this.slide41.Location = new System.Drawing.Point(114, -2);
-            this.slide41.Name = "slide41";
-            this.slide41.Size = new System.Drawing.Size(1126, 297);
-            this.slide41.TabIndex = 3;
+            this.guna2Panel1.Controls.Add(this.songPlayingBottomBar);
+            this.guna2Panel1.Controls.Add(this.lblEnd);
+            this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel1.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 868);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(1359, 97);
+            this.guna2Panel1.TabIndex = 0;
             // 
-            // slide21
+            // songPlayingBottomBar
             // 
-            this.slide21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide21.BackgroundImage")));
-            this.slide21.Location = new System.Drawing.Point(114, 0);
-            this.slide21.Name = "slide21";
-            this.slide21.Size = new System.Drawing.Size(1126, 297);
-            this.slide21.TabIndex = 1;
-            // 
-            // slide11
-            // 
-            this.slide11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("slide11.BackgroundImage")));
-            this.slide11.Location = new System.Drawing.Point(114, -2);
-            this.slide11.Name = "slide11";
-            this.slide11.Size = new System.Drawing.Size(1126, 297);
-            this.slide11.TabIndex = 0;
-            // 
-            // songPlayingBar
-            // 
-            this.songPlayingBar.BackColor = System.Drawing.Color.Transparent;
-            this.songPlayingBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.songPlayingBar.IsPlay = false;
-            this.songPlayingBar.Location = new System.Drawing.Point(0, -3);
-            this.songPlayingBar.Name = "songPlayingBar";
-            this.songPlayingBar.Size = new System.Drawing.Size(1359, 100);
-            this.songPlayingBar.TabIndex = 12;
+            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
+            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.songPlayingBottomBar.IsPlay = false;
+            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, -3);
+            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
+            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
+            this.songPlayingBottomBar.TabIndex = 12;
             // 
             // userControl11
             // 
@@ -407,6 +407,6 @@
         private Guna.UI2.WinForms.Guna2TextBox searchBar;
         private System.Windows.Forms.Label lblEnd;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Custom.Song__Playing__BottomBar songPlayingBar;
+        private Custom.Song__Playing__BottomBar songPlayingBottomBar;
     }
 }

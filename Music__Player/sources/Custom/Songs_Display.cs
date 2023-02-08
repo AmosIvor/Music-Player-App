@@ -37,10 +37,10 @@ namespace Music__Player.sources.Custom
 
             this.listSongs = listSongs;
 
-            if (row["ISFAVORITE"].ToString() == "False")           
-                IsSelectedFavorite = false;
-            else
-                IsSelectedFavorite = true;
+            //if (row["ISFAVORITE"].ToString() == "False")           
+            //    IsSelectedFavorite = false;
+            //else
+            //    IsSelectedFavorite = true;
 
             playingBottomBar = playingBar;
         }

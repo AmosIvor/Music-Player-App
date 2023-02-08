@@ -32,6 +32,11 @@ namespace Music__Player.sources.View
             LoadEventClick();
         }
 
+        public void LoadTitle()
+        {
+            lblNumberSong.Text = $"Amos Ivor - {fpnlSongs.Controls.Count} songs";
+        }
+
         void LoadFavorite()
         {
             List<List__Song__Playlist> listSong = FavoriteDAO.Instance.GetListSongFavorite();
@@ -56,6 +61,8 @@ namespace Music__Player.sources.View
 
                 fpnlSongs.Controls.Add(songFavorite);
             }
+
+            LoadTitle();
         }
 
         private void songFavorite_MouseClickPlay(object sender, MouseEventArgs e)
@@ -80,8 +87,6 @@ namespace Music__Player.sources.View
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
 
             Navigate.Navigation.Instance.historyScreen.InsertHistory();
-
-            btnPlayTop.Checked = true;
 
             Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
         }
@@ -259,34 +264,11 @@ namespace Music__Player.sources.View
 
         #endregion
 
-        #region Button Play Top
-
-        private void btnPlayTop_Click(object sender, EventArgs e)
-        {
-            btnPlayTop.Checked = !btnPlayTop.Checked;
-
-            Song__Playing__DAO.Instance.PlayFirstSong(fpnlSongs);
-        }
-
-        
-
-        #endregion
-
         #region Pause Song
-
-        
 
         public void PauseSong()
         {
-            if (btnPlayTop.Checked == true)
-            {
-                btnPlayTop.Checked = false;
-            }
-
-            if (fpnlSongs.Tag == null)
-            {
-                return;
-            }
+            
         }
 
         #endregion

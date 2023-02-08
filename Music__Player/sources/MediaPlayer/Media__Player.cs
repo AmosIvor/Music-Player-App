@@ -44,6 +44,7 @@ namespace Music__Player.sources.PlayMusic
         {
             player.settings.volume = 30;
             player.URL = url;
+
             player.controls.play();
             
             timer.Enabled = true;

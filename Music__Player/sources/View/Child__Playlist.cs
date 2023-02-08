@@ -29,29 +29,16 @@ namespace Music__Player.sources.View
         {
             InitializeComponent();
 
-            FormatDataGridView();
-
             LoadInitialSongBottomBar();
         }
 
         public void LoadChildPlaylist(int idPlaylist)
         {
-            LoadTitle(idPlaylist);
+            //LoadTitle(idPlaylist);
 
             LoadListSongByIdPlaylist(idPlaylist);
 
             LoadEventClick();
-        }
-
-        void FormatDataGridView()
-        {
-            dtgvSongs.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dtgvSongs.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dtgvSongs.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dtgvSongs.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         #region Load Song by Playlist
@@ -81,6 +68,8 @@ namespace Music__Player.sources.View
 
                 fpnlSongs.Controls.Add(songByPlaylist);
             }
+
+            LoadNumberSong();
         }
 
         private void songByPlaylist_MouseClickPlay(object sender, MouseEventArgs e)
@@ -254,16 +243,32 @@ namespace Music__Player.sources.View
         #endregion
 
         #region Load Title
+        //public void LoadTitle(int idPlaylist)
+        //{
+        //    PlaylistDTO titlePlaylist = PlaylistDAO.Instance.GetPlaylistByID(idPlaylist);
 
-        public void LoadTitle(int idPlaylist)
+        //    pbPlaylist.Image = titlePlaylist.Image_Playlist;
+
+        //    lblTitle.Text = titlePlaylist.Name_Playlist;
+
+        //    lblNumberSong.Text = "Amos Ivor - " + titlePlaylist.Quantity + " songs";
+        //}
+
+        public void LoadTitle(Image imagePlaylist, string title)
         {
-            PlaylistDTO titlePlaylist = PlaylistDAO.Instance.GetPlaylistByID(idPlaylist);
+            pbPlaylist.Image = imagePlaylist;
 
-            pbPlaylist.Image = titlePlaylist.Image_Playlist;
+            lblTitle.Text = title;
+        }
 
-            lblTitle.Text = titlePlaylist.Name_Playlist;
+        public void LoadNumberSong()
+        {
+            lblNumberSong.Text = $"Amos Ivor - {fpnlSongs.Controls.Count} songs";
+        }
 
-            lblNumberSong.Text = "Amos Ivor - " + titlePlaylist.Quantity + " songs";
+        public void LoadNumberSongInPlayist(Info__Playlist__Panel infoPlaylist)
+        {
+            infoPlaylist.Number_Song = fpnlSongs.Controls.Count + " songs";
         }
 
         #endregion
@@ -299,6 +304,7 @@ namespace Music__Player.sources.View
 
             LoadEventBottomBar();
         }
+
         #endregion
 
         #region Play First Song 
@@ -384,19 +390,5 @@ namespace Music__Player.sources.View
 
         #endregion
 
-        #region Play First Song
-
-        private void btnPlayTop_Click(object sender, EventArgs e)
-        {
-            btnPlayTop.Checked = !btnPlayTop.Checked;
-
-            PlayFirstSong();
-
-            Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
-
-            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying((List__Song__Playlist)fpnlSongs.Tag);
-        }
-
-        #endregion
     }
 }

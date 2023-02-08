@@ -573,7 +573,16 @@ namespace Music__Player.sources.View
             Navigate.Navigation.Instance.historyScreen.LoadSongPlayingBottomBar();
 
             Navigate.Navigation.Instance.favoriteScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.songsScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.albumsScreen.LoadAlbum();
+
+            Navigate.Navigation.Instance.albumsScreen.LoadSongPlayingBottomBar();
+
+            Navigate.Navigation.Instance.childAlbumScreen.LoadSongPlayingBottomBar();
         }
+
         #endregion
 
         #region Handle Favorite

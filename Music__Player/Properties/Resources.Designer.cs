@@ -843,8 +843,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap music1 {
         internal static System.Drawing.Bitmap login {
             get {
+                object obj = ResourceManager.GetObject("music1", resourceCulture);
                 object obj = ResourceManager.GetObject("login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -853,8 +855,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap music2 {
         internal static System.Drawing.Bitmap login1 {
             get {
+                object obj = ResourceManager.GetObject("music2", resourceCulture);
                 object obj = ResourceManager.GetObject("login1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -863,8 +867,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap music3 {
         internal static System.Drawing.Bitmap logout {
             get {
+                object obj = ResourceManager.GetObject("music3", resourceCulture);
                 object obj = ResourceManager.GetObject("logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -873,8 +879,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap music4 {
         internal static System.Drawing.Bitmap logoutIcon {
             get {
+                object obj = ResourceManager.GetObject("music4", resourceCulture);
                 object obj = ResourceManager.GetObject("logoutIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -883,8 +891,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mute_100px {
         internal static System.Drawing.Bitmap music1 {
             get {
+                object obj = ResourceManager.GetObject("mute_100px", resourceCulture);
                 object obj = ResourceManager.GetObject("music1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -913,8 +923,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pause_100px {
         internal static System.Drawing.Bitmap music4 {
             get {
+                object obj = ResourceManager.GetObject("pause_100px", resourceCulture);
                 object obj = ResourceManager.GetObject("music4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -923,8 +935,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pause_100px_png1 {
         internal static System.Drawing.Bitmap mute_100px {
             get {
+                object obj = ResourceManager.GetObject("pause_100px_png1", resourceCulture);
                 object obj = ResourceManager.GetObject("mute_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -933,8 +947,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play_100px {
         internal static System.Drawing.Bitmap pause_100px {
             get {
+                object obj = ResourceManager.GetObject("play_100px", resourceCulture);
                 object obj = ResourceManager.GetObject("pause_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -943,8 +959,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play_100px_png1 {
         internal static System.Drawing.Bitmap pause_100px_png1 {
             get {
+                object obj = ResourceManager.GetObject("play_100px_png1", resourceCulture);
                 object obj = ResourceManager.GetObject("pause_100px_png1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -953,8 +971,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap radio {
         internal static System.Drawing.Bitmap play_100px {
             get {
+                object obj = ResourceManager.GetObject("radio", resourceCulture);
                 object obj = ResourceManager.GetObject("play_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -963,8 +983,10 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap radio_button {
         internal static System.Drawing.Bitmap play_100px_png1 {
             get {
+                object obj = ResourceManager.GetObject("radio-button", resourceCulture);
                 object obj = ResourceManager.GetObject("play_100px_png1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
@@ -973,9 +995,9 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap radio {
+        internal static System.Drawing.Bitmap repeat_100px {
             get {
-                object obj = ResourceManager.GetObject("radio", resourceCulture);
+                object obj = ResourceManager.GetObject("repeat_100px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -983,9 +1005,9 @@ namespace Music__Player.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap radio_button {
+        internal static System.Drawing.Bitmap repeat_100px_png1 {
             get {
-                object obj = ResourceManager.GetObject("radio-button", resourceCulture);
+                object obj = ResourceManager.GetObject("repeat_100px_png1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

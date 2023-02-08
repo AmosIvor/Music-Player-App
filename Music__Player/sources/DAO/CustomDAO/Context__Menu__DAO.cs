@@ -129,10 +129,14 @@ namespace Music__Player.sources.DAO.CustomDAO
             {
                 Navigate.Navigation.Instance.childPlaylistScreen.DeleteSong(Dropdown__Playlist__DAO.Instance.songSelecting);
 
+                Navigate.Navigation.Instance.childPlaylistScreen.LoadNumberSong();
+
                 return;
             }
 
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.DeleteSong(Dropdown__Playlist__DAO.Instance.songSelecting);
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadNumberSong();
         }
 
         public void DeleteSongFavorite()
@@ -142,6 +146,8 @@ namespace Music__Player.sources.DAO.CustomDAO
             DataProviderDAO.Instance.ExecuteNonQuery(query, new object[] { Dropdown__Playlist__DAO.Instance.songSelecting });
 
             Navigate.Navigation.Instance.favoriteScreen.DeleteSong(Dropdown__Playlist__DAO.Instance.songSelecting);
+
+            Navigate.Navigation.Instance.favoriteScreen.LoadTitle();
         }
 
         bool IsChildPlaylistScreen()

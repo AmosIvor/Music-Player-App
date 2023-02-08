@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Music__Player.sources.Constant;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -106,6 +107,22 @@ namespace Music__Player.sources.Custom
         {
             get { return name_album; }
             set { name_album = value; lblAlbum.Text = value; }
+        }
+
+        private bool isAdd;
+
+        public bool IsAdd
+        {
+            get { return isAdd;}
+            set 
+            {
+                isAdd = value; 
+                
+                if (isAdd == true)
+                {
+                    btnOption.Image = ICON.Add_Playlist;
+                }
+            }
         }
 
         private bool isFavorite;
