@@ -303,6 +303,7 @@ namespace Music__Player.sources.View
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (pnlClicked.Tag == null)
+
                 return;
 
             Info__Playlist__Panel prevClicked = (Info__Playlist__Panel)pnlClicked.Tag;

@@ -254,7 +254,6 @@ namespace Music__Player.sources.View
         #endregion
 
         #region Load Title
-
         public void LoadTitle(int idPlaylist)
         {
             PlaylistDTO titlePlaylist = PlaylistDAO.Instance.GetPlaylistByID(idPlaylist);
@@ -299,6 +298,7 @@ namespace Music__Player.sources.View
 
             LoadEventBottomBar();
         }
+
         #endregion
 
         #region Play First Song 
