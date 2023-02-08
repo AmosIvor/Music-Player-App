@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main__Screen));
             this.dragForm = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.fpnlPlaylists = new System.Windows.Forms.FlowLayoutPanel();
             this.VerticalLine = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -66,7 +67,7 @@
             // 
             this.panelSlideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.panelSlideBar.Controls.Add(this.btnUser);
-            this.panelSlideBar.Controls.Add(this.btnDangXuat);
+            this.panelSlideBar.Controls.Add(this.btnLogOut);
             this.panelSlideBar.Controls.Add(this.guna2Separator1);
             this.panelSlideBar.Controls.Add(this.fpnlPlaylists);
             this.panelSlideBar.Controls.Add(this.VerticalLine);
@@ -92,68 +93,69 @@
             // 
             // btnUser
             // 
+            this.btnUser.BorderColor = System.Drawing.Color.White;
             this.btnUser.BorderRadius = 20;
+            this.btnUser.BorderThickness = 2;
             this.btnUser.CheckedState.Parent = this.btnUser;
-            this.btnUser.CustomImages.Image = global::Music__Player.Properties.Resources.user;
+            this.btnUser.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImages.Image")));
             this.btnUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUser.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnUser.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnUser.CustomImages.Parent = this.btnUser;
-            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.FillColor = System.Drawing.Color.Transparent;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnUser.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnUser.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnUser.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnUser.HoverState.Parent = this.btnUser;
             this.btnUser.Location = new System.Drawing.Point(27, 23);
             this.btnUser.Name = "btnUser";
             this.btnUser.PressedColor = System.Drawing.Color.Transparent;
+            this.btnUser.PressedDepth = 0;
             this.btnUser.ShadowDecoration.Parent = this.btnUser;
             this.btnUser.Size = new System.Drawing.Size(187, 45);
             this.btnUser.TabIndex = 8;
             this.btnUser.Text = "An Hung";
             this.btnUser.TextOffset = new System.Drawing.Point(3, 0);
             // 
-            // btnDangXuat
+            // btnLogOut
             // 
-            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.BorderColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.BorderRadius = 10;
-            this.btnDangXuat.BorderThickness = 1;
-            this.btnDangXuat.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDangXuat.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnDangXuat.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnDangXuat.CheckedState.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.CheckedState.Parent = this.btnDangXuat;
-            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangXuat.CustomImages.Image = global::Music__Player.Properties.Resources.logoutIcon;
-            this.btnDangXuat.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDangXuat.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
-            this.btnDangXuat.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDangXuat.CustomImages.Parent = this.btnDangXuat;
-            this.btnDangXuat.FillColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.HoverState.Parent = this.btnDangXuat;
-            this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDangXuat.Location = new System.Drawing.Point(36, 908);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.ShadowDecoration.Parent = this.btnDangXuat;
-            this.btnDangXuat.Size = new System.Drawing.Size(170, 45);
-            this.btnDangXuat.TabIndex = 7;
-            this.btnDangXuat.Text = "Đăng xuất";
-            this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDangXuat.TextOffset = new System.Drawing.Point(47, 0);
-            this.btnDangXuat.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.BorderRadius = 10;
+            this.btnLogOut.BorderThickness = 1;
+            this.btnLogOut.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnLogOut.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnLogOut.CheckedState.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.CheckedState.Parent = this.btnLogOut;
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOut.CustomImages.Image = global::Music__Player.Properties.Resources.logoutIcon;
+            this.btnLogOut.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.CustomImages.ImageOffset = new System.Drawing.Point(7, 0);
+            this.btnLogOut.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnLogOut.CustomImages.Parent = this.btnLogOut;
+            this.btnLogOut.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnLogOut.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.HoverState.Parent = this.btnLogOut;
+            this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.Location = new System.Drawing.Point(36, 902);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.ShadowDecoration.Parent = this.btnLogOut;
+            this.btnLogOut.Size = new System.Drawing.Size(170, 45);
+            this.btnLogOut.TabIndex = 7;
+            this.btnLogOut.Text = "Log out";
+            this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogOut.TextOffset = new System.Drawing.Point(47, 0);
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(55, 586);
+            this.guna2Separator1.Location = new System.Drawing.Point(55, 566);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(151, 10);
             this.guna2Separator1.TabIndex = 6;
@@ -167,7 +169,7 @@
             this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button1);
             this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button2);
             this.fpnlPlaylists.Controls.Add(this.name__Playlist__Button3);
-            this.fpnlPlaylists.Location = new System.Drawing.Point(7, 616);
+            this.fpnlPlaylists.Location = new System.Drawing.Point(7, 596);
             this.fpnlPlaylists.Name = "fpnlPlaylists";
             this.fpnlPlaylists.Padding = new System.Windows.Forms.Padding(26, 0, 0, 0);
             this.fpnlPlaylists.Size = new System.Drawing.Size(233, 264);
@@ -177,7 +179,7 @@
             // 
             this.VerticalLine.FillColor = System.Drawing.Color.White;
             this.VerticalLine.FillThickness = 5;
-            this.VerticalLine.Location = new System.Drawing.Point(-2, 75);
+            this.VerticalLine.Location = new System.Drawing.Point(-2, 78);
             this.VerticalLine.Name = "VerticalLine";
             this.VerticalLine.Size = new System.Drawing.Size(10, 45);
             this.VerticalLine.TabIndex = 4;
@@ -192,7 +194,7 @@
             this.btnPlaylist.HoverState.Parent = this.btnPlaylist;
             this.btnPlaylist.Image = global::Music__Player.Properties.Resources.icon_skip_blue;
             this.btnPlaylist.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPlaylist.Location = new System.Drawing.Point(172, 436);
+            this.btnPlaylist.Location = new System.Drawing.Point(172, 416);
             this.btnPlaylist.Name = "btnPlaylist";
             this.btnPlaylist.PressedState.Parent = this.btnPlaylist;
             this.btnPlaylist.Size = new System.Drawing.Size(34, 34);
@@ -205,7 +207,7 @@
             this.lblPlaylist.BackColor = System.Drawing.Color.Transparent;
             this.lblPlaylist.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlaylist.ForeColor = System.Drawing.Color.White;
-            this.lblPlaylist.Location = new System.Drawing.Point(32, 442);
+            this.lblPlaylist.Location = new System.Drawing.Point(32, 422);
             this.lblPlaylist.Name = "lblPlaylist";
             this.lblPlaylist.Size = new System.Drawing.Size(79, 23);
             this.lblPlaylist.TabIndex = 1;
@@ -217,7 +219,7 @@
             this.lblLibrary.BackColor = System.Drawing.Color.Transparent;
             this.lblLibrary.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLibrary.ForeColor = System.Drawing.Color.White;
-            this.lblLibrary.Location = new System.Drawing.Point(32, 278);
+            this.lblLibrary.Location = new System.Drawing.Point(32, 271);
             this.lblLibrary.Name = "lblLibrary";
             this.lblLibrary.Size = new System.Drawing.Size(76, 23);
             this.lblLibrary.TabIndex = 1;
@@ -229,7 +231,7 @@
             this.lblMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMenu.ForeColor = System.Drawing.Color.White;
-            this.lblMenu.Location = new System.Drawing.Point(32, 122);
+            this.lblMenu.Location = new System.Drawing.Point(32, 123);
             this.lblMenu.Name = "lblMenu";
             this.lblMenu.Size = new System.Drawing.Size(60, 23);
             this.lblMenu.TabIndex = 1;
@@ -262,7 +264,7 @@
             this.btnCreatePlaylist.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCreatePlaylist.HoverState.Parent = this.btnCreatePlaylist;
             this.btnCreatePlaylist.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCreatePlaylist.Location = new System.Drawing.Point(36, 531);
+            this.btnCreatePlaylist.Location = new System.Drawing.Point(36, 511);
             this.btnCreatePlaylist.Name = "btnCreatePlaylist";
             this.btnCreatePlaylist.ShadowDecoration.Parent = this.btnCreatePlaylist;
             this.btnCreatePlaylist.Size = new System.Drawing.Size(204, 45);
@@ -299,7 +301,7 @@
             this.btnHistory.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnHistory.HoverState.Parent = this.btnHistory;
             this.btnHistory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHistory.Location = new System.Drawing.Point(36, 363);
+            this.btnHistory.Location = new System.Drawing.Point(36, 360);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.ShadowDecoration.Parent = this.btnHistory;
             this.btnHistory.Size = new System.Drawing.Size(170, 45);
@@ -336,7 +338,7 @@
             this.btnAlbums.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnAlbums.HoverState.Parent = this.btnAlbums;
             this.btnAlbums.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAlbums.Location = new System.Drawing.Point(41, 312);
+            this.btnAlbums.Location = new System.Drawing.Point(36, 309);
             this.btnAlbums.Name = "btnAlbums";
             this.btnAlbums.ShadowDecoration.Parent = this.btnAlbums;
             this.btnAlbums.Size = new System.Drawing.Size(170, 45);
@@ -373,7 +375,7 @@
             this.btnFavorite.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnFavorite.HoverState.Parent = this.btnFavorite;
             this.btnFavorite.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnFavorite.Location = new System.Drawing.Point(36, 480);
+            this.btnFavorite.Location = new System.Drawing.Point(36, 460);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.ShadowDecoration.Parent = this.btnFavorite;
             this.btnFavorite.Size = new System.Drawing.Size(170, 45);
@@ -410,7 +412,7 @@
             this.btnSongs.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnSongs.HoverState.Parent = this.btnSongs;
             this.btnSongs.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSongs.Location = new System.Drawing.Point(36, 207);
+            this.btnSongs.Location = new System.Drawing.Point(36, 211);
             this.btnSongs.Name = "btnSongs";
             this.btnSongs.ShadowDecoration.Parent = this.btnSongs;
             this.btnSongs.Size = new System.Drawing.Size(170, 45);
@@ -447,7 +449,7 @@
             this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnHome.HoverState.Parent = this.btnHome;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(36, 156);
+            this.btnHome.Location = new System.Drawing.Point(36, 160);
             this.btnHome.Name = "btnHome";
             this.btnHome.ShadowDecoration.Parent = this.btnHome;
             this.btnHome.Size = new System.Drawing.Size(170, 45);
@@ -583,7 +585,7 @@
         private sources.Custom.Name__Playlist__Button name__Playlist__Button2;
         private sources.Custom.Name__Playlist__Button name__Playlist__Button3;
         private sources.Custom.Name__Playlist__Button name__Playlist__Button6;
-        private Guna.UI2.WinForms.Guna2Button btnDangXuat;
+        private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2Button btnUser;
     }
 }

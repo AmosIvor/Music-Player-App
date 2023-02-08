@@ -57,22 +57,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fAdmin.cs">
+    <Compile Include="sources\Login\fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fAdmin.Designer.cs">
+    <Compile Include="sources\Login\fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="sources\Login\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="sources\Login\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fSignUp.cs">
+    <Compile Include="sources\Login\fSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fSignUp.Designer.cs">
+    <Compile Include="sources\Login\fSignUp.Designer.cs">
       <DependentUpon>fSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Main__Screen.cs">
@@ -289,13 +289,13 @@
     <Compile Include="sources\View\Favorite.Designer.cs">
       <DependentUpon>Favorite.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="fAdmin.resx">
+    <EmbeddedResource Include="sources\Login\fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="sources\Login\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fSignUp.resx">
+    <EmbeddedResource Include="sources\Login\fSignUp.resx">
       <DependentUpon>fSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main__Screen.resx">

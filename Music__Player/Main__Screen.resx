@@ -120,6 +120,31 @@
   <metadata name="dragForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnUser.CustomImages.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
+        MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnAggQDRYlvZJ5AAAEBElEQVRYR6WXy6tWVRyGj4i3vJDi
+        jUTJG830KJI4caD5D4gomtpEahChhkiBOPWCiOLAa4o0ldT+hBDPUUuxBgYFDmqQZk40tbJWz7PXbx/P
+        9+29v/MdzwPvOXv/3netb1/W2nvtnm5JKU1B76Oz6CZ6iP4OuW1NbzOaEs1GDp29g75Az1A7v4faMXsO
+        LY5uhg+NJ6AjyDOUp+gS2obeRuMianZc1PTMmBXbHkbjI9odNFiEfkDi2RxAb4Y9JGbRwWgrd9HCsDtD
+        sBc9sBV8g+aENWxoOxddsyP4DfWGVQ8Bz7z8ce/h2LBqwR+jYrcWfG/PeSQeRP2VwPCef28KzkW5At5M
+        5H392WDwE7I2I2IV8MqD8HZMiPIrKDrgxMtee+bU16HHhuAl8oeV2/IHei/iLVD3SpS343CUMxScao5Y
+        B03tPae+Ivz/0FE0Myy9WehYeGaWh9UCdcfEc+RvvZqi7DjP5UCUWqA+Cn1bJFL6JMoV8HbmSLqFRkW5
+        BeqHikR5m9nwCedRP0G1U436KiR9UaoF3wO9USRTWhnlFqhPRT4n/kSTLfh4lUuRqYC3N0fSrig1QubT
+        HE17olQB76scSZvc8fkt28KvgFdeto1RasRMjqaDUaqA90GOpNPu+BKR+eFXwNuVI2l3lBohU16BnVGq
+        gLcgR1K/O75MHL0Dz/Z28N5F0h+lWvAdA+UJrYhyBbzxyN984M5f6FF4jZApZ0GnM9udI+lmlBoh8wi9
+        KA/gYdQbIbMUOYc98uNodlh6s9GJ8JxRS8JqhIxriOIAvAU+yUaH1wiZtegfJP8iH8fKbdFbE/FGyIxG
+        tiluQTlv54VfAW8iciDeNzgEZnwgvRHNK+C5dpA+d87k7bQ1/Baoe+l/LBL5Sl1FHyJf22+FlqGP0Neo
+        fC/cQ7W3gvr2IpHSKXe25O10MfwBqG1A3ne5jBqnagkZp9gVG4DjYX1YA1D7snB9rvDHR7GPRcPTI2N9
+        NfLHva8fR7lraLMD+dJxkA+MC7ZnIH/L35xUFl18yL7Yd1T72nVUby5CrwFtfczbh6/p4u3J//1IzhYh
+        YWcx8mh9ScxHp5EcichrQx++uuUU8vZ45l6VRRHJUHBFI98hB9IvqHEkdwt9OIN+jT5vI6m+Jyj6eLxT
+        2JnPwhox9PV57rLAZV91SSYYC5ELR3EN13FR2g304VLsgh2CfS8Iqx4CzvvyIK6juWENG9rOQ312BPa5
+        NKzOEPRKuHoVp4zrgWlhD4lZ5JiyrXhrO595OzRwmW4nzg5xyeZnl4sJZ0r7p5k1vcGfZo52v5CG92k2
+        GBo7RX1OlGczmKaPU6eaK63WqTYS6Gwy2oScz/3ILyjPULlt7SRySZafcEPS0/M/gEVk1Fe7bY8AAAAA
+        SUVORK5CYII=
+</value>
+  </data>
   <metadata name="borderForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
   </metadata>
