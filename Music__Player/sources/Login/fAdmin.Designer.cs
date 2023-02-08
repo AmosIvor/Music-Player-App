@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAdmin));
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelSlideBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnHome.HoverState.Parent = this.btnHome;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(27, 88);
+            this.btnHome.Location = new System.Drawing.Point(36, 90);
             this.btnHome.Name = "btnHome";
             this.btnHome.ShadowDecoration.Parent = this.btnHome;
             this.btnHome.Size = new System.Drawing.Size(170, 45);
@@ -115,7 +117,7 @@
             this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnDangXuat.HoverState.Parent = this.btnDangXuat;
             this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDangXuat.Location = new System.Drawing.Point(27, 155);
+            this.btnDangXuat.Location = new System.Drawing.Point(36, 154);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.ShadowDecoration.Parent = this.btnDangXuat;
             this.btnDangXuat.Size = new System.Drawing.Size(170, 45);
@@ -127,33 +129,44 @@
             // 
             // btnUser
             // 
+            this.btnUser.BorderColor = System.Drawing.Color.White;
             this.btnUser.BorderRadius = 20;
+            this.btnUser.BorderThickness = 2;
             this.btnUser.CheckedState.Parent = this.btnUser;
-            this.btnUser.CustomImages.Image = global::Music__Player.Properties.Resources.user;
+            this.btnUser.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImages.Image")));
             this.btnUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUser.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnUser.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
             this.btnUser.CustomImages.Parent = this.btnUser;
-            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.FillColor = System.Drawing.Color.Transparent;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnUser.HoverState.FillColor = System.Drawing.Color.White;
-            this.btnUser.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnUser.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnUser.HoverState.Parent = this.btnUser;
             this.btnUser.Location = new System.Drawing.Point(27, 23);
             this.btnUser.Name = "btnUser";
             this.btnUser.PressedColor = System.Drawing.Color.Transparent;
+            this.btnUser.PressedDepth = 0;
             this.btnUser.ShadowDecoration.Parent = this.btnUser;
-            this.btnUser.Size = new System.Drawing.Size(170, 45);
+            this.btnUser.Size = new System.Drawing.Size(187, 45);
             this.btnUser.TabIndex = 9;
-            this.btnUser.Text = "Admin";
+            this.btnUser.Text = "ADMIN";
             this.btnUser.TextOffset = new System.Drawing.Point(3, 0);
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(242, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1341, 918);
+            this.panel1.TabIndex = 3;
             // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1583, 918);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelSlideBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fAdmin";
@@ -170,5 +183,6 @@
         private Guna.UI2.WinForms.Guna2GradientPanel panelSlideBar;
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
         private Guna.UI2.WinForms.Guna2Button btnUser;
+        private System.Windows.Forms.Panel panel1;
     }
 }
