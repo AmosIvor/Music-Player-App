@@ -206,6 +206,13 @@ namespace Music__Player
             Navigation.Instance.NavigateScreen(panelMainScreen, btnPlaylist, Navigation.Instance.childAlbumScreen, VerticalLine);
         }
 
+        public void LoadAlbum()
+        {
+            Navigation.Instance.NavigateScreen(panelMainScreen, btnAlbums, Navigation.Instance.albumsScreen, VerticalLine);
+
+            btnAlbums.Checked = true;
+        }
+
         #endregion
 
     }

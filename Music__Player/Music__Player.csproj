@@ -71,23 +71,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="sources\Constant\IMAGE.cs" />
+    <Compile Include="sources\DAO\AlbumDAO\AlbumDAO.cs" />
+    <Compile Include="sources\DAO\AlbumDAO\Info__Album__DAO.cs" />
+    <Compile Include="sources\DTO\ChildAlbumDTO\AlbumDTO.cs" />
     <Compile Include="sources\View\Child__Album.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="sources\View\Child__Album.Designer.cs">
       <DependentUpon>Child__Album.cs</DependentUpon>
     </Compile>
-    <Compile Include="sources\Custom\Album__Display.cs">
+    <Compile Include="sources\Custom\Info__Album.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="sources\Custom\Album__Display.Designer.cs">
-      <DependentUpon>Album__Display.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sources\Custom\Album__Panel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="sources\Custom\Album__Panel.Designer.cs">
-      <DependentUpon>Album__Panel.cs</DependentUpon>
+    <Compile Include="sources\Custom\Info__Album.Designer.cs">
+      <DependentUpon>Info__Album.cs</DependentUpon>
     </Compile>
     <Compile Include="sources\Custom\Context__Menu.cs">
       <SubType>UserControl</SubType>
@@ -119,7 +116,6 @@
     <Compile Include="sources\Custom\Song__Playing__BottomBar.Designer.cs">
       <DependentUpon>Song__Playing__BottomBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="sources\DAO\AlbumDAO\AlbumDisplayDAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Context__Menu__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Form__Background__DAO.cs" />
     <Compile Include="sources\Constant\ICON.cs" />
@@ -281,11 +277,8 @@
     <EmbeddedResource Include="sources\View\Child__Album.resx">
       <DependentUpon>Child__Album.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sources\Custom\Album__Display.resx">
-      <DependentUpon>Album__Display.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="sources\Custom\Album__Panel.resx">
-      <DependentUpon>Album__Panel.cs</DependentUpon>
+    <EmbeddedResource Include="sources\Custom\Info__Album.resx">
+      <DependentUpon>Info__Album.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sources\Custom\Artist__Panel.resx">
       <DependentUpon>Artist__Panel.cs</DependentUpon>
@@ -497,12 +490,6 @@
     <None Include="Resources\icon_recent_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon_skip_blue.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icon_back_blue.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icon_createplaylist_white.png" />
   </ItemGroup>
   <ItemGroup>
@@ -682,6 +669,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_heart_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_skip_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_back_blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
