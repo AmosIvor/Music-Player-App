@@ -30,15 +30,25 @@ namespace Music__Player.sources.PlayMusic
 
         public WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
 
+
+        Song__Playing__BottomBar bottomBar;
+        Song__Playing__BottomBar BottomBar
+        {
+            get { return bottomBar; }
+            set
+            {
+                bottomBar = value;
+            }
+        }
         public void RunMP3(string url, Timer timer)
         {
             player.settings.volume = 30;
-
             player.URL = url;
             player.controls.play();
+            
             timer.Enabled = true;
         }
-
+        
         public void EventTimer(Timer timer1, Guna2ImageButton btnPlay, Guna2TrackBar sliderTimeMusic, Label lblStart, Label lblEnd)
         {
             if (player.playState == WMPPlayState.wmppsPlaying)
@@ -53,7 +63,6 @@ namespace Music__Player.sources.PlayMusic
 
                 lblStart.Text = player.controls.currentPositionString;
             }
-
             else if (player.playState == WMPPlayState.wmppsStopped)
             {
                 timer1.Enabled = false;
@@ -73,8 +82,14 @@ namespace Music__Player.sources.PlayMusic
             player.controls.currentPosition = sliderTimeMusic.Value;
         }
 
+        public void SliderVolumeMusicScroll(Guna2TrackBar sliderVolumeMusic)
+        {
+            player.settings.volume = sliderVolumeMusic.Value;
+        }
+
         public void btnPlay_Click(Guna2ImageButton btn, Timer timer, Song__Playing__BottomBar btnBar = null)
         {
+            if (btnBar != null) BottomBar = btnBar;
             if (player.playState == WMPPlayState.wmppsPlaying)
             {
                 btn.Checked = false;

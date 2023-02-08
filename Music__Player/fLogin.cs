@@ -35,9 +35,16 @@ namespace Music__Player
             return AccountDAO.Instance.Signin(username, password);
         }
 
-        private void ShowScreen()
+        private void ShowScreen(Main__Screen mainScreen, fAdmin adminScreen)
         {
-            Main__Screen main = new Main__Screen();
+            Form main;
+            if (mainScreen != null)
+            {
+                main = mainScreen;
+            } else
+            {
+                main = adminScreen;
+            }
             Hide();
             main.ShowDialog();
             Show();
@@ -47,13 +54,25 @@ namespace Music__Player
         {
             string userName = tbUserName.Text;
             string password = tbPassword.Text;
-            if (Login(userName, password))
+            if (userName == "admin")
             {
-                ShowScreen();
-            }
-            else
+                if (Login(userName, password))
+                {
+                    ShowScreen(null, new fAdmin());
+                } else
+                {
+                    MessageBox.Show("Vui lòng đúng mật khẩu hoặc tài khoản đăng nhập!");
+                }
+            } else
             {
-                MessageBox.Show("Vui lòng đúng mật khẩu hoặc tài khoản đăng nhập!");
+                if (Login(userName, password))
+                {
+                    ShowScreen(new Main__Screen(),null);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng đúng mật khẩu hoặc tài khoản đăng nhập!");
+                }
             }
         }
 
@@ -77,7 +96,7 @@ namespace Music__Player
             if (Signin(userName, password)) 
             {
                 MessageBox.Show("Đăng ký tài khoản thành công");
-                ShowScreen();
+                ShowScreen(new Main__Screen(), null);
             }
             else
             {

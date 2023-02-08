@@ -83,6 +83,8 @@
             this.sliderVolume.Size = new System.Drawing.Size(111, 23);
             this.sliderVolume.TabIndex = 8;
             this.sliderVolume.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(85)))), ((int)(((byte)(143)))));
+            this.sliderVolume.Value = 30;
+            this.sliderVolume.Scroll += new System.Windows.Forms.ScrollEventHandler(this.sliderVolume_Scroll);
             // 
             // sliderTimeMusic
             // 

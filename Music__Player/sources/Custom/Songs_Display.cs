@@ -232,7 +232,7 @@ namespace Music__Player.sources.Custom
                 {
                     isSelectedSong = true;
                     picturePlaySong.Image = Properties.Resources.icon_play_blue;
-                    //playingBottomBar.setPlayingBottomBar(this);
+                    playingBottomBar.setPlayingSong(this);
 
                     foreach (Control control in ShadowPanelSong.Controls)
                     {

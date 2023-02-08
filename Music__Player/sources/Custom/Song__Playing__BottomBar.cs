@@ -52,23 +52,7 @@ namespace Music__Player.sources.Custom
             _mouseClickAddPlaylist?.Invoke(sender, e);
         }
 
-        private bool isPlay;
-        public bool IsPlay
-        {
-            get { return isPlay; }
-            set
-            {
-                isPlay = value;
-                if (isPlay == true)
-                {
-                    btnPlay.Image = Resources.pause_100px_png1;
-                }
-                else
-                {
-                    btnPlay.Image = Resources.play_100px_png1;
-                }
-            }
-        }
+       
 
         #endregion
 
@@ -93,9 +77,15 @@ namespace Music__Player.sources.Custom
             Media__Player.Instance.SliderTimeMusicScroll(sliderTimeMusic);
         }
 
+        private void sliderVolume_Scroll(object sender, ScrollEventArgs e)
+        {
+            Media__Player.Instance.SliderVolumeMusicScroll(sliderVolume);
+        }
+
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay, timerMusic);
+            Media__Player.Instance.btnPlay_Click(btnPlay, timerMusic, this);
+            IsPlay = !IsPlay;
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)
@@ -106,6 +96,12 @@ namespace Music__Player.sources.Custom
                 {
                     Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
                 }
+
+                if (playingSong != null)
+                {
+                    Media__Player.Instance.RunMP3(playingSong.URL, timerMusic);
+                    lblStart.Text = "00:00";
+                }
             }
             catch { }
         }
@@ -114,6 +110,49 @@ namespace Music__Player.sources.Custom
         {
             Dropdown__Playlist__DAO.Instance.songSelecting = lblNameSong.Text;
         }
+
+        private bool isPlay;
+        public bool IsPlay
+        {
+            get { return isPlay; }
+            set
+            {
+                isPlay = value;
+                if (isPlay == true)
+                {
+                    btnPlay.Image = Resources.pause_100px_png1;
+                }
+                else
+                {
+                    btnPlay.Image = Resources.play_100px_png1;
+                }
+            }
+        }
+
+        private Songs_Display playingSong;
+        public Songs_Display PlayingSong
+        {
+            get { return playingSong; }
+            set
+            {
+                playingSong = value;
+            }
+        }
+
+        
+        public void setPlayingSong(Songs_Display song)
+        {
+            pbImage.Image = song.ImageSong;
+            lblNameSong.Text = song.NameSong;
+            lblArtist.Text = song.Artist;
+            IsPlay = true;
+            PlayingSong= song;
+            lblStart.Text = "00:00";
+            sliderTimeMusic.Value = 0;
+            lblEnd.Text = song.Duration;
+            Media__Player.Instance.RunMP3(song.URL, timerMusic);
+        }
+
 
     }
 }
