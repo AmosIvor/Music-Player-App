@@ -29,8 +29,6 @@ namespace Music__Player.sources.View
         {
             InitializeComponent();
 
-            FormatDataGridView();
-
             LoadInitialSongBottomBar();
         }
 
@@ -41,17 +39,6 @@ namespace Music__Player.sources.View
             LoadListSongByIdPlaylist(idPlaylist);
 
             LoadEventClick();
-        }
-
-        void FormatDataGridView()
-        {
-            dtgvSongs.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dtgvSongs.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dtgvSongs.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            dtgvSongs.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         #region Load Song by Playlist
@@ -384,19 +371,5 @@ namespace Music__Player.sources.View
 
         #endregion
 
-        #region Play First Song
-
-        private void btnPlayTop_Click(object sender, EventArgs e)
-        {
-            btnPlayTop.Checked = !btnPlayTop.Checked;
-
-            PlayFirstSong();
-
-            Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
-
-            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying((List__Song__Playlist)fpnlSongs.Tag);
-        }
-
-        #endregion
     }
 }
