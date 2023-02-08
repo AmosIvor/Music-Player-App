@@ -31,6 +31,7 @@
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.panelSlideBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,18 +62,19 @@
             this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnHome.HoverState.Parent = this.btnHome;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(36, 75);
+            this.btnHome.Location = new System.Drawing.Point(27, 88);
             this.btnHome.Name = "btnHome";
             this.btnHome.ShadowDecoration.Parent = this.btnHome;
             this.btnHome.Size = new System.Drawing.Size(170, 45);
             this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
+            this.btnHome.Text = "Insert Song";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.TextOffset = new System.Drawing.Point(47, 0);
             // 
             // panelSlideBar
             // 
             this.panelSlideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.panelSlideBar.Controls.Add(this.btnUser);
             this.panelSlideBar.Controls.Add(this.btnDangXuat);
             this.panelSlideBar.Controls.Add(this.btnHome);
             this.panelSlideBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -113,7 +115,7 @@
             this.btnDangXuat.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnDangXuat.HoverState.Parent = this.btnDangXuat;
             this.btnDangXuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDangXuat.Location = new System.Drawing.Point(36, 861);
+            this.btnDangXuat.Location = new System.Drawing.Point(27, 155);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.ShadowDecoration.Parent = this.btnDangXuat;
             this.btnDangXuat.Size = new System.Drawing.Size(170, 45);
@@ -122,6 +124,30 @@
             this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDangXuat.TextOffset = new System.Drawing.Point(47, 0);
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click_1);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BorderRadius = 20;
+            this.btnUser.CheckedState.Parent = this.btnUser;
+            this.btnUser.CustomImages.Image = global::Music__Player.Properties.Resources.user;
+            this.btnUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUser.CustomImages.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnUser.CustomImages.Parent = this.btnUser;
+            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnUser.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnUser.HoverState.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnUser.HoverState.Parent = this.btnUser;
+            this.btnUser.Location = new System.Drawing.Point(27, 23);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.PressedColor = System.Drawing.Color.Transparent;
+            this.btnUser.ShadowDecoration.Parent = this.btnUser;
+            this.btnUser.Size = new System.Drawing.Size(170, 45);
+            this.btnUser.TabIndex = 9;
+            this.btnUser.Text = "Admin";
+            this.btnUser.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // fAdmin
             // 
@@ -143,5 +169,6 @@
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2GradientPanel panelSlideBar;
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
+        private Guna.UI2.WinForms.Guna2Button btnUser;
     }
 }

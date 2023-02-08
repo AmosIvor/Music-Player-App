@@ -1,4 +1,5 @@
-﻿using Music__Player.sources.DAO;
+﻿using Guna.UI2.WinForms;
+using Music__Player.sources.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,28 @@ namespace Music__Player
 {
     public partial class fSignUp : Form
     {
+        public fSignUp()
+        {
+
+        }
         public fSignUp(fLogin fLogin)
         {
             InitializeComponent();
-            Login = fLogin;       
+            userName = tbUserName;
+            Login = fLogin;
+        }
+        private Guna2TextBox userName;
+        public Guna2TextBox UserName
+        {
+            get { return userName; }
+            set
+            {
+                userName = value;
+            }
+        }
+        public void ShowMessage()
+        {
+            userName.Focus();
         }
 
         private fLogin login;
@@ -61,8 +80,8 @@ namespace Music__Player
         }
         private void ResetForm()
         {
-            tbUserName.Text = "";
             tbUserName.Focus();
+            tbUserName.Text = "";
             tbPassword.Text = "";
             tbConfirmPassword.Text = "";
             tbNickName.Text = "";

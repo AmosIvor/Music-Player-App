@@ -16,6 +16,7 @@ namespace Music__Player
         public fLogin()
         {
             InitializeComponent();
+            tbUserName.Focus();
         }
 
         private void handleEnter(object sender, KeyEventArgs e)

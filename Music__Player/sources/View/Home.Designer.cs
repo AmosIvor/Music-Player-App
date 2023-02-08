@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelHome = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblCountFpanelsSong = new System.Windows.Forms.Label();
             this.fpanelArtists = new System.Windows.Forms.FlowLayoutPanel();
             this.artist__Panel7 = new Music__Player.sources.Custom.Artist__Panel();
@@ -73,7 +72,6 @@
             // panelHome
             // 
             this.panelHome.AutoScroll = true;
-            this.panelHome.Controls.Add(this.btnExit);
             this.panelHome.Controls.Add(this.lblCountFpanelsSong);
             this.panelHome.Controls.Add(this.fpanelArtists);
             this.panelHome.Controls.Add(this.pnlSongPlaying);
@@ -90,23 +88,6 @@
             this.panelHome.ShadowDecoration.Parent = this.panelHome;
             this.panelHome.Size = new System.Drawing.Size(1359, 965);
             this.panelHome.TabIndex = 3;
-            // 
-            // btnExit
-            // 
-            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnExit.CheckedState.Parent = this.btnExit;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnExit.HoverState.Parent = this.btnExit;
-            this.btnExit.Image = global::Music__Player.Properties.Resources.icon_power_black;
-            this.btnExit.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnExit.Location = new System.Drawing.Point(1213, 15);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnExit.PressedState.Parent = this.btnExit;
-            this.btnExit.Size = new System.Drawing.Size(44, 44);
-            this.btnExit.TabIndex = 11;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblCountFpanelsSong
             // 
@@ -648,6 +629,5 @@
         private Custom.Artist__Panel artist__Panel11;
         private System.Windows.Forms.Timer timerMusic;
         private Guna.UI2.WinForms.Guna2ImageButton btnAddPlaylist;
-        private Guna.UI2.WinForms.Guna2ImageButton btnExit;
     }
 }

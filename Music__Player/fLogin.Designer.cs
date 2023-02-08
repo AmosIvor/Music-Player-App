@@ -112,7 +112,7 @@
             this.tbPassword.SelectedText = "";
             this.tbPassword.ShadowDecoration.Parent = this.tbPassword;
             this.tbPassword.Size = new System.Drawing.Size(392, 47);
-            this.tbPassword.TabIndex = 5;
+            this.tbPassword.TabIndex = 1;
             this.tbPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.handleEnter);
             // 
             // tbUserName
@@ -138,7 +138,7 @@
             this.tbUserName.SelectedText = "";
             this.tbUserName.ShadowDecoration.Parent = this.tbUserName;
             this.tbUserName.Size = new System.Drawing.Size(392, 44);
-            this.tbUserName.TabIndex = 4;
+            this.tbUserName.TabIndex = 0;
             this.tbUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.handleEnter);
             // 
             // label2

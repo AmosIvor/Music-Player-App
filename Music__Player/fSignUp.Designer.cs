@@ -1,4 +1,7 @@
-﻿namespace Music__Player
+﻿using System.Runtime.CompilerServices;
+using System.Windows.Forms;
+
+namespace Music__Player
 {
     partial class fSignUp
     {
@@ -63,7 +66,7 @@
             this.panel1.Location = new System.Drawing.Point(48, 52);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1218, 676);
-            this.panel1.TabIndex = 3;
+            this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -90,7 +93,7 @@
             this.panel2.Location = new System.Drawing.Point(625, 49);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(591, 576);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 0;
             // 
             // panel6
             // 
@@ -99,7 +102,7 @@
             this.panel6.Location = new System.Drawing.Point(93, 299);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(445, 100);
-            this.panel6.TabIndex = 11;
+            this.panel6.TabIndex = 3;
             // 
             // tbConfirmPassword
             // 
@@ -124,7 +127,7 @@
             this.tbConfirmPassword.SelectedText = "";
             this.tbConfirmPassword.ShadowDecoration.Parent = this.tbConfirmPassword;
             this.tbConfirmPassword.Size = new System.Drawing.Size(392, 44);
-            this.tbConfirmPassword.TabIndex = 6;
+            this.tbConfirmPassword.TabIndex = 3;
             // 
             // label5
             // 
@@ -134,7 +137,7 @@
             this.label5.Location = new System.Drawing.Point(26, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(142, 17);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 93;
             this.label5.Text = "CONFIRM PASSWORD";
             // 
             // panel5
@@ -144,7 +147,7 @@
             this.panel5.Location = new System.Drawing.Point(93, 401);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(445, 100);
-            this.panel5.TabIndex = 10;
+            this.panel5.TabIndex = 4;
             // 
             // tbNickName
             // 
@@ -170,7 +173,7 @@
             this.tbNickName.SelectedText = "";
             this.tbNickName.ShadowDecoration.Parent = this.tbNickName;
             this.tbNickName.Size = new System.Drawing.Size(392, 44);
-            this.tbNickName.TabIndex = 6;
+            this.tbNickName.TabIndex = 4;
             // 
             // label4
             // 
@@ -180,7 +183,7 @@
             this.label4.Location = new System.Drawing.Point(26, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 17);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 91;
             this.label4.Text = "NICKNAME";
             // 
             // panel4
@@ -190,7 +193,7 @@
             this.panel4.Location = new System.Drawing.Point(93, 197);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(445, 100);
-            this.panel4.TabIndex = 9;
+            this.panel4.TabIndex = 2;
             // 
             // tbPassword
             // 
@@ -215,7 +218,7 @@
             this.tbPassword.SelectedText = "";
             this.tbPassword.ShadowDecoration.Parent = this.tbPassword;
             this.tbPassword.Size = new System.Drawing.Size(392, 44);
-            this.tbPassword.TabIndex = 6;
+            this.tbPassword.TabIndex = 1;
             // 
             // label3
             // 
@@ -225,7 +228,7 @@
             this.label3.Location = new System.Drawing.Point(26, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 17);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 96;
             this.label3.Text = "PASSWORD";
             // 
             // panel3
@@ -235,7 +238,7 @@
             this.panel3.Location = new System.Drawing.Point(93, 94);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(445, 100);
-            this.panel3.TabIndex = 8;
+            this.panel3.TabIndex = 1;
             // 
             // tbUserName
             // 
@@ -260,7 +263,7 @@
             this.tbUserName.SelectedText = "";
             this.tbUserName.ShadowDecoration.Parent = this.tbUserName;
             this.tbUserName.Size = new System.Drawing.Size(392, 44);
-            this.tbUserName.TabIndex = 6;
+            this.tbUserName.TabIndex = 1;
             // 
             // label2
             // 
@@ -270,7 +273,7 @@
             this.label2.Location = new System.Drawing.Point(26, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 17);
-            this.label2.TabIndex = 5;
+            this.label2.TabIndex = 0;
             this.label2.Text = "USERNAME";
             // 
             // btnDangKy
@@ -284,7 +287,7 @@
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.ShadowDecoration.Parent = this.btnDangKy;
             this.btnDangKy.Size = new System.Drawing.Size(181, 45);
-            this.btnDangKy.TabIndex = 7;
+            this.btnDangKy.TabIndex = 0;
             this.btnDangKy.Text = "Đăng ký";
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
@@ -340,7 +343,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -363,5 +365,7 @@
         private Guna.UI2.WinForms.Guna2TextBox tbUserName;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+
+        
     }
 }
