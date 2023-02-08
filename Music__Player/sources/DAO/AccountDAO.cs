@@ -35,7 +35,7 @@ namespace Music__Player.sources.DAO
                 //Insert, update
 
                 DataTable results = DataProviderDAO.Instance.ExecuteQuery(query);
-
+                
                 return results.Rows.Count > 0;
             } catch
             {

@@ -31,6 +31,24 @@ namespace Music__Player
             LoadMainScreen();
         }
 
+        public Main__Screen(string name)
+        {
+            InitializeComponent();
+
+            LoadMainScreen();
+
+            UserName= name;
+        }
+        private string userName;
+        public string UserName
+        {
+            get { return userName; } 
+            set
+            {
+                userName = value;
+                btnUser.Text = userName;
+            } 
+        }
         void LoadMainScreen()
         {
             btnHome.Checked = true;
@@ -155,7 +173,7 @@ namespace Music__Player
         #region LIBRARY
         private void btnRecent_Click(object sender, EventArgs e)
         {
-            Navigation.Instance.NavigateScreen(panelMainScreen, btnRecent, Navigation.Instance.recentScreen, VerticalLine);
+            //Navigation.Instance.NavigateScreen(panelMainScreen, btnRecent, Navigation.Instance.recentScreen, VerticalLine);
         }
         private void btnFavorite_Click(object sender, EventArgs e)
         {

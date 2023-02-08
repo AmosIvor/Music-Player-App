@@ -67,7 +67,10 @@ namespace Music__Player
             {
                 if (Login(userName, password))
                 {
-                    ShowScreen(new Main__Screen(),null);
+                    string query = $"Login @userName = {userName}, @passWord = {password}";
+                    DataTable results = DataProviderDAO.Instance.ExecuteQuery(query);
+                    DataRow dataRow = results.Rows[0];
+                    ShowScreen(new Main__Screen(dataRow["DisplayName"].ToString()),null);
                 }
                 else
                 {
