@@ -30,11 +30,6 @@ namespace Music__Player
             return AccountDAO.Instance.Login(username, password);
         }
 
-        private bool Signin(string username, string password)
-        {
-            return AccountDAO.Instance.Signin(username, password);
-        }
-
         private void ShowScreen(Main__Screen mainScreen, fAdmin adminScreen)
         {
             Form main;
@@ -47,7 +42,14 @@ namespace Music__Player
             }
             Hide();
             main.ShowDialog();
+            ResetForm();
             Show();
+        }
+        private void ResetForm()
+        {
+            tbUserName.Text = "";
+            tbUserName.Focus();
+            tbPassword.Text = "";
         }
 
         private void handleLogin()
@@ -59,6 +61,7 @@ namespace Music__Player
                 if (Login(userName, password))
                 {
                     ShowScreen(null, new fAdmin());
+                    ResetForm();
                 } else
                 {
                     MessageBox.Show("Vui lòng đúng mật khẩu hoặc tài khoản đăng nhập!");
@@ -86,25 +89,22 @@ namespace Music__Player
 
         private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát ứng dụng không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.No)
-            {
-                e.Cancel = true;
-            } 
+
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            string userName = tbUserName.Text;
-            string password = tbPassword.Text;
-            if (Signin(userName, password)) 
+            fSignUp formSignUp = new fSignUp(this);
+            Hide();
+            formSignUp.ShowDialog();
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát ứng dụng không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show("Đăng ký tài khoản thành công");
-                ShowScreen(new Main__Screen(), null);
+                Application.Exit();
             }
-            else
-            {
-                MessageBox.Show("Người dùng đã tồn tại. Vui lòng sử dụng tên đăng nhập khác");
-            }  
         }
     }
 }

@@ -22,7 +22,7 @@ namespace Music__Player
 
         }
 
-        private void btnDangXuat_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn đăng xuất không", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {

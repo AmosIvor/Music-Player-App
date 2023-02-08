@@ -43,15 +43,17 @@ namespace Music__Player.sources.DAO
             }
         }
 
-        public bool Signin(string userName, string passWord)
+        public bool Signin(string userName, string passWord, string displayName)
         {
             try
             {
-                string query = $"INSERT INTO Account(UserName, PassWord)\r\nVALUES ('{userName}', '{passWord}')";
+                string query = $"INSERT INTO Account(DisplayName, UserName, PassWord)\r\nVALUES ('{displayName}','{userName}', '{passWord}')";
                 int result = DataProviderDAO.Instance.ExecuteNonQuery(query);
-
                 return result > 0;
-            } catch { return false; }
+            } catch 
+            {
+                return false; 
+            }
         }
 
     }
