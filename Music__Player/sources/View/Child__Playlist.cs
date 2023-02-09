@@ -34,8 +34,6 @@ namespace Music__Player.sources.View
 
         public void LoadChildPlaylist(int idPlaylist)
         {
-            //LoadTitle(idPlaylist);
-
             LoadListSongByIdPlaylist(idPlaylist);
 
             LoadEventClick();

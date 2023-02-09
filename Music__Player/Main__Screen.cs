@@ -107,6 +107,7 @@ namespace Music__Player
 
                 return;
             }
+
             Name__Playlist__Button namePlaylistOutside = (Name__Playlist__Button)sender;
 
             namePlaylistOutside.IsSelected = true;

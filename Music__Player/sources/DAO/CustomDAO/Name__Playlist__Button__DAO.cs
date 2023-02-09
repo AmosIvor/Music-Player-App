@@ -28,7 +28,7 @@ namespace Music__Player.sources.DAO.MainScreenDAO
         {
             List<Name__Playlist__Button> listNamePlaylist = new List<Name__Playlist__Button>();
 
-            string query = "Select NAME_PLAYLIST From PLAYLISTS";
+            string query = "Select ID_PLAYLIST, NAME_PLAYLIST From PLAYLISTS";
 
             DataTable data = DataProviderDAO.Instance.ExecuteQuery(query);
 

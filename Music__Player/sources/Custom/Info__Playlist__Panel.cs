@@ -54,6 +54,8 @@ namespace Music__Player.sources.Custom
             pnlBackground.MouseLeave += userControl_MouseLeave;
 
             btnPlay.MouseClick += btnPlay_MouseClickPlay;
+
+            btnBin.MouseClick += btnBin_MouseClickBin;
         }
 
         private int id_Playlist;
@@ -243,6 +245,19 @@ namespace Music__Player.sources.Custom
             }
         }
 
+        private event MouseEventHandler _mouseClickBin;
+
+        public event MouseEventHandler MouseClickBin
+        {
+            add
+            {
+                _mouseClickBin += value;
+            }
+            remove
+            {
+                _mouseClickBin -= value;
+            }
+        }
 
         #region Event
 
@@ -266,16 +281,16 @@ namespace Music__Player.sources.Custom
             _mouseClickPlay?.Invoke(sender, e);
         }
 
+        private void btnBin_MouseClickBin(object sender, MouseEventArgs e)
+        {
+            _mouseClickBin?.Invoke(sender, e);
+        }
+
         #endregion
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
             btnPlay.Checked = !btnPlay.Checked;
-        }
-
-        private void btnBin_Click(object sender, EventArgs e)
-        {
-            //btnBin.Checked = !btnBin.Checked;
         }
     }
 }

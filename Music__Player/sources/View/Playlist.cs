@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
+using Music__Player.sources.DAO.PlaylistDAO;
 
 namespace Music__Player.sources.View
 {
@@ -20,7 +21,7 @@ namespace Music__Player.sources.View
 
         Panel pnlHovered = new Panel();
 
-        Info__Playlist__Panel playlistSongPlaying;
+        public Info__Playlist__Panel playlistSongPlaying;
 
         Panel pnlClicked = new Panel();
 
@@ -49,6 +50,8 @@ namespace Music__Player.sources.View
                 infoPlaylist.MouseLeaveAdd += InfoPlaylist_MouseLeaveAdd;
 
                 infoPlaylist.MouseClickPlay += InfoPlaylist_MouseClickPlay;
+
+                infoPlaylist.MouseClickBin += InfoPlaylist_MouseClickBin;
 
                 fpnlPlaylists.Controls.Add(infoPlaylist);
             }
@@ -271,6 +274,19 @@ namespace Music__Player.sources.View
             Info__Playlist__Panel infoPlaylistOutside = Info__Playlist__Panel__DAO.Instance.GetInfoPlaylistPanelFromPanel(sender);
 
             infoPlaylistOutside.IsHovered = false;
+        }
+        private void InfoPlaylist_MouseClickBin(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                Info__Playlist__Panel infoPlaylistInside = Info__Playlist__Panel__DAO.Instance.GetInfoPlaylistPanelFromControlIntoPanel(sender);
+
+                PlaylistDAO.Instance.DeletePlaylist(infoPlaylistInside.ID_Playlist);
+
+                fpnlPlaylists.Controls.Remove(infoPlaylistInside);
+            }
+
+            catch { }
         }
 
         #endregion

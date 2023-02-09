@@ -36,5 +36,12 @@ namespace Music__Player.sources.DAO.PlaylistDAO
 
             return playlist;
         }
+
+        public void DeletePlaylist(int idPlaylist)
+        {
+            string query = "EXEC PROC_DELETE_PLAYLIST @id_playlist";
+
+            DataProviderDAO.Instance.ExecuteNonQuery(query, new object[] { idPlaylist });
+        }
     }
 }

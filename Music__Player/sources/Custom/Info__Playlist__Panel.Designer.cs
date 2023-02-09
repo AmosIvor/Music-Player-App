@@ -91,17 +91,16 @@
             this.btnBin.CheckedState.ImageSize = new System.Drawing.Size(55, 55);
             this.btnBin.CheckedState.Parent = this.btnBin;
             this.btnBin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBin.HoverState.ImageSize = new System.Drawing.Size(59, 59);
+            this.btnBin.HoverState.ImageSize = new System.Drawing.Size(55, 55);
             this.btnBin.HoverState.Parent = this.btnBin;
             this.btnBin.Image = global::Music__Player.Properties.Resources.icon_bin_black1;
-            this.btnBin.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnBin.ImageSize = new System.Drawing.Size(55, 55);
             this.btnBin.Location = new System.Drawing.Point(510, 52);
             this.btnBin.Name = "btnBin";
             this.btnBin.PressedState.ImageSize = new System.Drawing.Size(55, 55);
             this.btnBin.PressedState.Parent = this.btnBin;
             this.btnBin.Size = new System.Drawing.Size(60, 60);
             this.btnBin.TabIndex = 3;
-            this.btnBin.Click += new System.EventHandler(this.btnBin_Click);
             // 
             // btnPlay
             // 
