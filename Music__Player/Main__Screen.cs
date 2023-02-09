@@ -201,7 +201,6 @@ namespace Music__Player
         {
             Navigation.Instance.NavigateScreen(panelMainScreen, btnPlaylist, Navigation.Instance.playlistScreen, VerticalLine);
 
-            btnPlaylist.Checked = true;
         }
 
         private void btnCreatePlaylist_Click(object sender, EventArgs e)

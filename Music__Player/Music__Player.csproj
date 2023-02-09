@@ -719,5 +719,11 @@
   <ItemGroup>
     <None Include="Resources\icon_user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_playlist_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_playlist_white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
