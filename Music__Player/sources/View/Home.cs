@@ -110,7 +110,7 @@ namespace Music__Player.sources.View
             Song__Playing__DAO.Instance.SetSongPlayingByInfoSongPanel(pnlSongPlaying, pbPlaying, lblTitlePlaying, lblArtistPlaying, lblEnd);
 
             Media__Player.Instance.RunMP3(curr.URL, timerMusic);
-             
+            
             fpanelSongs.Tag = curr;
 
             LoadAllBottomBar();
@@ -436,7 +436,7 @@ namespace Music__Player.sources.View
         }
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay, timerMusic);
+            Media__Player.Instance.btnPlay_HomeClick(btnPlay);
         }
         private void btnRepeat_Click(object sender, EventArgs e)
         {
@@ -574,7 +574,7 @@ namespace Music__Player.sources.View
 
             Navigate.Navigation.Instance.favoriteScreen.LoadSongPlayingBottomBar();
 
-            //Navigate.Navigation.Instance.songsScreen.LoadSongPlayingBottomBar();
+            Navigate.Navigation.Instance.songsScreen.LoadSongPlayingBottomBar();
 
             Navigate.Navigation.Instance.albumsScreen.LoadAlbum();
 

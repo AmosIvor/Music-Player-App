@@ -61,6 +61,8 @@ namespace Music__Player.sources.Custom
             Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
 
             LoadInitialSong();
+
+            //IsPlay = true;
         }
 
         public void LoadInitialSong()
@@ -84,8 +86,30 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Media__Player.Instance.btnPlay_Click(btnPlay, timerMusic, this);
-            IsPlay = !IsPlay;
+            Media__Player.Instance.btnPlayEvent(btnPlay);
+
+            IsPlay = btnPlay.Checked;
+
+            NavigateAllScreen();
+        }
+
+        void NavigateAllScreen()
+        {
+            Navigate.Navigation.Instance.historyScreen.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.Instance.favoriteScreen.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.Instance.playlistScreen.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.Instance.childPlaylistScreen.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.Instance.albumsScreen.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.Instance.childAlbumScreen.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.Instance.songsScreen.HandleButtonPlay(IsPlay);
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)
@@ -120,11 +144,11 @@ namespace Music__Player.sources.Custom
                 isPlay = value;
                 if (isPlay == true)
                 {
-                    btnPlay.Image = Resources.pause_100px_png1;
+                    btnPlay.Checked = true;
                 }
                 else
                 {
-                    btnPlay.Image = Resources.play_100px_png1;
+                    btnPlay.Checked = false;
                 }
             }
         }
@@ -160,6 +184,7 @@ namespace Music__Player.sources.Custom
             get { return listSong; }
             set { listSong = value; }
         }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             if (ListSong != null)
@@ -220,11 +245,6 @@ namespace Music__Player.sources.Custom
                 }
                 listSong[random].IsSelectedSong=true;
             }
-        }
-
-        public void pauseMusic()
-        {
-            Media__Player.Instance.PauseSong();
         }
     }
 }

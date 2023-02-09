@@ -264,6 +264,11 @@ namespace Music__Player.sources.Custom
             LoadEventBottomBar();
         }
 
+        public void HandleButtonPlay(bool isPlay)
+        {
+            songPlayingBottomBar.IsPlay = isPlay;
+        }
+
         #endregion
 
         #region Play First Song

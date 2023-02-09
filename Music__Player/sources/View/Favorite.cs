@@ -249,6 +249,12 @@ namespace Music__Player.sources.View
 
             LoadEventBottomBar();
         }
+
+        public void HandleButtonPlay(bool isPlay)
+        {
+            songPlayingBottomBar.IsPlay = isPlay;
+        }
+
         #endregion
 
         #region Handle Favorite
@@ -260,15 +266,6 @@ namespace Music__Player.sources.View
         public void DeleteSong(string nameSong)
         {
             Context__Menu__DAO.Instance.DeleteSong(fpnlSongs, nameSong);
-        }
-
-        #endregion
-
-        #region Pause Song
-
-        public void PauseSong()
-        {
-            
         }
 
         #endregion

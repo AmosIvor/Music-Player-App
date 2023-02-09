@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Music__Player.sources.PlayMusic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -395,7 +396,7 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            Media__Player.Instance.btnPlayEvent(btnPlay);
         }
     }
 }

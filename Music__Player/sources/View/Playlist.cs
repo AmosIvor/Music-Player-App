@@ -320,6 +320,12 @@ namespace Music__Player.sources.View
 
             LoadEventBottomBar();
         }
+
+        public void HandleButtonPlay(bool isPlay)
+        {
+            songPlayingBottomBar.IsPlay = isPlay;
+        }
+
         #endregion
 
         #region Navigate

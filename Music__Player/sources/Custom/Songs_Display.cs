@@ -264,7 +264,6 @@ namespace Music__Player.sources.Custom
                     {
                         favoriteBox.Image = null;
                     }
-                    playingBottomBar?.pauseMusic();    
                 }
             }
         }
