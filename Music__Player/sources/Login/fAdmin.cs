@@ -32,7 +32,7 @@ namespace Music__Player
         {
             InitializeComponent();
 
-            btnInsert.Enabled = false;
+            btnInsertSQL.Enabled = false;
         }
 
         #region Exit
@@ -66,7 +66,7 @@ namespace Music__Player
 
             LoadSongInDataGridView();
 
-            btnInsert.Enabled = true;
+            btnInsertSQL.Enabled = true;
         }
 
         #endregion

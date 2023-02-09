@@ -150,7 +150,81 @@ namespace Music__Player.sources.Custom
             lblStart.Text = "00:00";
             sliderTimeMusic.Value = 0;
             lblEnd.Text = song.Duration;
+            Media__Player.Instance.BottomBar = this;
             Media__Player.Instance.RunMP3(song.URL, timerMusic);
+        }
+
+        private List<Songs_Display> listSong;
+        public List<Songs_Display> ListSong
+        {
+            get { return listSong; }
+            set { listSong = value; }
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (ListSong != null)
+            {
+                int i;
+                for (i = 0; i < listSong.Count; i++)
+                {
+                    if (listSong[i].IsSelectedSong == true)
+                    {
+                        listSong[i].IsSelectedSong = false;
+                        if (i != 0)
+                        {
+                            --i;
+                            listSong[i].IsSelectedSong = true;
+                        }
+                        else
+                        {
+                            listSong[listSong.Count - 1].IsSelectedSong = true;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        private void btnSkip_Click(object sender, EventArgs e)
+        {
+            if (ListSong != null)
+            {
+                int i;
+                for (i = 0; i < listSong.Count; i++)
+                {
+                    if (listSong[i].IsSelectedSong == true)
+                    {
+                        listSong[i].IsSelectedSong = false;
+                        if (i != listSong.Count - 1)
+                        {
+                            ++i;
+                            listSong[i].IsSelectedSong = true;
+                        }
+                        else
+                        {
+                            listSong[0].IsSelectedSong = true;
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+        private void btnSuffle_Click(object sender, EventArgs e)
+        {
+            if (listSong!= null)
+            {
+                Random rnd = new Random();
+                int random = rnd.Next(0, listSong.Count);
+                foreach (Songs_Display song in listSong) 
+                {
+                    song.IsSelectedSong = false;
+                }
+                listSong[random].IsSelectedSong=true;
+            }
+        }
+
+        public void pauseMusic()
+        {
+            Media__Player.Instance.PauseSong();
         }
     }
 }

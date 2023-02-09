@@ -233,7 +233,6 @@ namespace Music__Player.sources.Custom
                     isSelectedSong = true;
                     picturePlaySong.Image = Properties.Resources.icon_play_blue;
                     playingBottomBar.setPlayingSong(this);
-
                     foreach (Control control in ShadowPanelSong.Controls)
                     {
                         control.BackColor = Color.Gainsboro;
@@ -260,7 +259,7 @@ namespace Music__Player.sources.Custom
                     {
                         favoriteBox.Image = null;
                     }
-
+                    playingBottomBar?.pauseMusic();    
                 }
             }
         }

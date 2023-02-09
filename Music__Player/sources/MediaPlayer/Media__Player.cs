@@ -31,8 +31,8 @@ namespace Music__Player.sources.PlayMusic
         public WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
 
 
-        Song__Playing__BottomBar bottomBar;
-        Song__Playing__BottomBar BottomBar
+        private Song__Playing__BottomBar bottomBar;
+        public Song__Playing__BottomBar BottomBar
         {
             get { return bottomBar; }
             set
@@ -107,6 +107,12 @@ namespace Music__Player.sources.PlayMusic
             {
                 Navigate.Navigation.homeScreen.SearchAndPlaySong(Song__Playing__DAO.Instance.currInfoSongPanel);
             }
+        }
+
+        public void PauseSong()
+        {
+            BottomBar.IsPlay = false;
+            player.controls.pause();
         }
     }
 }

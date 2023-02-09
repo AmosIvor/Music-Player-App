@@ -126,6 +126,7 @@
             this.btnSuffle.PressedState.Parent = this.btnSuffle;
             this.btnSuffle.Size = new System.Drawing.Size(40, 40);
             this.btnSuffle.TabIndex = 4;
+            this.btnSuffle.Click += new System.EventHandler(this.btnSuffle_Click);
             // 
             // lblEnd
             // 
@@ -156,6 +157,7 @@
             this.btnBack.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnBack.Size = new System.Drawing.Size(40, 40);
             this.btnBack.TabIndex = 4;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnPlay
             // 
@@ -230,6 +232,7 @@
             this.btnSkip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSkip.Size = new System.Drawing.Size(40, 40);
             this.btnSkip.TabIndex = 5;
+            this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
             // 
             // btnRepeat
             // 
