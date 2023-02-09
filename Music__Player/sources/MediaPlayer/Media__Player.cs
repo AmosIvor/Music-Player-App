@@ -90,17 +90,16 @@ namespace Music__Player.sources.PlayMusic
 
         public void btnPlay_Click(Guna2ImageButton btn, Timer timer, Song__Playing__BottomBar btnBar = null)
         {
-            if (btnBar != null) BottomBar = btnBar;
             if (player.playState == WMPPlayState.wmppsPlaying)
             {
                 btn.Checked = false;
-                btnBar.IsPlay = true;
+
                 player.controls.pause();
             }
             else if (player.playState == WMPPlayState.wmppsPaused)
             {
                 btn.Checked = true;
-                btnBar.IsPlay = false;
+
                 player.controls.play();
             }
             else

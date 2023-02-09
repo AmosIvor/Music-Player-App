@@ -19,6 +19,23 @@ namespace Music__Player.sources.Custom
         }
 
         #region Initial
+
+        public Info__Song__Panel(Songs_Display songDisplay)
+        {
+            InitializeComponent();
+
+            this.Title = songDisplay.NameSong;
+
+            this.Artist = songDisplay.Artist;
+
+            this.Duration = songDisplay.Duration;
+
+            this.Image_Song = songDisplay.ImageSong;
+
+            this.URL = songDisplay.URL;
+
+            LoadInitialEvent();
+        }
         public Info__Song__Panel(List__Song__Playlist songByPlaylist)
         {
             InitializeComponent();

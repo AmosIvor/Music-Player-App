@@ -26,7 +26,7 @@ namespace Music__Player.sources.View
 
             Load_Display_Song();
 
-            //LoadInitialSongBottomBar();
+            LoadInitialSongBottomBar();
 
             //LoadEventClick();
         }
@@ -89,5 +89,29 @@ namespace Music__Player.sources.View
             searchBar.Focus();
         }
 
+        #region Bottom Bar
+
+        void LoadEventBottomBar()
+        {
+            songPlayingBottomBar.MouseClickAddPlaylist += SongPlayingBottomBar_MouseClickAddPlaylist;
+        }
+
+        private void SongPlayingBottomBar_MouseClickAddPlaylist(object sender, EventArgs e)
+        {
+            Dropdown__Playlist__DAO.Instance.AddPlaylistEventInUserControl(this);
+        }
+
+        public void LoadSongPlayingBottomBar()
+        {
+            songPlayingBottomBar.LoadSongPlayingByInfoSongPanel();
+        }
+
+        private void LoadInitialSongBottomBar()
+        {
+            songPlayingBottomBar.LoadInitialSong();
+
+            LoadEventBottomBar();
+        }
+        #endregion
     }
 }

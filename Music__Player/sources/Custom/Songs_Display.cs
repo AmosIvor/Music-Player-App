@@ -1,4 +1,5 @@
 ﻿using Music__Player.sources.DAO;
+using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.PlayMusic;
 using System;
 using System.Collections.Generic;
@@ -232,7 +233,10 @@ namespace Music__Player.sources.Custom
                 {
                     isSelectedSong = true;
                     picturePlaySong.Image = Properties.Resources.icon_play_blue;
-                    playingBottomBar.setPlayingSong(this);
+                    Info__Song__Panel curr = new Info__Song__Panel(this);
+                    Song__Playing__DAO.Instance.currInfoSongPanel = curr;
+                    //playingBottomBar.setPlayingSong(this);
+                    Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
                     foreach (Control control in ShadowPanelSong.Controls)
                     {
