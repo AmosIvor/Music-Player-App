@@ -61,6 +61,7 @@ namespace Music__Player.sources.View
             {
                 flowLayoutPanel1.Controls.Add(song);
             }
+            songPlayingBottomBar.ListSong = listSongDisplay;
         }
         void searchNameSong(string findByName)
         {
@@ -83,6 +84,7 @@ namespace Music__Player.sources.View
                 {
                     flowLayoutPanel1.Controls.Add(song);
                 }
+                songPlayingBottomBar.ListSong = listSongSearch;
             } else
                 Load_Display_Song();    
 

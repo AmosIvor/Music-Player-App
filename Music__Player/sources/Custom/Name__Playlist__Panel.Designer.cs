@@ -55,7 +55,7 @@
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(215, 30);
             this.lblName.TabIndex = 1;
-            this.lblName.Text = "Tran Tuan Vu";
+            this.lblName.Text = "An Hung";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnImage
