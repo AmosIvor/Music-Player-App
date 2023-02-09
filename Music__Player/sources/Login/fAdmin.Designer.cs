@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAdmin));
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelSlideBar.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +89,32 @@
             this.panelSlideBar.TabIndex = 2;
             this.panelSlideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSlideBar_Paint);
             // 
+            // btnUser
+            // 
+            this.btnUser.BorderColor = System.Drawing.Color.White;
+            this.btnUser.BorderRadius = 20;
+            this.btnUser.BorderThickness = 2;
+            this.btnUser.CheckedState.Parent = this.btnUser;
+            this.btnUser.CustomImages.Image = global::Music__Player.Properties.Resources.icon_user;
+            this.btnUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUser.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnUser.CustomImages.Parent = this.btnUser;
+            this.btnUser.FillColor = System.Drawing.Color.Transparent;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnUser.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnUser.HoverState.Parent = this.btnUser;
+            this.btnUser.Location = new System.Drawing.Point(27, 23);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.PressedColor = System.Drawing.Color.Transparent;
+            this.btnUser.PressedDepth = 0;
+            this.btnUser.ShadowDecoration.Parent = this.btnUser;
+            this.btnUser.Size = new System.Drawing.Size(187, 45);
+            this.btnUser.TabIndex = 9;
+            this.btnUser.Text = "ADMIN";
+            this.btnUser.TextOffset = new System.Drawing.Point(3, 0);
+            // 
             // btnDangXuat
             // 
             this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
@@ -126,32 +151,6 @@
             this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDangXuat.TextOffset = new System.Drawing.Point(47, 0);
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click_1);
-            // 
-            // btnUser
-            // 
-            this.btnUser.BorderColor = System.Drawing.Color.White;
-            this.btnUser.BorderRadius = 20;
-            this.btnUser.BorderThickness = 2;
-            this.btnUser.CheckedState.Parent = this.btnUser;
-            this.btnUser.CustomImages.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.CustomImages.Image")));
-            this.btnUser.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUser.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUser.CustomImages.Parent = this.btnUser;
-            this.btnUser.FillColor = System.Drawing.Color.Transparent;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.HoverState.BorderColor = System.Drawing.Color.White;
-            this.btnUser.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnUser.HoverState.Parent = this.btnUser;
-            this.btnUser.Location = new System.Drawing.Point(27, 23);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.PressedColor = System.Drawing.Color.Transparent;
-            this.btnUser.PressedDepth = 0;
-            this.btnUser.ShadowDecoration.Parent = this.btnUser;
-            this.btnUser.Size = new System.Drawing.Size(187, 45);
-            this.btnUser.TabIndex = 9;
-            this.btnUser.Text = "ADMIN";
-            this.btnUser.TextOffset = new System.Drawing.Point(3, 0);
             // 
             // panel1
             // 

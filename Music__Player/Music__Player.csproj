@@ -135,7 +135,6 @@
       <DependentUpon>Song__Playing__BottomBar.cs</DependentUpon>
     </Compile>
     <Compile Include="sources\DAO\AccountDAO.cs" />
-    <Compile Include="sources\DAO\AlbumDAO\AlbumDisplayDAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Context__Menu__DAO.cs" />
     <Compile Include="sources\DAO\CustomDAO\Form__Background__DAO.cs" />
     <Compile Include="sources\Constant\ICON.cs" />
@@ -713,6 +712,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
