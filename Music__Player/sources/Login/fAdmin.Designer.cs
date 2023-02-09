@@ -28,12 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panelSlideBar = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangXuat = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInsertSQL = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dataSong = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Song = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Album = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VerticalLine = new Guna.UI2.WinForms.Guna2VSeparator();
             this.panelSlideBar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSong)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHome
@@ -57,7 +71,7 @@
             this.btnHome.FillColor = System.Drawing.Color.Transparent;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnHome.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.btnHome.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnHome.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
@@ -75,6 +89,7 @@
             // panelSlideBar
             // 
             this.panelSlideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.panelSlideBar.Controls.Add(this.VerticalLine);
             this.panelSlideBar.Controls.Add(this.btnUser);
             this.panelSlideBar.Controls.Add(this.btnDangXuat);
             this.panelSlideBar.Controls.Add(this.btnHome);
@@ -87,7 +102,6 @@
             this.panelSlideBar.ShadowDecoration.Parent = this.panelSlideBar;
             this.panelSlideBar.Size = new System.Drawing.Size(242, 918);
             this.panelSlideBar.TabIndex = 2;
-            this.panelSlideBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSlideBar_Paint);
             // 
             // btnUser
             // 
@@ -154,11 +168,143 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnInsertSQL);
+            this.panel1.Controls.Add(this.btnInsert);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(242, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1341, 918);
             this.panel1.TabIndex = 3;
+            // 
+            // btnInsertSQL
+            // 
+            this.btnInsertSQL.BackColor = System.Drawing.Color.Silver;
+            this.btnInsertSQL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsertSQL.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertSQL.Location = new System.Drawing.Point(926, 786);
+            this.btnInsertSQL.Name = "btnInsertSQL";
+            this.btnInsertSQL.Size = new System.Drawing.Size(209, 53);
+            this.btnInsertSQL.TabIndex = 4;
+            this.btnInsertSQL.Text = "Insert Into Database";
+            this.btnInsertSQL.UseVisualStyleBackColor = false;
+            this.btnInsertSQL.Click += new System.EventHandler(this.btnInsertSQL_Click);
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.BackColor = System.Drawing.Color.Silver;
+            this.btnInsert.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Location = new System.Drawing.Point(205, 79);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(209, 53);
+            this.btnInsert.TabIndex = 2;
+            this.btnInsert.Text = "Insert From File ...";
+            this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dataSong);
+            this.panel3.Location = new System.Drawing.Point(205, 174);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(930, 568);
+            this.panel3.TabIndex = 3;
+            // 
+            // dataSong
+            // 
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dataSong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataSong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataSong.BackgroundColor = System.Drawing.Color.White;
+            this.dataSong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataSong.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataSong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataSong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataSong.ColumnHeadersHeight = 40;
+            this.dataSong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.Song,
+            this.Album});
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataSong.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataSong.EnableHeadersVisualStyles = false;
+            this.dataSong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataSong.Location = new System.Drawing.Point(3, 3);
+            this.dataSong.Name = "dataSong";
+            this.dataSong.RowHeadersVisible = false;
+            this.dataSong.RowHeadersWidth = 51;
+            this.dataSong.RowTemplate.Height = 40;
+            this.dataSong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataSong.Size = new System.Drawing.Size(924, 562);
+            this.dataSong.TabIndex = 0;
+            this.dataSong.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dataSong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataSong.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataSong.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataSong.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataSong.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataSong.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataSong.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataSong.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataSong.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataSong.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataSong.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataSong.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataSong.ThemeStyle.HeaderStyle.Height = 40;
+            this.dataSong.ThemeStyle.ReadOnly = false;
+            this.dataSong.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataSong.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataSong.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dataSong.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataSong.ThemeStyle.RowsStyle.Height = 40;
+            this.dataSong.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataSong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.STT.HeaderText = "#";
+            this.STT.MinimumWidth = 50;
+            this.STT.Name = "STT";
+            this.STT.Width = 50;
+            // 
+            // Song
+            // 
+            this.Song.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Song.HeaderText = "Name Song";
+            this.Song.MinimumWidth = 300;
+            this.Song.Name = "Song";
+            this.Song.Width = 300;
+            // 
+            // Album
+            // 
+            this.Album.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Album.HeaderText = "Album";
+            this.Album.MinimumWidth = 6;
+            this.Album.Name = "Album";
+            // 
+            // VerticalLine
+            // 
+            this.VerticalLine.FillColor = System.Drawing.Color.White;
+            this.VerticalLine.FillThickness = 5;
+            this.VerticalLine.Location = new System.Drawing.Point(-2, 90);
+            this.VerticalLine.Name = "VerticalLine";
+            this.VerticalLine.Size = new System.Drawing.Size(10, 45);
+            this.VerticalLine.TabIndex = 10;
             // 
             // fAdmin
             // 
@@ -172,6 +318,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fAdmin";
             this.panelSlideBar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +332,13 @@
         private Guna.UI2.WinForms.Guna2Button btnDangXuat;
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnInsertSQL;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2DataGridView dataSong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Song;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Album;
+        private Guna.UI2.WinForms.Guna2VSeparator VerticalLine;
     }
 }

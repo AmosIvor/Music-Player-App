@@ -1,4 +1,5 @@
 ﻿using Music__Player.sources.DAO;
+using Music__Player.sources.Navigate;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -74,7 +75,8 @@ namespace Music__Player
                     string query = $"Login @userName = {userName}, @passWord = {password}";
                     DataTable results = DataProviderDAO.Instance.ExecuteQuery(query);
                     DataRow dataRow = results.Rows[0];
-                    ShowScreen(new Main__Screen(dataRow["DisplayName"].ToString()),null);
+                    Navigation.Instance.mainScreen.LoadUser(dataRow["DisplayName"].ToString());
+                    ShowScreen(Navigation.Instance.mainScreen, null);
                 }
                 else
                 {

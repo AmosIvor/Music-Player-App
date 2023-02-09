@@ -245,6 +245,9 @@ namespace Music__Player
 
         #endregion
 
-
+        public void LoadUser(string name)
+        {
+            btnUser.Text = name;
+        }
     }
 }
