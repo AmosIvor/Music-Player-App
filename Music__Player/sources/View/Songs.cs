@@ -61,7 +61,7 @@ namespace Music__Player.sources.View
             {
                 flowLayoutPanel1.Controls.Add(song);
             }
-            songPlayingBottomBar.ListSong = listSongDisplay;
+            addListPlayingSong(listSongDisplay);
         }
         void searchNameSong(string findByName)
         {
@@ -84,11 +84,16 @@ namespace Music__Player.sources.View
                 {
                     flowLayoutPanel1.Controls.Add(song);
                 }
-                songPlayingBottomBar.ListSong = listSongSearch;
+                addListPlayingSong(listSongSearch);
             } else
-                Load_Display_Song();    
-
+                Load_Display_Song();
             searchBar.Focus();
+        }
+
+        public void addListPlayingSong(List<Songs_Display> list)
+        {
+            songPlayingBottomBar.ListSong = list;
+            songPlayingBottomBar.FlowLayoutPanel1 = flowLayoutPanel1;
         }
 
         #region Bottom Bar

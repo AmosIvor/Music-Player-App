@@ -88,7 +88,7 @@ namespace Music__Player.sources.PlayMusic
             player.settings.volume = sliderVolumeMusic.Value;
         }
 
-        public void btnPlay_Click(Guna2ImageButton btn, Timer timer, Song__Playing__BottomBar btnBar = null)
+        public void btnPlay_Click(Guna2ImageButton btn, Timer timer)
         {
             if (player.playState == WMPPlayState.wmppsPlaying)
             {
@@ -108,10 +108,6 @@ namespace Music__Player.sources.PlayMusic
             }
         }
 
-        public void PauseSong()
-        {
-            BottomBar.IsPlay = false;
-            player.controls.pause();
-        }
+
     }
 }
