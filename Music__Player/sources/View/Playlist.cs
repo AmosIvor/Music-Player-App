@@ -284,6 +284,8 @@ namespace Music__Player.sources.View
                 PlaylistDAO.Instance.DeletePlaylist(infoPlaylistInside.ID_Playlist);
 
                 fpnlPlaylists.Controls.Remove(infoPlaylistInside);
+
+                Navigate.Navigation.Instance.mainScreen.DeletePlaylistMenuBar(infoPlaylistInside.Name_Playlist);
             }
 
             catch { }

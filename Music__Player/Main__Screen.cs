@@ -154,6 +154,13 @@ namespace Music__Player
             namePlaylistOutside.IsHovered = true;
         }
 
+        public void DeletePlaylistMenuBar(string namePlaylist)
+        {
+            Name__Playlist__Button curr = fpnlPlaylists.Controls.OfType<Name__Playlist__Button>().FirstOrDefault(c => c.Name_Playlist == namePlaylist);
+
+            fpnlPlaylists.Controls.Remove(curr);
+        }
+
         #endregion 
 
         #region HOME
