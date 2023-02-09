@@ -26,9 +26,9 @@ namespace Music__Player.sources.View
 
             Load_Display_Song();
 
-            LoadInitialSongBottomBar();
+            //LoadInitialSongBottomBar();
 
-            LoadEventClick();
+            //LoadEventClick();
         }
         private void LoadNextSlide()
         {
