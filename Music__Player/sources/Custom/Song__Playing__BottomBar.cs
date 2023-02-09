@@ -81,6 +81,13 @@ namespace Music__Player.sources.Custom
 
         private void sliderVolume_Scroll(object sender, ScrollEventArgs e)
         {
+            if (sliderVolume.Value == 0)
+            {
+                btnVolume.Image = Resources.mute_100px;
+            } else
+            {
+                btnVolume.Image = Resources.audio_100px;
+            }
             Media__Player.Instance.SliderVolumeMusicScroll(sliderVolume);
         }
 
@@ -211,6 +218,13 @@ namespace Music__Player.sources.Custom
                 }
             }
         }
+
+        private void SetSong(string value)
+        {
+            flowLayoutPanel1.VerticalScroll.Value = (Convert.ToInt32(value) - 1) * 100;
+
+            flowLayoutPanel1.VerticalScroll.Value = (Convert.ToInt32(value) - 1) * 100;
+        }
         private void btnSkip_Click(object sender, EventArgs e)
         {
             if (ListSong != null)
@@ -225,18 +239,33 @@ namespace Music__Player.sources.Custom
                         {
                             ++i;
                             listSong[i].IsSelectedSong = true;
+
+                            SetSong(listSong[i].Id);
                         }
                         else
                         {
                             listSong[0].IsSelectedSong = true;
+
+                            SetSong("1");
                         }
                         break;
                     }
                 }
             }
         }
+        private FlowLayoutPanel flowLayoutPanel1;
+        public FlowLayoutPanel FlowLayoutPanel1
+        {
+            get { return flowLayoutPanel1; }
+            set
+            {
+                flowLayoutPanel1 = value;
+            }
+        }
+
         private void btnSuffle_Click(object sender, EventArgs e)
         {
+
             if (listSong!= null)
             {
                 Random rnd = new Random();
@@ -245,7 +274,9 @@ namespace Music__Player.sources.Custom
                 {
                     song.IsSelectedSong = false;
                 }
-                listSong[random].IsSelectedSong=true;
+                listSong[random].IsSelectedSong = true;
+
+                SetSong(listSong[random].Id);
             }
         }
     }
