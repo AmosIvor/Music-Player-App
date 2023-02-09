@@ -28,32 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pnlBottom = new Guna.UI2.WinForms.Guna2Panel();
-            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.fpnlArtist = new System.Windows.Forms.FlowLayoutPanel();
             this.fpnlGenre = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.guna2Panel2.SuspendLayout();
+            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.pnlBottom.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Lavender;
-            this.guna2Panel2.Controls.Add(this.btnBack);
-            this.guna2Panel2.Controls.Add(this.btnNext);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1359, 76);
-            this.guna2Panel2.TabIndex = 2;
             // 
             // btnBack
             // 
@@ -99,38 +85,31 @@
             this.pnlBottom.Size = new System.Drawing.Size(1359, 100);
             this.pnlBottom.TabIndex = 3;
             // 
-            // songPlayingBottomBar
-            // 
-            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
-            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.songPlayingBottomBar.IsPlay = false;
-            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
-            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
-            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
-            this.songPlayingBottomBar.TabIndex = 0;
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.fpnlArtist);
+            this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.fpnlGenre);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 76);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1359, 789);
+            this.panel1.Size = new System.Drawing.Size(1359, 865);
             this.panel1.TabIndex = 4;
             // 
             // fpnlArtist
             // 
-            this.fpnlArtist.Location = new System.Drawing.Point(46, 447);
+            this.fpnlArtist.AutoScroll = true;
+            this.fpnlArtist.Location = new System.Drawing.Point(46, 510);
             this.fpnlArtist.Name = "fpnlArtist";
             this.fpnlArtist.Size = new System.Drawing.Size(1294, 303);
             this.fpnlArtist.TabIndex = 5;
             // 
             // fpnlGenre
             // 
-            this.fpnlGenre.Location = new System.Drawing.Point(43, 82);
+            this.fpnlGenre.Location = new System.Drawing.Point(43, 121);
             this.fpnlGenre.Name = "fpnlGenre";
             this.fpnlGenre.Size = new System.Drawing.Size(1294, 303);
             this.fpnlGenre.TabIndex = 4;
@@ -140,7 +119,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(38, 38);
+            this.label1.Location = new System.Drawing.Point(38, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 26);
             this.label1.TabIndex = 3;
@@ -151,11 +130,23 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(38, 403);
+            this.label8.Location = new System.Drawing.Point(38, 466);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 26);
             this.label8.TabIndex = 2;
             this.label8.Text = "Artist";
+            // 
+            // songPlayingBottomBar
+            // 
+            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
+            this.songPlayingBottomBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.songPlayingBottomBar.IsPlay = false;
+            this.songPlayingBottomBar.ListSong = null;
+            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
+            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
+            this.songPlayingBottomBar.PlayingSong = null;
+            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
+            this.songPlayingBottomBar.TabIndex = 0;
             // 
             // Albums
             // 
@@ -163,10 +154,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlBottom);
-            this.Controls.Add(this.guna2Panel2);
             this.Name = "Albums";
             this.Size = new System.Drawing.Size(1359, 965);
-            this.guna2Panel2.ResumeLayout(false);
             this.pnlBottom.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -174,8 +163,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ImageButton btnBack;
         private Guna.UI2.WinForms.Guna2ImageButton btnNext;
         private Guna.UI2.WinForms.Guna2Panel pnlBottom;

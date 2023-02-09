@@ -531,6 +531,11 @@ namespace Music__Player.sources.View
             SearchAndPlaySong(Song__Playing__DAO.Instance.currInfoSongPanel);
         }
 
+        public void HandleButtonPlay(bool isPlay)
+        {
+            btnPlay.Checked = isPlay;
+        }
+
         #endregion
 
         #region HandleExit

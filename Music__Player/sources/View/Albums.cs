@@ -44,6 +44,8 @@ namespace Music__Player.sources.View
 
         void LoadAlbumGenre()
         {
+            fpnlGenre.Controls.Clear();
+
             List<Info__Album> listInfoAlbum = Info__Album__DAO.Instance.GetListInfoAlbumGenre();
 
             foreach (Info__Album album in listInfoAlbum)
@@ -62,6 +64,8 @@ namespace Music__Player.sources.View
 
         void LoadAlbumArtist()
         {
+            fpnlArtist.Controls.Clear();
+
             List<Info__Album> listInfoAlbum = Info__Album__DAO.Instance.GetListInfoAlbumArtist();
 
             foreach (Info__Album album in listInfoAlbum)

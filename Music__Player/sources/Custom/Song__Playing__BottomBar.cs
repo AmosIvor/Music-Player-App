@@ -110,6 +110,8 @@ namespace Music__Player.sources.Custom
             Navigate.Navigation.Instance.childAlbumScreen.HandleButtonPlay(IsPlay);
 
             Navigate.Navigation.Instance.songsScreen.HandleButtonPlay(IsPlay);
+
+            Navigate.Navigation.homeScreen.HandleButtonPlay(IsPlay);
         }
 
         private void btnRepeat_Click(object sender, EventArgs e)
