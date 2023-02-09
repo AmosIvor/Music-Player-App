@@ -34,6 +34,7 @@ namespace Music__Player
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@ namespace Music__Player
             this.label2 = new System.Windows.Forms.Label();
             this.btnDangKy = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,6 +94,21 @@ namespace Music__Player
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(591, 576);
             this.panel2.TabIndex = 0;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(331, 522);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(181, 45);
+            this.guna2Button1.TabIndex = 12;
+            this.guna2Button1.Text = "Thoát";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // panel6
             // 
@@ -166,7 +181,7 @@ namespace Music__Player
             this.tbNickName.HoverState.Parent = this.tbNickName;
             this.tbNickName.Location = new System.Drawing.Point(27, 39);
             this.tbNickName.Margin = new System.Windows.Forms.Padding(4);
-            this.tbNickName.MaxLength = 20;
+            this.tbNickName.MaxLength = 10;
             this.tbNickName.Name = "tbNickName";
             this.tbNickName.PasswordChar = '\0';
             this.tbNickName.PlaceholderText = "";
@@ -302,21 +317,6 @@ namespace Music__Player
             this.label1.TabIndex = 0;
             this.label1.Text = "ACCOUNT REGISTER";
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(331, 522);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(181, 45);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "Thoát";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // fSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,6 +343,7 @@ namespace Music__Player
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion

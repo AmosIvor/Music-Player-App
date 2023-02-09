@@ -152,7 +152,5 @@ namespace Music__Player.sources.Custom
             lblEnd.Text = song.Duration;
             Media__Player.Instance.RunMP3(song.URL, timerMusic);
         }
-
-
     }
 }

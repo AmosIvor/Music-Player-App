@@ -36,6 +36,7 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.fpnlPlaylists = new System.Windows.Forms.FlowLayoutPanel();
             this.VerticalLine = new Guna.UI2.WinForms.Guna2VSeparator();
+            this.btnPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblPlaylist = new System.Windows.Forms.Label();
             this.lblLibrary = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.name__Playlist__Button1 = new Music__Player.sources.Custom.Name__Playlist__Button();
             this.name__Playlist__Button2 = new Music__Player.sources.Custom.Name__Playlist__Button();
             this.name__Playlist__Button3 = new Music__Player.sources.Custom.Name__Playlist__Button();
-            this.btnPlaylist = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelSlideBar.SuspendLayout();
             this.fpnlPlaylists.SuspendLayout();
             this.SuspendLayout();
@@ -114,7 +114,7 @@
             this.btnUser.Size = new System.Drawing.Size(187, 45);
             this.btnUser.TabIndex = 8;
             this.btnUser.Text = "An Hung";
-            this.btnUser.TextOffset = new System.Drawing.Point(3, 0);
+            this.btnUser.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // btnLogOut
             // 
@@ -182,6 +182,23 @@
             this.VerticalLine.Name = "VerticalLine";
             this.VerticalLine.Size = new System.Drawing.Size(10, 45);
             this.VerticalLine.TabIndex = 4;
+            // 
+            // btnPlaylist
+            // 
+            this.btnPlaylist.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlaylist.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
+            this.btnPlaylist.CheckedState.Parent = this.btnPlaylist;
+            this.btnPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlaylist.HoverState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPlaylist.HoverState.Parent = this.btnPlaylist;
+            this.btnPlaylist.Image = global::Music__Player.Properties.Resources.icon_skip_blue;
+            this.btnPlaylist.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnPlaylist.Location = new System.Drawing.Point(172, 416);
+            this.btnPlaylist.Name = "btnPlaylist";
+            this.btnPlaylist.PressedState.Parent = this.btnPlaylist;
+            this.btnPlaylist.Size = new System.Drawing.Size(34, 34);
+            this.btnPlaylist.TabIndex = 2;
+            this.btnPlaylist.Click += new System.EventHandler(this.btnPlaylist_Click);
             // 
             // lblPlaylist
             // 
@@ -523,23 +540,6 @@
             this.name__Playlist__Button3.Name_Playlist = null;
             this.name__Playlist__Button3.Size = new System.Drawing.Size(175, 45);
             this.name__Playlist__Button3.TabIndex = 2;
-            // 
-            // btnPlaylist
-            // 
-            this.btnPlaylist.BackColor = System.Drawing.Color.Transparent;
-            this.btnPlaylist.CheckedState.ImageSize = new System.Drawing.Size(34, 34);
-            this.btnPlaylist.CheckedState.Parent = this.btnPlaylist;
-            this.btnPlaylist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlaylist.HoverState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPlaylist.HoverState.Parent = this.btnPlaylist;
-            this.btnPlaylist.Image = global::Music__Player.Properties.Resources.icon_skip_blue;
-            this.btnPlaylist.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPlaylist.Location = new System.Drawing.Point(172, 416);
-            this.btnPlaylist.Name = "btnPlaylist";
-            this.btnPlaylist.PressedState.Parent = this.btnPlaylist;
-            this.btnPlaylist.Size = new System.Drawing.Size(34, 34);
-            this.btnPlaylist.TabIndex = 2;
-            this.btnPlaylist.Click += new System.EventHandler(this.btnPlaylist_Click);
             // 
             // Main__Screen
             // 
