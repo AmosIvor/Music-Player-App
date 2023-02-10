@@ -70,7 +70,7 @@
             // 
             this.picturePlaySong.BackColor = System.Drawing.Color.WhiteSmoke;
             this.picturePlaySong.Image = global::Music__Player.Properties.Resources.icon_pause_blue;
-            this.picturePlaySong.Location = new System.Drawing.Point(30, 14);
+            this.picturePlaySong.Location = new System.Drawing.Point(29, 18);
             this.picturePlaySong.Name = "picturePlaySong";
             this.picturePlaySong.Size = new System.Drawing.Size(48, 50);
             this.picturePlaySong.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -79,6 +79,8 @@
             this.picturePlaySong.Visible = false;
             this.picturePlaySong.Click += new System.EventHandler(this.lbTimeSong_Click);
             this.picturePlaySong.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
+            this.picturePlaySong.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.picturePlaySong.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             // 
             // favoriteBox
             // 
@@ -98,7 +100,7 @@
             // 
             this.lbAlbum.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbAlbum.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAlbum.Location = new System.Drawing.Point(724, 27);
+            this.lbAlbum.Location = new System.Drawing.Point(724, 28);
             this.lbAlbum.Name = "lbAlbum";
             this.lbAlbum.Size = new System.Drawing.Size(199, 25);
             this.lbAlbum.TabIndex = 13;
@@ -107,6 +109,7 @@
             this.lbAlbum.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.lbAlbum.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.lbAlbum.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
+            this.lbAlbum.MouseHover += new System.EventHandler(this.HandleMouseEnter);
             // 
             // lbTimeSong
             // 
@@ -172,14 +175,14 @@
             this.lbId.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbId.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.ForeColor = System.Drawing.Color.Black;
-            this.lbId.Location = new System.Drawing.Point(38, 21);
+            this.lbId.Location = new System.Drawing.Point(37, 20);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(40, 40);
             this.lbId.TabIndex = 8;
             this.lbId.Tag = "";
             this.lbId.Text = "01";
             this.lbId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbId.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.lbId.Click += new System.EventHandler(this.ShowMessageClick);
             this.lbId.DoubleClick += new System.EventHandler(this.lbTimeSong_Click);
             this.lbId.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
             this.lbId.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
@@ -193,6 +196,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.Name = "Songs_Display";
             this.Size = new System.Drawing.Size(1126, 84);
+            this.Click += new System.EventHandler(this.lbTimeSong_Click);
+            this.MouseEnter += new System.EventHandler(this.HandleMouseEnter);
+            this.MouseLeave += new System.EventHandler(this.HandleMouseLeave);
             this.ShadowPanelSong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picturePlaySong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.favoriteBox)).EndInit();
