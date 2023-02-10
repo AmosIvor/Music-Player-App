@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Music__Player
 {
     internal static class Program
@@ -16,7 +17,8 @@ namespace Music__Player
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main__Screen());
+            //Application.Run(sources.Navigate.Navigation.Instance.mainScreen);
+            Application.Run(new fLogin());
 
         }
     }

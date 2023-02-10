@@ -23,10 +23,11 @@ namespace Music__Player.sources.DAO
         }
         private DataProviderDAO() { }
 
-        private string connectionSTR = "Server = .\\SQLEXPRESS ; Database = MUSIC_PLAYER_APP; Integrated Security = True";
+        private string connectionSTR = "Server = .\\SQLEXPRESS ; Database = PROJECT_MUSIC; Integrated Security = True";
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
             DataTable data = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
