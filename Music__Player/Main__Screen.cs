@@ -246,7 +246,7 @@ namespace Music__Player
         {
             if (MessageBox.Show("Bạn có muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Application.Exit();
+                Close();
             }
         }
 
