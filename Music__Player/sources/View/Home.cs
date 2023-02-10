@@ -426,6 +426,8 @@ namespace Music__Player.sources.View
         private void btnPlay_Click(object sender, EventArgs e)
         {
             Media__Player.Instance.btnPlay_HomeClick(btnPlay);
+
+            Media__Player.Instance.NavigateAllScreen();
         }
         private void btnRepeat_Click(object sender, EventArgs e)
         {

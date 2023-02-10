@@ -244,9 +244,9 @@ namespace Music__Player
         #region Exit
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn đăng xuất không ?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn thoát không ?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Close();
+                Application.Exit();
             }
         }
 
