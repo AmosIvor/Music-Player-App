@@ -413,7 +413,7 @@ namespace Music__Player.sources.View
        
         public void PauseSongInSomeScreen()
         {
-            Navigate.Navigation.Instance.albumsScreen.PauseSongInSomeScreen();
+            Navigate.Navigation.Instance.albumsScreen.PauseSongInSomeAlbum();
 
             Navigate.Navigation.Instance.favoriteScreen.PauseSongInFavorite();
 

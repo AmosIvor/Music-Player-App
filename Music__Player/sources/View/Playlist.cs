@@ -387,18 +387,6 @@ namespace Music__Player.sources.View
 
         }
 
-        void LoadPlaylist()
-        {
-            //if (fpnlPlaylists.Tag != null)
-            //{
-            //    LoadPlaylists();
-
-            //    return;
-            //}
-
-            
-        }
-
         #endregion
 
         #region Number Playlist
@@ -421,7 +409,7 @@ namespace Music__Player.sources.View
 
         public void PauseSongInSomeScreen()
         {
-            Navigate.Navigation.Instance.albumsScreen.PauseSongInSomeScreen();
+            Navigate.Navigation.Instance.albumsScreen.PauseSongInAlbum();
 
             Navigate.Navigation.Instance.favoriteScreen.PauseSongInFavorite();
 
