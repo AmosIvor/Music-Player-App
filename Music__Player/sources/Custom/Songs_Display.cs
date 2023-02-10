@@ -55,7 +55,7 @@ namespace Music__Player.sources.Custom
             set { playingBottomBar = value; }
         }
 
-        private List<Songs_Display> listSongs;
+        public List<Songs_Display> listSongs;
 
         private string id;
         public string Id
@@ -261,8 +261,12 @@ namespace Music__Player.sources.Custom
                     picturePlaySong.Image = Properties.Resources.icon_play_blue;
                     Info__Song__Panel curr = new Info__Song__Panel(this);
                     Song__Playing__DAO.Instance.currInfoSongPanel = curr;
-                    //playingBottomBar.setPlayingSong(this);
+                    Navigate.Navigation.Instance.historyScreen.InsertHistory();
                     Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
+
+                    Navigate.Navigation.Instance.albumsScreen.PauseSongInAlbum();
+                    Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+                    Navigate.Navigation.Instance.favoriteScreen.PauseSongInFavorite();
 
                     foreach (Control control in ShadowPanelSong.Controls)
                     {
@@ -309,5 +313,7 @@ namespace Music__Player.sources.Custom
         {
             MessageBox.Show("Click");
         }
+
+
     }
 }

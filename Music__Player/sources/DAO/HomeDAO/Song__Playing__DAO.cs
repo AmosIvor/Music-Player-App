@@ -33,6 +33,8 @@ namespace Music__Player.sources.DAO.HomeDAO
 
         public Song__Playing songPlayingByInfoSongPanel;
 
+        public Info__Song__Panel initialSong;
+
         public void SetSongPlayingByInfoSongPanel(Guna2ShadowPanel pnlMain, Guna2PictureBox pbImage, Label lblTitle, Label lblArtist, Label lblDuration)
         {
             songPlayingByInfoSongPanel = new Song__Playing(currInfoSongPanel);
@@ -50,9 +52,37 @@ namespace Music__Player.sources.DAO.HomeDAO
             pbImage.Image = songPlayingByInfoSongPanel.Image_Song;
         }
 
+        public void SetSongPlayingByInfoSongPanel(Info__Song__Panel info, Guna2ShadowPanel pnlMain, Guna2PictureBox pbImage, Label lblTitle, Label lblArtist, Label lblDuration)
+        {
+            lblTitle.Text = info.Title;
+
+            lblTitle.Location = new System.Drawing.Point(CenterHorizontal(pnlMain, lblTitle), lblTitle.Location.Y);
+
+            lblArtist.Text = info.Artist;
+
+            lblArtist.Location = new System.Drawing.Point(CenterHorizontal(pnlMain, lblArtist), lblArtist.Location.Y);
+
+            lblDuration.Text = info.Duration;
+
+            pbImage.Image = info.Image_Song;
+        }
+
         public void SetSongPlayingBottomBar(Guna2PictureBox pbImage, Label lblNameSong, Label lblArtist, Label lblDuration)
         {
             songPlayingByInfoSongPanel = new Song__Playing(currInfoSongPanel);
+
+            lblNameSong.Text = songPlayingByInfoSongPanel.Title;
+
+            lblArtist.Text = songPlayingByInfoSongPanel.Artist;
+
+            pbImage.Image = songPlayingByInfoSongPanel.Image_Song;
+
+            lblDuration.Text = songPlayingByInfoSongPanel.Duration;
+        }
+
+        public void SetSongPlayingBottomBar(bool isInitial, Guna2PictureBox pbImage, Label lblNameSong, Label lblArtist, Label lblDuration)
+        {
+            songPlayingByInfoSongPanel = new Song__Playing(initialSong);
 
             lblNameSong.Text = songPlayingByInfoSongPanel.Title;
 

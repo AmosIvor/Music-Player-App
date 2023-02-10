@@ -132,6 +132,8 @@ namespace Music__Player.sources.View
             }
 
             Navigate.Navigation.Instance.childAlbumScreen.PlayFirstSong();
+
+            PauseSongInSomeScreen();
         }
         private void album_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -186,6 +188,8 @@ namespace Music__Player.sources.View
 
                 Navigate.Navigation.Instance.childAlbumScreen.PlayFirstSong();
 
+                PauseSongInSomeScreen();
+
                 return;
             }
 
@@ -228,6 +232,8 @@ namespace Music__Player.sources.View
             }
 
             Navigate.Navigation.Instance.childAlbumScreen.PlayFirstSong();
+
+            PauseSongInSomeScreen();
         }
         private void album_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -320,5 +326,29 @@ namespace Music__Player.sources.View
         }
 
         #endregion
+
+        #region Pause Song
+        public void PauseSongInAlbum()
+        {
+            if (fpnlGenre.Tag != null)
+            {
+                Info__Album prevSelected = (Info__Album)fpnlGenre.Tag;
+
+                prevSelected.IsSelected = false;
+
+                prevSelected.IsHovered = false;
+            }
+        }
+
+        public void PauseSongInSomeScreen()
+        {
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
+            Navigate.Navigation.Instance.favoriteScreen.PauseSongInFavorite();
+
+            Navigate.Navigation.Instance.songsScreen.PauseSongInSong();
+        }
+
+        #endregion 
     }
 }

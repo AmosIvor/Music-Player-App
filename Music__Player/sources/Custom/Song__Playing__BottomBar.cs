@@ -60,12 +60,16 @@ namespace Music__Player.sources.Custom
         {
             Media__Player.Instance.RunMP3(Song__Playing__DAO.Instance.currInfoSongPanel.URL, timerMusic);
 
-            LoadInitialSong();
+            LoadSong();
 
             //IsPlay = true;
         }
 
         public void LoadInitialSong()
+        {
+            Song__Playing__DAO.Instance.SetSongPlayingBottomBar(true, pbImage, lblNameSong, lblArtist, lblEnd);
+        }
+        void LoadSong()
         {
             Song__Playing__DAO.Instance.SetSongPlayingBottomBar(pbImage, lblNameSong, lblArtist, lblEnd);
         }

@@ -68,6 +68,19 @@ namespace Music__Player.sources.View
         }
         private void songHistory_MouseClickPlay(object sender, MouseEventArgs e)
         {
+            Song__History curr = Song__History__DAO.Instance.GetSongHistoryFromControlIntoPanel(sender);
+            
+            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
+            
+            if (Song__Playing__DAO.Instance.currInfoSongPanel != null && infoSong.Title == Song__Playing__DAO.Instance.currInfoSongPanel.Title)
+            {
+                Media__Player.Instance.btnPlay_HomeClick((Guna2ImageButton)sender);
+
+                Media__Player.Instance.NavigateAllScreen();
+
+                return;
+            }
+
             if (fpnlSongs.Tag != null)
             {
                 Song__History prev = (Song__History)fpnlSongs.Tag;
@@ -75,19 +88,6 @@ namespace Music__Player.sources.View
                 prev.IsSelected = false;
 
                 prev.IsHovered = false;
-            }
-
-            Song__History curr = Song__History__DAO.Instance.GetSongHistoryFromControlIntoPanel(sender);
-            
-            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
-            
-            if (infoSong.Title == Song__Playing__DAO.Instance.currInfoSongPanel.Title)
-            {
-                Media__Player.Instance.btnPlay_HomeClick((Guna2ImageButton)sender);
-
-                Media__Player.Instance.NavigateAllScreen();
-
-                return;
             }
 
             fpnlSongs.Tag = curr;
@@ -98,6 +98,7 @@ namespace Music__Player.sources.View
 
             Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
+            PauseSongInSomeScreen();
         }
         private void songHistory_MouseDoubleClickAdd(object sender, MouseEventArgs e)
         {
@@ -124,6 +125,8 @@ namespace Music__Player.sources.View
 
                 Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
 
+                PauseSongInSomeScreen();
+
                 return;
             }
 
@@ -138,6 +141,8 @@ namespace Music__Player.sources.View
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSongOutside;
 
             Song__Playing__DAO.Instance.LoadSongPlayingAllScreen();
+
+            PauseSongInSomeScreen();
         }
         private void songHistory_MouseEnterAdd(object sender, EventArgs e)
         {
@@ -320,5 +325,16 @@ namespace Music__Player.sources.View
         }
 
         #endregion
+
+        void PauseSongInSomeScreen()
+        {
+            Navigate.Navigation.Instance.albumsScreen.PauseSongInAlbum();
+
+            Navigate.Navigation.Instance.playlistScreen.LoadPlaylists();
+
+            Navigate.Navigation.Instance.favoriteScreen.PauseSongInFavorite();
+
+            Navigate.Navigation.Instance.songsScreen.PauseSongInSong();
+        }
     }
 }

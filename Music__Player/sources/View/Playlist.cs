@@ -25,6 +25,8 @@ namespace Music__Player.sources.View
 
         Panel pnlClicked = new Panel();
 
+        public bool isClick = false;
+
         public Playlist()
         {
             InitializeComponent();
@@ -180,6 +182,8 @@ namespace Music__Player.sources.View
             pnlClicked.Tag = curr;
 
             Navigate.Navigation.Instance.mainScreen.LoadChildPlaylistPlayingSong();
+
+            PauseSongInSomeScreen();
 
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.LoadChildPlaylist(curr.ID_Playlist);
 
@@ -383,6 +387,18 @@ namespace Music__Player.sources.View
 
         }
 
+        void LoadPlaylist()
+        {
+            //if (fpnlPlaylists.Tag != null)
+            //{
+            //    LoadPlaylists();
+
+            //    return;
+            //}
+
+            
+        }
+
         #endregion
 
         #region Number Playlist
@@ -399,5 +415,19 @@ namespace Music__Player.sources.View
         }
 
         #endregion
+
+        #region Pause Song
+        
+
+        public void PauseSongInSomeScreen()
+        {
+            Navigate.Navigation.Instance.albumsScreen.PauseSongInSomeScreen();
+
+            Navigate.Navigation.Instance.favoriteScreen.PauseSongInFavorite();
+
+            Navigate.Navigation.Instance.songsScreen.PauseSongInSong();
+        }
+
+        #endregion 
     }
 }

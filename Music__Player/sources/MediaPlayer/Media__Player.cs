@@ -112,7 +112,7 @@ namespace Music__Player.sources.PlayMusic
             }
             else
             {
-                Navigate.Navigation.homeScreen.SearchAndPlaySong(Song__Playing__DAO.Instance.currInfoSongPanel);
+                Navigate.Navigation.homeScreen.SearchAndPlaySong();
             }
         }
 
@@ -156,6 +156,5 @@ namespace Music__Player.sources.PlayMusic
 
             Navigate.Navigation.homeScreen.HandleButtonPlay(isPlay);
         }
-
     }
 }

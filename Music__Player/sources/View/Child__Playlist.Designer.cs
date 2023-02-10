@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnNext = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -44,9 +43,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.fpnlSongs = new System.Windows.Forms.FlowLayoutPanel();
-            this.list__Song__Playlist1 = new Music__Player.sources.Custom.List__Song__Playlist();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.list__Song__Playlist1 = new Music__Player.sources.Custom.List__Song__Playlist();
+            this.songPlayingBottomBar = new Music__Player.sources.Custom.Song__Playing__BottomBar();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlaylist)).BeginInit();
@@ -64,15 +63,6 @@
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(1359, 100);
             this.guna2Panel1.TabIndex = 1;
-            // 
-            // songPlayingBottomBar
-            // 
-            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
-            this.songPlayingBottomBar.IsPlay = false;
-            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
-            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
-            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
-            this.songPlayingBottomBar.TabIndex = 0;
             // 
             // guna2Panel2
             // 
@@ -165,7 +155,6 @@
             this.guna2Panel3.Controls.Add(this.label2);
             this.guna2Panel3.Controls.Add(this.guna2Separator1);
             this.guna2Panel3.Controls.Add(this.fpnlSongs);
-            this.guna2Panel3.Controls.Add(this.guna2TextBox1);
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 360);
@@ -245,6 +234,16 @@
             this.fpnlSongs.TabIndex = 7;
             this.fpnlSongs.WrapContents = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(34, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 31);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "List Songs";
+            // 
             // list__Song__Playlist1
             // 
             this.list__Song__Playlist1.Artist = null;
@@ -266,44 +265,17 @@
             this.list__Song__Playlist1.Title = null;
             this.list__Song__Playlist1.URL = null;
             // 
-            // guna2TextBox1
+            // songPlayingBottomBar
             // 
-            this.guna2TextBox1.BorderRadius = 18;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.IconLeft = global::Music__Player.Properties.Resources.icon_search_blue;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(8, 0);
-            this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(28, 28);
-            this.guna2TextBox1.Location = new System.Drawing.Point(1016, 17);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Search ...";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(304, 44);
-            this.guna2TextBox1.TabIndex = 4;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(34, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 31);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "List Songs";
+            this.songPlayingBottomBar.BackColor = System.Drawing.Color.Transparent;
+            this.songPlayingBottomBar.FlowLayoutPanel1 = null;
+            this.songPlayingBottomBar.IsPlay = false;
+            this.songPlayingBottomBar.ListSong = null;
+            this.songPlayingBottomBar.Location = new System.Drawing.Point(0, 0);
+            this.songPlayingBottomBar.Name = "songPlayingBottomBar";
+            this.songPlayingBottomBar.PlayingSong = null;
+            this.songPlayingBottomBar.Size = new System.Drawing.Size(1359, 100);
+            this.songPlayingBottomBar.TabIndex = 0;
             // 
             // Child__Playlist
             // 
@@ -334,7 +306,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox pbPlaylist;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Custom.Song__Playing__BottomBar songPlayingBottomBar;
         private Guna.UI2.WinForms.Guna2ImageButton btnBack;
         private Guna.UI2.WinForms.Guna2ImageButton btnNext;

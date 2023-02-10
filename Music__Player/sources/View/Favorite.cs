@@ -3,6 +3,7 @@ using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.CustomDAO;
 using Music__Player.sources.DAO.FavoriteDAO;
 using Music__Player.sources.DAO.HomeDAO;
+using Music__Player.sources.PlayMusic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,6 +68,19 @@ namespace Music__Player.sources.View
 
         private void songFavorite_MouseClickPlay(object sender, MouseEventArgs e)
         {
+            List__Song__Playlist curr = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+
+            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
+
+            if (Song__Playing__DAO.Instance.currInfoSongPanel != null && infoSong.Title == Song__Playing__DAO.Instance.currInfoSongPanel.Title)
+            {
+                Media__Player.Instance.btnPlay_HomeClick((Guna2ImageButton)sender);
+
+                Media__Player.Instance.NavigateAllScreen();
+
+                return;
+            }
+
             if (fpnlSongs.Tag != null)
             {
                 List__Song__Playlist prev = (List__Song__Playlist)fpnlSongs.Tag;
@@ -76,13 +90,9 @@ namespace Music__Player.sources.View
                 prev.IsHovered = false;
             }
 
-            List__Song__Playlist curr = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
-
             fpnlSongs.Tag = curr;
 
             curr.IsSelected = true;
-
-            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
 
@@ -269,5 +279,20 @@ namespace Music__Player.sources.View
         }
 
         #endregion
+
+        #region Pause Song
+        public void PauseSongInFavorite()
+        {
+            if (fpnlSongs.Tag != null)
+            {
+                List__Song__Playlist prevSelected = (List__Song__Playlist)fpnlSongs.Tag;
+
+                prevSelected.IsSelected = false;
+
+                prevSelected.IsHovered = false;
+            }
+        }
+
+        #endregion 
     }
 }

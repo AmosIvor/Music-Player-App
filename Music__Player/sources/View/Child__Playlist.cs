@@ -73,6 +73,19 @@ namespace Music__Player.sources.View
 
         private void songByPlaylist_MouseClickPlay(object sender, MouseEventArgs e)
         {
+            List__Song__Playlist curr = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+            
+            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
+
+            if (Song__Playing__DAO.Instance.currInfoSongPanel != null && infoSong.Title == Song__Playing__DAO.Instance.currInfoSongPanel.Title)
+            {
+                Media__Player.Instance.btnPlay_HomeClick((Guna2ImageButton)sender);
+
+                Media__Player.Instance.NavigateAllScreen();
+
+                return;
+            }
+
             if (fpnlSongs.Tag != null)
             {
                 List__Song__Playlist prev = (List__Song__Playlist)fpnlSongs.Tag;
@@ -82,23 +95,9 @@ namespace Music__Player.sources.View
                 prev.IsHovered = false;
             }
 
-            List__Song__Playlist curr = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
-            
-            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
-
-            if (infoSong.Title == Song__Playing__DAO.Instance.currInfoSongPanel.Title)
-            {
-                Media__Player.Instance.btnPlay_HomeClick((Guna2ImageButton)sender);
-
-                Media__Player.Instance.NavigateAllScreen();
-
-                return;
-            }
-
             fpnlSongs.Tag = curr;
 
             curr.IsSelected = true;
-
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
 
@@ -108,6 +107,8 @@ namespace Music__Player.sources.View
 
             Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
 
+            PauseSongInSomeScreen();
+            
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying(curr);
         }
         private void songByPlaylist_MouseDoubleClickAdd(object sender, MouseEventArgs e)
@@ -139,6 +140,8 @@ namespace Music__Player.sources.View
 
                 Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
 
+                PauseSongInSomeScreen();
+
                 Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying(songByPlaylistInside);
 
                 return;
@@ -160,6 +163,8 @@ namespace Music__Player.sources.View
 
             Navigate.Navigation.Instance.playlistScreen.HandlePlayButtonInfoPlaylist();
 
+            PauseSongInSomeScreen();
+            
             Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.SetSongPlaying(songByPlaylistOutside);
         }
         private void songByPlaylist_MouseEnterAdd(object sender, EventArgs e)
@@ -404,5 +409,17 @@ namespace Music__Player.sources.View
 
         #endregion
 
+        #region Pause Song
+       
+        public void PauseSongInSomeScreen()
+        {
+            Navigate.Navigation.Instance.albumsScreen.PauseSongInSomeScreen();
+
+            Navigate.Navigation.Instance.favoriteScreen.PauseSongInFavorite();
+
+            Navigate.Navigation.Instance.songsScreen.PauseSongInSong();
+        }
+
+        #endregion 
     }
 }

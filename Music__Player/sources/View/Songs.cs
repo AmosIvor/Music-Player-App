@@ -18,6 +18,7 @@ namespace Music__Player.sources.View
 {
     public partial class Songs : UserControl
     {
+        List<Songs_Display> listSongDisplay;
         public Songs()
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace Music__Player.sources.View
         private void Load_Display_Song()
         {
             flowLayoutPanel1.Controls.Clear();
-            List<Songs_Display> listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay(songPlayingBottomBar);
+            listSongDisplay = SongDisplayDAO.Instance.GetListSongDisplay(songPlayingBottomBar);
             foreach(Songs_Display song in listSongDisplay)
             {
                 flowLayoutPanel1.Controls.Add(song);
@@ -123,6 +124,20 @@ namespace Music__Player.sources.View
         public void HandleButtonPlay(bool isPlay)
         {
             songPlayingBottomBar.IsPlay = isPlay;
+        }
+
+        #endregion
+
+        #region Pause Song 
+
+        public void PauseSongInSong()
+        {
+            foreach (Songs_Display songs in listSongDisplay)
+            {
+                if (songs.IsSelectedSong == true)
+                    songs.IsSelectedSong = false;
+            }
+            
         }
 
         #endregion
