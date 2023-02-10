@@ -19,6 +19,8 @@ namespace Music__Player.sources.Custom
         public Songs_Display()
         {
             InitializeComponent();
+            picturePlaySong.Hide();
+            lbId.Show();
         }
 
         public Songs_Display(DataRow row, List<Songs_Display> listSongs, string Id, Song__Playing__BottomBar playingBar)
@@ -181,8 +183,10 @@ namespace Music__Player.sources.Custom
                 control.BackColor = Color.Gainsboro;
             }
             Cursor = Cursors.Hand;
-            lbId.Visible = false;
-            picturePlaySong.Visible = true;
+            //lbId.Visible = false;
+            picturePlaySong.Show();
+            lbId.Hide();
+            //picturePlaySong.Visible = true;
             ShadowPanelSong.FillColor = Color.Gainsboro;
             if (!isSelectedFavorite)
             {
@@ -200,8 +204,10 @@ namespace Music__Player.sources.Custom
                 }
                 ShadowPanelSong.FillColor = Color.WhiteSmoke;
                 Cursor = Cursors.Default;
-                lbId.Visible = true;
-                picturePlaySong.Visible = false;    
+                //lbId.Visible = true;
+                lbId.Show();
+                //picturePlaySong.Visible = false;    
+                picturePlaySong.Hide();
                 if (!isSelectedFavorite)
                 {
                     favoriteBox.Image = null;
@@ -242,14 +248,15 @@ namespace Music__Player.sources.Custom
                     {
                         control.BackColor = Color.Gainsboro;
                     }
-                    lbId.Visible = false;
-                    picturePlaySong.Visible = true;
+                    //lbId.Visible = false;
+                    lbId.Hide();
+                    //picturePlaySong.Visible = true;
+                    picturePlaySong.Show();
                     ShadowPanelSong.FillColor = Color.Gainsboro;
                 } else
                 {
                     isSelectedSong = false;
                     picturePlaySong.Image = Properties.Resources.icon_pause_blue;
-
                     foreach (Control control in ShadowPanelSong.Controls)
                     {
                         control.BackColor = Color.WhiteSmoke;
@@ -257,8 +264,9 @@ namespace Music__Player.sources.Custom
                     ShadowPanelSong.FillColor = Color.WhiteSmoke;
                     if (!isSelectedSong)
                     {
-                        lbId.Visible = true;
-                        picturePlaySong.Visible = false;
+                        lbId.Hide();
+                        //picturePlaySong.Visible = false;
+                        picturePlaySong.Hide();
                     }
                     if (!isSelectedFavorite)
                     {
@@ -269,18 +277,17 @@ namespace Music__Player.sources.Custom
         }
         private void lbTimeSong_Click(object sender, EventArgs e)
         {
-            if (IsSelectedSong == true)
+            foreach (Songs_Display songs in listSongs)
             {
-                IsSelectedSong = false;
-            } else
-            {
-                foreach (Songs_Display songs in listSongs)
-                {
-                    if (songs.IsSelectedSong == true)
-                        songs.IsSelectedSong = false;
-                }
-                IsSelectedSong = true;
+                if (songs.IsSelectedSong == true)
+                    songs.IsSelectedSong = false;
             }
+            IsSelectedSong = true;
+        }
+
+        private void ShowMessageClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click");
         }
     }
 }
