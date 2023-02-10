@@ -13,6 +13,7 @@ using Music__Player.sources.Custom;
 using Music__Player.sources.DAO.CustomDAO;
 using Music__Player.sources.DAO.FavoriteDAO;
 using Music__Player.sources.DAO.HomeDAO;
+using Music__Player.sources.PlayMusic;
 
 namespace Music__Player.sources.View
 {
@@ -77,12 +78,21 @@ namespace Music__Player.sources.View
             }
 
             Song__History curr = Song__History__DAO.Instance.GetSongHistoryFromControlIntoPanel(sender);
+            
+            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
+            
+            if (infoSong.Title == Song__Playing__DAO.Instance.currInfoSongPanel.Title)
+            {
+                Media__Player.Instance.btnPlay_HomeClick((Guna2ImageButton)sender);
+
+                Media__Player.Instance.NavigateAllScreen();
+
+                return;
+            }
 
             fpnlSongs.Tag = curr;
 
             curr.IsSelected = true;
-
-            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
 
@@ -200,6 +210,18 @@ namespace Music__Player.sources.View
         void LoadEventClick()
         {
             Dropdown__Playlist__DAO.Instance.GetAllControls(this);
+        }
+        
+        public void PauseSongInHistory()
+        {
+            if (fpnlSongs.Tag != null)
+            {
+                Song__History prevSelected = (Song__History)fpnlSongs.Tag;
+
+                prevSelected.IsSelected = false;
+
+                prevSelected.IsHovered = false;
+            }
         }
 
         #endregion

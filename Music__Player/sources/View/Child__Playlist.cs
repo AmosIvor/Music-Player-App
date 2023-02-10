@@ -16,6 +16,7 @@ using Music__Player.sources.DAO.FavoriteDAO;
 using Music__Player.sources.DAO.HomeDAO;
 using Music__Player.sources.DAO.PlaylistDAO;
 using Music__Player.sources.DTO.ChildPlaylistDTO;
+using Music__Player.sources.PlayMusic;
 
 namespace Music__Player.sources.View
 {
@@ -82,12 +83,22 @@ namespace Music__Player.sources.View
             }
 
             List__Song__Playlist curr = List__Song__Playlist__DAO.Instance.GetListSongPlaylistFromControlIntoPanel(sender);
+            
+            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
+
+            if (infoSong.Title == Song__Playing__DAO.Instance.currInfoSongPanel.Title)
+            {
+                Media__Player.Instance.btnPlay_HomeClick((Guna2ImageButton)sender);
+
+                Media__Player.Instance.NavigateAllScreen();
+
+                return;
+            }
 
             fpnlSongs.Tag = curr;
 
             curr.IsSelected = true;
 
-            Info__Song__Panel infoSong = new Info__Song__Panel(curr);
 
             Song__Playing__DAO.Instance.currInfoSongPanel = infoSong;
 

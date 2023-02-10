@@ -111,7 +111,5 @@ namespace Music__Player.sources.DAO.HomeDAO
 
             Navigate.Navigation.homeScreen.LoadSongPlaying();
         }
-
-
     }
 }

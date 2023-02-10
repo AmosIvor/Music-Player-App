@@ -37,6 +37,23 @@ namespace Music__Player.sources.Custom
 
             LoadInitialEvent();
         }
+
+        public Info__Song__Panel(Artist__Panel artistPanel)
+        {
+            InitializeComponent();
+
+            this.Title = artistPanel.Title;
+
+            this.Artist = artistPanel.Title;
+
+            this.Duration = artistPanel.Duration;
+
+            this.Image_Song = artistPanel.Image_Song;
+
+            this.URL = artistPanel.URL;
+
+            LoadInitialEvent();
+        }
         public Info__Song__Panel(List__Song__Playlist songByPlaylist)
         {
             InitializeComponent();
@@ -396,7 +413,7 @@ namespace Music__Player.sources.Custom
 
         private void btnPlay_MouseClick(object sender, MouseEventArgs e)
         {
-            Media__Player.Instance.btnPlayEvent(btnPlay);
+            //Media__Player.Instance.btnPlay_HomeClick(btnPlay);
         }
     }
 }

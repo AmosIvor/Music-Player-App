@@ -94,6 +94,7 @@ namespace Music__Player.sources.PlayMusic
         {
             if (player.playState == WMPPlayState.wmppsPlaying)
             {
+                Console.WriteLine("Into1");
                 btn.Checked = false;
 
                 isPlay = false;
@@ -102,6 +103,7 @@ namespace Music__Player.sources.PlayMusic
             }
             else if (player.playState == WMPPlayState.wmppsPaused)
             {
+                Console.WriteLine("Into2");
                 btn.Checked = true;
 
                 isPlay = true;
@@ -132,6 +134,27 @@ namespace Music__Player.sources.PlayMusic
 
                 player.controls.play();
             }
+        }
+
+        public void NavigateAllScreen()
+        {
+            Navigate.Navigation.Instance.historyScreen.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.Instance.favoriteScreen.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.Instance.playlistScreen.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.Instance.childPlaylistScreen.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.Instance.childPlaylistScreenPlayingSong.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.Instance.albumsScreen.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.Instance.childAlbumScreen.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.Instance.songsScreen.HandleButtonPlay(isPlay);
+
+            Navigate.Navigation.homeScreen.HandleButtonPlay(isPlay);
         }
 
     }

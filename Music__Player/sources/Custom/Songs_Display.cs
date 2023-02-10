@@ -128,6 +128,26 @@ namespace Music__Player.sources.Custom
             set { url = value;}
         }
 
+        private bool isPlay;
+        public bool IsPlay
+        {
+            get { return isPlay; }
+            set
+            {
+                isPlay = value;
+
+                if (isPlay == true)
+                {
+                    picturePlaySong.Image = Properties.Resources.icon_pause_blue;
+                }
+                else
+                {
+                    picturePlaySong.Image = Properties.Resources.icon_play_blue;
+                }
+            }
+        }
+
+
         private bool isSelectedFavorite;
         private bool IsSelectedFavorite
         {

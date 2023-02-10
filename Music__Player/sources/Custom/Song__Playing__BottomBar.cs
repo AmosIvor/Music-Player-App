@@ -100,7 +100,7 @@ namespace Music__Player.sources.Custom
             NavigateAllScreen();
         }
 
-        void NavigateAllScreen()
+        public void NavigateAllScreen()
         {
             Navigate.Navigation.Instance.historyScreen.HandleButtonPlay(IsPlay);
 
